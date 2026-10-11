@@ -1,0 +1,24 @@
+{
+  "version": 5,
+  "reset_pc": 2147483648,
+  "ram_base": 2147483648,
+  "ram_bytes": 65536,
+  "memories": {
+    "sdram": {"base": 2415919104, "bytes": 67108864}
+  },
+  "reserved": {
+    "peripherals": {"base": 268435456, "bytes": 65536},
+    "accelerator": {"base": 268500992, "bytes": 65536}
+  },
+  "devices": {
+    "uart": {"base": 268435456, "bytes": 256},
+    "timer": {"base": 268439552, "bytes": 256},
+    "counters": {"base": 268443648, "bytes": 256},
+    "cache": {"base": 268447744, "bytes": 256},
+    "intc": {"base": 268451840, "bytes": 256}
+  },
+  "caches": {"line_bytes": 32, "icache_bytes": 2048, "dcache_bytes": 2048},
+  "interrupts": {"uart": 0, "accelerator": 1},
+  "accel": {"n": 4, "parallel": 1},
+  "accel_regs": {"ctrl": 0, "status": 8, "info": 16, "cycles": 24, "a": 256, "b": 512, "c": 768, "d": 1024}
+}

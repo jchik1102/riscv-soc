@@ -1,0 +1,16 @@
+[
+  {"cases":"all", "seed":1, "max_delay":5, "reset_cycles":[-1]},
+  {"cases":["first","edges","overflow","reset_state"], "seed":7, "max_delay":0, "reset_cycles":[-1]},
+  {"cases":["random_1","random_7","random_42","rv64_random_11","rv64_random_29","rv64_random_97","control","memory_sizes","array_loop"], "seed":42, "max_delay":9, "reset_cycles":[-1]},
+  {"cases":["reset_state"], "seed":1, "max_delay":5, "reset_cycles":[4,6,10,20,30]},
+  {"cases":["reset_store"], "seed":1, "max_delay":9, "reset_cycles":[-1], "reset_mode":1},
+  {"cases":["reset_store"], "seed":1, "max_delay":9, "reset_cycles":[-1], "reset_mode":2},
+  {"cases":["reset_store"], "seed":1, "max_delay":9, "reset_cycles":[-1], "reset_mode":3},
+  {"cases":["m_random_13","m_random_31","m_random_101","m_mixed","asm_muldiv","m_divw_edges"], "seed":42, "max_delay":9, "reset_cycles":[-1]},
+  {"cases":["m_random_13","m_mixed","m_mul_edges"], "seed":7, "max_delay":0, "reset_cycles":[-1]},
+  {"cases":["m_reset"], "seed":1, "max_delay":5, "reset_cycles":[0,1,31,63,64], "reset_mode":4},
+  {"cases":["m_reset_w"], "seed":1, "max_delay":5, "reset_cycles":[0,15,31,32], "reset_mode":4},
+  {"cases":["m_reset","m_reset_w"], "seed":1, "max_delay":5, "reset_cycles":[-1], "reset_mode":5},
+  {"cases":["m_reset","m_reset_w"], "seed":1, "max_delay":5, "reset_cycles":[-1], "reset_mode":6},
+  {"cases":["m_mixed"], "seed":29, "max_delay":3, "reset_cycles":[150,900,2500]}
+]

@@ -1,0 +1,184 @@
+[
+ {
+  "name": "s6_icache",
+  "image": "build/programs/s6_icache.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_dcache",
+  "image": "build/programs/s6_dcache.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_fetch_end",
+  "image": "build/programs/s6_fetch_end.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_random_7",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_random_19",
+  "image": "build/programs/s6_random_19.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_control",
+  "image": "build/programs/s6_control.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s5_sdram_cached",
+  "image": "build/programs/s5_sdram.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_sdram"
+ },
+ {
+  "name": "s5_random_5_cached",
+  "image": "build/programs/s5_random_5.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_random_5"
+ },
+ {
+  "name": "s5_random_23_cached",
+  "image": "build/programs/s5_random_23.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_random_23"
+ },
+ {
+  "name": "s5_fetch_fault_cached",
+  "image": "build/programs/s5_fetch_fault.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_fetch_fault"
+ },
+ {
+  "name": "s5_sdram_fw_cached",
+  "image": "build/firmware/s5_sdram.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_sdram_fw"
+ },
+ {
+  "name": "s6_random_7_uncached",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 0,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_random_7"
+ },
+ {
+  "name": "s6_random_7_ionly",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 1,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_random_7"
+ },
+ {
+  "name": "s6_random_7_donly",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 2,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_random_7"
+ },
+ {
+  "name": "s6_control_uncached",
+  "image": "build/programs/s6_control.hex",
+  "cache_en": 0,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_control"
+ },
+ {
+  "name": "s6_random_7_reset",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "reset_at": 1500,
+  "program": "s6_random_7"
+ },
+ {
+  "name": "s6_random_19_fill_reset",
+  "image": "build/programs/s6_random_19.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "reset_at": 1500,
+  "reset_fill": true,
+  "program": "s6_random_19"
+ },
+ {
+  "name": "s6_icache_4k",
+  "image": "build/programs/s6_icache.hex",
+  "cache_en": 3,
+  "icache": 4096,
+  "dcache": 4096,
+  "program": "s6_icache"
+ },
+ {
+  "name": "s6_random_7_4k",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 3,
+  "icache": 4096,
+  "dcache": 4096,
+  "program": "s6_random_7"
+ },
+ {
+  "name": "s6_control_4k",
+  "image": "build/programs/s6_control.hex",
+  "cache_en": 3,
+  "icache": 4096,
+  "dcache": 4096,
+  "program": "s6_control"
+ },
+ {
+  "name": "s6_bench",
+  "image": "build/firmware/s6_bench.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_bench_4k",
+  "image": "build/firmware/s6_bench.hex",
+  "cache_en": 3,
+  "icache": 4096,
+  "dcache": 4096,
+  "program": "s6_bench"
+ },
+ {
+  "name": "s6_bench_fill_reset",
+  "image": "build/firmware/s6_bench.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_bench",
+  "reset_at": 30000,
+  "reset_fill": true
+ }
+]

@@ -1,0 +1,21 @@
+[
+  {"cases": "all", "seed": 1, "max_delay": 5, "reset_cycles": [-1]},
+  {"cases": "all", "seed": 7, "max_delay": 0, "reset_cycles": [-1]},
+  {"cases": ["random_1", "random_7", "random_42", "rv64_random_11", "rv64_random_29", "rv64_random_97", "control", "memory_sizes", "array_loop", "pipe_forward", "pipe_redirect", "pipe_random_3", "pipe_random_17", "pipe_random_59", "asm_array", "asm_muldiv"], "seed": 42, "max_delay": 9, "reset_cycles": [-1]},
+  {"cases": ["pipe_forward", "pipe_redirect", "pipe_kill_load", "pipe_kill_store", "pipe_random_3", "pipe_random_17", "pipe_random_59", "m_mixed"], "seed": 3, "max_delay": 2, "reset_cycles": [-1]},
+  {"cases": ["reset_state"], "seed": 1, "max_delay": 5, "reset_cycles": [4, 6, 10, 20, 30]},
+  {"cases": ["reset_store"], "seed": 1, "max_delay": 9, "reset_cycles": [-1], "reset_mode": 1},
+  {"cases": ["reset_store"], "seed": 1, "max_delay": 9, "reset_cycles": [-1], "reset_mode": 2},
+  {"cases": ["reset_store"], "seed": 1, "max_delay": 9, "reset_cycles": [-1], "reset_mode": 3},
+  {"cases": ["m_random_13", "m_random_31", "m_random_101", "m_mixed", "asm_muldiv", "m_divw_edges"], "seed": 42, "max_delay": 9, "reset_cycles": [-1]},
+  {"cases": ["m_reset"], "seed": 1, "max_delay": 5, "reset_cycles": [0, 1, 31, 63, 64], "reset_mode": 4},
+  {"cases": ["m_reset_w"], "seed": 1, "max_delay": 5, "reset_cycles": [0, 15, 31, 32], "reset_mode": 4},
+  {"cases": ["m_reset", "m_reset_w"], "seed": 1, "max_delay": 5, "reset_cycles": [-1], "reset_mode": 5},
+  {"cases": ["m_reset", "m_reset_w"], "seed": 1, "max_delay": 5, "reset_cycles": [-1], "reset_mode": 6},
+  {"cases": ["m_mixed"], "seed": 29, "max_delay": 3, "reset_cycles": [150, 900, 2500]},
+  {"cases": ["pipe_random_3", "pipe_forward"], "seed": 5, "max_delay": 4, "reset_cycles": [40, 95, 300, 1200]},
+  {"cases": ["s4_interrupt", "s4_csr", "s4_traps", "pipe_random_3", "m_mixed", "memory_sizes"], "seed": 3, "max_delay": 4, "reset_cycles": [-1], "irq_rate": 120},
+  {"cases": ["s4_interrupt"], "seed": 9, "max_delay": 0, "reset_cycles": [-1], "irq_rate": 300},
+  {"cases": ["s4_interrupt", "pipe_forward", "asm_muldiv"], "seed": 21, "max_delay": 7, "reset_cycles": [-1], "irq_rate": 60},
+  {"cases": ["s4_interrupt"], "seed": 5, "max_delay": 3, "reset_cycles": [2000, 4500], "irq_rate": 90}
+]

@@ -1,0 +1,12 @@
+[
+ {"name": "s8_demo", "image": "build/firmware/s8_bench.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s8_demo_seq", "image": "build/firmware/s8_bench.hex", "accel_n": 4, "accel_parallel": 0, "program": "s8_demo"},
+ {"name": "s8_demo_n2", "image": "build/firmware/s8_bench.hex", "accel_n": 2, "accel_parallel": 1, "program": "s8_demo"},
+ {"name": "s8_random_3", "image": "build/programs/s8_random_3.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s8_random_11", "image": "build/programs/s8_random_11.hex", "accel_n": 4, "accel_parallel": 0},
+ {"name": "s8_random_29", "image": "build/programs/s8_random_29.hex", "accel_n": 2, "accel_parallel": 1},
+ {"name": "s8_random_47", "image": "build/programs/s8_random_47.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s8_random_83", "image": "build/programs/s8_random_83.hex", "accel_n": 2, "accel_parallel": 0},
+ {"name": "s8_random_3_seq", "image": "build/programs/s8_random_3.hex", "accel_n": 4, "accel_parallel": 0, "program": "s8_random_3"},
+ {"name": "s8_random_11_reset", "image": "build/programs/s8_random_11.hex", "accel_n": 4, "accel_parallel": 0, "program": "s8_random_11", "reset_at": 9000}
+]

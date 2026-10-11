@@ -1,0 +1,14 @@
+[
+ {"name": "s7_accel", "image": "build/programs/s7_accel.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s7_accel_seq", "image": "build/programs/s7_accel.hex", "accel_n": 4, "accel_parallel": 0, "program": "s7_accel"},
+ {"name": "s7_irq", "image": "build/programs/s7_irq.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s7_irq_seq", "image": "build/programs/s7_irq.hex", "accel_n": 4, "accel_parallel": 0, "program": "s7_irq"},
+ {"name": "s7_matmul_sw", "image": "build/programs/s7_matmul_sw.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s7_bench", "image": "build/firmware/s7_bench.hex", "accel_n": 4, "accel_parallel": 1},
+ {"name": "s7_bench_seq", "image": "build/firmware/s7_bench.hex", "accel_n": 4, "accel_parallel": 0, "program": "s7_bench"},
+ {"name": "s7_bench_n2", "image": "build/firmware/s7_bench.hex", "accel_n": 2, "accel_parallel": 1, "program": "s7_bench"},
+ {"name": "s7_bench_n2_seq", "image": "build/firmware/s7_bench.hex", "accel_n": 2, "accel_parallel": 0, "program": "s7_bench"},
+ {"name": "s7_bench_reset", "image": "build/firmware/s7_bench.hex", "accel_n": 4, "accel_parallel": 0, "program": "s7_bench", "reset_at": 60000},
+ {"name": "s6_random_7_on_s7", "image": "build/programs/s6_random_7.hex", "accel_n": 4, "accel_parallel": 1, "program": "s6_random_7"},
+ {"name": "s6_bench_on_s7", "image": "build/firmware/s6_bench.hex", "accel_n": 4, "accel_parallel": 1, "program": "s6_bench"}
+]
