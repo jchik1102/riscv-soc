@@ -1,0 +1,83 @@
+# muldiv_unit vs a RISC-V spec reference, one task per RV64M operation.
+# Each task is a bounded check from reset through one operation and one cycle
+# after it (so a repeated done is seen): the 64-bit
+# forms finish at step 68, the W forms at step 36. Operands are structured
+# (see muldiv_formal.sv): K=8 free low bits, except MULH and MULHSU, which use
+# K=4: at K=8, MULH took 2,108 s and MULHSU was stopped unfinished after more
+# than an hour (logs in results/formal/muldiv_k8/).
+# cover: one task over all operations.
+[tasks]
+mul
+mulh
+mulhsu
+mulhu
+div
+divu
+rem
+remu
+mulw
+divw
+divuw
+remw
+remuw
+cover
+
+[options]
+mul: mode bmc
+mul: depth 70
+mulh: mode bmc
+mulh: depth 70
+mulhsu: mode bmc
+mulhsu: depth 70
+mulhu: mode bmc
+mulhu: depth 70
+div: mode bmc
+div: depth 70
+divu: mode bmc
+divu: depth 70
+rem: mode bmc
+rem: depth 70
+remu: mode bmc
+remu: depth 70
+mulw: mode bmc
+mulw: depth 38
+divw: mode bmc
+divw: depth 38
+divuw: mode bmc
+divuw: depth 38
+remw: mode bmc
+remw: depth 38
+remuw: mode bmc
+remuw: depth 38
+cover: mode cover
+cover: depth 72
+
+[engines]
+smtbmc bitwuzla
+
+[script]
+plugin -i slang
+mul: read_slang -D FORMAL -D OP=0 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+mulh: read_slang -D FORMAL -D OP=1 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv -G K=4 --top muldiv_formal
+mulhsu: read_slang -D FORMAL -D OP=2 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv -G K=4 --top muldiv_formal
+mulhu: read_slang -D FORMAL -D OP=3 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+div: read_slang -D FORMAL -D OP=4 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+divu: read_slang -D FORMAL -D OP=5 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+rem: read_slang -D FORMAL -D OP=6 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+remu: read_slang -D FORMAL -D OP=7 -D WORD=0 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+mulw: read_slang -D FORMAL -D OP=0 -D WORD=1 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+divw: read_slang -D FORMAL -D OP=4 -D WORD=1 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+divuw: read_slang -D FORMAL -D OP=5 -D WORD=1 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+remw: read_slang -D FORMAL -D OP=6 -D WORD=1 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+remuw: read_slang -D FORMAL -D OP=7 -D WORD=1 platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+cover: read_slang -D FORMAL platform_pkg.sv soc_pkg.sv core_pkg.sv mul_iter.sv div_iter.sv muldiv_unit.sv muldiv_formal.sv --top muldiv_formal
+prep -top muldiv_formal
+
+[files]
+../rtl/soc/platform_pkg.sv
+../rtl/soc/soc_pkg.sv
+../rtl/core/core_pkg.sv
+../rtl/core/mul_iter.sv
+../rtl/core/div_iter.sv
+../rtl/core/muldiv_unit.sv
+muldiv_formal.sv

@@ -1,0 +1,5 @@
+OSS CAD Suite 20261014
+Yosys 0.70+16 (git sha1 3bb533450, Release, Clang /usr/bin/clang++ 21.1.8)
+SBY v0.69
+Yices 2.7.0
+Bitwuzla 0.9.1

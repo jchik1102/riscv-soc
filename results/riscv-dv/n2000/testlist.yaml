@@ -1,0 +1,139 @@
+# riscv-dv test list for the riscv-soc pipeline core (RV64IM, machine mode).
+# Derived from riscv-dv yaml/base_testlist.yaml and target/rv32imc/testlist.yaml.
+# 2000 is replaced by scripts/riscvdv_gen.sh.
+#
+# Standard tests not run, because the core lacks the feature:
+#   riscv_ebreak_debug_mode_test    - no debug mode
+#   riscv_full_interrupt_test       - interrupts would have to be injected in step
+#                                     with the ISS; pipe_tb's random interrupts are not
+#   riscv_unaligned_load_store_test - misaligned loads/stores trap by design
+#   riscv_pmp_test                  - no PMP
+#   riscv_csr_test                  - writes CSRs the core does not implement
+#   riscv_mmu_stress_test           - no MMU; its load/store mix runs below as
+#                                     riscv_load_store_stress_test
+#   riscv_hint_instr_test           - pyflow emits HINTs only as 16-bit compressed
+#                                     encodings (.2byte, riscv_instr_sequence.py);
+#                                     the core has no C extension. riscv-dv lists
+#                                     this test only for its rv32imc target.
+#
+# Note: illegal_instr_ratio is per 1000 instructions of the main program, so at a
+# few hundred instructions pyflow injects none; use a larger 2000.
+#
+# Changes forced by riscv-dv's Python generator (pyflow) at the pinned commit:
+#   * Sub-programs are off in every test (+num_of_sub_program=0). Any value
+#     above 0 crashes the generator: 'riscv_asm_program_gen' object has no
+#     attribute 'callstack_gen'. Programs therefore have no subroutine calls and
+#     returns between sub-programs; JAL/JALR still appear inside the main program.
+#   * riscv_rand_instr_test.py overwrites instr_cnt=10000 and
+#     num_of_sub_program=5 in code, which hits the crash above. The tests that
+#     used it (no_fence, illegal_instr, hint_instr) run through
+#     riscv_instr_base_test with the same options plus the three streams
+#     riscv_rand_instr_test adds (load_store_rand, jal, load_store_hazard).
+#   * riscv_ebreak_test is dropped: pyflow cannot generate EBREAK
+#     (KeyError: 'EBREAK').
+#   * riscv_hazard_instr_stream, riscv_multi_page_load_store_instr_stream and
+#     riscv_mem_region_stress_test are not implemented by pyflow (missing from
+#     pygen_src/riscv_utils.py factory; the generator hangs). They are replaced
+#     by riscv_load_store_stress_instr_stream and
+#     riscv_single_load_store_instr_stream.
+#   * riscv_rand_jump_test is meant to jump among many sub-programs; with
+#     sub-programs off it is a random program with a load/store stream.
+
+- test: riscv_arithmetic_basic_test
+  description: Arithmetic instructions only, no load/store/branch
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_int_numeric_corner_stream,4
+    +no_fence=1
+    +no_data_page=1
+    +no_branch_jump=1
+    +boot_mode=m
+    +no_csr_instr=1
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_rand_instr_test
+  description: Random instruction stress test
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_load_store_rand_instr_stream,4
+    +directed_instr_1=riscv_loop_instr,4
+    +directed_instr_2=riscv_load_store_stress_instr_stream,4
+    +directed_instr_3=riscv_load_store_hazard_instr_stream,4
+    +directed_instr_4=riscv_single_load_store_instr_stream,4
+    +directed_instr_5=riscv_jal_instr,4
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_jump_stress_test
+  description: Back-to-back jumps
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_1=riscv_jal_instr,20
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_loop_test
+  description: Loops
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_1=riscv_loop_instr,20
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_rand_jump_test
+  description: Random program with a load/store stream (no sub-programs, see header)
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_load_store_rand_instr_stream,8
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_load_store_stress_test
+  description: The load/store mix of riscv_mmu_stress_test (renamed, no MMU)
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_load_store_rand_instr_stream,40
+    +directed_instr_1=riscv_load_store_hazard_instr_stream,40
+    +directed_instr_2=riscv_load_store_stress_instr_stream,10
+    +directed_instr_3=riscv_single_load_store_instr_stream,10
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_no_fence_test
+  description: Random instructions without FENCE
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_load_store_rand_instr_stream,4
+    +directed_instr_1=riscv_jal_instr,4
+    +directed_instr_2=riscv_load_store_hazard_instr_stream,4
+    +no_fence=1
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test
+
+- test: riscv_illegal_instr_test
+  description: Illegal instructions; the handler resumes after each exception
+  gen_opts: >
+    +instr_cnt=2000
+    +num_of_sub_program=0
+    +directed_instr_0=riscv_load_store_rand_instr_stream,4
+    +directed_instr_1=riscv_jal_instr,4
+    +directed_instr_2=riscv_load_store_hazard_instr_stream,4
+    +illegal_instr_ratio=5
+  iterations: 2
+  gen_test: riscv_instr_base_test
+  rtl_test: core_base_test

@@ -1,0 +1,82 @@
+[
+ {
+  "program": "riscv_arithmetic_basic_test_0",
+  "bytes": 20552,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_arithmetic_basic_test_1",
+  "bytes": 20552,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_hint_instr_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_illegal_instr_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_illegal_instr_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_jump_stress_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_jump_stress_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_load_store_stress_test_0",
+  "status": "GENERATOR_INVALID_ASM",
+  "error": "build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S:476: Error: illegal operands `la zero,region_1+3854'"
+ },
+ {
+  "program": "riscv_load_store_stress_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_loop_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_no_fence_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_no_fence_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_rand_instr_test_0",
+  "status": "GENERATOR_INVALID_ASM",
+  "error": "build/riscv-dv/n300/images/riscv_rand_instr_test_0.S:66: Error: illegal operands `la zero,region_1+3955'"
+ },
+ {
+  "program": "riscv_rand_instr_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_rand_jump_test_0",
+  "bytes": 36936,
+  "status": "READY"
+ },
+ {
+  "program": "riscv_rand_jump_test_1",
+  "bytes": 36936,
+  "status": "READY"
+ }
+]

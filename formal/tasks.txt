@@ -1,0 +1,15 @@
+# <file>.sby <task>: run by scripts/run-formal.sh (make formal)
+muldiv.sby mul
+muldiv.sby mulh
+muldiv.sby mulhsu
+muldiv.sby mulhu
+muldiv.sby div
+muldiv.sby divu
+muldiv.sby rem
+muldiv.sby remu
+muldiv.sby mulw
+muldiv.sby divw
+muldiv.sby divuw
+muldiv.sby remw
+muldiv.sby remuw
+muldiv.sby cover

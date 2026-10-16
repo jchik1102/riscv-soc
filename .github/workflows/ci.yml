@@ -1,0 +1,53 @@
+# What runs on GitHub-hosted runners: the Python model and checker tests, a
+# Verilator lint of the pipeline core, and the SymbiYosys checks of the M unit.
+# The XSim/UVM regression, ACT4, riscv-dv, CoreMark and the Quartus build need
+# the Windows vendor tools and run locally (make test, act, riscvdv, coremark,
+# fpga).
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  models:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pytest tests -q
+
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: YosysHQ/setup-oss-cad-suite@v3
+        with:
+          version: '2026-10-14'
+      - name: Verilator lint of the pipeline core
+        run: >
+          verilator --lint-only -Wno-fatal -Wno-WIDTH -Wno-UNUSED -Wno-DECLFILENAME
+          --top-module core_pipeline
+          rtl/soc/platform_pkg.sv rtl/soc/soc_pkg.sv rtl/core/core_pkg.sv rtl/core/decoder.sv
+          rtl/core/alu.sv rtl/core/load_store.sv rtl/core/regfile.sv rtl/core/mul_iter.sv
+          rtl/core/div_iter.sv rtl/core/muldiv_unit.sv rtl/core/csr_file.sv rtl/core/core_pipeline.sv
+          2>&1 | tee lint.log;
+          ! grep -q '%Error' lint.log
+
+  formal:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: YosysHQ/setup-oss-cad-suite@v3
+        with:
+          version: '2026-10-14'
+      - run: FORMAL_JOBS=4 bash scripts/run-formal.sh
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: formal-results
+          path: results/formal

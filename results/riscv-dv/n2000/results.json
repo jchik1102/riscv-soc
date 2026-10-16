@@ -1,0 +1,156 @@
+[
+ {
+  "program": "riscv_arithmetic_basic_test_0",
+  "bytes": 28744,
+  "records": 2155,
+  "traps": [
+   "2072:cause11",
+   "2155:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 2155 records, 1083 fetches, 64 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 2153,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_arithmetic_basic_test_1",
+  "bytes": 20552,
+  "records": 614,
+  "traps": [
+   "531:cause11",
+   "614:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 614 records, 315 fetches, 64 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 612,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_illegal_instr_test_0",
+  "bytes": 36936,
+  "records": 228,
+  "traps": [
+   "95:cause4",
+   "145:cause11",
+   "228:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 228 records, 126 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 225,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_illegal_instr_test_1",
+  "bytes": 41032,
+  "records": 271,
+  "traps": [
+   "138:cause6",
+   "188:cause11",
+   "271:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 271 records, 201 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 268,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_jump_stress_test_0",
+  "bytes": 45128,
+  "records": 2042,
+  "traps": [
+   "1959:cause11",
+   "2042:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_0_s1_d5.csv: 2042 records, 1973 fetches, 64 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 2040,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_jump_stress_test_1",
+  "bytes": 36936,
+  "records": 328,
+  "traps": [
+   "245:cause11",
+   "328:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_1_s1_d5.csv: 328 records, 225 fetches, 64 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 326,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_load_store_stress_test_0",
+  "bytes": null,
+  "result": "NOT_RUN",
+  "reason": "GENERATOR_INVALID_ASM"
+ },
+ {
+  "program": "riscv_load_store_stress_test_1",
+  "bytes": null,
+  "result": "NOT_RUN",
+  "reason": "GENERATOR_INVALID_ASM"
+ },
+ {
+  "program": "riscv_no_fence_test_0",
+  "bytes": 36936,
+  "records": 244,
+  "traps": [
+   "111:cause6",
+   "161:cause11",
+   "244:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_no_fence_test_0_s1_d5.csv: 244 records, 152 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 241,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_no_fence_test_1",
+  "bytes": null,
+  "result": "NOT_RUN",
+  "reason": "GENERATOR_INVALID_ASM"
+ },
+ {
+  "program": "riscv_rand_instr_test_0",
+  "bytes": 36936,
+  "records": 227,
+  "traps": [
+   "94:cause6",
+   "144:cause11",
+   "227:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_instr_test_0_s1_d5.csv: 227 records, 125 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 224,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_rand_jump_test_0",
+  "bytes": 45128,
+  "records": 237,
+  "traps": [
+   "104:cause7",
+   "154:cause11",
+   "237:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_0_s1_d5.csv: 237 records, 126 fetches, 96 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 234,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_rand_jump_test_1",
+  "bytes": 36936,
+  "records": 284,
+  "traps": [
+   "151:cause4",
+   "201:cause11",
+   "284:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_1_s1_d5.csv: 284 records, 153 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 281,
+  "result": "PASS"
+ }
+]

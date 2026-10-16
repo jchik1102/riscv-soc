@@ -48,6 +48,7 @@ module cpu_soc #(
     bus_rsp_t acc_rsp;
     logic msip, mtip, meip, icache_inv, icache_enable, dcache_enable;
     logic ev_i_access, ev_i_miss, ev_i_uncached, ev_d_access, ev_d_miss, ev_d_uncached, ev_d_write;
+    logic ev_branch, ev_mispredict;
     logic [4:0] dev_sel, dev_ok;
     logic dev_acc, dev_wr;
     logic [7:0] dev_offset, dev_mask;
@@ -60,6 +61,7 @@ module cpu_soc #(
       .trace_valid(trace_valid), .trace(trace), .halted(halted),
       .event_retired(event_retired), .event_mem_wait(event_mem_wait), .event_arith_wait(event_arith_wait),
       .event_fetch_wait(event_fetch_wait), .event_load_use(event_load_use), .event_redirect(event_redirect),
+      .event_branch(ev_branch), .event_mispredict(ev_mispredict),
       .msip(msip), .mtip(mtip), .meip(meip), .icache_inv(icache_inv));
     bus_decoder #(.SDRAM_BYTES(SDRAM ? platform_pkg::SDRAM_BYTES : 64'h0),
                   .ACCEL_BYTES(ACCEL_N != 0 ? platform_pkg::ACCELERATOR_BYTES : 64'h0)) decoder(.clk(clk), .rst(rst),
@@ -156,7 +158,8 @@ module cpu_soc #(
       .ev_retired(event_retired), .ev_mem_wait(event_mem_wait), .ev_arith_wait(event_arith_wait),
       .ev_fetch_wait(event_fetch_wait), .ev_load_use(event_load_use), .ev_redirect(event_redirect),
       .ev_i_access(ev_i_access), .ev_i_miss(ev_i_miss), .ev_i_uncached(ev_i_uncached),
-      .ev_d_access(ev_d_access), .ev_d_miss(ev_d_miss), .ev_d_uncached(ev_d_uncached), .ev_d_write(ev_d_write));
+      .ev_d_access(ev_d_access), .ev_d_miss(ev_d_miss), .ev_d_uncached(ev_d_uncached), .ev_d_write(ev_d_write),
+      .ev_branch(ev_branch), .ev_mispredict(ev_mispredict));
     cache_regs #(.PRESENT(CACHE), .ICACHE_BYTES(ICACHE_BYTES), .DCACHE_BYTES(DCACHE_BYTES)) cache_control(
       .clk(clk), .rst(rst), .acc(dev_acc && dev_sel[3]), .wr(dev_wr),
       .offset(dev_offset), .wdata(dev_wdata), .mask(dev_mask), .rdata(cache_rdata), .ok(dev_ok[3]),

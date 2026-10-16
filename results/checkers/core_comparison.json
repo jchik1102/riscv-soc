@@ -1,0 +1,476 @@
+[
+  {
+    "program": "first",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "edges",
+    "records": 10,
+    "multicycle_cycles": 88,
+    "pipeline_cycles": 38
+  },
+  {
+    "program": "overflow",
+    "records": 70,
+    "multicycle_cycles": 601,
+    "pipeline_cycles": 231
+  },
+  {
+    "program": "reset_state",
+    "records": 7,
+    "multicycle_cycles": 60,
+    "pipeline_cycles": 29
+  },
+  {
+    "program": "reject_m_word_reserved",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "reject_compressed",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "promoted_sub",
+    "records": 5,
+    "multicycle_cycles": 43,
+    "pipeline_cycles": 25
+  },
+  {
+    "program": "promoted_addiw",
+    "records": 5,
+    "multicycle_cycles": 43,
+    "pipeline_cycles": 25
+  },
+  {
+    "program": "promoted_shift",
+    "records": 5,
+    "multicycle_cycles": 43,
+    "pipeline_cycles": 25
+  },
+  {
+    "program": "promoted_ecall",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "promoted_ebreak",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "promoted_fence",
+    "records": 5,
+    "multicycle_cycles": 43,
+    "pipeline_cycles": 25
+  },
+  {
+    "program": "promoted_mul",
+    "records": 5,
+    "multicycle_cycles": 108,
+    "pipeline_cycles": 86
+  },
+  {
+    "program": "random_1",
+    "records": 232,
+    "multicycle_cycles": 1983,
+    "pipeline_cycles": 771
+  },
+  {
+    "program": "random_7",
+    "records": 232,
+    "multicycle_cycles": 1983,
+    "pipeline_cycles": 771
+  },
+  {
+    "program": "random_42",
+    "records": 232,
+    "multicycle_cycles": 1983,
+    "pipeline_cycles": 771
+  },
+  {
+    "program": "alu64",
+    "records": 155,
+    "multicycle_cycles": 1309,
+    "pipeline_cycles": 529
+  },
+  {
+    "program": "word_ops",
+    "records": 596,
+    "multicycle_cycles": 5097,
+    "pipeline_cycles": 1948
+  },
+  {
+    "program": "control",
+    "records": 80,
+    "multicycle_cycles": 749,
+    "pipeline_cycles": 271
+  },
+  {
+    "program": "memory_sizes",
+    "records": 167,
+    "multicycle_cycles": 2245,
+    "pipeline_cycles": 965
+  },
+  {
+    "program": "array_loop",
+    "records": 119,
+    "multicycle_cycles": 1201,
+    "pipeline_cycles": 504
+  },
+  {
+    "program": "reset_store",
+    "records": 7,
+    "multicycle_cycles": 78,
+    "pipeline_cycles": 31
+  },
+  {
+    "program": "fault_ecall",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_ebreak",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_jal_align",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_branch_align",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_jalr_align",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_fetch_bounds",
+    "records": 21,
+    "multicycle_cycles": 182,
+    "pipeline_cycles": 73
+  },
+  {
+    "program": "fault_fetch_high",
+    "records": 21,
+    "multicycle_cycles": 182,
+    "pipeline_cycles": 73
+  },
+  {
+    "program": "fault_load_bounds",
+    "records": 20,
+    "multicycle_cycles": 181,
+    "pipeline_cycles": 67
+  },
+  {
+    "program": "fault_store_bounds",
+    "records": 20,
+    "multicycle_cycles": 181,
+    "pipeline_cycles": 67
+  },
+  {
+    "program": "fault_load_high",
+    "records": 20,
+    "multicycle_cycles": 181,
+    "pipeline_cycles": 67
+  },
+  {
+    "program": "fault_store_high",
+    "records": 20,
+    "multicycle_cycles": 181,
+    "pipeline_cycles": 67
+  },
+  {
+    "program": "fault_load_zero",
+    "records": 3,
+    "multicycle_cycles": 33,
+    "pipeline_cycles": 21
+  },
+  {
+    "program": "fault_store_zero",
+    "records": 3,
+    "multicycle_cycles": 33,
+    "pipeline_cycles": 21
+  },
+  {
+    "program": "fault_shift64_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_shiftw_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_m_word_reserved_1",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_m_word_reserved_2",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_m_word_reserved_3",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_op_funct7_2_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_branch_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_load_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_store_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_jalr_reserved",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "fault_load_align_1",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_store_align_1",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_load_align_2",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_store_align_2",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_load_align_3",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fault_store_align_3",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "promoted_divuw",
+    "records": 4,
+    "multicycle_cycles": 73,
+    "pipeline_cycles": 53
+  },
+  {
+    "program": "promoted_fence_i",
+    "records": 6,
+    "multicycle_cycles": 53,
+    "pipeline_cycles": 47
+  },
+  {
+    "program": "branch_untaken_align",
+    "records": 4,
+    "multicycle_cycles": 34,
+    "pipeline_cycles": 19
+  },
+  {
+    "program": "fence_variants",
+    "records": 8,
+    "multicycle_cycles": 67,
+    "pipeline_cycles": 30
+  },
+  {
+    "program": "rv64_random_11",
+    "records": 642,
+    "multicycle_cycles": 6236,
+    "pipeline_cycles": 2341
+  },
+  {
+    "program": "rv64_random_29",
+    "records": 629,
+    "multicycle_cycles": 6127,
+    "pipeline_cycles": 2222
+  },
+  {
+    "program": "rv64_random_97",
+    "records": 629,
+    "multicycle_cycles": 6057,
+    "pipeline_cycles": 2263
+  },
+  {
+    "program": "m_mul_edges",
+    "records": 925,
+    "multicycle_cycles": 50794,
+    "pipeline_cycles": 44312
+  },
+  {
+    "program": "m_div_edges",
+    "records": 781,
+    "multicycle_cycles": 44680,
+    "pipeline_cycles": 39272
+  },
+  {
+    "program": "m_divw_edges",
+    "records": 781,
+    "multicycle_cycles": 26221,
+    "pipeline_cycles": 20840
+  },
+  {
+    "program": "m_mixed",
+    "records": 170,
+    "multicycle_cycles": 4594,
+    "pipeline_cycles": 3527
+  },
+  {
+    "program": "m_reset",
+    "records": 39,
+    "multicycle_cycles": 521,
+    "pipeline_cycles": 318
+  },
+  {
+    "program": "m_reset_w",
+    "records": 39,
+    "multicycle_cycles": 426,
+    "pipeline_cycles": 222
+  },
+  {
+    "program": "m_random_13",
+    "records": 565,
+    "multicycle_cycles": 13592,
+    "pipeline_cycles": 9755
+  },
+  {
+    "program": "m_random_31",
+    "records": 555,
+    "multicycle_cycles": 12780,
+    "pipeline_cycles": 9045
+  },
+  {
+    "program": "m_random_101",
+    "records": 552,
+    "multicycle_cycles": 12883,
+    "pipeline_cycles": 9234
+  },
+  {
+    "program": "pipe_forward",
+    "records": 51,
+    "multicycle_cycles": 982,
+    "pipeline_cycles": 667
+  },
+  {
+    "program": "pipe_redirect",
+    "records": 43,
+    "multicycle_cycles": 361,
+    "pipeline_cycles": 103
+  },
+  {
+    "program": "pipe_kill_load",
+    "records": 21,
+    "multicycle_cycles": 189,
+    "pipeline_cycles": 75
+  },
+  {
+    "program": "pipe_kill_store",
+    "records": 21,
+    "multicycle_cycles": 189,
+    "pipeline_cycles": 75
+  },
+  {
+    "program": "pipe_trap_shadow",
+    "records": 4,
+    "multicycle_cycles": 43,
+    "pipeline_cycles": 22
+  },
+  {
+    "program": "pipe_misaligned_shadow",
+    "records": 3,
+    "multicycle_cycles": 28,
+    "pipeline_cycles": 18
+  },
+  {
+    "program": "pipe_random_3",
+    "records": 761,
+    "multicycle_cycles": 15658,
+    "pipeline_cycles": 10172
+  },
+  {
+    "program": "pipe_random_17",
+    "records": 770,
+    "multicycle_cycles": 14712,
+    "pipeline_cycles": 9217
+  },
+  {
+    "program": "pipe_random_59",
+    "records": 768,
+    "multicycle_cycles": 14655,
+    "pipeline_cycles": 9164
+  },
+  {
+    "program": "asm_array",
+    "records": 177,
+    "multicycle_cycles": 1705,
+    "pipeline_cycles": 830
+  },
+  {
+    "program": "asm_muldiv",
+    "records": 159,
+    "multicycle_cycles": 4175,
+    "pipeline_cycles": 3124
+  },
+  {
+    "program": "asm_fir",
+    "records": 18010,
+    "multicycle_cycles": 253936,
+    "pipeline_cycles": 144192
+  }
+]

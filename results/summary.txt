@@ -1,0 +1,10 @@
+collected: 2026-10-15T09:12:23
+commit: f4f0a46f999d06f90b4e9a626c8c9e7cc1290a43
+rtl_mutants_detected: 97 of 97 (muldiv 12/12, pipeline 23/23, sdram 23/23, cache 17/17, accel 22/22)
+soc_s4: 1 runs, 8800 retirements checked
+soc_s5: 7 runs, 371566 retirements checked
+soc_s6: 23 runs, 711762 retirements checked
+soc_s7: 12 runs, 372264 retirements checked
+soc_s8: 10 runs, 992320 retirements checked
+spike_programs: 93 agree, 2 skipped by design
+uvm_runs: 105 passed, 0 runs reporting UVM errors or fatals

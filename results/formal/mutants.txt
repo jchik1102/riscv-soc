@@ -1,0 +1,12 @@
+div_by_zero_quotient_negated         DETECTED by: div divw 
+divuw_result_zero_extended           DETECTED by: divw divuw 
+done_pulse_repeated                  DETECTED by: mul mulh mulhsu mulhu mulw 
+kill_ignored_by_multiplier           not detected
+mulh_no_signed_correction            DETECTED by: mulh mulhsu 
+mulhsu_rs2_treated_signed            DETECTED by: mulhsu 
+mulw_low_half_not_sign_extended      DETECTED by: mulw 
+off_by_one_latency                   DETECTED by: div divu rem remu divw divuw remw remuw 
+remainder_takes_divisor_sign         DETECTED by: rem remw 
+reset_keeps_divider_busy             DETECTED by: mul mulh mulhsu mulhu div divu rem remu mulw divw divuw remw remuw 
+unit_accepts_start_while_busy        not detected
+w_operands_not_extended              DETECTED by: divw remw 

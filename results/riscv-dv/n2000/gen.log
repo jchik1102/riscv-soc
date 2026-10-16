@@ -1,0 +1,23 @@
+GEN_OK riscv_arithmetic_basic_test
+GEN_FAIL riscv_rand_instr_test (see build/riscv-dv/n2000/gen.log)
+GEN_OK riscv_jump_stress_test
+GEN_FAIL riscv_loop_test (see build/riscv-dv/n2000/gen.log)
+GEN_OK riscv_rand_jump_test
+GEN_OK riscv_load_store_stress_test
+GEN_OK riscv_no_fence_test
+GEN_OK riscv_illegal_instr_test
+GENERATED: 13 programs (instr_cnt=2000) in build/riscv-dv/n2000
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_0: 2153 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_1: 612 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_0: 225 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_1: 268 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_0: 2040 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_1: 326 commits, 1 handled traps
+RISCVDV_SKIP riscv_load_store_stress_test_0: generator produced invalid assembly: /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/images/riscv_load_store_stress_test_0.S:356: Error: illegal operands `la zero,region_1+3150'
+RISCVDV_SKIP riscv_load_store_stress_test_1: generator produced invalid assembly: /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/images/riscv_load_store_stress_test_1.S:175: Error: illegal operands `la zero,region_1+3795'
+RISCVDV_SPIKE_PASS riscv_no_fence_test_0: 241 commits, 2 handled traps
+RISCVDV_SKIP riscv_no_fence_test_1: generator produced invalid assembly: /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/images/riscv_no_fence_test_1.S:66: Error: illegal operands `la zero,region_1+3708'
+RISCVDV_SPIKE_PASS riscv_rand_instr_test_0: 224 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_0: 234 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_1: 281 commits, 2 handled traps
+RISCVDV_SPIKE_TOTAL pass=10 of 10; skipped=3

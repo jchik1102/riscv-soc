@@ -1,0 +1,15 @@
+muldiv_mul                               PASS       13s
+muldiv_mulh                              PASS       95s
+muldiv_mulhsu                            PASS      146s
+muldiv_mulhu                             PASS       12s
+muldiv_div                               PASS      156s
+muldiv_divu                              PASS      278s
+muldiv_rem                               PASS      299s
+muldiv_remu                              PASS      390s
+muldiv_mulw                              PASS       16s
+muldiv_divw                              PASS       18s
+muldiv_divuw                             PASS       28s
+muldiv_remw                              PASS       31s
+muldiv_remuw                             PASS       46s
+muldiv_cover                             PASS       12s
+FORMAL 14 of 14 tasks PASS

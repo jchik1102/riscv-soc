@@ -1,5 +1,9 @@
 module core_pipeline #(
-  parameter logic [63:0] RESET_PC = platform_pkg::RESET_PC
+  parameter logic [63:0] RESET_PC = platform_pkg::RESET_PC,
+  // Branch prediction in fetch (branch_predictor below). 0 predicts every
+  // instruction falls through, the behaviour before prediction was added;
+  // +define+NO_BPRED forces 0 for comparison runs.
+  parameter bit BPRED = 1
 ) (
   input logic clk, rst,
   output logic ireq_valid,
@@ -19,6 +23,9 @@ module core_pipeline #(
   output logic halted,
   output logic event_retired, event_mem_wait, event_arith_wait,
   output logic event_fetch_wait, event_load_use, event_redirect,
+  // Control transfers resolved in EX, and those whose predicted next PC was
+  // wrong (redirects other than the unconditional MRET/FENCE.I ones).
+  output logic event_branch, event_mispredict,
   input logic msip, mtip, meip,
   output logic icache_inv
 );
@@ -48,6 +55,17 @@ module core_pipeline #(
   logic if_valid, if_trap, if_fire;
   logic [31:0] if_insn;
   logic [5:0] if_cause;
+
+  // Next-PC prediction for the instruction at pc_f. It travels with the
+  // instruction to EX, which redirects only when the real next PC differs.
+`ifdef NO_BPRED
+  localparam bit USE_BPRED = 0;
+`else
+  localparam bit USE_BPRED = BPRED;
+`endif
+  logic bp_taken, bp_update, bp_update_branch;
+  logic id_pred_taken, id_target_hit, ex_pred_taken, ex_target_hit, mispredict;
+  logic [63:0] bp_target, if_pred_next, id_pred_next;
 
   assign pc_beat = pc_f[63:3];
   assign next_beat = pc_beat + 61'd1;
@@ -272,8 +290,31 @@ module core_pipeline #(
   assign ex_go = ex_valid && !load_hazard && !md_wait && !sys_wait && !fence_wait && mem_accept && !mem_trap_now;
   assign ex_take = !ex_valid || ex_go;
   assign id_take = !id_valid || ex_take;
-  assign redirect = ex_go && control_taken;
+  // Redirect when the next PC fetch predicted is wrong. The prediction is
+  // compared with pc+4 and with pc+imm in ID, so EX only selects on the branch
+  // outcome and the compare stays off the forwarding path. JALR (target from
+  // a register), MRET and FENCE.I always redirect; JALR is not predicted.
+  assign id_pred_taken = id_pred_next != id_pc + 64'd4;
+  assign id_target_hit = id_pred_next == id_pc + id_dec.imm;
+  always_comb
+    case (ex_dec.kind)
+      K_BRANCH: mispredict = take_branch ? !(ex_pred_taken && ex_target_hit) : ex_pred_taken;
+      K_JAL: mispredict = !(ex_pred_taken && ex_target_hit);
+      K_JALR, K_MRET: mispredict = 1'b1;
+      K_FENCE: mispredict = ex_insn[12] || ex_pred_taken;
+      default: mispredict = ex_pred_taken;
+    endcase
+  assign redirect = ex_go && !executed.trap && mispredict;
   assign redirect_pc = executed.next_pc;
+
+  branch_predictor predictor(.clk(clk), .rst(rst), .fetch_pc(pc_f),
+    .predict_taken(bp_taken), .predict_target(bp_target),
+    .update(bp_update), .update_branch(bp_update_branch), .update_taken(control_taken),
+    .update_pc(ex_pc), .update_target(executed.next_pc));
+  assign if_pred_next = USE_BPRED && bp_taken ? bp_target : pc_f + 64'd4;
+  assign bp_update = USE_BPRED && ex_go && !executed.trap &&
+    (ex_dec.kind == K_BRANCH || ex_dec.kind == K_JAL);
+  assign bp_update_branch = ex_dec.kind == K_BRANCH;
   assign ex_trap_fire = ex_go && executed.trap;
   assign flush_front = redirect || ex_trap_fire || mem_trap_now || wb_trap_take;
   assign if_fire = if_valid && id_take && !flush_front;
@@ -296,6 +337,9 @@ module core_pipeline #(
   assign event_fetch_wait = !rst && !stopped && !halted && !if_valid;
   assign event_load_use = !rst && load_hazard;
   assign event_redirect = !rst && redirect;
+  assign event_branch = !rst && ex_go && !executed.trap &&
+    (ex_dec.kind == K_BRANCH || ex_dec.kind == K_JAL || ex_dec.kind == K_JALR);
+  assign event_mispredict = !rst && redirect && ex_dec.kind != K_MRET && ex_dec.kind != K_FENCE;
 
   always_ff @(posedge clk) begin
     if (rst) begin
@@ -305,8 +349,8 @@ module core_pipeline #(
       fb_valid <= 0; fb_error <= 0;
       fb_tag[0] <= 0; fb_tag[1] <= 0; fb_data[0] <= 0; fb_data[1] <= 0;
       out_valid <= 0; out_tag <= 0; hold_valid <= 0; hold_tag <= 0;
-      id_valid <= 0; id_pc <= 0; id_insn <= 0; id_trap <= 0; id_cause <= 0;
-      ex_valid <= 0; ex_pc <= 0; ex_insn <= 0; ex_trap <= 0; ex_cause <= 0; ex_dec <= '0;
+      id_valid <= 0; id_pc <= 0; id_insn <= 0; id_trap <= 0; id_cause <= 0; id_pred_next <= 0;
+      ex_valid <= 0; ex_pc <= 0; ex_insn <= 0; ex_trap <= 0; ex_cause <= 0; ex_dec <= '0; ex_pred_taken <= 0; ex_target_hit <= 0;
       ex_a <= 0; ex_b <= 0; ex_md_started <= 0; ex_md_have_q <= 0; ex_md_result <= 0;
       mem_valid <= 0; mem_access <= 0; mem_is_load <= 0; mem_issued <= 0; mem_f3 <= 0;
       mem_rec <= '0; mem_req <= '0; mem_tval <= 0; mem_noinc <= 0;
@@ -327,7 +371,7 @@ module core_pipeline #(
       if (icache_inv) fb_valid <= 0;
       if (wb_trap_take) pc_f <= mtvec_q;
       else if (redirect) pc_f <= redirect_pc;
-      else if (if_fire) pc_f <= pc_f + 64'd4;
+      else if (if_fire) pc_f <= if_pred_next;
       if (wb_trap_take) stopped <= 0;
       else if (ex_trap_fire || mem_trap_now) stopped <= 1;
 
@@ -335,6 +379,7 @@ module core_pipeline #(
       else if (id_take) begin
         id_valid <= if_valid;
         id_pc <= pc_f; id_insn <= if_insn; id_trap <= if_trap; id_cause <= if_cause;
+        id_pred_next <= if_pred_next;
       end
 
       if (mem_trap_now || wb_trap_take) begin
@@ -342,6 +387,7 @@ module core_pipeline #(
       end else if (ex_take) begin
         ex_valid <= id_valid && !redirect && !ex_trap_fire;
         ex_pc <= id_pc; ex_insn <= id_insn; ex_trap <= id_trap; ex_cause <= id_cause;
+        ex_pred_taken <= id_pred_taken; ex_target_hit <= id_target_hit;
         ex_dec <= id_dec; ex_a <= id_a; ex_b <= id_b;
         ex_md_started <= 0; ex_md_have_q <= 0;
       end else begin
@@ -378,6 +424,60 @@ module core_pipeline #(
       end
       if (wb_valid) order_count <= order_count + 1;
       if (wb_valid && wb_rec.trap && !wb_handled) halt_q <= 1;
+    end
+  end
+endmodule
+
+// Branch predictor: a 32-entry direct-mapped BTB with partial tags and a
+// 256-entry table of 2-bit counters, looked up with the fetch PC in the same
+// cycle. A BTB hit predicts the stored target for JAL, and for branches when
+// the counter says taken (JALR is not predicted). Predictions are only hints:
+// EX checks every instruction's next PC against the prediction and redirects
+// on a mismatch, so aliasing from the partial tag costs cycles, not
+// correctness. Targets keep bits 31..2; the upper half comes from the fetch PC,
+// and a transfer that crosses a 4 GiB boundary is never installed. All state
+// clears on reset, so a run's cycle count does not depend on earlier runs.
+module branch_predictor #(
+  parameter int BTB_BITS = 5, BHT_BITS = 8, TAG_BITS = 8
+) (
+  input logic clk, rst,
+  input logic [63:0] fetch_pc,
+  output logic predict_taken,
+  output logic [63:0] predict_target,
+  input logic update, update_branch, update_taken,
+  input logic [63:0] update_pc, update_target
+);
+  localparam int ENTRIES = 1 << BTB_BITS, COUNTERS = 1 << BHT_BITS;
+  logic [ENTRIES-1:0] valid, jump;
+  logic [TAG_BITS-1:0] tag [0:ENTRIES-1];
+  logic [29:0] target [0:ENTRIES-1];
+  logic [1:0] counter [0:COUNTERS-1];
+
+  wire [BTB_BITS-1:0] f_index = fetch_pc[BTB_BITS+1:2];
+  wire [TAG_BITS-1:0] f_tag = fetch_pc[BTB_BITS+2 +: TAG_BITS];
+  wire [BHT_BITS-1:0] f_counter = fetch_pc[BHT_BITS+1:2];
+  wire [BTB_BITS-1:0] u_index = update_pc[BTB_BITS+1:2];
+  wire [BHT_BITS-1:0] u_counter = update_pc[BHT_BITS+1:2];
+
+  assign predict_taken = valid[f_index] && tag[f_index] == f_tag && (jump[f_index] || counter[f_counter][1]);
+  assign predict_target = {fetch_pc[63:32], target[f_index], 2'b00};
+
+  always_ff @(posedge clk) begin
+    if (rst) begin
+      valid <= '0; jump <= '0;
+      for (int i = 0; i < ENTRIES; i++) begin tag[i] <= '0; target[i] <= '0; end
+      for (int i = 0; i < COUNTERS; i++) counter[i] <= 2'b01;
+    end else if (update) begin
+      if (update_branch) begin
+        if (update_taken && counter[u_counter] != 2'b11) counter[u_counter] <= counter[u_counter] + 2'd1;
+        if (!update_taken && counter[u_counter] != 2'b00) counter[u_counter] <= counter[u_counter] - 2'd1;
+      end
+      if (update_taken && update_target[63:32] == update_pc[63:32]) begin
+        valid[u_index] <= 1'b1;
+        jump[u_index] <= !update_branch;
+        tag[u_index] <= update_pc[BTB_BITS+2 +: TAG_BITS];
+        target[u_index] <= update_target[31:2];
+      end
     end
   end
 endmodule

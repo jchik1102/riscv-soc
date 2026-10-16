@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Oct 15 07:58:05 2026
+# Process ID         : 48788
+# Current directory  : C:/projects/riscv-soc/build/coremark/xsim_fir_bpred
+# Command line       : xsim.exe -log coremark.log -mode tcl -source {xsim.dir/coremark_tb/xsim_script.tcl}
+# Log file           : C:/projects/riscv-soc/build/coremark/xsim_fir_bpred/coremark.log
+# Journal file       : C:/projects/riscv-soc/build/coremark/xsim_fir_bpred\xsim.jou
+# Running On         : Jonathan
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : Intel(R) Core(TM) i9-14900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 34053 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 38348 MB
+# Available Virtual  : 6037 MB
+#-----------------------------------------------------------
+source xsim.dir/coremark_tb/xsim_script.tcl
+# xsim {coremark_tb} -testplusarg IMAGE=C:/projects/riscv-soc/build/programs/asm_fir.hex -testplusarg MAX_CYCLES=200000000 -autoloadwcfg -runall -onerror quit
+Time resolution is 1 ps
+run -all
+COREMARK_TB_DONE cycles=109864 retired=18009 redirects=193 branches=4452 mispredicts=193 halt_cause=3
+REPORT magic=4649523151313500 checksum=000000000fc6e755 status=1
+$finish called at time : 2197330 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 85
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 07:58:07 2026...

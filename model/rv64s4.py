@@ -8,7 +8,7 @@ DEVICES = {name: (MAP["devices"][name]["base"], MAP["devices"][name]["bytes"]) f
 ZICSR_NAMES = {"CSRRW", "CSRRS", "CSRRC", "CSRRWI", "CSRRSI", "CSRRCI", "MRET", "WFI"}
 
 REGISTERS = {"uart": {0x00, 0x08, 0x10, 0x18, 0x20}, "timer": {0x00, 0x08, 0x10},
-             "counters": set(range(0x00, 0x78, 8)), "cache": {0x00, 0x08}, "intc": {0x00, 0x08, 0x10}}
+             "counters": set(range(0x00, 0x88, 8)), "cache": {0x00, 0x08}, "intc": {0x00, 0x08, 0x10}}
 ACCEL_BASE, ACCEL_BYTES = MAP["reserved"]["accelerator"]["base"], MAP["reserved"]["accelerator"]["bytes"]
 
 def mmio_register_exists(address):

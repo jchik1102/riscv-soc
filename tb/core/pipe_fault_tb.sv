@@ -13,6 +13,7 @@ module pipe_fault_tb;
     logic msip = 0, mtip = 0, meip = 0;
     logic icache_inv;
     logic event_retired, event_mem_wait, event_arith_wait, event_fetch_wait, event_load_use, event_redirect;
+    logic event_branch, event_mispredict;
     bus_req_t ireq, dreq;
     bus_rsp_t irsp = '{rdata:64'hffffffffffffffff, error:1'b1};
     bus_rsp_t drsp = '0;

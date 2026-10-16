@@ -1,0 +1,24 @@
+SIMULATED: riscv_arithmetic_basic_test_0_s1_d5
+SIMULATED: riscv_arithmetic_basic_test_1_s1_d5
+SIMULATED: riscv_illegal_instr_test_0_s1_d5
+SIMULATED: riscv_illegal_instr_test_1_s1_d5
+SIMULATED: riscv_jump_stress_test_0_s1_d5
+SIMULATED: riscv_jump_stress_test_1_s1_d5
+SIMULATED: riscv_no_fence_test_0_s1_d5
+SIMULATED: riscv_rand_instr_test_0_s1_d5
+SIMULATED: riscv_rand_jump_test_0_s1_d5
+SIMULATED: riscv_rand_jump_test_1_s1_d5
+RISCVDV_PASS riscv_arithmetic_basic_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 2155 records, 1083 fetches, 64 data accesses
+RISCVDV_PASS riscv_arithmetic_basic_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 614 records, 315 fetches, 64 data accesses
+RISCVDV_PASS riscv_illegal_instr_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 228 records, 126 fetches, 95 data accesses
+RISCVDV_PASS riscv_illegal_instr_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 271 records, 201 fetches, 95 data accesses
+RISCVDV_PASS riscv_jump_stress_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_0_s1_d5.csv: 2042 records, 1973 fetches, 64 data accesses
+RISCVDV_PASS riscv_jump_stress_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_1_s1_d5.csv: 328 records, 225 fetches, 64 data accesses
+RISCVDV_NOT_RUN riscv_load_store_stress_test_0 GENERATOR_INVALID_ASM
+RISCVDV_NOT_RUN riscv_load_store_stress_test_1 GENERATOR_INVALID_ASM
+RISCVDV_PASS riscv_no_fence_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_no_fence_test_0_s1_d5.csv: 244 records, 152 fetches, 95 data accesses
+RISCVDV_NOT_RUN riscv_no_fence_test_1 GENERATOR_INVALID_ASM
+RISCVDV_PASS riscv_rand_instr_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_instr_test_0_s1_d5.csv: 227 records, 125 fetches, 95 data accesses
+RISCVDV_PASS riscv_rand_jump_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_0_s1_d5.csv: 237 records, 126 fetches, 96 data accesses
+RISCVDV_PASS riscv_rand_jump_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_1_s1_d5.csv: 284 records, 153 fetches, 95 data accesses
+RISCVDV_TOTAL pass=10 of 10 programs; not run=3; 6604 Spike-matched register commits in passing programs

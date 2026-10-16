@@ -1,0 +1,73 @@
+---
+$schema: config_schema.json#
+kind: architecture configuration
+type: fully configured
+name: riscv-soc-rv64im
+description: >
+  riscv-soc five-stage pipeline (core_pipeline.sv): RV64IM_Zicsr_Zifencei in
+  machine mode only. Misaligned loads and stores trap. No counters beyond
+  mcycle/minstret, no PMP, mtvec direct mode only.
+implemented_extensions:
+  - { name: I, version: "= 2.1" }
+  - { name: M, version: "= 2.0" }
+  - { name: Zmmul, version: "= 1.0.0" }
+  - { name: Zicsr, version: "= 2.0" }
+  - { name: Zifencei, version: "= 2.0.0" }
+  - { name: Sm, version: "= 1.12.0" }
+params:
+  NON_STANDARD_EXTENSION_IMPLEMENTED: false
+  # M params
+  MUTABLE_MISA_M: false
+  # Sm params
+  WFI_U_MODE: false
+  MEI_INTR_IMPL: true
+  MSI_INTR_IMPL: true
+  MTI_INTR_IMPL: true
+  WFI_FINITE: true
+  MXLEN: 64
+  PRECISE_SYNCHRONOUS_EXCEPTIONS: true
+  TRAP_ON_ECALL_FROM_M: true
+  TRAP_ON_EBREAK: true
+  MARCHID_IMPLEMENTED: false
+  MIMPID_IMPLEMENTED: false
+  VENDOR_ID_BANK: 0x0
+  VENDOR_ID_OFFSET: 0x0
+  MISALIGNED_LDST: false
+  # Misalignment is detected in EX (core_pipeline.sv:207), before the bus can
+  # return an access fault, so it always wins.
+  MISALIGNED_LDST_EXCEPTION_PRIORITY: high
+  TRAP_ON_ILLEGAL_WLRL: false
+  TRAP_ON_UNIMPLEMENTED_INSTRUCTION: true
+  TRAP_ON_RESERVED_INSTRUCTION: true
+  TRAP_ON_UNIMPLEMENTED_CSR: true
+  REPORT_VA_IN_MTVAL_ON_BREAKPOINT: true
+  REPORT_VA_IN_MTVAL_ON_LOAD_MISALIGNED: true
+  REPORT_VA_IN_MTVAL_ON_STORE_AMO_MISALIGNED: true
+  REPORT_VA_IN_MTVAL_ON_INSTRUCTION_MISALIGNED: true
+  REPORT_VA_IN_MTVAL_ON_LOAD_ACCESS_FAULT: true
+  REPORT_VA_IN_MTVAL_ON_STORE_AMO_ACCESS_FAULT: true
+  REPORT_VA_IN_MTVAL_ON_INSTRUCTION_ACCESS_FAULT: true
+  REPORT_ENCODING_IN_MTVAL_ON_ILLEGAL_INSTRUCTION: true
+  MTVAL_WIDTH: 64
+  CONFIG_PTR_ADDRESS: 0
+  PMA_GRANULARITY: 3
+  PHYS_ADDR_WIDTH: 56
+  M_MODE_ENDIANNESS: little
+  MISA_CSR_IMPLEMENTED: true
+  MTVEC_ACCESS: rw
+  MTVEC_MODES: [0]
+  MTVEC_BASE_ALIGNMENT_DIRECT: 4
+  MTVEC_ILLEGAL_WRITE_BEHAVIOR: retain
+  MCOUNTINHIBIT_IMPLEMENTED: false
+  NUM_PMP_ENTRIES: 0
+  # No Zicntr/Zihpm and no U-mode, so nothing can be delegated through mcounteren.
+  MCOUNTENABLE_EN:
+    [false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false]
+  HPM_COUNTER_EN:
+    [false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false,
+     false, false, false, false, false, false, false, false]

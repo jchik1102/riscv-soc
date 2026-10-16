@@ -1,0 +1,122 @@
+[
+  {
+    "injected_fault": "word_sign_extension",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 17: expected/actual {'rd_data': (18446744073709549568, 4294965248)}"
+  },
+  {
+    "injected_fault": "branch_next_pc",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 3: expected/actual {'next_pc': (2147483668, 2147483664)}"
+  },
+  {
+    "injected_fault": "store_data",
+    "result": "DETECTED",
+    "diagnostic": "Bus request expected (2147500032, 1, 1, 128), actual (2147500032, 1, 1, 129)"
+  },
+  {
+    "injected_fault": "store_mask",
+    "result": "DETECTED",
+    "diagnostic": "Bus request expected (2147500032, 1, 1, 128), actual (2147500032, 1, 0, 128)"
+  },
+  {
+    "injected_fault": "duplicate_store",
+    "result": "DETECTED",
+    "diagnostic": "Unexpected or duplicate bus request"
+  },
+  {
+    "injected_fault": "missing_store",
+    "result": "DETECTED",
+    "diagnostic": "Bus response expected None, actual (0, 0)"
+  },
+  {
+    "injected_fault": "response_data",
+    "result": "DETECTED",
+    "diagnostic": "Bus response expected (0, 128), actual (0, 129)"
+  },
+  {
+    "injected_fault": "final_memory",
+    "result": "DETECTED",
+    "diagnostic": "Final RAM contents differ from independent model"
+  },
+  {
+    "injected_fault": "mulh_high_product",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 400: expected/actual {'rd_data': (4611686018427387904, 4611686018427387905)}"
+  },
+  {
+    "injected_fault": "mulhsu_signedness",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 517: expected/actual {'rd_data': (18446744073709551615, 9223372036854775807)}"
+  },
+  {
+    "injected_fault": "mulw_sign_extension",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 794: expected/actual {'rd_data': (18446744073709551615, 4294967295)}"
+  },
+  {
+    "injected_fault": "signed_division_rounding",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 242: expected/actual {'rd_data': (18446744073709551614, 18446744073709551613)}"
+  },
+  {
+    "injected_fault": "remainder_sign",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 516: expected/actual {'rd_data': (18446744073709551615, 1)}"
+  },
+  {
+    "injected_fault": "divuw_sign_extension",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 348: expected/actual {'rd_data': (18446744073709551615, 4294967295)}"
+  },
+  {
+    "injected_fault": "duplicate_m_completion",
+    "result": "DETECTED",
+    "diagnostic": "Retirement before required bus completion"
+  },
+  {
+    "injected_fault": "missing_m_retirement",
+    "result": "DETECTED",
+    "diagnostic": "Unexpected or duplicate bus request"
+  },
+  {
+    "injected_fault": "pipe_wrong_path_store",
+    "result": "DETECTED",
+    "diagnostic": "Data request for order 10: expected (2147500032, 1, 255, 77), actual (2147500056, 1, 255, 77)"
+  },
+  {
+    "injected_fault": "pipe_duplicate_store",
+    "result": "DETECTED",
+    "diagnostic": "Data request for order 11: expected (2147500032, 0, 255, 0), actual (2147500032, 1, 255, 77)"
+  },
+  {
+    "injected_fault": "pipe_reordered_data",
+    "result": "DETECTED",
+    "diagnostic": "Data request for order 10: expected (2147500032, 1, 255, 77), actual (2147500032, 0, 255, 0)"
+  },
+  {
+    "injected_fault": "pipe_store_retired_before_ack",
+    "result": "DETECTED",
+    "diagnostic": "Memory instruction 10 retired before its response"
+  },
+  {
+    "injected_fault": "pipe_fetch_data",
+    "result": "DETECTED",
+    "diagnostic": "Fetch response at 0x80000000: expected (0, 22518629497063959), actual (0, 22518629498112535)"
+  },
+  {
+    "injected_fault": "pipe_fetch_mask",
+    "result": "DETECTED",
+    "diagnostic": "Malformed fetch request ['0000000080000000', '0', '0f', '0000000000000000']"
+  },
+  {
+    "injected_fault": "pipe_forwarded_result",
+    "result": "DETECTED",
+    "diagnostic": "Trace row 2: expected/actual {'rd_data': (10, 15)}"
+  },
+  {
+    "injected_fault": "pipe_missing_load_response",
+    "result": "DETECTED",
+    "diagnostic": "Memory instruction 11 retired before its response"
+  }
+]

@@ -1,0 +1,87 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/platform_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/soc_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/decoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/load_store.sv" into library work
+INFO: [VRFC 10-311] analyzing module load_store
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/mul_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module mul_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/div_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module div_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/muldiv_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module muldiv_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/csr_file.sv" into library work
+INFO: [VRFC 10-311] analyzing module csr_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module core_pipeline
+INFO: [VRFC 10-311] analyzing module branch_predictor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/tb/core/coremark_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module coremark_tb
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe coremark_tb -s coremark_tb --timescale 1ns/1ps 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.soc_pkg
+Compiling package work.platform_pkg
+Compiling package work.core_pkg
+Compiling module work.decoder
+Compiling module work.regfile
+Compiling module work.alu
+Compiling module work.mul_iter
+Compiling module work.div_iter
+Compiling module work.muldiv_unit
+Compiling module work.csr_file
+Compiling module work.load_store
+Compiling module work.branch_predictor_default
+Compiling module work.core_pipeline_default
+Compiling module work.coremark_tb
+Built simulation snapshot coremark_tb
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 07:59:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/coremark_tb/xsim_script.tcl
+# xsim {coremark_tb} -testplusarg IMAGE=C:/projects/riscv-soc/build/coremark/coremark.hex -testplusarg MAX_CYCLES=200000000 -autoloadwcfg -runall -onerror quit
+Time resolution is 1 ps
+run -all
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 10299946
+Total time (secs): 0
+ERROR! Must execute for at least 10 secs for a valid result!
+Iterations       : 10
+Compiler version : GCC13.2.0
+Compiler flags   : -march=rv64im_zicsr -mabi=lp64 -mcmodel=medany -O2
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xfcaf
+Errors detected
+TICKS 10299946
+COREMARK_TB_DONE cycles=10349096 retired=3623912 redirects=98904 branches=652013 mispredicts=98904 halt_cause=11
+REPORT magic=0000000000000000 checksum=0000000000000000 status=0
+$finish called at time : 206981970 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 85
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:28 . Memory (MB): peak = 195.457 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 13508 KB (Peak: 13508 KB), Simulation CPU Usage: 87374 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 08:01:27 2026...
+COREMARK_RUN_PASS program=coremark variant=bpred log=C:\projects\riscv-soc\build\coremark\xsim_coremark_bpred/coremark.log

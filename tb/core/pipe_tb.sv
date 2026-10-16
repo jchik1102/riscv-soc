@@ -10,10 +10,19 @@ module pipe_tb;
   logic msip = 0, mtip = 0, meip = 0;
   logic icache_inv;
   logic event_retired, event_mem_wait, event_arith_wait, event_fetch_wait, event_load_use, event_redirect;
+  logic event_branch, event_mispredict;
   bus_req_t ireq, dreq, isaved, dsaved;
   bus_rsp_t irsp, drsp;
   retire_t trace;
-  byte unsigned mem [0:RAM_BYTES-1];
+  // Simulation memory size. Defaults to the SoC's on-chip RAM; the
+  // riscv-arch-test runner sets +define+TB_MEM_BYTES because those tests need
+  // up to ~120 KB. Testbench only: the RTL and the SoC stay at RAM_BYTES.
+`ifdef TB_MEM_BYTES
+  localparam logic [63:0] MEM_BYTES = `TB_MEM_BYTES;
+`else
+  localparam logic [63:0] MEM_BYTES = RAM_BYTES;
+`endif
+  byte unsigned mem [0:MEM_BYTES-1];
   bit ibusy = 0, dbusy = 0;
   int idelay, ddelay, cycle_count = 0, retire_count = 0;
   int irq_rate = 0, irq_taken = 0, handled_traps = 0, irq_during_m = 0, irq_during_mem = 0;
@@ -36,7 +45,7 @@ module pipe_tb;
     return (insn[6:0] == 7'h33 || insn[6:0] == 7'h3b) && insn[31:25] == 7'h01;
   endfunction
   function automatic bit in_ram(logic [63:0] addr);
-    return addr >= RAM_BASE && addr <= RAM_BASE + RAM_BYTES - 8 && addr[2:0] == 0;
+    return addr >= RAM_BASE && addr <= RAM_BASE + MEM_BYTES - 8 && addr[2:0] == 0;
   endfunction
   function automatic int unsigned next_rng(input int unsigned x);
     x ^= x << 13; x ^= x >> 17; x ^= x << 5; return x;

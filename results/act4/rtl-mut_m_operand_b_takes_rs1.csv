@@ -1,0 +1,65 @@
+test,suite,status,detail
+I-add-00,I,PASS,tohost=1 cycles=24702 retired=4958
+I-addi-00,I,PASS,tohost=1 cycles=17298 retired=3216
+I-addiw-00,I,PASS,tohost=1 cycles=17245 retired=3208
+I-addw-00,I,PASS,tohost=1 cycles=24635 retired=4958
+I-and-00,I,PASS,tohost=1 cycles=24610 retired=4950
+I-andi-00,I,PASS,tohost=1 cycles=17402 retired=3216
+I-auipc-00,I,PASS,tohost=1 cycles=2370 retired=479
+I-beq-00,I,PASS,tohost=1 cycles=29072 retired=6149
+I-bge-00,I,PASS,tohost=1 cycles=34016 retired=6254
+I-bgeu-00,I,PASS,tohost=1 cycles=31483 retired=6252
+I-blt-00,I,PASS,tohost=1 cycles=33566 retired=6265
+I-bltu-00,I,PASS,tohost=1 cycles=31102 retired=6262
+I-bne-00,I,PASS,tohost=1 cycles=33190 retired=6370
+I-fence-00,I,PASS,tohost=1 cycles=1842 retired=527
+I-jal-00,I,PASS,tohost=1 cycles=54147 retired=16063
+I-jalr-00,I,PASS,tohost=1 cycles=13545 retired=2897
+I-lb-00,I,PASS,tohost=1 cycles=5810 retired=1123
+I-lbu-00,I,PASS,tohost=1 cycles=5778 retired=1123
+I-ld-00,I,PASS,tohost=1 cycles=5109 retired=963
+I-lh-00,I,PASS,tohost=1 cycles=5461 retired=1047
+I-lhu-00,I,PASS,tohost=1 cycles=5435 retired=1039
+I-lui-00,I,PASS,tohost=1 cycles=2378 retired=471
+I-lw-00,I,PASS,tohost=1 cycles=5267 retired=1001
+I-lwu-00,I,PASS,tohost=1 cycles=5267 retired=1001
+I-nop-00,I,PASS,tohost=1 cycles=842 retired=230
+I-or-00,I,PASS,tohost=1 cycles=24643 retired=4950
+I-ori-00,I,PASS,tohost=1 cycles=17451 retired=3216
+I-sb-00,I,PASS,tohost=1 cycles=12228 retired=3109
+I-sd-00,I,PASS,tohost=1 cycles=11515 retired=2949
+I-sh-00,I,PASS,tohost=1 cycles=11885 retired=3033
+I-sll-00,I,PASS,tohost=1 cycles=24635 retired=4950
+I-slli-00,I,PASS,tohost=1 cycles=12731 retired=2386
+I-slliw-00,I,PASS,tohost=1 cycles=8676 retired=1652
+I-sllw-00,I,PASS,tohost=1 cycles=24722 retired=4950
+I-slt-00,I,PASS,tohost=1 cycles=24506 retired=4930
+I-slti-00,I,PASS,tohost=1 cycles=17290 retired=3202
+I-sltiu-00,I,PASS,tohost=1 cycles=17328 retired=3202
+I-sltu-00,I,PASS,tohost=1 cycles=24477 retired=4922
+I-sra-00,I,PASS,tohost=1 cycles=24694 retired=4950
+I-srai-00,I,PASS,tohost=1 cycles=12722 retired=2386
+I-sraiw-00,I,PASS,tohost=1 cycles=8676 retired=1660
+I-sraw-00,I,PASS,tohost=1 cycles=24694 retired=4950
+I-srl-00,I,PASS,tohost=1 cycles=24610 retired=4958
+I-srli-00,I,PASS,tohost=1 cycles=12818 retired=2386
+I-srliw-00,I,PASS,tohost=1 cycles=8644 retired=1660
+I-srlw-00,I,PASS,tohost=1 cycles=24622 retired=4950
+I-sub-00,I,PASS,tohost=1 cycles=24664 retired=4958
+I-subw-00,I,PASS,tohost=1 cycles=24635 retired=4958
+I-sw-00,I,PASS,tohost=1 cycles=11700 retired=2995
+I-xor-00,I,PASS,tohost=1 cycles=24564 retired=4950
+I-xori-00,I,PASS,tohost=1 cycles=17334 retired=3216
+M-div-00,M,FAIL,self-check failed; tohost=3 cycles=5439 retired=1224
+M-divu-00,M,FAIL,self-check failed; tohost=3 cycles=5439 retired=1224
+M-divuw-00,M,FAIL,self-check failed; tohost=3 cycles=5419 retired=1232
+M-divw-00,M,FAIL,self-check failed; tohost=3 cycles=5407 retired=1226
+M-mul-00,M,FAIL,self-check failed; tohost=3 cycles=5576 retired=1225
+M-mulh-00,M,FAIL,self-check failed; tohost=3 cycles=5576 retired=1230
+M-mulhsu-00,M,FAIL,self-check failed; tohost=3 cycles=5576 retired=1231
+M-mulhu-00,M,FAIL,self-check failed; tohost=3 cycles=5576 retired=1233
+M-mulw-00,M,FAIL,self-check failed; tohost=3 cycles=5492 retired=1232
+M-rem-00,M,FAIL,self-check failed; tohost=3 cycles=5620 retired=1231
+M-remu-00,M,FAIL,self-check failed; tohost=3 cycles=5576 retired=1232
+M-remuw-00,M,FAIL,self-check failed; tohost=3 cycles=5492 retired=1226
+M-remw-00,M,FAIL,self-check failed; tohost=3 cycles=5492 retired=1226

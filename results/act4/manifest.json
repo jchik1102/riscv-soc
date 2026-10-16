@@ -1,0 +1,450 @@
+[
+ {
+  "test": "I-add-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-add-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-addi-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-addi-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88368
+ },
+ {
+  "test": "I-addiw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-addiw-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88864
+ },
+ {
+  "test": "I-addw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-addw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "I-and-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-and-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-andi-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-andi-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88368
+ },
+ {
+  "test": "I-auipc-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-auipc-00.elf",
+  "bytes": 33568,
+  "tohost_offset": 28720
+ },
+ {
+  "test": "I-beq-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-beq-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 145888
+ },
+ {
+  "test": "I-bge-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-bge-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 145888
+ },
+ {
+  "test": "I-bgeu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-bgeu-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 146352
+ },
+ {
+  "test": "I-blt-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-blt-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 145888
+ },
+ {
+  "test": "I-bltu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-bltu-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 146352
+ },
+ {
+  "test": "I-bne-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-bne-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 145888
+ },
+ {
+  "test": "I-fence-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-fence-00.elf",
+  "bytes": 45856,
+  "tohost_offset": 43840
+ },
+ {
+  "test": "I-jal-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-jal-00.elf",
+  "bytes": 148256,
+  "tohost_offset": 143440
+ },
+ {
+  "test": "I-jalr-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-jalr-00.elf",
+  "bytes": 54048,
+  "tohost_offset": 50496
+ },
+ {
+  "test": "I-lb-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lb-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33456
+ },
+ {
+  "test": "I-lbu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lbu-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33584
+ },
+ {
+  "test": "I-ld-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-ld-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 32960
+ },
+ {
+  "test": "I-lh-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lh-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33200
+ },
+ {
+  "test": "I-lhu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lhu-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33328
+ },
+ {
+  "test": "I-lui-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lui-00.elf",
+  "bytes": 33568,
+  "tohost_offset": 28608
+ },
+ {
+  "test": "I-lw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lw-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33072
+ },
+ {
+  "test": "I-lwu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-lwu-00.elf",
+  "bytes": 37664,
+  "tohost_offset": 33184
+ },
+ {
+  "test": "I-nop-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-nop-00.elf",
+  "bytes": 29472,
+  "tohost_offset": 25088
+ },
+ {
+  "test": "I-or-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-or-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116144
+ },
+ {
+  "test": "I-ori-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-ori-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 87872
+ },
+ {
+  "test": "I-sb-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sb-00.elf",
+  "bytes": 54048,
+  "tohost_offset": 49616
+ },
+ {
+  "test": "I-sd-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sd-00.elf",
+  "bytes": 49952,
+  "tohost_offset": 49008
+ },
+ {
+  "test": "I-sh-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sh-00.elf",
+  "bytes": 54048,
+  "tohost_offset": 49312
+ },
+ {
+  "test": "I-sll-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sll-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-slli-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-slli-00.elf",
+  "bytes": 74528,
+  "tohost_offset": 73344
+ },
+ {
+  "test": "I-slliw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-slliw-00.elf",
+  "bytes": 66336,
+  "tohost_offset": 61632
+ },
+ {
+  "test": "I-sllw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sllw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "I-slt-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-slt-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116928
+ },
+ {
+  "test": "I-slti-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-slti-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88480
+ },
+ {
+  "test": "I-sltiu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sltiu-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88976
+ },
+ {
+  "test": "I-sltu-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sltu-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117504
+ },
+ {
+  "test": "I-sra-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sra-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-srai-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-srai-00.elf",
+  "bytes": 74528,
+  "tohost_offset": 73344
+ },
+ {
+  "test": "I-sraiw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sraiw-00.elf",
+  "bytes": 66336,
+  "tohost_offset": 61632
+ },
+ {
+  "test": "I-sraw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sraw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "I-srl-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-srl-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-srli-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-srli-00.elf",
+  "bytes": 74528,
+  "tohost_offset": 73344
+ },
+ {
+  "test": "I-srliw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-srliw-00.elf",
+  "bytes": 66336,
+  "tohost_offset": 61632
+ },
+ {
+  "test": "I-srlw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-srlw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "I-sub-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sub-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-subw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-subw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "I-sw-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-sw-00.elf",
+  "bytes": 54048,
+  "tohost_offset": 49168
+ },
+ {
+  "test": "I-xor-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-xor-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "I-xori-00",
+  "suite": "I",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/I/I-xori-00.elf",
+  "bytes": 90912,
+  "tohost_offset": 88368
+ },
+ {
+  "test": "M-div-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-div-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "M-divu-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-divu-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "M-divuw-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-divuw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117888
+ },
+ {
+  "test": "M-divw-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-divw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "M-mul-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-mul-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "M-mulh-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-mulh-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "M-mulhsu-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-mulhsu-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 118496
+ },
+ {
+  "test": "M-mulhu-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-mulhu-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117888
+ },
+ {
+  "test": "M-mulw-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-mulw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "M-rem-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-rem-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 116720
+ },
+ {
+  "test": "M-remu-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-remu-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ },
+ {
+  "test": "M-remuw-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-remuw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117888
+ },
+ {
+  "test": "M-remw-00",
+  "suite": "M",
+  "elf": "build/act4/riscv-soc-rv64im/elfs/rv64i/M/M-remw-00.elf",
+  "bytes": 119584,
+  "tohost_offset": 117312
+ }
+]

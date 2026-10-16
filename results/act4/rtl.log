@@ -1,0 +1,180 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/platform_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/soc_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/decoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/load_store.sv" into library work
+INFO: [VRFC 10-311] analyzing module load_store
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/mul_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module mul_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/div_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module div_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/muldiv_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module muldiv_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/csr_file.sv" into library work
+INFO: [VRFC 10-311] analyzing module csr_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module core_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/tb/core/pipe_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module pipe_tb
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe pipe_tb -s pipe_tb --timescale 1ns/1ps --debug typical 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.soc_pkg
+Compiling package work.platform_pkg
+Compiling package work.core_pkg
+Compiling module work.decoder
+Compiling module work.regfile
+Compiling module work.alu
+Compiling module work.mul_iter
+Compiling module work.div_iter
+Compiling module work.muldiv_unit
+Compiling module work.csr_file
+Compiling module work.load_store
+Compiling module work.core_pipeline_default
+Compiling module work.pipe_tb
+Built simulation snapshot pipe_tb
+SIMULATED: I-add-00_s1_d5
+SIMULATED: I-addi-00_s1_d5
+SIMULATED: I-addiw-00_s1_d5
+SIMULATED: I-addw-00_s1_d5
+SIMULATED: I-and-00_s1_d5
+SIMULATED: I-andi-00_s1_d5
+SIMULATED: I-auipc-00_s1_d5
+SIMULATED: I-beq-00_s1_d5
+SIMULATED: I-bge-00_s1_d5
+SIMULATED: I-bgeu-00_s1_d5
+SIMULATED: I-blt-00_s1_d5
+SIMULATED: I-bltu-00_s1_d5
+SIMULATED: I-bne-00_s1_d5
+SIMULATED: I-fence-00_s1_d5
+SIMULATED: I-jal-00_s1_d5
+SIMULATED: I-jalr-00_s1_d5
+SIMULATED: I-lb-00_s1_d5
+SIMULATED: I-lbu-00_s1_d5
+SIMULATED: I-ld-00_s1_d5
+SIMULATED: I-lh-00_s1_d5
+SIMULATED: I-lhu-00_s1_d5
+SIMULATED: I-lui-00_s1_d5
+SIMULATED: I-lw-00_s1_d5
+SIMULATED: I-lwu-00_s1_d5
+SIMULATED: I-nop-00_s1_d5
+SIMULATED: I-or-00_s1_d5
+SIMULATED: I-ori-00_s1_d5
+SIMULATED: I-sb-00_s1_d5
+SIMULATED: I-sd-00_s1_d5
+SIMULATED: I-sh-00_s1_d5
+SIMULATED: I-sll-00_s1_d5
+SIMULATED: I-slli-00_s1_d5
+SIMULATED: I-slliw-00_s1_d5
+SIMULATED: I-sllw-00_s1_d5
+SIMULATED: I-slt-00_s1_d5
+SIMULATED: I-slti-00_s1_d5
+SIMULATED: I-sltiu-00_s1_d5
+SIMULATED: I-sltu-00_s1_d5
+SIMULATED: I-sra-00_s1_d5
+SIMULATED: I-srai-00_s1_d5
+SIMULATED: I-sraiw-00_s1_d5
+SIMULATED: I-sraw-00_s1_d5
+SIMULATED: I-srl-00_s1_d5
+SIMULATED: I-srli-00_s1_d5
+SIMULATED: I-srliw-00_s1_d5
+SIMULATED: I-srlw-00_s1_d5
+SIMULATED: I-sub-00_s1_d5
+SIMULATED: I-subw-00_s1_d5
+SIMULATED: I-sw-00_s1_d5
+SIMULATED: I-xor-00_s1_d5
+SIMULATED: I-xori-00_s1_d5
+SIMULATED: M-div-00_s1_d5
+SIMULATED: M-divu-00_s1_d5
+SIMULATED: M-divuw-00_s1_d5
+SIMULATED: M-divw-00_s1_d5
+SIMULATED: M-mul-00_s1_d5
+SIMULATED: M-mulh-00_s1_d5
+SIMULATED: M-mulhsu-00_s1_d5
+SIMULATED: M-mulhu-00_s1_d5
+SIMULATED: M-mulw-00_s1_d5
+SIMULATED: M-rem-00_s1_d5
+SIMULATED: M-remu-00_s1_d5
+SIMULATED: M-remuw-00_s1_d5
+SIMULATED: M-remw-00_s1_d5
+ACT_RTL_PASS I-add-00 tohost=1 cycles=24702 retired=4958
+ACT_RTL_PASS I-addi-00 tohost=1 cycles=17298 retired=3216
+ACT_RTL_PASS I-addiw-00 tohost=1 cycles=17245 retired=3208
+ACT_RTL_PASS I-addw-00 tohost=1 cycles=24635 retired=4958
+ACT_RTL_PASS I-and-00 tohost=1 cycles=24610 retired=4950
+ACT_RTL_PASS I-andi-00 tohost=1 cycles=17402 retired=3216
+ACT_RTL_PASS I-auipc-00 tohost=1 cycles=2370 retired=479
+ACT_RTL_PASS I-beq-00 tohost=1 cycles=29072 retired=6149
+ACT_RTL_PASS I-bge-00 tohost=1 cycles=34016 retired=6254
+ACT_RTL_PASS I-bgeu-00 tohost=1 cycles=31483 retired=6252
+ACT_RTL_PASS I-blt-00 tohost=1 cycles=33566 retired=6265
+ACT_RTL_PASS I-bltu-00 tohost=1 cycles=31102 retired=6262
+ACT_RTL_PASS I-bne-00 tohost=1 cycles=33190 retired=6370
+ACT_RTL_PASS I-fence-00 tohost=1 cycles=1842 retired=527
+ACT_RTL_PASS I-jal-00 tohost=1 cycles=54147 retired=16063
+ACT_RTL_PASS I-jalr-00 tohost=1 cycles=13545 retired=2897
+ACT_RTL_PASS I-lb-00 tohost=1 cycles=5810 retired=1123
+ACT_RTL_PASS I-lbu-00 tohost=1 cycles=5778 retired=1123
+ACT_RTL_PASS I-ld-00 tohost=1 cycles=5109 retired=963
+ACT_RTL_PASS I-lh-00 tohost=1 cycles=5461 retired=1047
+ACT_RTL_PASS I-lhu-00 tohost=1 cycles=5435 retired=1039
+ACT_RTL_PASS I-lui-00 tohost=1 cycles=2378 retired=471
+ACT_RTL_PASS I-lw-00 tohost=1 cycles=5267 retired=1001
+ACT_RTL_PASS I-lwu-00 tohost=1 cycles=5267 retired=1001
+ACT_RTL_PASS I-nop-00 tohost=1 cycles=842 retired=230
+ACT_RTL_PASS I-or-00 tohost=1 cycles=24643 retired=4950
+ACT_RTL_PASS I-ori-00 tohost=1 cycles=17451 retired=3216
+ACT_RTL_PASS I-sb-00 tohost=1 cycles=12228 retired=3109
+ACT_RTL_PASS I-sd-00 tohost=1 cycles=11515 retired=2949
+ACT_RTL_PASS I-sh-00 tohost=1 cycles=11885 retired=3033
+ACT_RTL_PASS I-sll-00 tohost=1 cycles=24635 retired=4950
+ACT_RTL_PASS I-slli-00 tohost=1 cycles=12731 retired=2386
+ACT_RTL_PASS I-slliw-00 tohost=1 cycles=8676 retired=1652
+ACT_RTL_PASS I-sllw-00 tohost=1 cycles=24722 retired=4950
+ACT_RTL_PASS I-slt-00 tohost=1 cycles=24506 retired=4930
+ACT_RTL_PASS I-slti-00 tohost=1 cycles=17290 retired=3202
+ACT_RTL_PASS I-sltiu-00 tohost=1 cycles=17328 retired=3202
+ACT_RTL_PASS I-sltu-00 tohost=1 cycles=24477 retired=4922
+ACT_RTL_PASS I-sra-00 tohost=1 cycles=24694 retired=4950
+ACT_RTL_PASS I-srai-00 tohost=1 cycles=12722 retired=2386
+ACT_RTL_PASS I-sraiw-00 tohost=1 cycles=8676 retired=1660
+ACT_RTL_PASS I-sraw-00 tohost=1 cycles=24694 retired=4950
+ACT_RTL_PASS I-srl-00 tohost=1 cycles=24610 retired=4958
+ACT_RTL_PASS I-srli-00 tohost=1 cycles=12818 retired=2386
+ACT_RTL_PASS I-srliw-00 tohost=1 cycles=8644 retired=1660
+ACT_RTL_PASS I-srlw-00 tohost=1 cycles=24622 retired=4950
+ACT_RTL_PASS I-sub-00 tohost=1 cycles=24664 retired=4958
+ACT_RTL_PASS I-subw-00 tohost=1 cycles=24635 retired=4958
+ACT_RTL_PASS I-sw-00 tohost=1 cycles=11700 retired=2995
+ACT_RTL_PASS I-xor-00 tohost=1 cycles=24564 retired=4950
+ACT_RTL_PASS I-xori-00 tohost=1 cycles=17334 retired=3216
+ACT_RTL_PASS M-div-00 tohost=1 cycles=61258 retired=4958
+ACT_RTL_PASS M-divu-00 tohost=1 cycles=61229 retired=4966
+ACT_RTL_PASS M-divuw-00 tohost=1 cycles=42447 retired=4950
+ACT_RTL_PASS M-divw-00 tohost=1 cycles=42494 retired=4958
+ACT_RTL_PASS M-mul-00 tohost=1 cycles=61219 retired=4958
+ACT_RTL_PASS M-mulh-00 tohost=1 cycles=61136 retired=4958
+ACT_RTL_PASS M-mulhsu-00 tohost=1 cycles=61224 retired=4958
+ACT_RTL_PASS M-mulhu-00 tohost=1 cycles=61136 retired=4950
+ACT_RTL_PASS M-mulw-00 tohost=1 cycles=42554 retired=4950
+ACT_RTL_PASS M-rem-00 tohost=1 cycles=61219 retired=4958
+ACT_RTL_PASS M-remu-00 tohost=1 cycles=61219 retired=4958
+ACT_RTL_PASS M-remuw-00 tohost=1 cycles=42554 retired=4950
+ACT_RTL_PASS M-remw-00 tohost=1 cycles=42554 retired=4958
+ACT_RTL_SUMMARY suite=I pass=51 of 51
+ACT_RTL_SUMMARY suite=M pass=13 of 13
+ACT_RTL_TOTAL pass=64 of 64
+exit=0

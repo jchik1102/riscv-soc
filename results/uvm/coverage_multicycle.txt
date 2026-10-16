@@ -1,0 +1,625 @@
+
+ Xcrg Functional Coverage Report 
+
+ // To generate a more detailed report in html format, please run xcrg -dir <database> -report_format html -report_dir <dir>
+ // This is a text report also in CSV format. By exporting to Excel and using , as the delimiter, the data can be split into individual rows and columns
+ // This report contains 3 sections, Total Summary, CoverGroups Summary and CoverPoint Tables sections 
+ // In order to navigate to a CoverPoint's Table, the TableTag printed for the respective covergroup/instance can be grepped in this report
+ // For example, if covergroup name is g1 and coverpoint is cp1, the TableTag to go to the Group's CoverPoint Table summary is g1_cp1 
+ // For example, if covergroup name is g1, instance name is i1, coverpoint is cp1, the TableTag to go to the Instance's CoverPoint Table summary is g1_i1_cp1 
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+   Date             :, 10/15/26 09:11:55 British Columbia Daylight Time
+   User             :, jonat
+   Version          :, Vivado Simulator Coverage Report 2025.2
+   Command Line     :, C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir . -cov_db_name asm_muldiv_s1_d5_r-1 -cov_db_name control_s1_d5_r-1 -cov_db_name fault_fetch_high_s1_d5_r-1 -cov_db_name fault_load_bounds_s1_d5_r-1 -cov_db_name first_s1_d5_r-1 -cov_db_name m_mixed_s1_d5_r-1 -cov_db_name memory_sizes_s1_d5_r-1 -cov_db_name pipe_forward_s1_d5_r-1 -cov_db_name random_s1_d5_p6 -merge_dir . -merge_db_name merged -report_dir coverage_report -report_format text 
+   Number of Tests  :, 1
+
+   Coverage Score            :, 62.9714
+   Total Insts Score         :, 62.9714
+   Total no of Cover Groups  :, 3
+   Total no of Instances     :, 3
+
+
+     CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+       cpu_uvm_pkg::cpu_coverage::cg_retire              ,92.2476     ,1           ,92.2476         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       cpu_uvm_pkg::cpu_coverage::cg_bus                 ,83.3333     ,1           ,83.3333         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       cpu_uvm_pkg::cpu_coverage::cg_events              ,13.3333     ,1           ,13.3333         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverGroups Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Cover Group Details : cpu_uvm_pkg::cpu_coverage::cg_retire
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+cpu_uvm_pkg::cpu_coverage::cg_retire              ,92.2476     ,1           ,92.2476         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - cpu_uvm_pkg::cpu_coverage::cg_retire
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_retire                                   ,92.2476     ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_retire Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_class                                          ,cg_retire_	his .cg_retire_cp_class,17          ,1           ,16          ,94.1176     ,100         ,1           ,1           ,64          ,            ,
+             cp_f3                                             ,cg_retire_	his .cg_retire_cp_f3,8           ,0           ,8           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_dist_rs1                                       ,cg_retire_	his .cg_retire_cp_dist_rs1,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_dist_rs2                                       ,cg_retire_	his .cg_retire_cp_dist_rs2,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rd_zero                                        ,cg_retire_	his .cg_retire_cp_rd_zero,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_cause                                          ,cg_retire_	his .cg_retire_cp_cause,9           ,5           ,4           ,44.4444     ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance 	his .cg_retire Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_m_ops                                           ,cg_retire_	his .cg_retire_x_m_ops,13          ,0           ,13          ,100         ,100         ,1           ,1           ,            ,
+             x_hazard_rs1                                      ,cg_retire_	his .cg_retire_x_hazard_rs1,48          ,4           ,44          ,91.6667     ,100         ,1           ,1           ,            ,
+             x_hazard_rs2                                      ,cg_retire_	his .cg_retire_x_hazard_rs2,28          ,0           ,28          ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : cpu_uvm_pkg::cpu_coverage::cg_bus
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+cpu_uvm_pkg::cpu_coverage::cg_bus                 ,83.3333     ,1           ,83.3333         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - cpu_uvm_pkg::cpu_coverage::cg_bus
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_bus                                      ,83.3333     ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_bus Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_port                                           ,cg_bus_	his .cg_bus_cp_port,2           ,1           ,1           ,50          ,100         ,1           ,1           ,64          ,            ,
+             cp_write                                          ,cg_bus_	his .cg_bus_cp_write,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_error                                          ,cg_bus_	his .cg_bus_cp_error,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_latency                                        ,cg_bus_	his .cg_bus_cp_latency,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_wait                                           ,cg_bus_	his .cg_bus_cp_wait,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance 	his .cg_bus Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_port_latency                                    ,cg_bus_	his .cg_bus_x_port_latency,6           ,3           ,3           ,50          ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : cpu_uvm_pkg::cpu_coverage::cg_events
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+cpu_uvm_pkg::cpu_coverage::cg_events              ,13.3333     ,1           ,13.3333         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - cpu_uvm_pkg::cpu_coverage::cg_events
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_events                                   ,13.3333     ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_events Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_load_use                                       ,cg_events_	his .cg_events_cp_load_use,1           ,1           ,0           ,0           ,100         ,1           ,1           ,64          ,            ,
+             cp_redirect                                       ,cg_events_	his .cg_events_cp_redirect,1           ,1           ,0           ,0           ,100         ,1           ,1           ,64          ,            ,
+             cp_fetch_wait                                     ,cg_events_	his .cg_events_cp_fetch_wait,1           ,1           ,0           ,0           ,100         ,1           ,1           ,64          ,            ,
+             cp_arith_mem                                      ,cg_events_	his .cg_events_cp_arith_mem,3           ,1           ,2           ,66.6667     ,100         ,1           ,1           ,64          ,            ,
+             cp_retire_during_m                                ,cg_events_	his .cg_events_cp_retire_during_m,1           ,1           ,0           ,0           ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverPoint Tables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_class
+ Table tag :, cg_retire_	his .cg_retire_cp_class
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   17          ,1           ,16          ,94.1176     ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto_C_SYS  ,0           ,1           ,
+
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto_C_ALU_R,252         ,1           ,
+      auto_C_ALU_I,1734        ,1           ,
+      auto_C_ALU_W,84          ,1           ,
+      auto_C_ALU_IW,93          ,1           ,
+      auto_C_LUI  ,95          ,1           ,
+      auto_C_AUIPC,212         ,1           ,
+      auto_C_JAL  ,85          ,1           ,
+      auto_C_JALR ,112         ,1           ,
+      auto_C_BR_TAKEN,91          ,1           ,
+      auto_C_BR_NOT,88          ,1           ,
+      auto_C_LOAD ,312         ,1           ,
+      auto_C_STORE,214         ,1           ,
+      auto_C_M    ,161         ,1           ,
+      auto_C_M_W  ,70          ,1           ,
+      auto_C_FENCE,88          ,1           ,
+      auto_C_TRAP ,14          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_f3
+ Table tag :, cg_retire_	his .cg_retire_cp_f3
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     8           ,0           ,8           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,2179        ,1           ,
+      auto[1]     ,630         ,1           ,
+      auto[2]     ,133         ,1           ,
+      auto[3]     ,225         ,1           ,
+      auto[4]     ,143         ,1           ,
+      auto[5]     ,149         ,1           ,
+      auto[6]     ,118         ,1           ,
+      auto[7]     ,128         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_dist_rs1
+ Table tag :, cg_retire_	his .cg_retire_cp_dist_rs1
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      none        ,2162        ,1           ,
+      d1          ,1221        ,1           ,
+      d2          ,148         ,1           ,
+      d3          ,174         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_dist_rs2
+ Table tag :, cg_retire_	his .cg_retire_cp_dist_rs2
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      none        ,686         ,1           ,
+      d1          ,170         ,1           ,
+      d2          ,59          ,1           ,
+      d3          ,45          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_rd_zero
+ Table tag :, cg_retire_	his .cg_retire_cp_rd_zero
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,3023        ,1           ,
+      auto[1]     ,682         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_retire, Variable :, cp_cause
+ Table tag :, cg_retire_	his .cg_retire_cp_cause
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   9           ,5           ,4           ,44.4444     ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      causes_0    ,0           ,1           ,
+      causes_4    ,0           ,1           ,
+      causes_6    ,0           ,1           ,
+      causes_7    ,0           ,1           ,
+      causes_11   ,0           ,1           ,
+
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      causes_1    ,1           ,1           ,
+      causes_2    ,5           ,1           ,
+      causes_3    ,7           ,1           ,
+      causes_5    ,1           ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_retire, Variable :, x_m_ops
+ Table tag :, cg_retire_	his .cg_retire_x_m_ops
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          13          ,0           ,13          ,100         ,
+ Automatic,      13          ,0           ,13          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_class        ,cp_f3           ,Hit Count,  AtLeast,    
+      auto_C_M        ,auto[0]         ,44          ,1           ,
+      auto_C_M        ,auto[1]         ,13          ,1           ,
+      auto_C_M        ,auto[2]         ,18          ,1           ,
+      auto_C_M        ,auto[3]         ,7           ,1           ,
+      auto_C_M        ,auto[4]         ,16          ,1           ,
+      auto_C_M        ,auto[5]         ,15          ,1           ,
+      auto_C_M        ,auto[6]         ,11          ,1           ,
+      auto_C_M        ,auto[7]         ,37          ,1           ,
+      auto_C_M_W      ,auto[0]         ,29          ,1           ,
+      auto_C_M_W      ,auto[4]         ,11          ,1           ,
+      auto_C_M_W      ,auto[5]         ,10          ,1           ,
+      auto_C_M_W      ,auto[6]         ,10          ,1           ,
+      auto_C_M_W      ,auto[7]         ,10          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_retire, Variable :, x_m_ops
+ Table tag :, cg_retire_	his .cg_retire_x_m_ops
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          13          ,0           ,13          ,100         ,
+ Automatic,      13          ,0           ,13          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_class        ,cp_f3           ,Hit Count,  AtLeast,    
+      auto_C_M        ,auto[0]         ,44          ,1           ,
+      auto_C_M        ,auto[1]         ,13          ,1           ,
+      auto_C_M        ,auto[2]         ,18          ,1           ,
+      auto_C_M        ,auto[3]         ,7           ,1           ,
+      auto_C_M        ,auto[4]         ,16          ,1           ,
+      auto_C_M        ,auto[5]         ,15          ,1           ,
+      auto_C_M        ,auto[6]         ,11          ,1           ,
+      auto_C_M        ,auto[7]         ,37          ,1           ,
+      auto_C_M_W      ,auto[0]         ,29          ,1           ,
+      auto_C_M_W      ,auto[4]         ,11          ,1           ,
+      auto_C_M_W      ,auto[5]         ,10          ,1           ,
+      auto_C_M_W      ,auto[6]         ,10          ,1           ,
+      auto_C_M_W      ,auto[7]         ,10          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_retire, Variable :, x_m_ops
+ Table tag :, cg_retire_	his .cg_retire_x_m_ops
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          13          ,0           ,13          ,100         ,
+ Automatic,      13          ,0           ,13          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_class        ,cp_f3           ,Hit Count,  AtLeast,    
+      auto_C_M        ,auto[0]         ,44          ,1           ,
+      auto_C_M        ,auto[1]         ,13          ,1           ,
+      auto_C_M        ,auto[2]         ,18          ,1           ,
+      auto_C_M        ,auto[3]         ,7           ,1           ,
+      auto_C_M        ,auto[4]         ,16          ,1           ,
+      auto_C_M        ,auto[5]         ,15          ,1           ,
+      auto_C_M        ,auto[6]         ,11          ,1           ,
+      auto_C_M        ,auto[7]         ,37          ,1           ,
+      auto_C_M_W      ,auto[0]         ,29          ,1           ,
+      auto_C_M_W      ,auto[4]         ,11          ,1           ,
+      auto_C_M_W      ,auto[5]         ,10          ,1           ,
+      auto_C_M_W      ,auto[6]         ,10          ,1           ,
+      auto_C_M_W      ,auto[7]         ,10          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_bus, Variable :, cp_port
+ Table tag :, cg_bus_	his .cg_bus_cp_port
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,1           ,1           ,50          ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[1]     ,0           ,1           ,
+
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,4233        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_bus, Variable :, cp_write
+ Table tag :, cg_bus_	his .cg_bus_cp_write
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,4019        ,1           ,
+      auto[1]     ,214         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_bus, Variable :, cp_error
+ Table tag :, cg_bus_	his .cg_bus_cp_error
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,4231        ,1           ,
+      auto[1]     ,2           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_bus, Variable :, cp_latency
+ Table tag :, cg_bus_	his .cg_bus_cp_latency
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      next        ,630         ,1           ,
+      short       ,1433        ,1           ,
+      long        ,2170        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_bus, Variable :, cp_wait
+ Table tag :, cg_bus_	his .cg_bus_cp_wait
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      none        ,2449        ,1           ,
+      some        ,1784        ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_bus, Variable :, x_port_latency
+ Table tag :, cg_bus_	his .cg_bus_x_port_latency
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          6           ,3           ,3           ,50          ,
+ Automatic,      6           ,3           ,3           ,0.5         ,
+
+                 Auto Uncovered bins 
+
+      cp_port         ,cp_latency      ,Hit Count,  AtLeast,    
+      auto[1]         , *              ,0           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_port         ,cp_latency      ,Hit Count,  AtLeast,    
+      auto[0]         ,next            ,630         ,1           ,
+      auto[0]         ,short           ,1433        ,1           ,
+      auto[0]         ,long            ,2170        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_events, Variable :, cp_load_use
+ Table tag :, cg_events_	his .cg_events_cp_load_use
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,1           ,0           ,0           ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      hit         ,0           ,1           ,
+
+
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_events, Variable :, cp_redirect
+ Table tag :, cg_events_	his .cg_events_cp_redirect
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,1           ,0           ,0           ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      hit         ,0           ,1           ,
+
+
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_events, Variable :, cp_fetch_wait
+ Table tag :, cg_events_	his .cg_events_cp_fetch_wait
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,1           ,0           ,0           ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      hit         ,0           ,1           ,
+
+
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_events, Variable :, cp_arith_mem
+ Table tag :, cg_events_	his .cg_events_cp_arith_mem
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,1           ,2           ,66.6667     ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      both        ,0           ,1           ,
+
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      arith_only  ,13006       ,1           ,
+      mem_only    ,13353       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_events, Variable :, cp_retire_during_m
+ Table tag :, cg_events_	his .cg_events_cp_retire_during_m
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,1           ,0           ,0           ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      hit         ,0           ,1           ,
+
+
+
+
+
+
+
+

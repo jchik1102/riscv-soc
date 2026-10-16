@@ -1,0 +1,7 @@
+program  variant  cycles     retired    CPI    branches  mispredicts rate    redirects CoreMark/MHz
+fir      nobpred      117423      18009  6.520      4452        2438  54.76%      2438            -
+fir      bpred        109864      18009  6.101      4452         193   4.34%       193            -
+coremark nobpred    11242768    3623912  3.102    652013      392845  60.25%    392845        0.894
+coremark bpred      10349096    3623912  2.856    652013       98904  15.17%     98904        0.971
+SUMMARY fir cpi 6.520->6.101 mispredict_rate 54.76%->4.34% cycles -6.4%
+SUMMARY coremark cpi 3.102->2.856 mispredict_rate 60.25%->15.17% cycles -7.9% coremark_speedup=1.086

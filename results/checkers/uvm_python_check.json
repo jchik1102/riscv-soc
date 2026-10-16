@@ -1,0 +1,1251 @@
+{
+  "instruction_coverage": {
+    "ADD": 4483,
+    "ADDI": 20326,
+    "ADDIW": 933,
+    "ADDW": 506,
+    "AND": 189,
+    "ANDI": 198,
+    "AUIPC": 2276,
+    "BEQ": 2327,
+    "BEQ_not_taken": 2170,
+    "BEQ_taken": 157,
+    "BGE": 325,
+    "BGEU": 255,
+    "BGEU_not_taken": 105,
+    "BGEU_taken": 150,
+    "BGE_not_taken": 84,
+    "BGE_taken": 241,
+    "BLT": 355,
+    "BLTU": 202,
+    "BLTU_not_taken": 136,
+    "BLTU_taken": 66,
+    "BLT_not_taken": 184,
+    "BLT_taken": 171,
+    "BNE": 2580,
+    "BNE_not_taken": 186,
+    "BNE_taken": 2394,
+    "CSRRC": 144,
+    "CSRRCI": 137,
+    "CSRRS": 189,
+    "CSRRSI": 134,
+    "CSRRW": 284,
+    "CSRRWI": 259,
+    "CSR_mcause": 265,
+    "CSR_mepc": 29,
+    "CSR_mhartid": 1,
+    "CSR_mie": 4,
+    "CSR_minstret": 258,
+    "CSR_misa": 2,
+    "CSR_mscratch": 290,
+    "CSR_mstatus": 9,
+    "CSR_mtval": 279,
+    "CSR_mtvec": 7,
+    "CSR_mvendorid": 1,
+    "DIV": 407,
+    "DIVU": 325,
+    "DIVUW": 259,
+    "DIVW": 262,
+    "EBREAK": 80,
+    "ECALL": 4,
+    "FENCE": 1073,
+    "FENCE.I": 2,
+    "ILLEGAL": 64,
+    "JAL": 1419,
+    "JALR": 1031,
+    "LB": 463,
+    "LBU": 370,
+    "LD": 755,
+    "LH": 4273,
+    "LHU": 466,
+    "LUI": 1078,
+    "LW": 420,
+    "LWU": 353,
+    "MRET": 15,
+    "MUL": 574,
+    "MULH": 303,
+    "MULHSU": 312,
+    "MULHU": 355,
+    "MULW": 2357,
+    "M_divide_by_zero": 713,
+    "M_signed_overflow": 15,
+    "OR": 171,
+    "ORI": 205,
+    "REM": 330,
+    "REMU": 366,
+    "REMUW": 308,
+    "REMW": 283,
+    "SB": 438,
+    "SD": 1165,
+    "SH": 516,
+    "SLL": 197,
+    "SLLI": 6813,
+    "SLLIW": 203,
+    "SLLW": 219,
+    "SLT": 152,
+    "SLTI": 188,
+    "SLTIU": 189,
+    "SLTU": 206,
+    "SRA": 131,
+    "SRAI": 218,
+    "SRAIW": 127,
+    "SRAW": 142,
+    "SRL": 94,
+    "SRLI": 85,
+    "SRLIW": 142,
+    "SRLW": 138,
+    "SUB": 135,
+    "SUBW": 450,
+    "SW": 432,
+    "WFI": 2,
+    "XOR": 159,
+    "XORI": 196,
+    "cause_0": 5,
+    "cause_1": 4,
+    "cause_11": 4,
+    "cause_2": 62,
+    "cause_3": 80,
+    "cause_4": 6,
+    "cause_5": 5,
+    "cause_6": 4,
+    "cause_7": 5,
+    "trap_handled": 13,
+    "trap_terminal": 162
+  },
+  "transcripts": [
+    {
+      "data_accesses": 0,
+      "fetches": 79,
+      "records": 155,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/alu64_s1_d5_r-1/alu64.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 78,
+      "records": 119,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/array_loop_s1_d5_r-1/array_loop.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 127,
+      "records": 177,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/asm_array_s1_d5_r-1/asm_array.csv"
+    },
+    {
+      "data_accesses": 4153,
+      "fetches": 13398,
+      "records": 18010,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/asm_fir_s1_d5_r-1/asm_fir.csv"
+    },
+    {
+      "data_accesses": 30,
+      "fetches": 127,
+      "records": 159,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/asm_muldiv_s1_d5_r-1/asm_muldiv.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/branch_untaken_align_s1_d5_r-1/branch_untaken_align.csv"
+    },
+    {
+      "data_accesses": 9,
+      "fetches": 42,
+      "records": 80,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/control_s1_d5_r-1/control.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 6,
+      "records": 10,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/edges_s1_d5_r-1/edges.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_branch_align_s1_d5_r-1/fault_branch_align.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_branch_reserved_s1_d5_r-1/fault_branch_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_csr_s1_d5_r-1/fault_csr.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_ebreak_s1_d5_r-1/fault_ebreak.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_ecall_s1_d5_r-1/fault_ecall.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 13,
+      "records": 21,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_fetch_bounds_s1_d5_r-1/fault_fetch_bounds.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 13,
+      "records": 21,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_fetch_high_s1_d5_r-1/fault_fetch_high.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_jal_align_s1_d5_r-1/fault_jal_align.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_jalr_align_s1_d5_r-1/fault_jalr_align.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_jalr_reserved_s1_d5_r-1/fault_jalr_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_align_1_s1_d5_r-1/fault_load_align_1.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_align_2_s1_d5_r-1/fault_load_align_2.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_align_3_s1_d5_r-1/fault_load_align_3.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 11,
+      "records": 20,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_bounds_s1_d5_r-1/fault_load_bounds.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 11,
+      "records": 20,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_high_s1_d5_r-1/fault_load_high.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_reserved_s1_d5_r-1/fault_load_reserved.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 4,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_load_zero_s1_d5_r-1/fault_load_zero.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_m_word_reserved_1_s1_d5_r-1/fault_m_word_reserved_1.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_m_word_reserved_2_s1_d5_r-1/fault_m_word_reserved_2.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_m_word_reserved_3_s1_d5_r-1/fault_m_word_reserved_3.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 5,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_mret_s1_d5_r-1/fault_mret.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_op_funct7_2_reserved_s1_d5_r-1/fault_op_funct7_2_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_shift64_reserved_s1_d5_r-1/fault_shift64_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_shiftw_reserved_s1_d5_r-1/fault_shiftw_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_align_1_s1_d5_r-1/fault_store_align_1.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_align_2_s1_d5_r-1/fault_store_align_2.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_align_3_s1_d5_r-1/fault_store_align_3.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 11,
+      "records": 20,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_bounds_s1_d5_r-1/fault_store_bounds.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 11,
+      "records": 20,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_high_s1_d5_r-1/fault_store_high.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_reserved_s1_d5_r-1/fault_store_reserved.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 4,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fault_store_zero_s1_d5_r-1/fault_store_zero.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 5,
+      "records": 8,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/fence_variants_s1_d5_r-1/fence_variants.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/first_s1_d5_r-1/first.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 393,
+      "records": 781,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_div_edges_s1_d5_r-1/m_div_edges.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 393,
+      "records": 781,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_divw_edges_s1_d5_r-1/m_divw_edges.csv"
+    },
+    {
+      "data_accesses": 4,
+      "fetches": 106,
+      "records": 170,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_mixed_s1_d5_r-1/m_mixed.csv"
+    },
+    {
+      "data_accesses": 4,
+      "fetches": 117,
+      "records": 182,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/m_mixed_s7_d3_r300/m_mixed.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 465,
+      "records": 925,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_mul_edges_s1_d5_r-1/m_mul_edges.csv"
+    },
+    {
+      "data_accesses": 70,
+      "fetches": 288,
+      "records": 552,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_random_101_s1_d5_r-1/m_random_101.csv"
+    },
+    {
+      "data_accesses": 98,
+      "fetches": 293,
+      "records": 565,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_random_13_s1_d5_r-1/m_random_13.csv"
+    },
+    {
+      "data_accesses": 80,
+      "fetches": 287,
+      "records": 555,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_random_31_s1_d5_r-1/m_random_31.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 22,
+      "records": 39,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_reset_s1_d5_r-1/m_reset.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 22,
+      "records": 39,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/m_reset_w_s1_d5_r-1/m_reset_w.csv"
+    },
+    {
+      "data_accesses": 129,
+      "fetches": 86,
+      "records": 167,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/memory_sizes_s1_d5_r-1/memory_sizes.csv"
+    },
+    {
+      "data_accesses": 187,
+      "fetches": 127,
+      "records": 243,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/memory_sizes_s7_d3_r300/memory_sizes.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 36,
+      "records": 70,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/overflow_s1_d5_r-1/overflow.csv"
+    },
+    {
+      "data_accesses": 15,
+      "fetches": 33,
+      "records": 51,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_forward_s1_d5_r-1/pipe_forward.csv"
+    },
+    {
+      "data_accesses": 15,
+      "fetches": 38,
+      "records": 57,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/pipe_forward_s8_d2_r25/pipe_forward.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 13,
+      "records": 21,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_kill_load_s1_d5_r-1/pipe_kill_load.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 13,
+      "records": 21,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_kill_store_s1_d5_r-1/pipe_kill_store.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 3,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_misaligned_shadow_s1_d5_r-1/pipe_misaligned_shadow.csv"
+    },
+    {
+      "data_accesses": 234,
+      "fetches": 455,
+      "records": 770,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_random_17_s1_d5_r-1/pipe_random_17.csv"
+    },
+    {
+      "data_accesses": 213,
+      "fetches": 456,
+      "records": 761,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_random_3_s1_d5_r-1/pipe_random_3.csv"
+    },
+    {
+      "data_accesses": 215,
+      "fetches": 514,
+      "records": 870,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/pipe_random_3_s7_d3_r300/pipe_random_3.csv"
+    },
+    {
+      "data_accesses": 233,
+      "fetches": 446,
+      "records": 768,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_random_59_s1_d5_r-1/pipe_random_59.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 15,
+      "records": 43,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_redirect_s1_d5_r-1/pipe_redirect.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 4,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/pipe_trap_shadow_s1_d5_r-1/pipe_trap_shadow.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_addiw_s1_d5_r-1/promoted_addiw.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_divuw_s1_d5_r-1/promoted_divuw.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_ebreak_s1_d5_r-1/promoted_ebreak.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_ecall_s1_d5_r-1/promoted_ecall.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 7,
+      "records": 6,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_fence_i_s1_d5_r-1/promoted_fence_i.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_fence_s1_d5_r-1/promoted_fence.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 5,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_mul_s1_d5_r-1/promoted_mul.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_shift_s1_d5_r-1/promoted_shift.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/promoted_sub_s1_d5_r-1/promoted_sub.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 117,
+      "records": 232,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_1_s1_d5_r-1/random_1.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 117,
+      "records": 232,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_42_s1_d5_r-1/random_42.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 117,
+      "records": 232,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_7_s1_d5_r-1/random_7.csv"
+    },
+    {
+      "data_accesses": 59,
+      "fetches": 305,
+      "records": 539,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_0.csv"
+    },
+    {
+      "data_accesses": 47,
+      "fetches": 268,
+      "records": 487,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_1.csv"
+    },
+    {
+      "data_accesses": 49,
+      "fetches": 291,
+      "records": 521,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_10.csv"
+    },
+    {
+      "data_accesses": 53,
+      "fetches": 339,
+      "records": 607,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_11.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 213,
+      "records": 394,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_2.csv"
+    },
+    {
+      "data_accesses": 40,
+      "fetches": 247,
+      "records": 442,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_3.csv"
+    },
+    {
+      "data_accesses": 71,
+      "fetches": 344,
+      "records": 602,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_4.csv"
+    },
+    {
+      "data_accesses": 30,
+      "fetches": 256,
+      "records": 455,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_5.csv"
+    },
+    {
+      "data_accesses": 46,
+      "fetches": 265,
+      "records": 475,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_6.csv"
+    },
+    {
+      "data_accesses": 54,
+      "fetches": 260,
+      "records": 477,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_7.csv"
+    },
+    {
+      "data_accesses": 29,
+      "fetches": 275,
+      "records": 510,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_8.csv"
+    },
+    {
+      "data_accesses": 24,
+      "fetches": 205,
+      "records": 361,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s1_d5_p12/random_9.csv"
+    },
+    {
+      "data_accesses": 61,
+      "fetches": 290,
+      "records": 516,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_0.csv"
+    },
+    {
+      "data_accesses": 26,
+      "fetches": 232,
+      "records": 396,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_1.csv"
+    },
+    {
+      "data_accesses": 40,
+      "fetches": 219,
+      "records": 392,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_10.csv"
+    },
+    {
+      "data_accesses": 27,
+      "fetches": 299,
+      "records": 536,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_11.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 224,
+      "records": 404,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_2.csv"
+    },
+    {
+      "data_accesses": 48,
+      "fetches": 299,
+      "records": 516,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_3.csv"
+    },
+    {
+      "data_accesses": 44,
+      "fetches": 274,
+      "records": 479,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_4.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 293,
+      "records": 519,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_5.csv"
+    },
+    {
+      "data_accesses": 64,
+      "fetches": 303,
+      "records": 533,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_6.csv"
+    },
+    {
+      "data_accesses": 38,
+      "fetches": 214,
+      "records": 395,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_7.csv"
+    },
+    {
+      "data_accesses": 37,
+      "fetches": 271,
+      "records": 504,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_8.csv"
+    },
+    {
+      "data_accesses": 38,
+      "fetches": 233,
+      "records": 415,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s2_d5_p12/random_9.csv"
+    },
+    {
+      "data_accesses": 58,
+      "fetches": 327,
+      "records": 582,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_0.csv"
+    },
+    {
+      "data_accesses": 61,
+      "fetches": 328,
+      "records": 575,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_1.csv"
+    },
+    {
+      "data_accesses": 41,
+      "fetches": 203,
+      "records": 356,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_10.csv"
+    },
+    {
+      "data_accesses": 63,
+      "fetches": 352,
+      "records": 650,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_11.csv"
+    },
+    {
+      "data_accesses": 66,
+      "fetches": 346,
+      "records": 640,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_2.csv"
+    },
+    {
+      "data_accesses": 63,
+      "fetches": 306,
+      "records": 539,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_3.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 228,
+      "records": 399,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_4.csv"
+    },
+    {
+      "data_accesses": 56,
+      "fetches": 305,
+      "records": 560,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_5.csv"
+    },
+    {
+      "data_accesses": 60,
+      "fetches": 328,
+      "records": 586,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_6.csv"
+    },
+    {
+      "data_accesses": 37,
+      "fetches": 214,
+      "records": 374,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_7.csv"
+    },
+    {
+      "data_accesses": 56,
+      "fetches": 322,
+      "records": 580,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_8.csv"
+    },
+    {
+      "data_accesses": 48,
+      "fetches": 240,
+      "records": 432,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s3_d5_p12/random_9.csv"
+    },
+    {
+      "data_accesses": 40,
+      "fetches": 231,
+      "records": 400,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_0.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 229,
+      "records": 413,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_1.csv"
+    },
+    {
+      "data_accesses": 61,
+      "fetches": 338,
+      "records": 600,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_10.csv"
+    },
+    {
+      "data_accesses": 36,
+      "fetches": 316,
+      "records": 555,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_11.csv"
+    },
+    {
+      "data_accesses": 57,
+      "fetches": 374,
+      "records": 651,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_2.csv"
+    },
+    {
+      "data_accesses": 70,
+      "fetches": 338,
+      "records": 590,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_3.csv"
+    },
+    {
+      "data_accesses": 74,
+      "fetches": 328,
+      "records": 585,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_4.csv"
+    },
+    {
+      "data_accesses": 44,
+      "fetches": 291,
+      "records": 529,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_5.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 231,
+      "records": 408,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_6.csv"
+    },
+    {
+      "data_accesses": 48,
+      "fetches": 282,
+      "records": 502,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_7.csv"
+    },
+    {
+      "data_accesses": 60,
+      "fetches": 357,
+      "records": 643,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_8.csv"
+    },
+    {
+      "data_accesses": 61,
+      "fetches": 319,
+      "records": 559,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s4_d5_p12/random_9.csv"
+    },
+    {
+      "data_accesses": 59,
+      "fetches": 332,
+      "records": 580,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_0.csv"
+    },
+    {
+      "data_accesses": 64,
+      "fetches": 310,
+      "records": 546,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_1.csv"
+    },
+    {
+      "data_accesses": 52,
+      "fetches": 293,
+      "records": 518,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_10.csv"
+    },
+    {
+      "data_accesses": 50,
+      "fetches": 337,
+      "records": 587,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_11.csv"
+    },
+    {
+      "data_accesses": 43,
+      "fetches": 342,
+      "records": 616,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_2.csv"
+    },
+    {
+      "data_accesses": 45,
+      "fetches": 270,
+      "records": 483,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_3.csv"
+    },
+    {
+      "data_accesses": 37,
+      "fetches": 232,
+      "records": 402,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_4.csv"
+    },
+    {
+      "data_accesses": 62,
+      "fetches": 335,
+      "records": 616,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_5.csv"
+    },
+    {
+      "data_accesses": 53,
+      "fetches": 277,
+      "records": 481,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_6.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 216,
+      "records": 392,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_7.csv"
+    },
+    {
+      "data_accesses": 40,
+      "fetches": 301,
+      "records": 539,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_8.csv"
+    },
+    {
+      "data_accesses": 45,
+      "fetches": 230,
+      "records": 406,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s5_d0_p12_ready/random_9.csv"
+    },
+    {
+      "data_accesses": 71,
+      "fetches": 336,
+      "records": 590,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_0.csv"
+    },
+    {
+      "data_accesses": 51,
+      "fetches": 239,
+      "records": 430,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_1.csv"
+    },
+    {
+      "data_accesses": 35,
+      "fetches": 221,
+      "records": 402,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_10.csv"
+    },
+    {
+      "data_accesses": 47,
+      "fetches": 344,
+      "records": 627,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_11.csv"
+    },
+    {
+      "data_accesses": 27,
+      "fetches": 222,
+      "records": 405,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_2.csv"
+    },
+    {
+      "data_accesses": 51,
+      "fetches": 287,
+      "records": 503,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_3.csv"
+    },
+    {
+      "data_accesses": 48,
+      "fetches": 275,
+      "records": 486,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_4.csv"
+    },
+    {
+      "data_accesses": 44,
+      "fetches": 258,
+      "records": 462,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_5.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 212,
+      "records": 378,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_6.csv"
+    },
+    {
+      "data_accesses": 34,
+      "fetches": 233,
+      "records": 411,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_7.csv"
+    },
+    {
+      "data_accesses": 57,
+      "fetches": 357,
+      "records": 640,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_8.csv"
+    },
+    {
+      "data_accesses": 41,
+      "fetches": 241,
+      "records": 432,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/random_s6_d9_p12/random_9.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/reject_compressed_s1_d5_r-1/reject_compressed.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 3,
+      "records": 4,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/reject_m_word_reserved_s1_d5_r-1/reject_m_word_reserved.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 5,
+      "records": 7,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/reset_state_s1_d5_r-1/reset_state.csv"
+    },
+    {
+      "data_accesses": 3,
+      "fetches": 6,
+      "records": 7,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/reset_store_s1_d5_r-1/reset_store.csv"
+    },
+    {
+      "data_accesses": 6,
+      "fetches": 11,
+      "records": 13,
+      "reset_markers": 2,
+      "trace": "build/uvm_pipeline/reset_store_s8_d2_r25/reset_store.csv"
+    },
+    {
+      "data_accesses": 112,
+      "fetches": 337,
+      "records": 642,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/rv64_random_11_s1_d5_r-1/rv64_random_11.csv"
+    },
+    {
+      "data_accesses": 112,
+      "fetches": 330,
+      "records": 629,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/rv64_random_29_s1_d5_r-1/rv64_random_29.csv"
+    },
+    {
+      "data_accesses": 102,
+      "fetches": 332,
+      "records": 629,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/rv64_random_97_s1_d5_r-1/rv64_random_97.csv"
+    },
+    {
+      "data_accesses": 1,
+      "fetches": 66,
+      "records": 127,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/s4_csr_s1_d5_r-1/s4_csr.csv"
+    },
+    {
+      "data_accesses": 81,
+      "fetches": 257,
+      "records": 390,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/s4_interrupt_s1_d5_r-1/s4_interrupt.csv"
+    },
+    {
+      "data_accesses": 41,
+      "fetches": 170,
+      "records": 245,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/s4_traps_s1_d5_r-1/s4_traps.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 4,
+      "records": 5,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/s4_wfi_s1_d5_r-1/s4_wfi.csv"
+    },
+    {
+      "data_accesses": 0,
+      "fetches": 299,
+      "records": 596,
+      "reset_markers": 0,
+      "trace": "build/uvm_pipeline/word_ops_s1_d5_r-1/word_ops.csv"
+    }
+  ]
+}

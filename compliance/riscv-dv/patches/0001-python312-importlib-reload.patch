@@ -1,0 +1,13 @@
+diff --git a/pygen/pygen_src/isa/riscv_instr.py b/pygen/pygen_src/isa/riscv_instr.py
+index e67fd54..85aff1c 100644
+--- a/pygen/pygen_src/isa/riscv_instr.py
++++ b/pygen/pygen_src/isa/riscv_instr.py
+@@ -15,7 +15,7 @@ import copy
+ import sys
+ import random
+ import vsc
+-from imp import reload
++from importlib import reload
+ from collections import defaultdict
+ from bitstring import BitArray
+ from importlib import import_module

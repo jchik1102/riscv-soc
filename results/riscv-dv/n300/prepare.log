@@ -1,0 +1,17 @@
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_0: 261 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_1: 375 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_hint_instr_test_0: 225 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_0: 247 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_1: 237 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_0: 247 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_1: 209 commits, 1 handled traps
+RISCVDV_SKIP riscv_load_store_stress_test_0: generator produced invalid assembly: build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S:476: Error: illegal operands `la zero,region_1+3854'
+RISCVDV_SPIKE_PASS riscv_load_store_stress_test_1: 233 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_loop_test_0: 205 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_no_fence_test_0: 265 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_no_fence_test_1: 238 commits, 2 handled traps
+RISCVDV_SKIP riscv_rand_instr_test_0: generator produced invalid assembly: build/riscv-dv/n300/images/riscv_rand_instr_test_0.S:66: Error: illegal operands `la zero,region_1+3955'
+RISCVDV_SPIKE_PASS riscv_rand_instr_test_1: 223 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_0: 237 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_1: 297 commits, 2 handled traps
+RISCVDV_SPIKE_TOTAL pass=14 of 14; skipped=2

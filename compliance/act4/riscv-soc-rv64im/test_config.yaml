@@ -1,0 +1,10 @@
+name: riscv-soc-rv64im
+# ACT4 requires GCC 15 or later; firmware keeps the system GCC 13.2.
+compiler_exe: /home/jonat/riscv-tools/gcc-nightly-2026.08.27/bin/riscv64-unknown-elf-gcc # riscv-gnu-toolchain 2026.08.27, GCC 16.1.0
+objdump_exe: /home/jonat/riscv-tools/gcc-nightly-2026.08.27/bin/riscv64-unknown-elf-objdump
+ref_model_exe: /home/jonat/riscv-tools/sail-0.15/bin/sail_riscv_sim
+udb_config: riscv-soc-rv64im.yaml
+linker_script: link.ld
+dut_include_dir: .
+# The brief scopes this run to the unprivileged RV64I and RV64M tests.
+include_priv_tests: False

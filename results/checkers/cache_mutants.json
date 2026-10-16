@@ -1,0 +1,104 @@
+[
+  {
+    "mutant": "disable_keeps_lines",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 228410000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "fill_beats_written_to_one_word",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 12010000: read 0000000092001cd8 mask 03: 000000000000xxxx expected 0000000000004f3a",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "fill_burst_too_short",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 590000: malformed line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "fill_error_validates_line",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 25150000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "fill_returns_wrong_beat",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 850000: read 00000000900027b8 mask ff: a4b98e8390657a4f expected fcf1c6dba8bdb287",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "hit_ignores_region",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 198130000: read 0000000090000168 mask dc: 8a9f00b8ab9e0000 expected dfd200b8ab9e0000",
+    "fatal": "Fatal: CACHE_TB FAIL: 1 errors"
+  },
+  {
+    "mutant": "hit_ignores_tag",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 4890000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "hit_returns_unselected_lanes",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 6590000: read 00000000900027b8 mask 0f: fcf1c6dba8bdb287 expected 00000000a8bdb287",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "invalidate_ignored",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 179030000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "killed_fill_validates_line",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 287090000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB FAIL: 2 errors"
+  },
+  {
+    "mutant": "miss_keeps_old_line_valid",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 17430000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB FAIL: 4 errors"
+  },
+  {
+    "mutant": "reset_keeps_lines",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 56030000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "store_accepted_before_memory",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 4270000: response not produced in time",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "tag_from_wrong_bits",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 9070000: miss response without a line fill",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "write_error_updates_line",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 389550000: read 0000000092001cc8 mask ff: 6caaeb290835aa0e expected e8519b65bc97899b",
+    "fatal": "Fatal: CACHE_TB FAIL: 3 errors"
+  },
+  {
+    "mutant": "write_hit_not_updated",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 21230000: read 0000000092001cd8 mask ff: 818c7b6655404f3a expected 818c7b6655406f3a",
+    "fatal": "Fatal: CACHE_TB: too many errors"
+  },
+  {
+    "mutant": "write_miss_allocates_data",
+    "result": "DETECTED",
+    "first_error": "Error: CACHE_TB 50550000: read 00000000900002d0 mask f0: c81b0c0f00000000 expected 261b0c0100000000",
+    "fatal": "Fatal: CACHE_TB FAIL: 12 errors"
+  }
+]

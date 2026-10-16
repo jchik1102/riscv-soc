@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Oct 15 05:40:18 2026
+# Process ID         : 40404
+# Current directory  : C:/projects/riscv-soc/build/coremark/xsim_nobpred
+# Command line       : xsim.exe -log coremark.log -mode tcl -source {xsim.dir/coremark_tb/xsim_script.tcl}
+# Log file           : C:/projects/riscv-soc/build/coremark/xsim_nobpred/coremark.log
+# Journal file       : C:/projects/riscv-soc/build/coremark/xsim_nobpred\xsim.jou
+# Running On         : Jonathan
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : Intel(R) Core(TM) i9-14900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 34053 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 38348 MB
+# Available Virtual  : 7746 MB
+#-----------------------------------------------------------
+source xsim.dir/coremark_tb/xsim_script.tcl
+# xsim {coremark_tb} -testplusarg IMAGE=C:/projects/riscv-soc/build/coremark/coremark.hex -testplusarg MAX_CYCLES=200000000 -autoloadwcfg -runall -onerror quit
+Time resolution is 1 ps
+run -all
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11187783
+Total time (secs): 0
+ERROR! Must execute for at least 10 secs for a valid result!
+Iterations       : 10
+Compiler version : GCC13.2.0
+Compiler flags   : -march=rv64im_zicsr -mabi=lp64 -mcmodel=medany -O2
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xfcaf
+Errors detected
+TICKS 11187783
+COREMARK_TB_DONE cycles=11242766 retired=3623912 redirects=392844 halt_cause=11
+$finish called at time : 224855370 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 76
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:34 . Memory (MB): peak = 196.793 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 12524 KB (Peak: 12524 KB), Simulation CPU Usage: 93624 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 05:41:54 2026...

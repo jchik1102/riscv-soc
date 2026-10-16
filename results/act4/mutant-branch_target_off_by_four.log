@@ -1,0 +1,179 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/platform_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/soc_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/decoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/build/pipeline_mutants/branch_target_off_by_four/alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/build/pipeline_mutants/branch_target_off_by_four/load_store.sv" into library work
+INFO: [VRFC 10-311] analyzing module load_store
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/mul_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module mul_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/div_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module div_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/muldiv_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module muldiv_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/build/pipeline_mutants/branch_target_off_by_four/csr_file.sv" into library work
+INFO: [VRFC 10-311] analyzing module csr_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/build/pipeline_mutants/branch_target_off_by_four/core_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module core_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/tb/core/pipe_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module pipe_tb
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe pipe_tb -s pipe_tb --timescale 1ns/1ps --debug typical 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.soc_pkg
+Compiling package work.platform_pkg
+Compiling package work.core_pkg
+Compiling module work.decoder
+Compiling module work.regfile
+Compiling module work.alu
+Compiling module work.mul_iter
+Compiling module work.div_iter
+Compiling module work.muldiv_unit
+Compiling module work.csr_file
+Compiling module work.load_store
+Compiling module work.core_pipeline_default
+Compiling module work.pipe_tb
+Built simulation snapshot pipe_tb
+SIMULATED: I-add-00_s1_d5
+SIMULATED: I-addi-00_s1_d5
+SIMULATED: I-addiw-00_s1_d5
+SIMULATED: I-addw-00_s1_d5
+SIMULATED: I-and-00_s1_d5
+SIMULATED: I-andi-00_s1_d5
+SIMULATED: I-auipc-00_s1_d5
+SIMULATED: I-beq-00_s1_d5
+SIMULATED: I-bge-00_s1_d5
+SIMULATED: I-bgeu-00_s1_d5
+SIMULATED: I-blt-00_s1_d5
+SIMULATED: I-bltu-00_s1_d5
+SIMULATED: I-bne-00_s1_d5
+SIMULATED: I-fence-00_s1_d5
+SIMULATED: I-jal-00_s1_d5
+SIMULATED: I-jalr-00_s1_d5
+SIMULATED: I-lb-00_s1_d5
+SIMULATED: I-lbu-00_s1_d5
+SIMULATED: I-ld-00_s1_d5
+SIMULATED: I-lh-00_s1_d5
+SIMULATED: I-lhu-00_s1_d5
+SIMULATED: I-lui-00_s1_d5
+SIMULATED: I-lw-00_s1_d5
+SIMULATED: I-lwu-00_s1_d5
+SIMULATED: I-nop-00_s1_d5
+SIMULATED: I-or-00_s1_d5
+SIMULATED: I-ori-00_s1_d5
+SIMULATED: I-sb-00_s1_d5
+SIMULATED: I-sd-00_s1_d5
+SIMULATED: I-sh-00_s1_d5
+SIMULATED: I-sll-00_s1_d5
+SIMULATED: I-slli-00_s1_d5
+SIMULATED: I-slliw-00_s1_d5
+SIMULATED: I-sllw-00_s1_d5
+SIMULATED: I-slt-00_s1_d5
+SIMULATED: I-slti-00_s1_d5
+SIMULATED: I-sltiu-00_s1_d5
+SIMULATED: I-sltu-00_s1_d5
+SIMULATED: I-sra-00_s1_d5
+SIMULATED: I-srai-00_s1_d5
+SIMULATED: I-sraiw-00_s1_d5
+SIMULATED: I-sraw-00_s1_d5
+SIMULATED: I-srl-00_s1_d5
+SIMULATED: I-srli-00_s1_d5
+SIMULATED: I-srliw-00_s1_d5
+SIMULATED: I-srlw-00_s1_d5
+SIMULATED: I-sub-00_s1_d5
+SIMULATED: I-subw-00_s1_d5
+SIMULATED: I-sw-00_s1_d5
+SIMULATED: I-xor-00_s1_d5
+SIMULATED: I-xori-00_s1_d5
+SIMULATED: M-div-00_s1_d5
+SIMULATED: M-divu-00_s1_d5
+SIMULATED: M-divuw-00_s1_d5
+SIMULATED: M-divw-00_s1_d5
+SIMULATED: M-mul-00_s1_d5
+SIMULATED: M-mulh-00_s1_d5
+SIMULATED: M-mulhsu-00_s1_d5
+SIMULATED: M-mulhu-00_s1_d5
+SIMULATED: M-mulw-00_s1_d5
+SIMULATED: M-rem-00_s1_d5
+SIMULATED: M-remu-00_s1_d5
+SIMULATED: M-remuw-00_s1_d5
+SIMULATED: M-remw-00_s1_d5
+ACT_RTL_FAIL I-add-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-addi-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-addiw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-addw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-and-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-andi-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-auipc-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-beq-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-bge-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-bgeu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-blt-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-bltu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-bne-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-fence-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-jal-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-jalr-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lb-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lbu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-ld-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lh-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lhu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lui-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-lwu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-nop-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-or-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-ori-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sb-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sd-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sh-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sll-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-slli-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-slliw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sllw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-slt-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-slti-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sltiu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sltu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sra-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-srai-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sraiw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sraw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-srl-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-srli-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-srliw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-srlw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sub-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-subw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-sw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-xor-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL I-xori-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-div-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-divu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-divuw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-divw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-mul-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-mulh-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-mulhsu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-mulhu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-mulw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-rem-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-remu-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-remuw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_FAIL M-remw-00 halted without a result; tohost=0 cycles=75 retired=16
+ACT_RTL_SUMMARY suite=I pass=0 of 51
+ACT_RTL_SUMMARY suite=M pass=0 of 13
+ACT_RTL_TOTAL pass=0 of 64

@@ -1,0 +1,140 @@
+[
+  {
+    "mutant": "no_mem_to_ex_forwarding",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "bench: pipe_forward d0 i0 Fatal: Watchdog expired"
+  },
+  {
+    "mutant": "no_wb_to_ex_forwarding",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 2: expected/actual {'rd_data': (10, 5)}"
+  },
+  {
+    "mutant": "no_wb_to_id_bypass",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 21: expected/actual {'rd_data': (154, 77)}"
+  },
+  {
+    "mutant": "store_data_not_forwarded",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Data request for order 10: expected (2147500032, 1, 255, 77), actual (2147500032, 1, 255, 0)"
+  },
+  {
+    "mutant": "branch_operand_not_forwarded",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_random_17 d5 i0 AssertionError: Trace row 642: expected/actual {'next_pc': (2147486628, 2147486620)}"
+  },
+  {
+    "mutant": "no_load_use_stall",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Data request for order 12: expected (2147500040, 1, 255, 77), actual (2147500040, 1, 255, 0)"
+  },
+  {
+    "mutant": "stalled_operands_not_refreshed",
+    "category": "forwarding",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 41: expected/actual {'next_pc': (2147483856, 2147483852)}"
+  },
+  {
+    "mutant": "wrong_path_id_not_flushed",
+    "category": "branch",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 25: expected/actual {'pc': (2147483752, 2147483748), 'insn': (5837923, 3148051), 'next_pc': (2147483760, 2147483752), 'rd': (0, 18), 'rd_data': (0, 3)}"
+  },
+  {
+    "mutant": "wrong_path_ex_not_squashed",
+    "category": "branch",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 24: expected/actual {'pc': (2147483748, 2147483744), 'insn': (3148051, 1050771), 'next_pc': (2147483752, 2147483748), 'rd': (18, 17), 'rd_data': (3, 1)}"
+  },
+  {
+    "mutant": "branch_target_off_by_four",
+    "category": "branch",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 24: expected/actual {'pc': (2147483748, 2147483752), 'insn': (3148051, 5837923), 'next_pc': (2147483752, 2147483760), 'rd': (18, 0), 'rd_data': (3, 0)}"
+  },
+  {
+    "mutant": "duplicate_store_issue",
+    "category": "duplicate_store",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Data request for order 11: expected (2147500032, 0, 255, 0), actual (2147500032, 1, 255, 77)"
+  },
+  {
+    "mutant": "load_word_zero_extended",
+    "category": "sign_extension",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_random_3 d0 i0 AssertionError: Trace row 267: expected/actual {'rd_data': (18446744073709551615, 4294967295)}"
+  },
+  {
+    "mutant": "word_alu_not_sign_extended",
+    "category": "sign_extension",
+    "result": "DETECTED",
+    "diagnostic": "checker: word_ops d0 i0 AssertionError: Trace row 17: expected/actual {'rd_data': (18446744073709549568, 4294965248)}"
+  },
+  {
+    "mutant": "sub_computes_add",
+    "category": "arithmetic",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 5: expected/actual {'rd_data': (10, 30)}"
+  },
+  {
+    "mutant": "flush_does_not_kill_m",
+    "category": "arithmetic",
+    "result": "DETECTED",
+    "diagnostic": "bench: pipe_kill_load d0 i0 Fatal: Arithmetic completion after the terminal record (operation not cancelled)"
+  },
+  {
+    "mutant": "trap_mepc_is_next_pc",
+    "category": "trap",
+    "result": "DETECTED",
+    "diagnostic": "checker: s4_traps d3 i0 AssertionError: Trace row 9: expected/actual {'rd_data': (2147483676, 2147483680)}"
+  },
+  {
+    "mutant": "trap_keeps_mie",
+    "category": "trap",
+    "result": "DETECTED",
+    "diagnostic": "bench: s4_interrupt d4 i40 Fatal: Watchdog expired"
+  },
+  {
+    "mutant": "mret_does_not_restore_mie",
+    "category": "trap",
+    "result": "DETECTED",
+    "diagnostic": "checker: s4_csr d0 i0 AssertionError: Trace row 123: expected/actual {'rd_data': (6280, 6272)}"
+  },
+  {
+    "mutant": "interrupt_ignores_mstatus_mie",
+    "category": "interrupt",
+    "result": "DETECTED",
+    "diagnostic": "bench: s4_interrupt d4 i40 Fatal: Watchdog expired"
+  },
+  {
+    "mutant": "minstret_counts_traps",
+    "category": "counter",
+    "result": "DETECTED",
+    "diagnostic": "checker: s4_traps d3 i0 AssertionError: Trace row 242: expected/actual {'rd_data': (229, 242)}"
+  },
+  {
+    "mutant": "csr_not_serialized",
+    "category": "csr",
+    "result": "DETECTED",
+    "diagnostic": "checker: s4_csr d0 i0 AssertionError: Trace row 28: expected/actual {'rd_data': (28, 27)}"
+  },
+  {
+    "mutant": "trap_entry_keeps_front_end",
+    "category": "interrupt",
+    "result": "DETECTED",
+    "diagnostic": "checker: s4_interrupt d4 i40 AssertionError: Trace row 49: expected/actual {'pc': (2147483804, 2147483744), 'insn': (874523891, 41943187), 'next_pc': (2147483808, 2147483748), 'rd': (25, 1), 'rd_data': (9223372036854775815, 40)}"
+  },
+  {
+    "mutant": "m_operand_b_takes_rs1",
+    "category": "arithmetic",
+    "result": "DETECTED",
+    "diagnostic": "checker: pipe_forward d0 i0 AssertionError: Trace row 38: expected/actual {'rd_data': (50, 25)}"
+  }
+]

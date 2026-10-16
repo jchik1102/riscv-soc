@@ -1,0 +1,140 @@
+[
+  {
+    "mutant": "bank_row_bits_swapped",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 204989000: READ/WRITE to idle or precharging bank 1",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "burst_first_read_precharges",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 217069000: READ/WRITE to idle or precharging bank 0",
+    "fatal": "Fatal: SDRAM_TB FAIL: 0 bench errors, 312 model errors"
+  },
+  {
+    "mutant": "burst_last_flag_on_every_beat",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 217410000: last flag 1 on beat 0 of 4",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "burst_repeats_a_beat",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 231610000: read 0000000090007ff0 lane 0: 15 expected 07",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "burst_row_left_open",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 217249000: ACTIVATE to active bank 0",
+    "fatal": "Fatal: SDRAM_TB FAIL: 0 bench errors, 170 model errors"
+  },
+  {
+    "mutant": "column_from_wrong_address_bits",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 200770000: write 0000000090000100 lane 0 not at its documented bank/row/column",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "cpu_reset_does_not_drop_response",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 207170000: response before acceptance",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "cpu_reset_loses_accepted_store",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 337630000: nonzero data on an error or write response",
+    "fatal": "Fatal: SDRAM_TB FAIL: 5 bench errors, 0 model errors"
+  },
+  {
+    "mutant": "illegal_burst_accepted",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 222630000: error flag 0 for 0000000091709fe0",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "misaligned_request_accepted",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 227810000: error flag 0 for 0000000090002003",
+    "fatal": "Fatal: SDRAM_TB FAIL: 6 bench errors, 0 model errors"
+  },
+  {
+    "mutant": "mode_register_cas_latency_3",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 202230000: read 0000000090000100 lane 0: xx expected 10",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "power_up_wait_skipped",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 349000: command other than NOP/INHIBIT during the power-up wait",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "read_captured_one_cycle_early",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 202210000: read 0000000090000100 lane 0: xx expected 10",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "read_captured_one_cycle_late",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 202250000: read 0000000090000100 lane 0: 12 expected 10",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "read_column_from_wrong_address_bits",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 202230000: read 0000000090000100 lane 0: da expected 10",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "read_response_repeated",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 202250000: response with no outstanding request",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "refresh_never_requested",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 208389000: no REFRESH for 7820.0 ns (limit 7812.5 ns)",
+    "fatal": "Fatal: SDRAM_TB FAIL: 2 bench errors, 2 model errors"
+  },
+  {
+    "mutant": "refresh_trc_too_short",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 214689000: REFRESH to ACTIVATE tRC violated",
+    "fatal": "Fatal: SDRAM_TB FAIL: 0 bench errors, 31 model errors"
+  },
+  {
+    "mutant": "too_few_init_refreshes",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 200269000: LOAD MODE before PRECHARGE ALL and the initial refreshes",
+    "fatal": "Fatal: SDRAM_TB FAIL: 0 bench errors, 3222 model errors"
+  },
+  {
+    "mutant": "unselected_read_lanes_not_zeroed",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 204090000: unselected lane 4 not zero",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "write_dqm_inverted",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 201130000: write 0000000090000100 lane 2 not at its documented bank/row/column",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  },
+  {
+    "mutant": "write_recovery_tdal_too_short",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_MODEL 228669000: REFRESH before tRP/tDAL (bank 0)",
+    "fatal": "Fatal: SDRAM_TB FAIL: 0 bench errors, 23 model errors"
+  },
+  {
+    "mutant": "write_repeated_after_completion",
+    "result": "DETECTED",
+    "first_error": "Error: SDRAM_TB 200890000: response before acceptance",
+    "fatal": "Fatal: SDRAM_TB: too many errors"
+  }
+]

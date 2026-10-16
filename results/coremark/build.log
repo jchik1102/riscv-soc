@@ -1,0 +1,2 @@
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /mnt/c/projects/riscv-soc/build/coremark/coremark.elf has a LOAD segment with RWX permissions
+COREMARK_BUILT iterations=10 bytes=13224

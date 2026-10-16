@@ -1,0 +1,62 @@
+[
+ {
+  "program": "riscv_arithmetic_basic_test_0",
+  "result": "PASS",
+  "register_commits": 2153,
+  "handled_traps": 1
+ },
+ {
+  "program": "riscv_arithmetic_basic_test_1",
+  "result": "PASS",
+  "register_commits": 612,
+  "handled_traps": 1
+ },
+ {
+  "program": "riscv_illegal_instr_test_0",
+  "result": "PASS",
+  "register_commits": 225,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_illegal_instr_test_1",
+  "result": "PASS",
+  "register_commits": 268,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_jump_stress_test_0",
+  "result": "PASS",
+  "register_commits": 2040,
+  "handled_traps": 1
+ },
+ {
+  "program": "riscv_jump_stress_test_1",
+  "result": "PASS",
+  "register_commits": 326,
+  "handled_traps": 1
+ },
+ {
+  "program": "riscv_no_fence_test_0",
+  "result": "PASS",
+  "register_commits": 241,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_rand_instr_test_0",
+  "result": "PASS",
+  "register_commits": 224,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_rand_jump_test_0",
+  "result": "PASS",
+  "register_commits": 234,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_rand_jump_test_1",
+  "result": "PASS",
+  "register_commits": 281,
+  "handled_traps": 2
+ }
+]

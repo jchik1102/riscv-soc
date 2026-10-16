@@ -23,23 +23,26 @@ def parse_commit(line):
     return (int(match[1], 16), int(match[2], 16), rd, value,
             [(int(address, 16), int(data, 16) if data else None) for address, data in memory])
 
-def run_case(name, spike):
+def run_case(name, spike, program_dir=None, out_dir=None, max_steps=50000, elf=None):
     sdram = name.startswith(("s5_", "s6_", "s7_"))
     sdram_fetch = name.startswith("s6_")
-    out = ROOT / "build/spike"
+    out = Path(out_dir) if out_dir else ROOT / "build/spike"
     out.mkdir(parents=True, exist_ok=True)
-    program = ROOT / "build/programs" / f"{name}.bin"
-    assembly = out / f"{name}.S"
-    assembly.write_text(f'.section .text.init\n.global _start\n_start:\n.incbin "{program}"\n')
-    elf = out / f"{name}.elf"
-    subprocess.run(["riscv64-unknown-elf-gcc", "-march=rv64im", "-mabi=lp64", "-nostdlib", "-nostartfiles",
-                    "-Wl,--no-relax", "-T", "sw/link.ld", str(assembly), "-o", str(elf)], cwd=ROOT, check=True, timeout=30)
+    program = (Path(program_dir) if program_dir else ROOT / "build/programs") / f"{name}.bin"
+    if elf is None:
+        # Wrap the raw image so Spike loads it at the reset PC.
+        assembly = out / f"{name}.S"
+        assembly.write_text(f'.section .text.init\n.global _start\n_start:\n.incbin "{program}"\n')
+        elf = out / f"{name}.elf"
+        subprocess.run(["riscv64-unknown-elf-gcc", "-march=rv64im", "-mabi=lp64", "-nostdlib", "-nostartfiles",
+                        "-Wl,--no-relax", "-T", "sw/link.ld", str(assembly), "-o", str(elf)], cwd=ROOT, check=True, timeout=30)
+    # else: an ELF already linked at the reset PC whose image is `program` (riscv-dv)
     dis = subprocess.run(["riscv64-unknown-elf-objdump", "-d", str(elf)], capture_output=True, text=True, check=True)
     (out / f"{name}.dis").write_text(dis.stdout)
     machine = MachineS4(program.read_bytes(), sdram=sdram, sdram_fetch=sdram_fetch)
     expected = []
     steps = handled = 0
-    for _ in range(50000):
+    for _ in range(max_steps):
         row = machine.step()
         if row["trap"] and machine.halted:
             break

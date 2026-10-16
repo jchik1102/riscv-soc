@@ -1,0 +1,200 @@
+[
+  {
+    "mutant": "a_row_bytes_reversed",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 ffff447f, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "b_transposed",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 ffffe582, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "byte_access_allowed",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 3170000 cycle 159: error flag 0, expected 1 (addr 0000000010010100 mask 80 write 1)",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "c_always_added",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 8c644d91, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "c_never_added",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 9570000 cycle 479: read data half 0 ffffd8e7, expected 6396effb",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "cycles_not_cleared",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 3610000 cycle 181: read data half 0 00000014, expected 00000004",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "d_writable",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 6590000 cycle 330: error flag 0, expected 1 (addr 0000000010010420 mask f0 write 1)",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "done_clear_beats_completion",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2370000 cycle 119: irq 0, model DONE 1 IE 1",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "done_cleared_by_wrong_bit",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2990000 cycle 150: irq 1, model DONE 0 IE 1",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "high_word_uses_low_index",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 xxxxxxxx, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "irq_ignores_enable",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2130000 cycle 107: irq 1, model DONE 1 IE 0",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "one_step_short",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2250000 cycle 113: irq 1, model DONE 0 IE 1",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "product_zero_extended",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 0001bb07, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "reset_keeps_busy",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2110000 cycle 106: read data half 0 0000000X, expected 00000001",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "row_bound_ignored",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 10290000 cycle 515: error flag 0, expected 1 (addr 0000000010010158 mask 0f write 1)",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "seq_one_step_short",
+    "n": 4,
+    "parallel": 0,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 8790000 cycle 440: irq 1, model DONE 0 IE 1",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "seq_unsigned_product",
+    "n": 4,
+    "parallel": 0,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 95750000 cycle 4788: read data half 1 00005802, expected ffffef02",
+    "fatal": "Fatal: ACCEL_TB FAIL: 5 errors"
+  },
+  {
+    "mutant": "seq_wrong_loop_order",
+    "n": 4,
+    "parallel": 0,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2430000 cycle 122: read data half 0 00000010, expected 00000012",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "start_ignored_not_flagged",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7970000 cycle 399: read data half 0 00000002, expected 00000006",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "start_while_busy_restarts",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7490000 cycle 375: irq 0, model DONE 1 IE 1",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "unsigned_product",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 7610000 cycle 381: read data half 1 0000bc07, expected 0000bb07",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  },
+  {
+    "mutant": "write_while_busy_allowed",
+    "n": 4,
+    "parallel": 1,
+    "result": "DETECTED",
+    "by": "unit bench model",
+    "first_error": "Error: ACCEL_TB 2510000 cycle 126: error flag 0, expected 1 (addr 0000000010010310 mask f0 write 1)",
+    "fatal": "Fatal: ACCEL_TB: too many errors"
+  }
+]

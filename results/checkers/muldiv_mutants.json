@@ -1,0 +1,62 @@
+[
+  {
+    "mutant": "div_by_zero_quotient_negated",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected ffffffffffffffff actual 0000000000000001"
+  },
+  {
+    "mutant": "divuw_result_zero_extended",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected ffffffffffffffff actual 00000000ffffffff"
+  },
+  {
+    "mutant": "done_pulse_repeated",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: done without an outstanding accepted operation (canceled op completed?)"
+  },
+  {
+    "mutant": "kill_ignored_by_multiplier",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: start accepted during  kill"
+  },
+  {
+    "mutant": "mulh_no_signed_correction",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected d555555555555555 actual 5555555555555554"
+  },
+  {
+    "mutant": "mulhsu_rs2_treated_signed",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected 8000000000000000 actual 0000000000000000"
+  },
+  {
+    "mutant": "mulw_low_half_not_sign_extended",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected ffffffffacfc20c0 actual 00000000acfc20c0"
+  },
+  {
+    "mutant": "off_by_one_latency",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Operation watchdog: done missing"
+  },
+  {
+    "mutant": "remainder_takes_divisor_sign",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected 000000000000000f actual fffffffffffffff1"
+  },
+  {
+    "mutant": "reset_keeps_divider_busy",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Unknown busy/done"
+  },
+  {
+    "mutant": "unit_accepts_start_while_busy",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: done and busy asserted together"
+  },
+  {
+    "mutant": "w_operands_not_extended",
+    "result": "DETECTED",
+    "diagnostic": "Fatal: Result mismatch: expected 0000000000001856 actual ffffffffffff1406"
+  }
+]

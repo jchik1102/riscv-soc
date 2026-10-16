@@ -1,0 +1,4 @@
+variant  iterations ticks      CoreMark/MHz IPC    redirects
+nobpred          10   11187783        0.894  0.322    392844
+bpred            10   10219882        0.978  0.353     71602
+COREMARK_SUMMARY speedup=1.095 tick_reduction=8.7% redirect_reduction=81.8%
