@@ -1,0 +1,16 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:17:56 on Oct 17,2026
+vlog -sv -timescale 1ns/1ps C:\projects\riscv-soc\rtl\soc\platform_pkg.sv C:\projects\riscv-soc\rtl\soc\soc_pkg.sv C:\projects\riscv-soc\rtl\peripherals\fir_filter.sv C:\projects\riscv-soc\tb\unit\adc_rnm.sv C:\projects\riscv-soc\tb\unit\fir_adc_tb.sv 
+-- Compiling package platform_pkg
+-- Compiling package soc_pkg
+-- Compiling module fir_filter
+-- Importing package platform_pkg
+-- Importing package soc_pkg
+** Warning: C:\projects\riscv-soc\rtl\peripherals\fir_filter.sv(31): (vlog-13314) Defaulting port 'req' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module adc_rnm
+-- Compiling module fir_adc_tb
+
+Top level modules:
+	fir_adc_tb
+End time: 15:17:56 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 1

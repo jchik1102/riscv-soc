@@ -73,6 +73,10 @@ def main():
             outputs = [int.from_bytes(model.mem[start+2*i:start+2*i+2], 'little', signed=True) for i in range(fir['samples'])]
             assert outputs == fir['outputs']
         if name == 'pipe_redirect': assert [model.regs[i] for i in (1,2,3,5,6,7)] == [0,0,3,0,4,4]
+        if name == 'pipe_ras':
+            r = model.regs
+            assert (r[17], r[12], r[10], r[2] - r[20]) == (760, 204, 0, 1024)
+            assert [int.from_bytes(model.mem[0x4000 + 8*i:0x4008 + 8*i], 'little') for i in range(2)] == [760, 204]
         if name in ('pipe_trap_shadow', 'pipe_misaligned_shadow', 'pipe_kill_load', 'pipe_kill_store'):
             first = 1 if name == 'pipe_trap_shadow' else 0
             assert int.from_bytes(model.mem[0x4000:0x4008], 'little') == first and bytes(model.mem[0x4008:0x4010]) == bytes(8)

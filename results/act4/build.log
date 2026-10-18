@@ -1,7 +1,7 @@
 riscv64-unknown-elf-gcc (g6afcc4f6d) 16.1.0
 0.15
-make: Entering directory '/home/jonat/hwtools/riscv-arch-test'
+make[1]: Entering directory '/home/jonat/hwtools/riscv-arch-test'
 ✓ DUT configs prepared: 1 config all up to date
-✓ Build complete: 284 succeeded, 36 up-to-date
-make: Leaving directory '/home/jonat/hwtools/riscv-arch-test'
-python3: can't open file '/mnt/c/projects/riscv-soc/scripts/act_images.py': [Errno 2] No such file or directory
+✓ Build complete: 320 up-to-date
+make[1]: Leaving directory '/home/jonat/hwtools/riscv-arch-test'
+ACT_IMAGES: 64 images in build/act4/images

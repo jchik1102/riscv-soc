@@ -1,0 +1,1 @@
+ARTY_PASS top=arty_ddr3_top part=xc7a100tcsg324-1 wns_ns=0.553 whs_ns=0.029 slice_luts=16915 slice_registers=12737 bram_tiles=24 dsps=0 unrouted_nets=0 image_words=512

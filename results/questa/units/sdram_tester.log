@@ -1,0 +1,28 @@
+vsim -c sdram_tester_opt -l sdram_tester.log.questa -do "run -all; quit -f" 
+Start time: 15:17:15 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.sdram_tester_tb(fast)
+run -all
+SDRAM_TESTER_TB clean: loops=2 errors=0 model writes=8192 reads=8192
+SDRAM_TESTER_TB injected stuck-at-0 DQ5: errors=3456 first_error=0000000090000020
+SDRAM_TESTER_TEST_PASS
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/sdram_tester_tb.sv(78)
+   Time: 4651710 ns  Iteration: 2  Instance: /sdram_tester_tb
+End time: 15:17:19 on Oct 17,2026, Elapsed time: 0:00:04
+Errors: 0, Warnings: 0

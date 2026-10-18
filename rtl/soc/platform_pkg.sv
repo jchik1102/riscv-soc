@@ -9,6 +9,8 @@ package platform_pkg;
   localparam logic [63:0] PERIPHERALS_BYTES = 64'h0000000000010000;
   localparam logic [63:0] ACCELERATOR_BASE = 64'h0000000010010000;
   localparam logic [63:0] ACCELERATOR_BYTES = 64'h0000000000010000;
+  localparam logic [63:0] DSP_BASE = 64'h0000000010020000;
+  localparam logic [63:0] DSP_BYTES = 64'h0000000000010000;
   localparam logic [63:0] UART_BASE = 64'h0000000010000000;
   localparam logic [63:0] UART_BYTES = 64'h0000000000000100;
   localparam logic [63:0] TIMER_BASE = 64'h0000000010001000;

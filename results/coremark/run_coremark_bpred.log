@@ -53,7 +53,7 @@ Built simulation snapshot coremark_tb
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Oct 15 07:59:57 2026
+  **** Start of session at: Fri Oct 16 02:47:58 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -63,7 +63,7 @@ Time resolution is 1 ps
 run -all
 2K performance run parameters for coremark.
 CoreMark Size    : 666
-Total ticks      : 10299946
+Total ticks      : 10205836
 Total time (secs): 0
 ERROR! Must execute for at least 10 secs for a valid result!
 Iterations       : 10
@@ -76,12 +76,12 @@ seedcrc          : 0xe9f5
 [0]crcstate      : 0x8e3a
 [0]crcfinal      : 0xfcaf
 Errors detected
-TICKS 10299946
-COREMARK_TB_DONE cycles=10349096 retired=3623912 redirects=98904 branches=652013 mispredicts=98904 halt_cause=11
+TICKS 10205836
+COREMARK_TB_DONE cycles=10254241 retired=3623912 redirects=68690 branches=652013 mispredicts=68690 jalrs=36749 jalr_mispredicts=5407 returns=18343 return_mispredicts=3337 halt_cause=11
 REPORT magic=0000000000000000 checksum=0000000000000000 status=0
-$finish called at time : 206981970 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 85
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:28 . Memory (MB): peak = 195.457 ; gain = 0.000
+$finish called at time : 205084870 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 97
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:31 . Memory (MB): peak = 195.695 ; gain = 0.000
 exit
-INFO: xsimkernel Simulation Memory Usage: 13508 KB (Peak: 13508 KB), Simulation CPU Usage: 87374 ms
-INFO: [Common 17-206] Exiting xsim at Thu Oct 15 08:01:27 2026...
+INFO: xsimkernel Simulation Memory Usage: 12552 KB (Peak: 12552 KB), Simulation CPU Usage: 90687 ms
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 02:49:32 2026...
 COREMARK_RUN_PASS program=coremark variant=bpred log=C:\projects\riscv-soc\build\coremark\xsim_coremark_bpred/coremark.log

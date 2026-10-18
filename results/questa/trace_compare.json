@@ -1,0 +1,18 @@
+{
+  "multicycle": {
+    "files": 264,
+    "traces": 132,
+    "identical": 264,
+    "trace_lines": 130250,
+    "differ": [],
+    "missing": []
+  },
+  "pipeline": {
+    "files": 494,
+    "traces": 247,
+    "identical": 494,
+    "trace_lines": 250543,
+    "differ": [],
+    "missing": []
+  }
+}

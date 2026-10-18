@@ -48,6 +48,7 @@ def generate():
     build('first')
     fir_reference.main()
     build('s4_board')
+    build('fir_hw')
     build('s4_demo')
     for firmware in ('array', 'muldiv', 'fir'):
         data = build(firmware)

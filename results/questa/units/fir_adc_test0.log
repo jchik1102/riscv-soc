@@ -1,0 +1,26 @@
+vsim -c fir_adc_test0_opt -l fir_adc_test0.log.questa "+COEFFS=C:/projects/riscv-soc/tests/fir/lowpass.txt" "+OUT=C:/projects/riscv-soc/build/questa/units/fir_adc_test0.csv" -do "run -all; quit -f" 
+Start time: 15:17:58 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.fir_adc_tb(fast)
+run -all
+FIR_ADC_TB_PASS test=0 samples=1024 bits=12 max_quant_err_lsb=0.500 max_sh_err_v=0 max_sample_to_output_ns=149.5 checks=3092
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/fir_adc_tb.sv(123)
+   Time: 1024150 ns  Iteration: 1  Instance: /fir_adc_tb
+End time: 15:18:01 on Oct 17,2026, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0

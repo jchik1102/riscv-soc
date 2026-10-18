@@ -1,0 +1,54 @@
+[
+ {
+  "name": "s6_icache",
+  "image": "build/programs/s6_icache.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_dcache",
+  "image": "build/programs/s6_dcache.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_fetch_end",
+  "image": "build/programs/s6_fetch_end.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s6_random_7",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048
+ },
+ {
+  "name": "s5_sdram_cached",
+  "image": "build/programs/s5_sdram.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_sdram"
+ },
+ {
+  "name": "s5_random_5_cached",
+  "image": "build/programs/s5_random_5.hex",
+  "cache_en": 3,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s5_random_5"
+ },
+ {
+  "name": "s6_random_7_uncached",
+  "image": "build/programs/s6_random_7.hex",
+  "cache_en": 0,
+  "icache": 2048,
+  "dcache": 2048,
+  "program": "s6_random_7"
+ }
+]

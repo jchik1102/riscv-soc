@@ -53,7 +53,7 @@ Built simulation snapshot coremark_tb
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Oct 15 07:58:13 2026
+  **** Start of session at: Fri Oct 16 02:44:35 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -77,11 +77,11 @@ seedcrc          : 0xe9f5
 [0]crcfinal      : 0xfcaf
 Errors detected
 TICKS 11187783
-COREMARK_TB_DONE cycles=11242768 retired=3623912 redirects=392845 branches=652013 mispredicts=392845 halt_cause=11
+COREMARK_TB_DONE cycles=11242768 retired=3623912 redirects=392845 branches=652013 mispredicts=392845 jalrs=36749 jalr_mispredicts=36749 returns=18343 return_mispredicts=18343 halt_cause=11
 REPORT magic=0000000000000000 checksum=0000000000000000 status=0
-$finish called at time : 224855410 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 85
-run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:36 . Memory (MB): peak = 195.309 ; gain = 0.000
+$finish called at time : 224855410 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 97
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:38 . Memory (MB): peak = 195.742 ; gain = 0.000
 exit
-INFO: xsimkernel Simulation Memory Usage: 13476 KB (Peak: 13476 KB), Simulation CPU Usage: 95484 ms
-INFO: [Common 17-206] Exiting xsim at Thu Oct 15 07:59:52 2026...
+INFO: xsimkernel Simulation Memory Usage: 13512 KB (Peak: 13512 KB), Simulation CPU Usage: 97655 ms
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 02:46:15 2026...
 COREMARK_RUN_PASS program=coremark variant=nobpred log=C:\projects\riscv-soc\build\coremark\xsim_coremark_nobpred/coremark.log

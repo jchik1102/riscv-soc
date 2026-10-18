@@ -1,0 +1,16 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:17:27 on Oct 17,2026
+vopt accel_tb -o accel_n4_p1_opt -GN=4 -GPARALLEL=1 -GTRANSACTIONS=20000 
+
+Top level modules:
+	accel_tb
+
+Analyzing design...
+-- Loading module accel_tb
+-- Importing package soc_pkg
+-- Importing package platform_pkg
+-- Loading module matrix_accel
+Incremental compilation check found no design-units have changed.
+Optimized design name is accel_n4_p1_opt
+End time: 15:17:27 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

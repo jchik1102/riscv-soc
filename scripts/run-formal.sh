@@ -15,7 +15,8 @@ mkdir -p "$OUT"
 { echo "OSS CAD Suite $(cat "$(dirname "$(command -v yosys)")/../VERSION" 2>/dev/null)"; yosys -V; sby --version
   echo "Yices $(yices --version | head -1 | awk '{print $2}')"; echo "Bitwuzla $(bitwuzla --version)"; } > "$OUT/versions.txt"
 
-list=$(grep -vE '^\s*(#|$)' tasks.txt)
+# tr: a Windows checkout may give tasks.txt CRLF line endings
+list=$(tr -d '\r' < tasks.txt | grep -vE '^\s*(#|$)')
 # Remove old work directories so a task that fails to start can't report a stale status.
 echo "$list" | while read -r sby task; do rm -rf "${sby%.sby}_$task"; done
 for sby in $(echo "$list" | awk '{print $1}' | sort -u); do

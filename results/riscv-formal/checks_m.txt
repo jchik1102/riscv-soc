@@ -1,0 +1,16 @@
+riscv-formal c992aa6, Yosys 0.70+16 (git sha1 3bb533450, Release, Clang /usr/bin/clang++ 21.1.8)
+config: formal/rvfi/checks_m.cfg, insn depth 12
+insn_mul_ch0             PASS        225s
+insn_mulh_ch0            PASS        223s
+insn_mulhsu_ch0          PASS        222s
+insn_mulhu_ch0           PASS        210s
+insn_mulw_ch0            PASS        177s
+insn_div_ch0             PASS        213s
+insn_divu_ch0            PASS        221s
+insn_divuw_ch0           PASS        206s
+insn_divw_ch0            PASS        231s
+insn_rem_ch0             PASS        203s
+insn_remu_ch0            PASS        233s
+insn_remuw_ch0           PASS        205s
+insn_remw_ch0            PASS        204s
+RISCV_FORMAL checks_m 13 of 13 checks PASS

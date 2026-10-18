@@ -1,0 +1,54 @@
+SBY 13:45:38 [reg_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/defines.sv'.
+SBY 13:45:38 [reg_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/reg_ch0.sv'.
+SBY 13:45:38 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/../../checks/rvfi_macros.vh' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/rvfi_macros.vh'.
+SBY 13:45:38 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/../../checks/rvfi_channel.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/rvfi_channel.sv'.
+SBY 13:45:38 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/../../checks/rvfi_testbench.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/rvfi_testbench.sv'.
+SBY 13:45:38 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/../../checks/rvfi_reg_check.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/no_mem_to_ex_forwarding/rvfi/cores/riscv_soc/checks/reg_ch0/src/rvfi_reg_check.sv'.
+SBY 13:45:39 [reg_ch0] engine_0: smtbmc bitwuzla
+SBY 13:45:39 [reg_ch0] base: starting process "cd reg_ch0/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:45:42 [reg_ch0] base: finished (returncode=0)
+SBY 13:45:42 [reg_ch0] prep: starting process "cd reg_ch0/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:45:42 [reg_ch0] prep: finished (returncode=0)
+SBY 13:45:42 [reg_ch0] smt2: starting process "cd reg_ch0/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:45:43 [reg_ch0] smt2: finished (returncode=0)
+SBY 13:45:43 [reg_ch0] engine_0: starting process "cd reg_ch0; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 20:21  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:45:43 [reg_ch0] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 13:45:43 [reg_ch0] engine_0: ##   0:00:00  Skipping step 0..
+SBY 13:45:43 [reg_ch0] engine_0: ##   0:00:00  Skipping step 1..
+SBY 13:45:43 [reg_ch0] engine_0: ##   0:00:00  Skipping step 2..
+SBY 13:45:43 [reg_ch0] engine_0: ##   0:00:00  Skipping step 3..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:00  Skipping step 4..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:01  Skipping step 5..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:01  Skipping step 6..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:01  Skipping step 7..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:01  Skipping step 8..
+SBY 13:45:44 [reg_ch0] engine_0: ##   0:00:01  Skipping step 9..
+SBY 13:45:45 [reg_ch0] engine_0: ##   0:00:01  Skipping step 10..
+SBY 13:45:45 [reg_ch0] engine_0: ##   0:00:02  Skipping step 11..
+SBY 13:45:45 [reg_ch0] engine_0: ##   0:00:02  Skipping step 12..
+SBY 13:45:45 [reg_ch0] engine_0: ##   0:00:02  Skipping step 13..
+SBY 13:45:45 [reg_ch0] engine_0: ##   0:00:02  Skipping step 14..
+SBY 13:45:46 [reg_ch0] engine_0: ##   0:00:02  Skipping step 15..
+SBY 13:45:46 [reg_ch0] engine_0: ##   0:00:03  Skipping step 16..
+SBY 13:45:46 [reg_ch0] engine_0: ##   0:00:03  Skipping step 17..
+SBY 13:45:46 [reg_ch0] engine_0: ##   0:00:03  Skipping step 18..
+SBY 13:45:46 [reg_ch0] engine_0: ##   0:00:03  Skipping step 19..
+SBY 13:45:47 [reg_ch0] engine_0: ##   0:00:03  Checking assumptions in step 20..
+SBY 13:45:51 [reg_ch0] engine_0: ##   0:00:08  Checking assertions in step 20..
+SBY 13:46:41 [reg_ch0] engine_0: ##   0:00:58  BMC failed!
+SBY 13:46:41 [reg_ch0] engine_0: ##   0:00:58  Value for anyconst rvfi_testbench.insn_order (rvfi_reg_check.sv:19.24-19.34): 4
+SBY 13:46:41 [reg_ch0] engine_0: ##   0:00:58  Value for anyconst rvfi_testbench.register_index (rvfi_reg_check.sv:20.23-20.37): 25
+SBY 13:46:41 [reg_ch0] engine_0: ##   0:00:58  Assert failed in rvfi_testbench: rvfi_reg_check.sv:44.6-44.59 (_witness_.check_flatten_checker_inst__assert_rvfi_reg_check_sv_44_3899)
+SBY 13:46:41 [reg_ch0] engine_0: ##   0:00:58  Writing trace to VCD file: engine_0/trace.vcd
+SBY 13:48:07 [reg_ch0] engine_0: ##   0:02:24  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 13:48:10 [reg_ch0] engine_0: ##   0:02:27  Writing trace to constraints file: engine_0/trace.smtc
+SBY 13:48:12 [reg_ch0] engine_0: ##   0:02:29  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 13:48:18 [reg_ch0] engine_0: ##   0:02:35  Status: failed
+SBY 13:48:18 [reg_ch0] engine_0: finished (returncode=1)
+SBY 13:48:18 [reg_ch0] engine_0: Status returned by engine: FAIL
+SBY 13:48:18 [reg_ch0] summary: Elapsed clock time [H:MM:SS (secs)]: 0:02:39 (159)
+SBY 13:48:18 [reg_ch0] summary: Elapsed process time [H:MM:SS (secs)]: 0:02:38 (158)
+SBY 13:48:18 [reg_ch0] summary: engine_0 (smtbmc bitwuzla) returned FAIL
+SBY 13:48:18 [reg_ch0] summary: counterexample trace: reg_ch0/engine_0/trace.vcd
+SBY 13:48:18 [reg_ch0] summary:   failed assertion rvfi_testbench._witness_.check_flatten_checker_inst__assert_rvfi_reg_check_sv_44_3899 at rvfi_reg_check.sv:44.6-44.59 step 20
+SBY 13:48:18 [reg_ch0] DONE (FAIL, rc=0)

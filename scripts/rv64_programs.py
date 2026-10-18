@@ -258,7 +258,58 @@ def pipe_cases():
             else:
                 f3, word = rng.choice(M_OPS); code += [m(rd,a,b,f3,word), reg(b,rd,a), store(rd,20,8*rng.randrange(8),3)]
         result[f"pipe_random_{seed}"] = code
+    result["pipe_ras"] = pipe_ras()
     return result
+
+def pipe_ras():
+    # Calls and returns for the return-address stack, each in a loop so the
+    # BTB learns the returns: leaf calls; recursion 12 deep (past the 8-entry
+    # stack) with ld ra just before ret; x5 as the link register; a callee that
+    # returns 4 bytes past the call (the stack's prediction is wrong and EX
+    # must redirect); coroutine swaps (JALR that pops and pushes); a push-only
+    # jalr ra, 0(ra); and a return with an odd offset. x17 and x12 add up
+    # markers that a wrong path or a skipped call would change; the expected
+    # values are checked in check_all.py.
+    prog, labels = [], {}
+    def at(name): prog.append(name)
+    def to(name, make): prog.append((name, make))
+    loop = lambda name, reg: to(name, lambda off: branch(reg, 0, off, 1))
+    prog += [upper(20, 0x4000, True), imm(2, 20, 1024), imm(17, 0, 0), imm(12, 0, 0)]
+    prog += [imm(11, 0, 12)]; at("loop1")
+    to("leaf", lambda off: jal(1, off)); prog += [imm(17, 17, 1), imm(11, 11, -1)]; loop("loop1", 11)
+    prog += [imm(13, 0, 2)]; at("outer")
+    prog += [imm(10, 0, 12)]; to("rec", lambda off: jal(1, off)); prog += [imm(17, 17, 2), imm(13, 13, -1)]; loop("outer", 13)
+    prog += [imm(11, 0, 6)]; at("loop3")
+    to("leaf5", lambda off: jal(5, off)); prog += [imm(17, 17, 4), imm(11, 11, -1)]; loop("loop3", 11)
+    prog += [imm(11, 0, 6)]; at("loop4")
+    to("skip", lambda off: jal(1, off)); prog += [imm(17, 17, 1000), imm(17, 17, 8), imm(11, 11, -1)]; loop("loop4", 11)
+    prog += [imm(11, 0, 6)]; at("loop5")
+    to("co", lambda off: jal(5, off)); prog += [imm(17, 17, 16), jalr(5, 1, 0), imm(11, 11, -1)]; loop("loop5", 11)
+    prog += [imm(11, 0, 6)]; at("loop6")
+    prog += [upper(1, 0, True)]; to("pushf", lambda off: imm(1, 1, off + 4)); prog += [jalr(1, 1, 0), imm(17, 17, 32), imm(11, 11, -1)]; loop("loop6", 11)
+    prog += [imm(11, 0, 6)]; at("loop7")
+    to("oddf", lambda off: jal(1, off)); prog += [imm(17, 17, 64), imm(11, 11, -1)]; loop("loop7", 11)
+    prog += [store(17, 20, 0, 3), store(12, 20, 8, 3), 0]
+    at("leaf"); prog += [imm(12, 12, 3), jalr(0, 1, 0)]
+    at("rec"); to("base", lambda off: branch(10, 0, off, 0))
+    prog += [imm(2, 2, -16), store(1, 2, 0, 3), imm(10, 10, -1)]; to("rec", lambda off: jal(1, off))
+    prog += [imm(12, 12, 1), imm(2, 2, 16), load(1, 2, -16, 3), jalr(0, 1, 0)]
+    at("base"); prog += [jalr(0, 1, 0)]
+    at("leaf5"); prog += [imm(12, 12, 5), jalr(0, 5, 0)]
+    at("skip"); prog += [imm(1, 1, 4), jalr(0, 1, 0)]
+    at("co"); prog += [imm(12, 12, 1), jalr(1, 5, 0), imm(12, 12, 2), jalr(0, 5, 0)]
+    at("pushf"); prog += [imm(12, 12, 7), jalr(0, 1, 0)]
+    at("oddf"); prog += [imm(12, 12, 9), jalr(0, 1, 1)]
+    pc = 0
+    for item in prog:
+        if isinstance(item, str): labels[item] = pc
+        else: pc += 4
+    words, pc = [], 0
+    for item in prog:
+        if isinstance(item, str): continue
+        words.append(item[1](labels[item[0]] - pc) if isinstance(item, tuple) else item)
+        pc += 4
+    return words
 
 def csr(rd, rs1, address, f3): return (address << 20) | (rs1 << 15) | (f3 << 12) | (rd << 7) | 0x73
 MSTATUS, MIE, MTVEC, MSCRATCH, MEPC, MCAUSE, MTVAL, MIP = 0x300, 0x304, 0x305, 0x340, 0x341, 0x342, 0x343, 0x344

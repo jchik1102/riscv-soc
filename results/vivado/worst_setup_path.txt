@@ -1,0 +1,132 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 05:03:18 2026
+| Host         : Jonathan running 64-bit major release  (build 9200)
+| Command      : report_timing -setup -max_paths 1 -path_type full -file C:/projects/riscv-soc/build/vivado/synthesis_top/worst_setup_path.txt
+| Design       : synthesis_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.962ns  (required time - arrival time)
+  Source:                 soc/pipeline.core/mem_req_reg[addr][31]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            soc/ram/lanes[2].data_reg_1/WEA[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        17.218ns  (logic 5.574ns (32.373%)  route 11.644ns (67.627%))
+  Logic Levels:           27  (CARRY4=17 LUT1=1 LUT2=4 LUT3=1 LUT4=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                         propagated clock network latency
+                                                      0.973     0.973    
+    SLICE_X65Y116        FDRE                         0.000     0.973 r  soc/pipeline.core/mem_req_reg[addr][31]/C
+    SLICE_X65Y116        FDRE (Prop_fdre_C_Q)         0.456     1.429 f  soc/pipeline.core/mem_req_reg[addr][31]/Q
+                         net (fo=18, routed)          1.377     2.806    soc/pipeline.core/pipeline.dreq[addr]__0[31]
+    SLICE_X84Y116        LUT1 (Prop_lut1_I0_O)        0.124     2.930 r  soc/pipeline.core/owner[0]_i_240/O
+                         net (fo=1, routed)           0.000     2.930    soc/pipeline.core/owner[0]_i_240_n_0
+    SLICE_X84Y116        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.463 r  soc/pipeline.core/owner_reg[0]_i_188/CO[3]
+                         net (fo=1, routed)           0.000     3.463    soc/pipeline.core/owner_reg[0]_i_188_n_0
+    SLICE_X84Y117        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.580 r  soc/pipeline.core/owner_reg[0]_i_187/CO[3]
+                         net (fo=1, routed)           0.000     3.580    soc/pipeline.core/owner_reg[0]_i_187_n_0
+    SLICE_X84Y118        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.697 r  soc/pipeline.core/owner_reg[0]_i_141/CO[3]
+                         net (fo=1, routed)           0.000     3.697    soc/pipeline.core/owner_reg[0]_i_141_n_0
+    SLICE_X84Y119        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.814 r  soc/pipeline.core/owner_reg[0]_i_140/CO[3]
+                         net (fo=1, routed)           0.000     3.814    soc/pipeline.core/owner_reg[0]_i_140_n_0
+    SLICE_X84Y120        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.931 r  soc/pipeline.core/owner_reg[0]_i_91/CO[3]
+                         net (fo=1, routed)           0.000     3.931    soc/pipeline.core/owner_reg[0]_i_91_n_0
+    SLICE_X84Y121        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.048 r  soc/pipeline.core/owner_reg[0]_i_90/CO[3]
+                         net (fo=1, routed)           0.000     4.048    soc/pipeline.core/owner_reg[0]_i_90_n_0
+    SLICE_X84Y122        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.165 r  soc/pipeline.core/owner_reg[0]_i_50/CO[3]
+                         net (fo=1, routed)           0.000     4.165    soc/pipeline.core/owner_reg[0]_i_50_n_0
+    SLICE_X84Y123        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     4.488 f  soc/pipeline.core/owner_reg[0]_i_49/O[1]
+                         net (fo=1, routed)           0.552     5.040    soc/pipeline.core/pipeline.decoder/target3[59]
+    SLICE_X85Y122        LUT2 (Prop_lut2_I0_O)        0.306     5.346 r  soc/pipeline.core/owner[0]_i_19/O
+                         net (fo=1, routed)           0.000     5.346    soc/pipeline.core/owner[0]_i_19_n_0
+    SLICE_X85Y122        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.896 r  soc/pipeline.core/owner_reg[0]_i_4/CO[3]
+                         net (fo=7, routed)           1.772     7.669    soc/pipeline.core/pipeline.decoder/target217_in
+    SLICE_X71Y102        LUT2 (Prop_lut2_I0_O)        0.124     7.793 r  soc/pipeline.core/rsp[rdata][63]_i_5/O
+                         net (fo=3, routed)           0.314     8.107    soc/pipeline.core/owner_reg[0]_i_5_0
+    SLICE_X69Y101        LUT6 (Prop_lut6_I0_O)        0.124     8.231 r  soc/pipeline.core/owner_i_4/O
+                         net (fo=4, routed)           0.866     9.097    soc/pipeline.arbiter/pipeline.ram_dreq_valid
+    SLICE_X78Y101        LUT3 (Prop_lut3_I2_O)        0.124     9.221 r  soc/pipeline.arbiter/lanes[0].data_reg_0_i_19/O
+                         net (fo=161, routed)         1.121    10.342    soc/pipeline.arbiter/lock_owner_reg_1
+    SLICE_X82Y107        LUT4 (Prop_lut4_I2_O)        0.124    10.466 r  soc/pipeline.arbiter/held_word[3]_i_1/O
+                         net (fo=6, routed)           0.887    11.353    soc/pipeline.arbiter/req[addr][3]
+    SLICE_X83Y112        LUT2 (Prop_lut2_I0_O)        0.124    11.477 r  soc/pipeline.arbiter/read_mask[7]_i_113/O
+                         net (fo=1, routed)           0.000    11.477    soc/pipeline.arbiter/read_mask[7]_i_113_n_0
+    SLICE_X83Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.027 r  soc/pipeline.arbiter/read_mask_reg[7]_i_92/CO[3]
+                         net (fo=1, routed)           0.000    12.027    soc/pipeline.arbiter/read_mask_reg[7]_i_92_n_0
+    SLICE_X83Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.141 r  soc/pipeline.arbiter/read_mask_reg[7]_i_78/CO[3]
+                         net (fo=1, routed)           0.000    12.141    soc/pipeline.core/CO[0]
+    SLICE_X83Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.255 r  soc/pipeline.core/read_mask_reg[7]_i_63/CO[3]
+                         net (fo=1, routed)           0.000    12.255    soc/pipeline.core/read_mask_reg[7]_i_63_n_0
+    SLICE_X83Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.369 r  soc/pipeline.core/read_mask_reg[7]_i_49/CO[3]
+                         net (fo=1, routed)           0.000    12.369    soc/pipeline.core/read_mask_reg[7]_i_49_n_0
+    SLICE_X83Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.483 r  soc/pipeline.core/read_mask_reg[7]_i_35/CO[3]
+                         net (fo=1, routed)           0.000    12.483    soc/pipeline.core/read_mask_reg[7]_i_35_n_0
+    SLICE_X83Y117        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.597 r  soc/pipeline.core/read_mask_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.000    12.597    soc/pipeline.core/read_mask_reg[7]_i_21_n_0
+    SLICE_X83Y118        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.711 r  soc/pipeline.core/read_mask_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.000    12.711    soc/pipeline.core/read_mask_reg[7]_i_9_n_0
+    SLICE_X83Y119        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    12.868 r  soc/pipeline.core/read_mask_reg[7]_i_3/CO[1]
+                         net (fo=10, routed)          1.728    14.596    soc/pipeline.core/ram/valid_address1
+    SLICE_X63Y94         LUT2 (Prop_lut2_I1_O)        0.329    14.925 r  soc/pipeline.core/lanes[0].data_reg_0_i_21/O
+                         net (fo=1, routed)           0.403    15.328    soc/pipeline.arbiter/p_17_in
+    SLICE_X63Y94         LUT6 (Prop_lut6_I3_O)        0.124    15.452 r  soc/pipeline.arbiter/lanes[0].data_reg_0_i_20/O
+                         net (fo=8, routed)           1.482    16.934    soc/pipeline.arbiter/ram/write_enable
+    SLICE_X62Y72         LUT4 (Prop_lut4_I0_O)        0.116    17.050 r  soc/pipeline.arbiter/lanes[2].data_reg_0_i_5/O
+                         net (fo=2, routed)           1.141    18.191    soc/ram/lanes[2].data_reg_1_0[0]
+    RAMB36_X1Y16         RAMB36E1                                     r  soc/ram/lanes[2].data_reg_1/WEA[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+                         propagated clock network latency
+                                                      0.924    20.924    
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    RAMB36_X1Y16         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_WEA[0])
+                                                     -0.736    20.153    soc/ram/lanes[2].data_reg_1
+  -------------------------------------------------------------------
+                         required time                         20.153    
+                         arrival time                         -18.191    
+  -------------------------------------------------------------------
+                         slack                                  1.962    
+
+
+
+

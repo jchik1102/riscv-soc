@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 17 03:41:32 2026
+# Process ID         : 57296
+# Current directory  : C:/projects/riscv-soc/build/xsim_soc_ddr3
+# Command line       : xsim.exe -log s6_fetch_end.log -mode tcl -source {xsim.dir/soc_ddr3_2048_2048/xsim_script.tcl}
+# Log file           : C:/projects/riscv-soc/build/xsim_soc_ddr3/s6_fetch_end.log
+# Journal file       : C:/projects/riscv-soc/build/xsim_soc_ddr3\xsim.jou
+# Running On         : Jonathan
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : Intel(R) Core(TM) i9-14900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 34053 MB
+# Swap memory        : 8264 MB
+# Total Virtual      : 42317 MB
+# Available Virtual  : 8028 MB
+#-----------------------------------------------------------
+source xsim.dir/soc_ddr3_2048_2048/xsim_script.tcl
+# xsim {soc_ddr3_2048_2048} -testplusarg IMAGE=C:/projects/riscv-soc/build/programs/s6_fetch_end.hex -testplusarg TRACE=C:/projects/riscv-soc/build/xsim_soc_ddr3/s6_fetch_end.csv -testplusarg CACHE_EN=3 -autoloadwcfg -runall -onerror quit
+Time resolution is 1 fs
+run -all
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance soc_ddr3_tb.mig.u_mig_ddr3_mig.temp_mon_enabled.u_tempmon.xadc_supplied_temperature.XADC_inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+############# Write Clocks PLLE2_ADV Parameters #############
+
+nCK_PER_CLK      =       4
+CLK_PERIOD       =   10000
+CLKIN1_PERIOD    =  10.000
+DIVCLK_DIVIDE    =       1
+CLKFBOUT_MULT    =      13
+VCO_PERIOD       =   769.0
+CLKOUT0_DIVIDE_F =       2
+CLKOUT1_DIVIDE   =       4
+CLKOUT2_DIVIDE   =      64
+CLKOUT3_DIVIDE   =      16
+CLKOUT0_PERIOD   =    1538
+CLKOUT1_PERIOD   =    3076
+CLKOUT2_PERIOD   =   49216
+CLKOUT3_PERIOD   =   12304
+CLKOUT4_PERIOD   =    6152
+############################################################
+
+############# MMCME2_ADV Parameters #############
+
+MMCM_MULT_F           =           8
+MMCM_VCO_FREQ (MHz)   = 649.000
+MMCM_VCO_PERIOD       = 1540.832
+#################################################
+
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : BYTE_LANES_B0 = f BYTE_LANES_B1 = 0 DATA_CTL_B0 = c DATA_CTL_B1 = 0
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_LANE =           4 HIGHEST_LANE_B0 =           4 HIGHEST_LANE_B1 =           0
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_BANK =           1
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : FREQ_REF_PERIOD         = 1538.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DDR_TCK                 = 3077 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_S2_TAPS_SIZE         = 12.02 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_EARLY       = 1 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_OFFSET      = 1610.30 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_META_ZONE   = 200.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_FINE_INTR_DLY   = 890.73 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_COARSE_INTR_DLY = 575.97 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_INTRINSIC_DELAY = 1466.70 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_DELAY       = 60 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_INTRINSIC_DELAY      = 1466.70 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_DELAY                = 2187.64 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_OCLK_DELAY           = 0 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : L_PHY_0_PO_FINE_DELAY   = 60 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG1_INTRINSIC_DELAY = 0.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_INTRINSIC_DELAY = 865.48 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_INTRINSIC_DELAY      = 865.48 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_MAX_STG2_DELAY       = 756.98 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_OFFSET               = 123.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_DELAY           = 123.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy :PI_STG2_DELAY_CAND       = 123.00 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DEFAULT_RCLK_DELAY      = 10 
+soc_ddr3_tb.mig.u_mig_ddr3_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : RCLK_SELECT_EDGE        = 111 
+soc_ddr3_tb.memory.reset at time 1981637.0 ps WARNING: 200 us is required before RST_N goes inactive.
+soc_ddr3_tb.memory.cmd_task at time 2062385.0 ps WARNING: 500 us is required after RST_N goes inactive before CKE goes active.
+PHY_INIT: Memory Initialization completed at 11852406.0 ps
+PHY_INIT: Phaser_In Phase Locked at 13760098.0 ps
+PHY_INIT: Phaser_In DQSFOUND completed at 43064714.0 ps
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48217938.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48217938.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48221015.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48221015.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48224092.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48224092.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48227169.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48227169.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48230246.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48230246.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48377938.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48377938.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48381015.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48381015.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48384092.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48384092.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48387169.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48387169.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48390246.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48390246.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48537938.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48537938.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48541015.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48541015.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48544092.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48544092.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48547169.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48547169.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48550246.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48550246.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48697962.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48697962.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48701039.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48701039.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48704116.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48704116.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48707193.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48707193.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48710270.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 48710270.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49985507.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49985507.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49988584.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49988584.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49991661.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 49991661.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50139353.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50139353.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50142430.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50142430.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50145507.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50145507.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50148584.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50148584.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50151661.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+soc_ddr3_tb.memory.dqs_pos_timing_check: at time 50151661.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+PHY_INIT: Write Leveling completed at 50153944.0 ps
+PHY_INIT: Read Leveling Stage 1 completed at 90683175.0 ps
+PHY_INIT : PRBS/PER_BIT calibration completed at 90683175.0 ps
+PHY_INIT : COMPLEX OCLKDELAY calibration completed at 90683175.0 ps
+PHY_INIT: Write Calibration completed at 101883175.0 ps
+PHY_INIT: Write Calibration completed at 123433944.0 ps
+SOC_DDR3 calibration done at 163903700.0 ps ns
+SOC_DDR3 config icache=2048 dcache=2048 cache_en=3
+SOC_DDR3 memory: d_fill=0 d_read=0 d_write=2 i_fill=1 i_read=0 fence_i=1 wait_cycles=0
+SOC_DDR3_TEST_PASS cycles=109 interrupts=0
+$finish called at time : 166083700 ps : File "C:/projects/riscv-soc/tb/ddr3/soc_ddr3_tb.sv" Line 187
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:19 . Memory (MB): peak = 202.785 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 70672 KB (Peak: 70672 KB), Simulation CPU Usage: 78030 ms
+INFO: [Common 17-206] Exiting xsim at Sat Oct 17 03:42:53 2026...

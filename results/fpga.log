@@ -16,14 +16,14 @@ Info: Running Quartus Prime Shell
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Thu Oct 15 08:11:41 2026
+    Info: Processing started: Fri Oct 16 01:23:35 2026
 Info: Command: quartus_sh -t C:\projects\riscv-soc\fpga\de10_lite\board.tcl s8 1 C:/projects/riscv-soc/build/firmware/s8_board_words.hex 1024 1678397183 5
 Info: Quartus(args): s8 1 C:/projects/riscv-soc/build/firmware/s8_board_words.hex 1024 1678397183 5
 Info (125061): Changed top-level design entity name to "de10_lite_top"
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Oct 15 08:11:41 2026
+    Info: Processing started: Fri Oct 16 01:23:36 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de10_lite_s8_p1 -c de10_lite_s8_p1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 0 entities, in source file /projects/riscv-soc/rtl/soc/platform_pkg.sv
@@ -52,7 +52,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /projec
     Info (12023): Found entity 1: core_multicycle File: C:/projects/riscv-soc/rtl/core/core_multicycle.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file /projects/riscv-soc/rtl/core/core_pipeline.sv
     Info (12023): Found entity 1: core_pipeline File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 1
-    Info (12023): Found entity 2: branch_predictor File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 440
+    Info (12023): Found entity 2: branch_predictor File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 477
 Info (12021): Found 1 design units, including 1 entities, in source file /projects/riscv-soc/rtl/soc/bus_arbiter.sv
     Info (12023): Found entity 1: bus_arbiter File: C:/projects/riscv-soc/rtl/soc/bus_arbiter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /projects/riscv-soc/rtl/soc/bus_decoder.sv
@@ -163,16 +163,16 @@ Warning (10030): Net "rom.waddr_a" at boot_rom.sv(9) has no driver or initial va
 Warning (10030): Net "rom.we_a" at boot_rom.sv(9) has no driver or initial value, using a default initial value '0' File: C:/projects/riscv-soc/rtl/memory/boot_rom.sv Line: 9
 Info (12128): Elaborating entity "cpu_soc" for hierarchy "cpu_soc:soc" File: C:/projects/riscv-soc/fpga/de10_lite/de10_lite_top.sv Line: 89
 Info (12128): Elaborating entity "core_pipeline" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core" File: C:/projects/riscv-soc/rtl/soc/cpu_soc.sv Line: 65
-Info (12128): Elaborating entity "decoder" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|decoder:decode" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 99
-Info (12128): Elaborating entity "regfile" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|regfile:rf" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 134
-Info (12128): Elaborating entity "alu" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|alu:arithmetic" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 160
-Info (12128): Elaborating entity "muldiv_unit" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|muldiv_unit:arithmetic_unit" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 182
+Info (12128): Elaborating entity "decoder" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|decoder:decode" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 108
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|regfile:rf" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 143
+Info (12128): Elaborating entity "alu" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|alu:arithmetic" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 169
+Info (12128): Elaborating entity "muldiv_unit" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|muldiv_unit:arithmetic_unit" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 191
 Info (12128): Elaborating entity "mul_iter" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|muldiv_unit:arithmetic_unit|mul_iter:multiplier" File: C:/projects/riscv-soc/rtl/core/muldiv_unit.sv Line: 19
 Info (12128): Elaborating entity "div_iter" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|muldiv_unit:arithmetic_unit|div_iter:divider" File: C:/projects/riscv-soc/rtl/core/muldiv_unit.sv Line: 21
-Info (12128): Elaborating entity "csr_file" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|csr_file:csrs" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 196
+Info (12128): Elaborating entity "csr_file" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|csr_file:csrs" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 205
 Info (10264): Verilog HDL Case Statement information at csr_file.sv(46): all case item expressions in this case statement are onehot File: C:/projects/riscv-soc/rtl/core/csr_file.sv Line: 46
-Info (12128): Elaborating entity "load_store" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|load_store:mem_format" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 272
-Info (12128): Elaborating entity "branch_predictor" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|branch_predictor:predictor" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 313
+Info (12128): Elaborating entity "load_store" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|load_store:mem_format" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 281
+Info (12128): Elaborating entity "branch_predictor" for hierarchy "cpu_soc:soc|core_pipeline:pipeline.core|branch_predictor:predictor" File: C:/projects/riscv-soc/rtl/core/core_pipeline.sv Line: 341
 Info (12128): Elaborating entity "bus_decoder" for hierarchy "cpu_soc:soc|bus_decoder:pipeline.decoder" File: C:/projects/riscv-soc/rtl/soc/cpu_soc.sv Line: 77
 Info (10264): Verilog HDL Case Statement information at bus_decoder.sv(57): all case item expressions in this case statement are onehot File: C:/projects/riscv-soc/rtl/soc/bus_decoder.sv Line: 57
 Info (10264): Verilog HDL Case Statement information at bus_decoder.sv(64): all case item expressions in this case statement are onehot File: C:/projects/riscv-soc/rtl/soc/bus_decoder.sv Line: 64
@@ -645,23 +645,23 @@ Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/projects/riscv-soc/build/quartus_board_s8_p1/output_files/de10_lite_s8_p1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 29894 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 30490 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 29472 logic cells
+    Info (21061): Implemented 30068 logic cells
     Info (21064): Implemented 295 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 16 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 8945 megabytes
-    Info: Processing ended: Thu Oct 15 08:13:59 2026
-    Info: Elapsed time: 00:02:18
-    Info: Total CPU time (on all processors): 00:02:15
+    Info: Peak virtual memory: 8915 megabytes
+    Info: Processing ended: Fri Oct 16 01:25:58 2026
+    Info: Elapsed time: 00:02:22
+    Info: Total CPU time (on all processors): 00:02:29
 Info: *******************************************************************
 Info: Running Quartus Prime Fitter
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Oct 15 08:13:59 2026
+    Info: Processing started: Fri Oct 16 01:25:58 2026
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off de10_lite_s8_p1 -c de10_lite_s8_p1
 Info: qfit2_default_script.tcl version: #1
 Info: Project  = de10_lite_s8_p1
@@ -738,26 +738,26 @@ Info (176235): Finished register packing
     Extra Info (176218): Packed 53 registers into blocks of type I/O Output Buffer
     Extra Info (176220): Created 19 register duplicates
 Warning (15064): PLL "sdram_pll:pll_clock.pll|altpll:altpll_component|altpll_ga82:auto_generated|pll1" output port clk[1] feeds output pin "DRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: C:/projects/riscv-soc/build/quartus_board_s8_p1/db/altpll_ga82.tdf Line: 34
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:34
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:46
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 21% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 54% of the available device resources in the region that extends from location X22_Y11 to location X32_Y21
+Info (170195): Router estimated average interconnect usage is 22% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 57% of the available device resources in the region that extends from location X45_Y33 to location X55_Y43
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:20
-Info (11888): Total time spent on timing analysis during the Fitter is 10.42 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:23
+Info (11888): Total time spent on timing analysis during the Fitter is 11.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:15
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:18
 Warning (169177): 29 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin DRAM_DQ[0] uses I/O standard 3.3-V LVTTL at Y21 File: C:/projects/riscv-soc/fpga/de10_lite/de10_lite_top.sv Line: 19
     Info (169178): Pin DRAM_DQ[1] uses I/O standard 3.3-V LVTTL at Y20 File: C:/projects/riscv-soc/fpga/de10_lite/de10_lite_top.sv Line: 19
@@ -790,27 +790,27 @@ Warning (169177): 29 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/projects/riscv-soc/fpga/de10_lite/de10_lite_top.sv Line: 12
 Info (144001): Generated suppressed messages file C:/projects/riscv-soc/build/quartus_board_s8_p1/output_files/de10_lite_s8_p1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 6156 megabytes
-    Info: Processing ended: Thu Oct 15 08:15:32 2026
-    Info: Elapsed time: 00:01:33
-    Info: Total CPU time (on all processors): 00:03:18
+    Info: Peak virtual memory: 6098 megabytes
+    Info: Processing ended: Fri Oct 16 01:27:53 2026
+    Info: Elapsed time: 00:01:55
+    Info: Total CPU time (on all processors): 00:04:21
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Oct 15 08:15:33 2026
+    Info: Processing started: Fri Oct 16 01:27:54 2026
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de10_lite_s8_p1 -c de10_lite_s8_p1
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4926 megabytes
-    Info: Processing ended: Thu Oct 15 08:15:35 2026
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Oct 16 01:27:57 2026
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 Info (293026): Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Oct 15 08:15:36 2026
+    Info: Processing started: Fri Oct 16 01:27:57 2026
 Info: Command: quartus_sta de10_lite_s8_p1 -c de10_lite_s8_p1
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -835,15 +835,15 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 0.377
+Info (332146): Worst-case setup slack is 0.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.377               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.487               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):    12.425               0.000 sdram_clk_pin 
-Info (332146): Worst-case hold slack is 0.320
+Info (332146): Worst-case hold slack is 0.307
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.320               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.307               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     2.997               0.000 sdram_clk_pin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -859,27 +859,27 @@ Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 12
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 23.898 ns
+    Info (332114): Worst Case Available Settling Time: 22.765 ns
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 2.077
+Info (332146): Worst-case setup slack is 2.107
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.077               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     2.107               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):    12.489               0.000 sdram_clk_pin 
-Info (332146): Worst-case hold slack is 0.275
+Info (332146): Worst-case hold slack is 0.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.275               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.265               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     2.889               0.000 sdram_clk_pin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.686
+Info (332146): Worst-case minimum pulse width slack is 9.689
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.686               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.689               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     9.830               0.000 clk50 
     Info (332119):     9.876               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):    12.000               0.000 sdram_clk_pin 
@@ -888,18 +888,18 @@ Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 12
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 25.087 ns
+    Info (332114): Worst Case Available Settling Time: 24.107 ns
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 11.575
+Info (332146): Worst-case setup slack is 11.644
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.575               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    11.644               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):    12.427               0.000 sdram_clk_pin 
-Info (332146): Worst-case hold slack is 0.158
+Info (332146): Worst-case hold slack is 0.146
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.158               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.146               0.000 pll_clock.pll|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     2.575               0.000 sdram_clk_pin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -915,22 +915,22 @@ Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 12
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 33.075 ns
+    Info (332114): Worst Case Available Settling Time: 32.523 ns
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 5195 megabytes
-    Info: Processing ended: Thu Oct 15 08:15:47 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Fri Oct 16 01:28:09 2026
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
 Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 29 warnings
 BOARD_BUILD_DONE: de10_lite_s8_p1 (inspect fit, timing and assembler reports before any claim)
 Info (23030): Evaluation of Tcl script C:\projects\riscv-soc\fpga\de10_lite\board.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Thu Oct 15 08:15:47 2026
-    Info: Elapsed time: 00:04:06
-    Info: Total CPU time (on all processors): 00:06:05
+    Info: Processing ended: Fri Oct 16 01:28:10 2026
+    Info: Elapsed time: 00:04:35
+    Info: Total CPU time (on all processors): 00:27:26
 TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
@@ -949,7 +949,7 @@ Info: Running Quartus Prime Power Analyzer
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Thu Oct 15 08:15:47 2026
+    Info: Processing started: Fri Oct 16 01:28:10 2026
 Info: Command: quartus_pow --read_settings_files=on --write_settings_files=off de10_lite_s8_p1 -c de10_lite_s8_p1
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
@@ -973,11 +973,11 @@ Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specifi
 Warning (215044): No board thermal model was selected.  Analyzing without board thermal modeling.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 6.411 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 450.12 mW
+Info (215049): Average toggle rate for this design is 6.504 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 463.77 mW
 Info: Quartus Prime Power Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5141 megabytes
-    Info: Processing ended: Thu Oct 15 08:16:01 2026
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Processing ended: Fri Oct 16 01:28:27 2026
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:01:48
 POWER_ESTIMATE_DONE: build/quartus_board_s8_p1/output_files/de10_lite_s8_p1.pow.summary (vectorless estimate, not a measurement)

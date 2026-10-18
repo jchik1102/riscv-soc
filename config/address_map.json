@@ -8,7 +8,8 @@
   },
   "reserved": {
     "peripherals": {"base": 268435456, "bytes": 65536},
-    "accelerator": {"base": 268500992, "bytes": 65536}
+    "accelerator": {"base": 268500992, "bytes": 65536},
+    "dsp": {"base": 268566528, "bytes": 65536}
   },
   "devices": {
     "uart": {"base": 268435456, "bytes": 256},

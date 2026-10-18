@@ -1,0 +1,12 @@
+riscv-formal on RTL mutants (formal/rvfi/checks_m.cfg); each must fail a check
+DETECTED m_operand_b_takes_rs1 by insn_div_ch0 in 26s
+MISSED flush_does_not_kill_m (all checks pass, 181s)
+MISSED duplicate_store_issue (all checks pass, 176s)
+MISSED trap_mepc_is_next_pc (all checks pass, 176s)
+MISSED trap_keeps_mie (all checks pass, 181s)
+MISSED mret_does_not_restore_mie (all checks pass, 186s)
+MISSED interrupt_ignores_mstatus_mie (all checks pass, 181s)
+MISSED minstret_counts_traps (all checks pass, 193s)
+MISSED csr_not_serialized (all checks pass, 230s)
+MISSED trap_entry_keeps_front_end (all checks pass, 289s)
+RISCV_FORMAL_MUTANTS detected 1 of 10

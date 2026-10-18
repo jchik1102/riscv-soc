@@ -1,0 +1,7 @@
+FIR_ADC_BITEXACT run=tone samples=1024 mismatches=0
+ADC_TONE level_dbfs=-0.92 snr_db=73.44 ideal_db=73.08 enob=12.06
+FIR_ADC_BITEXACT run=two_tone samples=1024 mismatches=0
+ADC_TWO_TONE mean_code_lsb=3.06 (offset 1.5 mV is 3.07 LSB before the 0.995 gain)
+FIR_TONE bin=31 f_over_fs=0.0303 input_dbfs=-6.98 output_dbfs=-7.38 gain_db=-0.40 predicted_db=-0.40
+FIR_TONE bin=409 f_over_fs=0.3994 input_dbfs=-6.98 output_dbfs=-56.54 gain_db=-49.56 predicted_db=-49.45
+ADC_FIR_CHECK_PASS

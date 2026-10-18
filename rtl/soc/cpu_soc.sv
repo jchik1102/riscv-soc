@@ -6,7 +6,8 @@ module cpu_soc #(
   parameter int ICACHE_BYTES = int'(platform_pkg::CACHES_ICACHE_BYTES),
   parameter int DCACHE_BYTES = int'(platform_pkg::CACHES_DCACHE_BYTES),
   parameter int ACCEL_N = 0,
-  parameter bit ACCEL_PARALLEL = 1
+  parameter bit ACCEL_PARALLEL = 1,
+  parameter int FIR_LANES = 0          // 0: no FIR filter; else rtl/peripherals/fir_filter.sv with this many lanes
 ) (
   input logic clk, rst,
   input logic loader_we,
@@ -34,6 +35,7 @@ module cpu_soc #(
   // synthesis translate_off
   initial if (CACHE && !(PIPELINE && SDRAM)) $fatal(1, "cpu_soc: CACHE needs PIPELINE and SDRAM");
   initial if (!(ACCEL_N == 0 || (PIPELINE && (ACCEL_N == 2 || ACCEL_N == 4)))) $fatal(1, "cpu_soc: ACCEL_N must be 0, or 2/4 with PIPELINE");
+  initial if (FIR_LANES != 0 && !PIPELINE) $fatal(1, "cpu_soc: FIR_LANES needs PIPELINE");
   // synthesis translate_on
   generate if (PIPELINE) begin : pipeline
     bus_req_t ireq, dreq, ram_dreq, mmio_req, ram_ireq, sd_dreq;
@@ -46,6 +48,9 @@ module cpu_soc #(
     logic acc_req_valid, acc_req_ready, acc_rsp_valid, acc_rsp_ready, uart_irq, accel_irq;
     bus_req_t acc_req;
     bus_rsp_t acc_rsp;
+    logic dsp_req_valid, dsp_req_ready, dsp_rsp_valid, dsp_rsp_ready;
+    bus_req_t dsp_req;
+    bus_rsp_t dsp_rsp;
     logic msip, mtip, meip, icache_inv, icache_enable, dcache_enable;
     logic ev_i_access, ev_i_miss, ev_i_uncached, ev_d_access, ev_d_miss, ev_d_uncached, ev_d_write;
     logic ev_branch, ev_mispredict;
@@ -64,7 +69,8 @@ module cpu_soc #(
       .event_branch(ev_branch), .event_mispredict(ev_mispredict),
       .msip(msip), .mtip(mtip), .meip(meip), .icache_inv(icache_inv));
     bus_decoder #(.SDRAM_BYTES(SDRAM ? platform_pkg::SDRAM_BYTES : 64'h0),
-                  .ACCEL_BYTES(ACCEL_N != 0 ? platform_pkg::ACCELERATOR_BYTES : 64'h0)) decoder(.clk(clk), .rst(rst),
+                  .ACCEL_BYTES(ACCEL_N != 0 ? platform_pkg::ACCELERATOR_BYTES : 64'h0),
+                  .DSP_BYTES(FIR_LANES != 0 ? platform_pkg::DSP_BYTES : 64'h0)) decoder(.clk(clk), .rst(rst),
       .req_valid(dreq_valid), .req_ready(dreq_ready), .req(dreq),
       .rsp_valid(drsp_valid), .rsp_ready(drsp_ready), .rsp(drsp),
       .ram_req_valid(ram_dreq_valid), .ram_req_ready(ram_dreq_ready), .ram_req(ram_dreq),
@@ -74,7 +80,9 @@ module cpu_soc #(
       .sdram_req_valid(sd_dreq_valid), .sdram_req_ready(sd_dreq_ready), .sdram_req(sd_dreq),
       .sdram_rsp_valid(sd_drsp_valid), .sdram_rsp_ready(sd_drsp_ready), .sdram_rsp(sd_drsp),
       .accel_req_valid(acc_req_valid), .accel_req_ready(acc_req_ready), .accel_req(acc_req),
-      .accel_rsp_valid(acc_rsp_valid), .accel_rsp_ready(acc_rsp_ready), .accel_rsp(acc_rsp));
+      .accel_rsp_valid(acc_rsp_valid), .accel_rsp_ready(acc_rsp_ready), .accel_rsp(acc_rsp),
+      .dsp_req_valid(dsp_req_valid), .dsp_req_ready(dsp_req_ready), .dsp_req(dsp_req),
+      .dsp_rsp_valid(dsp_rsp_valid), .dsp_rsp_ready(dsp_rsp_ready), .dsp_rsp(dsp_rsp));
     bus_arbiter arbiter(.clk(clk), .rst(rst),
       .m0_req_valid(ram_dreq_valid), .m0_req_ready(ram_dreq_ready), .m0_req(ram_dreq),
       .m0_rsp_valid(ram_drsp_valid), .m0_rsp_ready(ram_drsp_ready), .m0_rsp(ram_drsp),
@@ -84,12 +92,12 @@ module cpu_soc #(
       .rsp_valid(rsp_valid), .rsp_ready(rsp_ready), .rsp(rsp));
 
     if (CACHE) begin : caches
-      bus_req_t sd_ireq, unused_mmio_req, unused_accel_req;
+      bus_req_t sd_ireq, unused_mmio_req, unused_accel_req, unused_dsp_req;
       bus_rsp_t sd_irsp;
       bus2_req_t ic_mreq, dc_mreq;
       bus2_rsp_t ic_mrsp, dc_mrsp;
       logic sd_ireq_valid, sd_ireq_ready, sd_irsp_valid, sd_irsp_ready, unused_mmio_valid, unused_mmio_rsp_ready;
-      logic unused_accel_valid, unused_accel_rsp_ready;
+      logic unused_accel_valid, unused_accel_rsp_ready, unused_dsp_valid, unused_dsp_rsp_ready;
       logic ic_mreq_valid, ic_mreq_ready, ic_mrsp_valid, ic_mrsp_ready;
       logic dc_mreq_valid, dc_mreq_ready, dc_mrsp_valid, dc_mrsp_ready;
       bus_decoder #(.MMIO_BYTES(64'h0), .SDRAM_BYTES(platform_pkg::SDRAM_BYTES)) fetch_decoder(.clk(clk), .rst(rst),
@@ -102,7 +110,9 @@ module cpu_soc #(
         .sdram_req_valid(sd_ireq_valid), .sdram_req_ready(sd_ireq_ready), .sdram_req(sd_ireq),
         .sdram_rsp_valid(sd_irsp_valid), .sdram_rsp_ready(sd_irsp_ready), .sdram_rsp(sd_irsp),
         .accel_req_valid(unused_accel_valid), .accel_req_ready(1'b0), .accel_req(unused_accel_req),
-        .accel_rsp_valid(1'b0), .accel_rsp_ready(unused_accel_rsp_ready), .accel_rsp('0));
+        .accel_rsp_valid(1'b0), .accel_rsp_ready(unused_accel_rsp_ready), .accel_rsp('0),
+        .dsp_req_valid(unused_dsp_valid), .dsp_req_ready(1'b0), .dsp_req(unused_dsp_req),
+        .dsp_rsp_valid(1'b0), .dsp_rsp_ready(unused_dsp_rsp_ready), .dsp_rsp('0));
       cache #(.BYTES(ICACHE_BYTES), .WRITES(0)) icache(.clk(clk), .rst(rst),
         .enable(icache_enable), .invalidate(icache_inv),
         .req_valid(sd_ireq_valid), .req_ready(sd_ireq_ready), .req(sd_ireq),
@@ -182,6 +192,15 @@ module cpu_soc #(
       assign acc_rsp_valid = 0;
       assign acc_rsp = '0;
       assign accel_irq = 0;
+    end
+    if (FIR_LANES != 0) begin : dsp
+      fir_filter #(.TAPS(16), .LANES(FIR_LANES)) filter(.clk(clk), .rst(rst),
+        .req_valid(dsp_req_valid), .req_ready(dsp_req_ready), .req(dsp_req),
+        .rsp_valid(dsp_rsp_valid), .rsp_ready(dsp_rsp_ready), .rsp(dsp_rsp));
+    end else begin : no_dsp
+      assign dsp_req_ready = 0;
+      assign dsp_rsp_valid = 0;
+      assign dsp_rsp = '0;
     end
   end else begin : multicycle
     core_multicycle core(.clk(clk), .rst(rst), .req_valid(req_valid), .req_ready(req_ready), .req(req),

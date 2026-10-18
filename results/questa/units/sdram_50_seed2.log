@@ -1,0 +1,68 @@
+vsim -c sdram_50_opt -l sdram_50_seed2.log.questa "+SEED=2" -do "run -all; quit -f" 
+Start time: 15:17:03 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.sdram_tb(fast)
+run -all
+SDRAM_TB clk=20000 ps seed=2 transactions=6000 checks=115537 known_lanes=9267 unknown_lanes=14874
+SDRAM_TB latency: accept<=17 response<=13 cycles; refresh gap max 7400.0 ns
+SDRAM_TB model commands: active=5829 read=4158 write=2950 refresh=228 mode=2 auto_precharge=5828 bank_change=4060 row_change=5036 row_same=785
+SDRAM_TB cover accept_during_refresh 76
+SDRAM_TB cover backpressure 1519
+SDRAM_TB cover bank_boundary 2404
+SDRAM_TB cover burst_2 320
+SDRAM_TB cover burst_4 320
+SDRAM_TB cover burst_error_len3 20
+SDRAM_TB cover burst_error_mask 19
+SDRAM_TB cover burst_error_misaligned 16
+SDRAM_TB cover burst_error_write 22
+SDRAM_TB cover burst_row_boundary 83
+SDRAM_TB cover busrst_burst 112
+SDRAM_TB cover busrst_column 76
+SDRAM_TB cover busrst_idle 69
+SDRAM_TB cover busrst_read_data 301
+SDRAM_TB cover busrst_response_pending 17
+SDRAM_TB cover busrst_waiting 71
+SDRAM_TB cover busrst_write_data 119
+SDRAM_TB cover controller_reset 1
+SDRAM_TB cover error_above 33
+SDRAM_TB cover error_below 29
+SDRAM_TB cover error_misaligned 32
+SDRAM_TB cover first_beat 396
+SDRAM_TB cover last_beat 377
+SDRAM_TB cover read_after_write_hit 2111
+SDRAM_TB cover read_full 918
+SDRAM_TB cover read_partial 1321
+SDRAM_TB cover refresh_preempts_request 18
+SDRAM_TB cover row_boundary 1833
+SDRAM_TB cover write_full 1173
+SDRAM_TB cover write_lane0 1857
+SDRAM_TB cover write_lane1 1854
+SDRAM_TB cover write_lane2 1882
+SDRAM_TB cover write_lane3 1875
+SDRAM_TB cover write_lane4 1891
+SDRAM_TB cover write_lane5 1868
+SDRAM_TB cover write_lane6 1879
+SDRAM_TB cover write_lane7 1871
+SDRAM_TB cover write_partial 1760
+SDRAM_TB cover write_zero_mask 17
+SDRAM_TEST_PASS
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/sdram_tb.sv(362)
+   Time: 1891050 ns  Iteration: 1  Instance: /sdram_tb
+End time: 15:17:05 on Oct 17,2026, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0

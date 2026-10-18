@@ -1,7 +1,9 @@
 param(
     [string]$Vivado = 'C:\AMDDesignTools\2025.2\Vivado',
-    # bpred: the core as built; nobpred: +define+NO_BPRED, the pre-prediction front end.
-    [ValidateSet('bpred', 'nobpred')][string]$Variant = 'bpred',
+    # bpred: the core as built; nobpred: +define+NO_BPRED, the pre-prediction front end;
+    # nojalr: +define+NO_JALR_PRED, the BTB/BHT without JALR prediction (no
+    # return-address stack, no BTB entries for JALR).
+    [ValidateSet('bpred', 'nojalr', 'nobpred')][string]$Variant = 'bpred',
     # coremark: build/coremark/coremark.hex (scripts/coremark_build.sh);
     # fir: the S3 FIR benchmark, build/programs/asm_fir.hex (scripts/programs.py).
     [ValidateSet('coremark', 'fir')][string]$Program = 'coremark',
@@ -26,7 +28,7 @@ try {
         'rtl/core/alu.sv', 'rtl/core/load_store.sv', 'rtl/core/regfile.sv', 'rtl/core/mul_iter.sv', 'rtl/core/div_iter.sv',
         'rtl/core/muldiv_unit.sv', 'rtl/core/csr_file.sv', 'rtl/core/core_pipeline.sv', 'tb/core/coremark_tb.sv') |
         ForEach-Object { Join-Path $root $_ }
-    $defines = if ($Variant -eq 'nobpred') { @('-d', 'NO_BPRED') } else { @() }
+    $defines = @(switch ($Variant) { 'nobpred' { '-d', 'NO_BPRED' } 'nojalr' { '-d', 'NO_JALR_PRED' } })
     Invoke-Xilinx 'xvlog' (@('--sv') + $defines + $sources)
     Invoke-Xilinx 'xelab' @('coremark_tb', '-s', 'coremark_tb', '--timescale', '1ns/1ps')
     @('coremark_tb', '-runall', '-onerror quit', "-log coremark.log",

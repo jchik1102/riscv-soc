@@ -1,0 +1,18 @@
+Fitter Status : Successful - Fri Oct 16 21:51:30 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : fir_l4
+Top-level Entity Name : fir_filter
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 1,353 / 49,760 ( 3 % )
+    Total combinational functions : 1,303 / 49,760 ( 3 % )
+    Dedicated logic registers : 762 / 49,760 ( 2 % )
+Total registers : 762
+Total pins : 1 / 360 ( < 1 % )
+Total virtual pins : 207
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 8 / 288 ( 3 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

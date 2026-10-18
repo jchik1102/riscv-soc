@@ -1,0 +1,144 @@
+{
+  "runs": [
+    {
+      "run": "s6_icache",
+      "records": 514,
+      "memory_side": {
+        "D": {
+          "fills": 3,
+          "reads": 0,
+          "writes": 21
+        },
+        "I": {
+          "fills": 17,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 1464,
+      "sdr_cycles": 3282,
+      "responses_with_unknown_data": 10,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s6_dcache",
+      "records": 302,
+      "memory_side": {
+        "D": {
+          "fills": 9,
+          "reads": 0,
+          "writes": 37
+        },
+        "I": {
+          "fills": 0,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 810,
+      "sdr_cycles": 2545,
+      "responses_with_unknown_data": 0,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s6_fetch_end",
+      "records": 24,
+      "memory_side": {
+        "D": {
+          "fills": 0,
+          "reads": 0,
+          "writes": 2
+        },
+        "I": {
+          "fills": 1,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 109,
+      "sdr_cycles": 1923,
+      "responses_with_unknown_data": 0,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s6_random_7",
+      "records": 3950,
+      "memory_side": {
+        "D": {
+          "fills": 236,
+          "reads": 0,
+          "writes": 634
+        },
+        "I": {
+          "fills": 118,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 21357,
+      "sdr_cycles": 23563,
+      "responses_with_unknown_data": 2,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s5_sdram_cached",
+      "records": 315,
+      "memory_side": {
+        "D": {
+          "fills": 8,
+          "reads": 0,
+          "writes": 19
+        },
+        "I": {
+          "fills": 0,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 740,
+      "sdr_cycles": 2557,
+      "responses_with_unknown_data": 0,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s5_random_5_cached",
+      "records": 846,
+      "memory_side": {
+        "D": {
+          "fills": 84,
+          "reads": 0,
+          "writes": 131
+        },
+        "I": {
+          "fills": 0,
+          "reads": 0,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 6690,
+      "sdr_cycles": 8510,
+      "responses_with_unknown_data": 0,
+      "same_retirements_as_sdr": true
+    },
+    {
+      "run": "s6_random_7_uncached",
+      "records": 3950,
+      "memory_side": {
+        "D": {
+          "fills": 0,
+          "reads": 330,
+          "writes": 634
+        },
+        "I": {
+          "fills": 0,
+          "reads": 474,
+          "writes": 0
+        }
+      },
+      "ddr3_cycles": 26479,
+      "sdr_cycles": 22435,
+      "responses_with_unknown_data": 1,
+      "same_retirements_as_sdr": true
+    }
+  ]
+}

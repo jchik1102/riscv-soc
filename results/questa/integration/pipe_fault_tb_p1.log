@@ -1,0 +1,27 @@
+vsim -c pipe_fault_tb_p1_opt -l pipe_fault_tb_p1.log.questa "+IMAGE=C:/projects/riscv-soc/build/firmware/array.hex" "+EXPECTED=fc6e755" "+S5_EXPECTED=7fc9e2a8" "+S6_EXPECTED=1f08e84a" "+S7_EXPECTED=5b465e18" "+S8_EXPECTED=32f682fe" "+CASES=C:/projects/riscv-soc/tests/fir/fir_soc.txt" -do "run -all; quit -f" 
+Start time: 15:29:24 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.core_pkg(fast)
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.pipe_fault_tb(fast)
+run -all
+PIPE_FAULT_TEST_PASS: misaligned reset PC and fetch bus error halt without retirement
+** Note: $finish    : C:/projects/riscv-soc/tb/core/pipe_fault_tb.sv(43)
+   Time: 130 ns  Iteration: 1  Instance: /pipe_fault_tb
+End time: 15:29:24 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

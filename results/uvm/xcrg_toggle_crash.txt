@@ -1,0 +1,22 @@
+Why the code coverage leaves out toggle coverage (manual runs, 2026-10-16)
+
+Snapshot: cpu_uvm_tb (pipeline core) elaborated with
+  xelab cpu_uvm_tb -L uvm -s cpu_uvm --timescale 1ns/1ps --cc_type sbct --cov_db_dir cov --cov_db_name snap
+then two UVM runs (programs first and alu64) with xsim. Report command, repeated:
+  xcrg -cov_db_dir cov -cov_db_name snap -report_dir rN -report_format html
+
+With --cc_type sbct (statement, branch, condition, toggle), Vivado 2025.2 xcrg exit codes:
+  attempt 1  -1073741819 (0xC0000005, access violation)
+  attempt 2  -1073741819
+  attempt 3  0
+  attempt 4  -1073741819
+  attempt 5  -1073741819
+Same database copied to a short path (build/cc), six more attempts:
+  -1073740791 (0xC0000409, stack buffer overrun), -1073741819, -1073741819,
+  -1073741819, -1073740791, -1073741819
+Earlier the same command had succeeded three times on this design, so the crash is
+intermittent, not a bad database.
+
+With --cc_type sbc (no toggle) and the same two runs, seven reports (one after
+each run, then five repeats) all exited 0, and the five repeats gave identical
+scores. The regressions therefore collect sbc only.

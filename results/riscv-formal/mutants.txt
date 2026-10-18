@@ -1,0 +1,27 @@
+riscv-formal on RTL mutants (formal/rvfi/checks.cfg); each must fail a check
+DETECTED add_computes_sub by insn_addi_ch0 in 197s
+DETECTED altops_mul_wrong by insn_mul_ch0 in 21s
+DETECTED no_mem_to_ex_forwarding by reg_ch0 in 162s
+DETECTED no_wb_to_ex_forwarding by reg_ch0 in 197s
+DETECTED no_wb_to_id_bypass by reg_ch0 in 201s
+DETECTED store_data_not_forwarded by insn_sb_ch0 in 211s
+DETECTED branch_operand_not_forwarded by insn_bne_ch0 in 204s
+DETECTED no_load_use_stall by reg_ch0 in 172s
+DETECTED stalled_operands_not_refreshed by reg_ch0 in 182s
+DETECTED wrong_path_id_not_flushed by pc_fwd_ch0 in 178s
+DETECTED wrong_path_ex_not_squashed by pc_fwd_ch0 in 209s
+DETECTED branch_target_off_by_four by pc_fwd_ch0 in 188s
+MISSED duplicate_store_issue (all checks pass, 921s)
+DETECTED load_word_zero_extended by insn_lw_ch0 in 167s
+DETECTED word_alu_not_sign_extended by insn_addiw_ch0 in 186s
+DETECTED sub_computes_add by insn_sub_ch0 in 199s
+MISSED flush_does_not_kill_m (all checks pass, 902s)
+MISSED trap_mepc_is_next_pc (all checks pass, 955s)
+MISSED trap_keeps_mie (all checks pass, 785s)
+MISSED mret_does_not_restore_mie (all checks pass, 880s)
+MISSED interrupt_ignores_mstatus_mie (all checks pass, 885s)
+MISSED minstret_counts_traps (all checks pass, 919s)
+MISSED csr_not_serialized (all checks pass, 1048s)
+MISSED trap_entry_keeps_front_end (all checks pass, 874s)
+MISSED m_operand_b_takes_rs1 (all checks pass, 829s)
+RISCV_FORMAL_MUTANTS detected 15 of 25

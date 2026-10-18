@@ -21,6 +21,7 @@ Python @('-m', 'pytest', '-q')
 & "$PSScriptRoot/run_ram.ps1" -Vivado $Vivado
 & "$PSScriptRoot/run_muldiv.ps1" -Vivado $Vivado -Distro $Distro -LinuxPython $LinuxPython
 & "$PSScriptRoot/run_muldiv_mutants.ps1" -Vivado $Vivado -Distro $Distro -LinuxPython $LinuxPython
+& "$PSScriptRoot/run_fir.ps1" -Vivado $Vivado -Distro $Distro -LinuxPython $LinuxPython -SkipMatlab
 & "$PSScriptRoot/run_integration.ps1" -Vivado $Vivado
 $groups = Get-Content -LiteralPath (Join-Path $root 'config/regression.json') -Raw | ConvertFrom-Json
 $compiled = $false

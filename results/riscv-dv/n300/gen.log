@@ -1,38 +1,23 @@
 GEN_OK riscv_arithmetic_basic_test
-GEN_OK riscv_rand_instr_test
+GEN_FAIL riscv_rand_instr_test (see build/riscv-dv/n300/gen.log)
 GEN_OK riscv_jump_stress_test
 GEN_FAIL riscv_loop_test (see build/riscv-dv/n300/gen.log)
 GEN_OK riscv_rand_jump_test
 GEN_OK riscv_load_store_stress_test
 GEN_OK riscv_no_fence_test
 GEN_OK riscv_illegal_instr_test
-GEN_FAIL riscv_hint_instr_test (see build/riscv-dv/n300/gen.log)
-GENERATED: 16 programs (instr_cnt=300) in build/riscv-dv/n300
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: Image overlaps the report block
-collect2: error: ld returned 1 exit status
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: Image overlaps the report block
-collect2: error: ld returned 1 exit status
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: Image overlaps the report block
-collect2: error: ld returned 1 exit status
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: Image overlaps the report block
-collect2: error: ld returned 1 exit status
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: Image overlaps the report block
-collect2: error: ld returned 1 exit status
-/mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S: Assembler messages:
-/mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S:476: Error: illegal operands `la zero,region_1+3854'
-/mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S:758: Error: illegal operands `la zero,region_1+3220'
-RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_0: 261 commits, 1 handled traps
-RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_1: 375 commits, 1 handled traps
-RISCVDV_SPIKE_FAIL riscv_hint_instr_test_0: Command '['riscv64-unknown-elf-gcc', '-march=rv64im', '-mabi=lp64', '-nostdlib', '-nostartfiles', '-Wl,--no-relax', '-T', 'sw/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_hint_instr_test_0.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_hint_instr_test_0.
-RISCVDV_SPIKE_FAIL riscv_illegal_instr_test_0: Command '['riscv64-unknown-elf-gcc', '-march=rv64im', '-mabi=lp64', '-nostdlib', '-nostartfiles', '-Wl,--no-relax', '-T', 'sw/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_illegal_instr_test_0.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_illegal_instr_t
-RISCVDV_SPIKE_FAIL riscv_illegal_instr_test_1: Command '['riscv64-unknown-elf-gcc', '-march=rv64im', '-mabi=lp64', '-nostdlib', '-nostartfiles', '-Wl,--no-relax', '-T', 'sw/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_illegal_instr_test_1.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_illegal_instr_t
-RISCVDV_SPIKE_FAIL riscv_jump_stress_test_0: Command '['riscv64-unknown-elf-gcc', '-march=rv64im', '-mabi=lp64', '-nostdlib', '-nostartfiles', '-Wl,--no-relax', '-T', 'sw/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_jump_stress_test_0.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_jump_stress_test_
-RISCVDV_SPIKE_FAIL riscv_jump_stress_test_1: Command '['riscv64-unknown-elf-gcc', '-march=rv64im', '-mabi=lp64', '-nostdlib', '-nostartfiles', '-Wl,--no-relax', '-T', 'sw/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_jump_stress_test_1.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/spike/riscv_jump_stress_test_
-Traceback (most recent call last):
-  File "/mnt/c/projects/riscv-soc/scripts/riscvdv_prepare.py", line 84, in <module>
-    main(sys.argv[1])
-  File "/mnt/c/projects/riscv-soc/scripts/riscvdv_prepare.py", line 53, in main
-    subprocess.run(["riscv64-unknown-elf-gcc", "-static", "-mcmodel=medany", "-fvisibility=hidden",
-  File "/usr/lib/python3.12/subprocess.py", line 571, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['riscv64-unknown-elf-gcc', '-static', '-mcmodel=medany', '-fvisibility=hidden', '-nostdlib', '-nostartfiles', '-march=rv64im_zicsr_zifencei', '-mabi=lp64', '-I/home/jonat/hwtools/riscv-dv/user_extension', '-T/home/jonat/hwtools/riscv-dv/scripts/link.ld', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_load_store_stress_test_0.S', '-o', '/mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_load_store_stress_test_0.elf']' returned non-zero exit status 1.
+GENERATED: 13 programs (instr_cnt=300) in build/riscv-dv/n300
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_0: 332 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_arithmetic_basic_test_1: 299 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_0: 216 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_illegal_instr_test_1: 234 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_0: 311 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_jump_stress_test_1: 415 commits, 1 handled traps
+RISCVDV_SPIKE_PASS riscv_load_store_stress_test_0: 227 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_load_store_stress_test_1: 237 commits, 2 handled traps
+RISCVDV_SKIP riscv_no_fence_test_0: generator produced invalid assembly: /mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_no_fence_test_0.S:66: Error: illegal operands `la zero,region_1+3116'
+RISCVDV_SPIKE_PASS riscv_no_fence_test_1: 270 commits, 1 handled traps
+RISCVDV_SKIP riscv_rand_instr_test_0: generator produced invalid assembly: /mnt/c/projects/riscv-soc/build/riscv-dv/n300/images/riscv_rand_instr_test_0.S:122: Error: illegal operands `slti zero,zero,none'
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_0: 371 commits, 2 handled traps
+RISCVDV_SPIKE_PASS riscv_rand_jump_test_1: 243 commits, 2 handled traps
+RISCVDV_SPIKE_TOTAL pass=11 of 11; skipped=2

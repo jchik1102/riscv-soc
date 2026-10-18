@@ -1,0 +1,16 @@
+﻿s6_icache: SOC_DDR3_TEST_PASS cycles=1464 interrupts=0
+s6_dcache: SOC_DDR3_TEST_PASS cycles=810 interrupts=0
+s6_fetch_end: SOC_DDR3_TEST_PASS cycles=109 interrupts=0
+s6_random_7: SOC_DDR3_TEST_PASS cycles=21357 interrupts=0
+s5_sdram_cached: SOC_DDR3_TEST_PASS cycles=740 interrupts=0
+s5_random_5_cached: SOC_DDR3_TEST_PASS cycles=6690 interrupts=0
+s6_random_7_uncached: SOC_DDR3_TEST_PASS cycles=26479 interrupts=0
+PASS DDR3 SoC s6_icache: 514 records, D {'fills': 3, 'reads': 0, 'writes': 21}, I {'fills': 17, 'reads': 0, 'writes': 0}, cycles DDR3 1464 SDR 3282, 10 responses with X data, same retirements as SDR
+PASS DDR3 SoC s6_dcache: 302 records, D {'fills': 9, 'reads': 0, 'writes': 37}, I {'fills': 0, 'reads': 0, 'writes': 0}, cycles DDR3 810 SDR 2545, 0 responses with X data, same retirements as SDR
+PASS DDR3 SoC s6_fetch_end: 24 records, D {'fills': 0, 'reads': 0, 'writes': 2}, I {'fills': 1, 'reads': 0, 'writes': 0}, cycles DDR3 109 SDR 1923, 0 responses with X data, same retirements as SDR
+PASS DDR3 SoC s6_random_7: 3950 records, D {'fills': 236, 'reads': 0, 'writes': 634}, I {'fills': 118, 'reads': 0, 'writes': 0}, cycles DDR3 21357 SDR 23563, 2 responses with X data, same retirements as SDR
+PASS DDR3 SoC s5_sdram_cached: 315 records, D {'fills': 8, 'reads': 0, 'writes': 19}, I {'fills': 0, 'reads': 0, 'writes': 0}, cycles DDR3 740 SDR 2557, 0 responses with X data, same retirements as SDR
+PASS DDR3 SoC s5_random_5_cached: 846 records, D {'fills': 84, 'reads': 0, 'writes': 131}, I {'fills': 0, 'reads': 0, 'writes': 0}, cycles DDR3 6690 SDR 8510, 0 responses with X data, same retirements as SDR
+PASS DDR3 SoC s6_random_7_uncached: 3950 records, D {'fills': 0, 'reads': 330, 'writes': 634}, I {'fills': 0, 'reads': 474, 'writes': 0}, cycles DDR3 26479 SDR 22435, 1 responses with X data, same retirements as SDR
+DDR3_SOC_CHECK_PASS 7 runs
+DDR3_SOC_PASS

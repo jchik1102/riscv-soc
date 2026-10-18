@@ -19,6 +19,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/cor
 INFO: [VRFC 10-311] analyzing module csr_file
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pipeline.sv" into library work
 INFO: [VRFC 10-311] analyzing module core_pipeline
+INFO: [VRFC 10-311] analyzing module branch_predictor
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/tb/core/pipe_tb.sv" into library work
 INFO: [VRFC 10-311] analyzing module pipe_tb
 Vivado Simulator v2025.2
@@ -43,6 +44,7 @@ Compiling module work.div_iter
 Compiling module work.muldiv_unit
 Compiling module work.csr_file
 Compiling module work.load_store
+Compiling module work.branch_predictor_default
 Compiling module work.core_pipeline_default
 Compiling module work.pipe_tb
 Built simulation snapshot pipe_tb
@@ -116,24 +118,24 @@ ACT_RTL_PASS I-addiw-00 tohost=1 cycles=17245 retired=3208
 ACT_RTL_PASS I-addw-00 tohost=1 cycles=24635 retired=4958
 ACT_RTL_PASS I-and-00 tohost=1 cycles=24610 retired=4950
 ACT_RTL_PASS I-andi-00 tohost=1 cycles=17402 retired=3216
-ACT_RTL_PASS I-auipc-00 tohost=1 cycles=2370 retired=479
+ACT_RTL_PASS I-auipc-00 tohost=1 cycles=2404 retired=479
 ACT_RTL_PASS I-beq-00 tohost=1 cycles=29072 retired=6149
 ACT_RTL_PASS I-bge-00 tohost=1 cycles=34016 retired=6254
-ACT_RTL_PASS I-bgeu-00 tohost=1 cycles=31483 retired=6252
+ACT_RTL_PASS I-bgeu-00 tohost=1 cycles=31495 retired=6252
 ACT_RTL_PASS I-blt-00 tohost=1 cycles=33566 retired=6265
 ACT_RTL_PASS I-bltu-00 tohost=1 cycles=31102 retired=6262
 ACT_RTL_PASS I-bne-00 tohost=1 cycles=33190 retired=6370
 ACT_RTL_PASS I-fence-00 tohost=1 cycles=1842 retired=527
-ACT_RTL_PASS I-jal-00 tohost=1 cycles=54147 retired=16063
+ACT_RTL_PASS I-jal-00 tohost=1 cycles=54335 retired=16063
 ACT_RTL_PASS I-jalr-00 tohost=1 cycles=13545 retired=2897
 ACT_RTL_PASS I-lb-00 tohost=1 cycles=5810 retired=1123
 ACT_RTL_PASS I-lbu-00 tohost=1 cycles=5778 retired=1123
-ACT_RTL_PASS I-ld-00 tohost=1 cycles=5109 retired=963
+ACT_RTL_PASS I-ld-00 tohost=1 cycles=5111 retired=963
 ACT_RTL_PASS I-lh-00 tohost=1 cycles=5461 retired=1047
-ACT_RTL_PASS I-lhu-00 tohost=1 cycles=5435 retired=1039
+ACT_RTL_PASS I-lhu-00 tohost=1 cycles=5444 retired=1039
 ACT_RTL_PASS I-lui-00 tohost=1 cycles=2378 retired=471
 ACT_RTL_PASS I-lw-00 tohost=1 cycles=5267 retired=1001
-ACT_RTL_PASS I-lwu-00 tohost=1 cycles=5267 retired=1001
+ACT_RTL_PASS I-lwu-00 tohost=1 cycles=5275 retired=1001
 ACT_RTL_PASS I-nop-00 tohost=1 cycles=842 retired=230
 ACT_RTL_PASS I-or-00 tohost=1 cycles=24643 retired=4950
 ACT_RTL_PASS I-ori-00 tohost=1 cycles=17451 retired=3216
@@ -150,11 +152,11 @@ ACT_RTL_PASS I-sltiu-00 tohost=1 cycles=17328 retired=3202
 ACT_RTL_PASS I-sltu-00 tohost=1 cycles=24477 retired=4922
 ACT_RTL_PASS I-sra-00 tohost=1 cycles=24694 retired=4950
 ACT_RTL_PASS I-srai-00 tohost=1 cycles=12722 retired=2386
-ACT_RTL_PASS I-sraiw-00 tohost=1 cycles=8676 retired=1660
+ACT_RTL_PASS I-sraiw-00 tohost=1 cycles=8733 retired=1660
 ACT_RTL_PASS I-sraw-00 tohost=1 cycles=24694 retired=4950
 ACT_RTL_PASS I-srl-00 tohost=1 cycles=24610 retired=4958
 ACT_RTL_PASS I-srli-00 tohost=1 cycles=12818 retired=2386
-ACT_RTL_PASS I-srliw-00 tohost=1 cycles=8644 retired=1660
+ACT_RTL_PASS I-srliw-00 tohost=1 cycles=8706 retired=1660
 ACT_RTL_PASS I-srlw-00 tohost=1 cycles=24622 retired=4950
 ACT_RTL_PASS I-sub-00 tohost=1 cycles=24664 retired=4958
 ACT_RTL_PASS I-subw-00 tohost=1 cycles=24635 retired=4958
@@ -177,4 +179,3 @@ ACT_RTL_PASS M-remw-00 tohost=1 cycles=42554 retired=4958
 ACT_RTL_SUMMARY suite=I pass=51 of 51
 ACT_RTL_SUMMARY suite=M pass=13 of 13
 ACT_RTL_TOTAL pass=64 of 64
-exit=0

@@ -1,6 +1,7 @@
 module synthesis_top #(
   parameter bit PIPELINE = 0,
-  parameter int ACCEL_N = 0
+  parameter int ACCEL_N = 0,
+  parameter int FIR_LANES = 0
 ) (
   input logic clk, rst,
   input logic loader_we,
@@ -15,7 +16,7 @@ module synthesis_top #(
   import soc_pkg::*;
   retire_t trace;
   logic event_retired, event_mem_wait, event_arith_wait, event_fetch_wait, event_load_use, event_redirect;
-  cpu_soc #(.PIPELINE(PIPELINE), .ACCEL_N(ACCEL_N)) soc(.*, .cache_enable_init(2'b00), .sdram_req_valid(), .sdram_req_ready(1'b0), .sdram_req(),
+  cpu_soc #(.PIPELINE(PIPELINE), .ACCEL_N(ACCEL_N), .FIR_LANES(FIR_LANES)) soc(.*, .cache_enable_init(2'b00), .sdram_req_valid(), .sdram_req_ready(1'b0), .sdram_req(),
     .sdram_rsp_valid(1'b0), .sdram_rsp_ready(), .sdram_rsp('0));
   assign trace_pc = trace.pc;
   assign trace_result = trace.rd_data;

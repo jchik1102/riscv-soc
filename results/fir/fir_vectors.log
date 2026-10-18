@@ -1,0 +1,4 @@
+MATLAB 26.1.0.3276743 (R2026a) Update 3, fi from C:\Program Files\MATLAB\R2026a\toolbox\fixedpoint\fixedpoint\fi.m, Fixed-Point Designer license 1
+FIR_MODEL_MATCHES_PYTHON taps=16 samples=128 saturated=67 checksum=0x000000000fc6e755
+FIR_CASES cases=13 outputs=1872
+LOWPASS_Q15 -114 -159 -139 291 1450 3284 5246 6524 6524 5246 3284 1450 291 -139 -159 -114 

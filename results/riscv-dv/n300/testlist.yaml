@@ -11,6 +11,13 @@
 #   riscv_csr_test                  - writes CSRs the core does not implement
 #   riscv_mmu_stress_test           - no MMU; its load/store mix runs below as
 #                                     riscv_load_store_stress_test
+#   riscv_hint_instr_test           - pyflow emits HINTs only as 16-bit compressed
+#                                     encodings (.2byte, riscv_instr_sequence.py);
+#                                     the core has no C extension. riscv-dv lists
+#                                     this test only for its rv32imc target.
+#
+# Note: illegal_instr_ratio is per 1000 instructions of the main program, so at a
+# few hundred instructions pyflow injects none; use a larger 300.
 #
 # Changes forced by riscv-dv's Python generator (pyflow) at the pinned commit:
 #   * Sub-programs are off in every test (+num_of_sub_program=0). Any value
@@ -127,19 +134,6 @@
     +directed_instr_1=riscv_jal_instr,4
     +directed_instr_2=riscv_load_store_hazard_instr_stream,4
     +illegal_instr_ratio=5
-  iterations: 2
-  gen_test: riscv_instr_base_test
-  rtl_test: core_base_test
-
-- test: riscv_hint_instr_test
-  description: HINT encodings must execute as no-ops
-  gen_opts: >
-    +instr_cnt=300
-    +num_of_sub_program=0
-    +directed_instr_0=riscv_load_store_rand_instr_stream,4
-    +directed_instr_1=riscv_jal_instr,4
-    +directed_instr_2=riscv_load_store_hazard_instr_stream,4
-    +hint_instr_ratio=5
   iterations: 2
   gen_test: riscv_instr_base_test
   rtl_test: core_base_test

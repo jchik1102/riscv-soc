@@ -1,0 +1,17 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:16:25 on Oct 17,2026
+vopt muldiv_tb -o muldiv_opt 
+
+Top level modules:
+	muldiv_tb
+
+Analyzing design...
+-- Loading module muldiv_tb
+-- Importing package core_pkg
+-- Loading module muldiv_unit
+-- Loading module mul_iter
+-- Loading module div_iter
+Incremental compilation check found no design-units have changed.
+Optimized design name is muldiv_opt
+End time: 15:16:25 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

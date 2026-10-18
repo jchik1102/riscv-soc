@@ -14,7 +14,7 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-   Date             :, 10/15/26 09:11:55 British Columbia Daylight Time
+   Date             :, 10/17/26 15:08:42 British Columbia Daylight Time
    User             :, jonat
    Version          :, Vivado Simulator Coverage Report 2025.2
    Command Line     :, C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir . -cov_db_name asm_muldiv_s1_d5_r-1 -cov_db_name control_s1_d5_r-1 -cov_db_name fault_fetch_high_s1_d5_r-1 -cov_db_name fault_load_bounds_s1_d5_r-1 -cov_db_name first_s1_d5_r-1 -cov_db_name m_mixed_s1_d5_r-1 -cov_db_name memory_sizes_s1_d5_r-1 -cov_db_name pipe_forward_s1_d5_r-1 -cov_db_name random_s1_d5_p6 -merge_dir . -merge_db_name merged -report_dir coverage_report -report_format text 

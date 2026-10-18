@@ -1,0 +1,55 @@
+vsim -c cache_2048_opt -l cache_2048_seed3.log.questa "+SEED=3" -do "run -all; quit -f" 
+Start time: 15:16:47 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.cache_tb(fast)
+run -all
+CACHE_TB bytes=2048 transactions=20000 checks=444082 hit_latency<=8 miss_latency<=26
+CACHE_TB events dut access=19097 miss=10065 bypass=554 write=7941 model access=19097 miss=10065 bypass=554 write=7941
+CACHE_TB cover beat0 2524
+CACHE_TB cover beat1 2498
+CACHE_TB cover beat2 2518
+CACHE_TB cover beat3 2532
+CACHE_TB cover beat_gap 53978
+CACHE_TB cover bypass_disabled 148
+CACHE_TB cover bypass_outside 406
+CACHE_TB cover conflict_eviction 3061
+CACHE_TB cover cpu_backpressure 6631
+CACHE_TB cover enable_drop_during_fill 61
+CACHE_TB cover every_beat_requested 8069
+CACHE_TB cover far_tag 309
+CACHE_TB cover fill_error 1897
+CACHE_TB cover hit_after_write_hit 91
+CACHE_TB cover invalidate_during_fill 60
+CACHE_TB cover memory_accept_delay 6245
+CACHE_TB cover outside_alias_of_valid_line 132
+CACHE_TB cover read_error_bypass 20
+CACHE_TB cover read_hit 1433
+CACHE_TB cover read_miss 10072
+CACHE_TB cover reset_during_fill 52
+CACHE_TB cover reset_during_pass 15
+CACHE_TB cover subword_read_hit 941
+CACHE_TB cover subword_write_hit 593
+CACHE_TB cover write_error_on_valid_line 242
+CACHE_TB cover write_hit 921
+CACHE_TB cover write_miss 7020
+CACHE_TEST_PASS
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/cache_tb.sv(348)
+   Time: 4608250 ns  Iteration: 1  Instance: /cache_tb
+End time: 15:16:51 on Oct 17,2026, Elapsed time: 0:00:04
+Errors: 0, Warnings: 0

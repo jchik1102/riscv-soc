@@ -1,0 +1,21 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:16:12 on Oct 17,2026
+vopt ram_tb -o ram_opt 
+
+Top level modules:
+	ram_tb
+
+Analyzing design...
+-- Loading module ram_tb
+-- Importing package soc_pkg
+-- Importing package platform_pkg
+-- Loading module onchip_ram
+Optimizing 4 design-units (inlining 1/2 module instances):
+-- Optimizing package soc_pkg(fast)
+-- Optimizing package platform_pkg(fast)
+-- Inlining module onchip_ram(fast)
+** Warning: C:\projects\riscv-soc\rtl\memory\onchip_ram.sv(8): (vopt-13314) Defaulting port 'req' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module ram_tb(fast)
+Optimized design name is ram_opt
+End time: 15:16:13 on Oct 17,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 1

@@ -1,7 +1,11 @@
-program  variant  cycles     retired    CPI    branches  mispredicts rate    redirects CoreMark/MHz
-fir      nobpred      117423      18009  6.520      4452        2438  54.76%      2438            -
-fir      bpred        109864      18009  6.101      4452         193   4.34%       193            -
-coremark nobpred    11242768    3623912  3.102    652013      392845  60.25%    392845        0.894
-coremark bpred      10349096    3623912  2.856    652013       98904  15.17%     98904        0.971
+program  variant  cycles     retired    CPI    branches  mispredicts rate    redirects CoreMark/MHz jalrs  jalr_miss returns return_miss
+fir      nobpred      117423      18009  6.520      4452        2438  54.76%      2438            -      4         4       2           2
+fir      nojalr       109864      18009  6.101      4452         193   4.34%       193            -      4         4       2           2
+fir      bpred        109864      18009  6.101      4452         193   4.34%       193            -      4         4       2           2
+coremark nobpred    11242768    3623912  3.102    652013      392845  60.25%    392845        0.894  36749     36749   18343       18343
+coremark nojalr     10349096    3623912  2.856    652013       98904  15.17%     98904        0.971  36749     36749   18343       18343
+coremark bpred      10254241    3623912  2.830    652013       68690  10.54%     68690        0.980  36749      5407   18343        3337
 SUMMARY fir cpi 6.520->6.101 mispredict_rate 54.76%->4.34% cycles -6.4%
-SUMMARY coremark cpi 3.102->2.856 mispredict_rate 60.25%->15.17% cycles -7.9% coremark_speedup=1.086
+SUMMARY coremark cpi 3.102->2.830 mispredict_rate 60.25%->10.54% cycles -8.8% coremark_speedup=1.096
+JALR fir cpi 6.101->6.101 mispredict_rate 4.34%->4.34% cycles -0.0%
+JALR coremark cpi 2.856->2.830 mispredict_rate 15.17%->10.54% cycles -0.9% coremark_speedup=1.009

@@ -1,0 +1,60 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct 17 03:35:00 2026
+| Host         : Jonathan running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file C:/projects/riscv-soc/build/vivado/arty_ddr3/utilization_hierarchy.txt
+| Design       : arty_ddr3_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------+------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|              Instance             |                  Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------------+------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| arty_ddr3_top                     |                                    (top) |      16915 |      16240 |     658 |   17 | 12737 |     16 |     16 |          0 |
+|   (arty_ddr3_top)                 |                                    (top) |         50 |         50 |       0 |    0 |    97 |      0 |      0 |          0 |
+|   bridge                          |                              ddr3_bridge |        593 |        437 |     156 |    0 |   168 |      0 |      0 |          0 |
+|     (bridge)                      |                              ddr3_bridge |         22 |         22 |       0 |    0 |   124 |      0 |      0 |          0 |
+|     cmd_fifo                      |                               async_fifo |        109 |         41 |      68 |    0 |    22 |      0 |      0 |          0 |
+|     rd_fifo                       |               async_fifo__parameterized0 |        463 |        375 |      88 |    0 |    22 |      0 |      0 |          0 |
+|   image_rom                       |                                 boot_rom |        357 |        357 |       0 |    0 |    62 |      0 |      0 |          0 |
+|   mig                             |                                 mig_ddr3 |       4294 |       3827 |     450 |   17 |  3552 |      0 |      0 |          0 |
+|     (mig)                         |                                 mig_ddr3 |        216 |          0 |     216 |    0 |     0 |      0 |      0 |          0 |
+|     u_mig_ddr3_mig                |                             mig_ddr3_mig |       4078 |       3827 |     234 |   17 |  3552 |      0 |      0 |          0 |
+|       temp_mon_enabled.u_tempmon  |         mig_ddr3mig_7series_v4_2_tempmon |         38 |         38 |       0 |    0 |   122 |      0 |      0 |          0 |
+|       u_memc_ui_top_std           | mig_ddr3mig_7series_v4_2_memc_ui_top_std |       4035 |       3784 |     234 |   17 |  3383 |      0 |      0 |          0 |
+|   soc                             |                                  cpu_soc |      11622 |      11570 |      52 |    0 |  8858 |     16 |     16 |          0 |
+|     ram                           |                               onchip_ram |         78 |         78 |       0 |    0 |    23 |     16 |      0 |          0 |
+|     pipeline.arbiter              |                              bus_arbiter |         94 |         94 |       0 |    0 |     4 |      0 |      0 |          0 |
+|     pipeline.caches.dcache        |                    cache__parameterized0 |        331 |        311 |      20 |    0 |   271 |      0 |      8 |          0 |
+|     pipeline.caches.fetch_decoder |                              bus_decoder |         67 |         67 |       0 |    0 |     4 |      0 |      0 |          0 |
+|     pipeline.caches.icache        |                                    cache |        254 |        234 |      20 |    0 |   198 |      0 |      8 |          0 |
+|     pipeline.caches.sdram_arbiter |                            burst_arbiter |        100 |        100 |       0 |    0 |     4 |      0 |      0 |          0 |
+|     pipeline.core                 |                            core_pipeline |      10264 |      10264 |       0 |    0 |  6990 |      0 |      0 |          0 |
+|       (pipeline.core)             |                            core_pipeline |       3864 |       3864 |       0 |    0 |  1886 |      0 |      0 |          0 |
+|       arithmetic                  |                                      alu |        642 |        642 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       arithmetic_unit             |                              muldiv_unit |       1460 |       1460 |       0 |    0 |   604 |      0 |      0 |          0 |
+|       csrs                        |                                 csr_file |        905 |        905 |       0 |    0 |   449 |      0 |      0 |          0 |
+|       decode                      |                                  decoder |         78 |         78 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       mem_format                  |                               load_store |        145 |        145 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       predictor                   |                         branch_predictor |       2005 |       2005 |       0 |    0 |  2067 |      0 |      0 |          0 |
+|       rf                          |                                  regfile |       1185 |       1185 |       0 |    0 |  1984 |      0 |      0 |          0 |
+|     pipeline.counters             |                            perf_counters |        256 |        256 |       0 |    0 |  1025 |      0 |      0 |          0 |
+|     pipeline.machine_timer        |                                    timer |         32 |         32 |       0 |    0 |   129 |      0 |      0 |          0 |
+|     pipeline.peripherals          |                                 mmio_bus |          1 |          1 |       0 |    0 |    66 |      0 |      0 |          0 |
+|     pipeline.serial               |                                     uart |        125 |        113 |      12 |    0 |   136 |      0 |      0 |          0 |
++-----------------------------------+------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

@@ -1,0 +1,57 @@
+SBY 13:41:55 [insn_addi_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/defines.sv'.
+SBY 13:41:55 [insn_addi_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/insn_addi_ch0.sv'.
+SBY 13:41:55 [insn_addi_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/../../checks/rvfi_macros.vh' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/rvfi_macros.vh'.
+SBY 13:41:55 [insn_addi_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/../../checks/rvfi_channel.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/rvfi_channel.sv'.
+SBY 13:41:55 [insn_addi_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/../../checks/rvfi_testbench.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/rvfi_testbench.sv'.
+SBY 13:41:56 [insn_addi_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/../../checks/rvfi_insn_check.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/rvfi_insn_check.sv'.
+SBY 13:41:56 [insn_addi_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/../../insns/insn_addi.v' to '/mnt/c/projects/riscv-soc-formal/build/rvfi_mutants/add_computes_sub/rvfi/cores/riscv_soc/checks/insn_addi_ch0/src/insn_addi.v'.
+SBY 13:41:56 [insn_addi_ch0] engine_0: smtbmc bitwuzla
+SBY 13:41:56 [insn_addi_ch0] base: starting process "cd insn_addi_ch0/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:41:57 [insn_addi_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [2:0]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3914': $auto$proc_dlatch.cc:555:proc_dlatch$4710
+SBY 13:41:57 [insn_addi_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [3]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3914': $auto$proc_dlatch.cc:557:proc_dlatch$4753
+SBY 13:41:57 [insn_addi_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [31:4]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3914': $auto$proc_dlatch.cc:555:proc_dlatch$4756
+SBY 13:41:59 [insn_addi_ch0] base: finished (returncode=0)
+SBY 13:41:59 [insn_addi_ch0] prep: starting process "cd insn_addi_ch0/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:42:00 [insn_addi_ch0] prep: finished (returncode=0)
+SBY 13:42:00 [insn_addi_ch0] smt2: starting process "cd insn_addi_ch0/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:42:00 [insn_addi_ch0] smt2: finished (returncode=0)
+SBY 13:42:00 [insn_addi_ch0] engine_0: starting process "cd insn_addi_ch0; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 20:21  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:42:00 [insn_addi_ch0] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 13:42:01 [insn_addi_ch0] engine_0: ##   0:00:00  Skipping step 0..
+SBY 13:42:01 [insn_addi_ch0] engine_0: ##   0:00:00  Skipping step 1..
+SBY 13:42:02 [insn_addi_ch0] engine_0: ##   0:00:01  Skipping step 2..
+SBY 13:42:02 [insn_addi_ch0] engine_0: ##   0:00:01  Skipping step 3..
+SBY 13:42:02 [insn_addi_ch0] engine_0: ##   0:00:01  Skipping step 4..
+SBY 13:42:02 [insn_addi_ch0] engine_0: ##   0:00:01  Skipping step 5..
+SBY 13:42:03 [insn_addi_ch0] engine_0: ##   0:00:02  Skipping step 6..
+SBY 13:42:03 [insn_addi_ch0] engine_0: ##   0:00:02  Skipping step 7..
+SBY 13:42:03 [insn_addi_ch0] engine_0: ##   0:00:02  Skipping step 8..
+SBY 13:42:03 [insn_addi_ch0] engine_0: ##   0:00:02  Skipping step 9..
+SBY 13:42:04 [insn_addi_ch0] engine_0: ##   0:00:03  Skipping step 10..
+SBY 13:42:04 [insn_addi_ch0] engine_0: ##   0:00:03  Skipping step 11..
+SBY 13:42:04 [insn_addi_ch0] engine_0: ##   0:00:03  Skipping step 12..
+SBY 13:42:04 [insn_addi_ch0] engine_0: ##   0:00:03  Skipping step 13..
+SBY 13:42:05 [insn_addi_ch0] engine_0: ##   0:00:04  Skipping step 14..
+SBY 13:42:05 [insn_addi_ch0] engine_0: ##   0:00:04  Skipping step 15..
+SBY 13:42:05 [insn_addi_ch0] engine_0: ##   0:00:04  Skipping step 16..
+SBY 13:42:05 [insn_addi_ch0] engine_0: ##   0:00:04  Skipping step 17..
+SBY 13:42:06 [insn_addi_ch0] engine_0: ##   0:00:05  Skipping step 18..
+SBY 13:42:06 [insn_addi_ch0] engine_0: ##   0:00:05  Skipping step 19..
+SBY 13:42:06 [insn_addi_ch0] engine_0: ##   0:00:05  Checking assumptions in step 20..
+SBY 13:42:13 [insn_addi_ch0] engine_0: ##   0:00:12  Checking assertions in step 20..
+SBY 13:43:13 [insn_addi_ch0] engine_0: ##   0:01:12  waiting for solver (1 minute)
+SBY 13:43:26 [insn_addi_ch0] engine_0: ##   0:01:24  BMC failed!
+SBY 13:43:26 [insn_addi_ch0] engine_0: ##   0:01:25  Assert failed in rvfi_testbench: rvfi_insn_check.sv:177.7-177.40 (_witness_.check_flatten_checker_inst__assert_rvfi_insn_check_sv_177_3954)
+SBY 13:43:27 [insn_addi_ch0] engine_0: ##   0:01:26  Writing trace to VCD file: engine_0/trace.vcd
+SBY 13:44:56 [insn_addi_ch0] engine_0: ##   0:02:55  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 13:44:59 [insn_addi_ch0] engine_0: ##   0:02:58  Writing trace to constraints file: engine_0/trace.smtc
+SBY 13:45:01 [insn_addi_ch0] engine_0: ##   0:03:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 13:45:08 [insn_addi_ch0] engine_0: ##   0:03:07  Status: failed
+SBY 13:45:08 [insn_addi_ch0] engine_0: finished (returncode=1)
+SBY 13:45:08 [insn_addi_ch0] engine_0: Status returned by engine: FAIL
+SBY 13:45:08 [insn_addi_ch0] summary: Elapsed clock time [H:MM:SS (secs)]: 0:03:12 (192)
+SBY 13:45:08 [insn_addi_ch0] summary: Elapsed process time [H:MM:SS (secs)]: 0:03:10 (190)
+SBY 13:45:08 [insn_addi_ch0] summary: engine_0 (smtbmc bitwuzla) returned FAIL
+SBY 13:45:08 [insn_addi_ch0] summary: counterexample trace: insn_addi_ch0/engine_0/trace.vcd
+SBY 13:45:08 [insn_addi_ch0] summary:   failed assertion rvfi_testbench._witness_.check_flatten_checker_inst__assert_rvfi_insn_check_sv_177_3954 at rvfi_insn_check.sv:177.7-177.40 step 20
+SBY 13:45:08 [insn_addi_ch0] DONE (FAIL, rc=0)

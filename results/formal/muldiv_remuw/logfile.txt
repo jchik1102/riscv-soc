@@ -1,113 +1,113 @@
-SBY  3:10:30 [muldiv_mul] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mul'.
-SBY  3:10:30 [muldiv_mulh] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulh'.
-SBY  3:10:31 [muldiv_mulhsu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhsu'.
-SBY  3:10:31 [muldiv_mulhu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhu'.
-SBY  3:10:31 [muldiv_div] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_div'.
-SBY  3:10:32 [muldiv_divu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divu'.
-SBY  3:10:32 [muldiv_rem] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_rem'.
-SBY  3:10:32 [muldiv_remu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remu'.
-SBY  3:10:33 [muldiv_mulw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulw'.
-SBY  3:10:33 [muldiv_divw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divw'.
-SBY  3:10:33 [muldiv_divuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divuw'.
-SBY  3:10:34 [muldiv_remw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remw'.
-SBY  3:10:34 [muldiv_remuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remuw'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/platform_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/platform_pkg.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/soc_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/soc_pkg.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/core_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/core_pkg.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/mul_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/mul_iter.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/div_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/div_iter.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/muldiv_unit.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/muldiv_unit.sv'.
-SBY  3:10:34 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/muldiv_formal.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/muldiv_formal.sv'.
-SBY  3:10:34 [muldiv_remuw] engine_0: smtbmc bitwuzla
-SBY  3:10:36 [muldiv_remuw] base: starting process "cd muldiv_remuw/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY  3:10:36 [muldiv_remuw] base: finished (returncode=0)
-SBY  3:10:36 [muldiv_remuw] prep: starting process "cd muldiv_remuw/model; yosys -ql design_prep.log design_prep.ys"
-SBY  3:10:36 [muldiv_remuw] prep: finished (returncode=0)
-SBY  3:10:37 [muldiv_remuw] smt2: starting process "cd muldiv_remuw/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY  3:10:37 [muldiv_remuw] smt2: finished (returncode=0)
-SBY  3:11:02 [muldiv_remuw] engine_0: starting process "cd muldiv_remuw; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 38  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
-SBY  3:11:02 [muldiv_remuw] engine_0: ##   0:00:00  Solver: bitwuzla
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 0..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 0..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 1..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 1..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 2..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 2..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 3..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 3..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 4..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 4..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 5..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 5..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 6..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 6..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 7..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 7..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 8..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 8..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 9..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 9..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 10..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 10..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 11..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 11..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 12..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 12..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 13..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 13..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 14..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 14..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 15..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 15..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 16..
-SBY  3:11:03 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 16..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 17..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 17..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 18..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 18..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 19..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 19..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 20..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 20..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 21..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 21..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 22..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 22..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 23..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 23..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 24..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 24..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 25..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 25..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 26..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 26..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 27..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 27..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 28..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 28..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 29..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 29..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 30..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 30..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 31..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 31..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 32..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 32..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 33..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 33..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 34..
-SBY  3:11:04 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 34..
-SBY  3:11:05 [muldiv_remuw] engine_0: ##   0:00:02  Checking assumptions in step 35..
-SBY  3:11:05 [muldiv_remuw] engine_0: ##   0:00:02  Checking assertions in step 35..
-SBY  3:11:05 [muldiv_remuw] engine_0: ##   0:00:02  Checking assumptions in step 36..
-SBY  3:11:05 [muldiv_remuw] engine_0: ##   0:00:02  Checking assertions in step 36..
-SBY  3:11:20 [muldiv_remuw] engine_0: ##   0:00:17  Checking assumptions in step 37..
-SBY  3:11:20 [muldiv_remuw] engine_0: ##   0:00:18  Checking assertions in step 37..
-SBY  3:11:21 [muldiv_remuw] engine_0: ##   0:00:18  Status: passed
-SBY  3:11:21 [muldiv_remuw] engine_0: finished (returncode=0)
-SBY  3:11:21 [muldiv_remuw] engine_0: Status returned by engine: pass
-SBY  3:11:21 [muldiv_remuw] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:46 (46)
-SBY  3:11:21 [muldiv_remuw] summary: Elapsed process time [H:MM:SS (secs)]: 0:01:23 (83)
-SBY  3:11:21 [muldiv_remuw] summary: engine_0 (smtbmc bitwuzla) returned pass
-SBY  3:11:21 [muldiv_remuw] summary: engine_0 did not produce any traces
-SBY  3:11:21 [muldiv_remuw] DONE (PASS, rc=0)
+SBY 15:06:34 [muldiv_mul] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mul'.
+SBY 15:06:35 [muldiv_mulh] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulh'.
+SBY 15:06:35 [muldiv_mulhsu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhsu'.
+SBY 15:06:35 [muldiv_mulhu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhu'.
+SBY 15:06:35 [muldiv_div] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_div'.
+SBY 15:06:35 [muldiv_divu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divu'.
+SBY 15:06:36 [muldiv_rem] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_rem'.
+SBY 15:06:36 [muldiv_remu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remu'.
+SBY 15:06:36 [muldiv_mulw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulw'.
+SBY 15:06:36 [muldiv_divw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divw'.
+SBY 15:06:36 [muldiv_divuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divuw'.
+SBY 15:06:36 [muldiv_remw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remw'.
+SBY 15:06:37 [muldiv_remuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remuw'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/platform_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/platform_pkg.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/soc_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/soc_pkg.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/core_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/core_pkg.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/mul_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/mul_iter.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/div_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/div_iter.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/muldiv_unit.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/muldiv_unit.sv'.
+SBY 15:06:37 [muldiv_remuw] Copy '/mnt/c/projects/riscv-soc/formal/muldiv_formal.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_remuw/src/muldiv_formal.sv'.
+SBY 15:06:37 [muldiv_remuw] engine_0: smtbmc bitwuzla
+SBY 15:06:38 [muldiv_remuw] base: starting process "cd muldiv_remuw/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 15:06:38 [muldiv_remuw] base: finished (returncode=0)
+SBY 15:06:39 [muldiv_remuw] prep: starting process "cd muldiv_remuw/model; yosys -ql design_prep.log design_prep.ys"
+SBY 15:06:39 [muldiv_remuw] prep: finished (returncode=0)
+SBY 15:06:39 [muldiv_remuw] smt2: starting process "cd muldiv_remuw/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:06:40 [muldiv_remuw] smt2: finished (returncode=0)
+SBY 15:06:54 [muldiv_remuw] engine_0: starting process "cd muldiv_remuw; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 38  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 15:06:54 [muldiv_remuw] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 15:06:54 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 15:06:54 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 15:06:54 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 15:06:54 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 24..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 24..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 25..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 25..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 26..
+SBY 15:06:55 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 26..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 27..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 27..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 28..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 28..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 29..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 29..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 30..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 30..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 31..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 31..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 32..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 32..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 33..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 33..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 34..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 34..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 35..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 35..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assumptions in step 36..
+SBY 15:06:56 [muldiv_remuw] engine_0: ##   0:00:01  Checking assertions in step 36..
+SBY 15:07:07 [muldiv_remuw] engine_0: ##   0:00:12  Checking assumptions in step 37..
+SBY 15:07:07 [muldiv_remuw] engine_0: ##   0:00:12  Checking assertions in step 37..
+SBY 15:07:07 [muldiv_remuw] engine_0: ##   0:00:13  Status: passed
+SBY 15:07:07 [muldiv_remuw] engine_0: finished (returncode=0)
+SBY 15:07:07 [muldiv_remuw] engine_0: Status returned by engine: pass
+SBY 15:07:07 [muldiv_remuw] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:30 (30)
+SBY 15:07:07 [muldiv_remuw] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:55 (55)
+SBY 15:07:07 [muldiv_remuw] summary: engine_0 (smtbmc bitwuzla) returned pass
+SBY 15:07:07 [muldiv_remuw] summary: engine_0 did not produce any traces
+SBY 15:07:07 [muldiv_remuw] DONE (PASS, rc=0)

@@ -38,6 +38,7 @@ def main():
     for core in ("pipeline", "multicycle"):
         copy(BUILD / f"uvm_{core}/coverage_report/functionalCoverageReport/xcrg_func_cov_report.txt",
              OUT / "uvm" / f"coverage_{core}.txt")
+        copy(BUILD / f"uvm_{core}/code_coverage.txt", OUT / "uvm" / f"code_coverage_{core}.txt")
     for name in QUARTUS_FILES:
         copy(QUARTUS / name, OUT / "quartus" / name)
 
@@ -71,6 +72,12 @@ def main():
         runs = len(re.findall(r"^UVM_RUN_PASS", text, re.M))
         errors = len(re.findall(r"UVM_(?:ERROR|FATAL) :\s*[1-9]", text))
         lines.append(f"uvm_runs: {runs} passed, {errors} runs reporting UVM errors or fatals")
+    for core in ("pipeline", "multicycle"):
+        path = OUT / "uvm" / f"code_coverage_{core}.txt"
+        if path.exists():
+            last = [l for l in path.read_text().splitlines() if l.startswith("CODE_COVERAGE ")]
+            if last:
+                lines.append(f"code_coverage_{core}: {last[-1].split(' ', 2)[2]}")
 
     commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
     header = [f"collected: {datetime.now().isoformat(timespec='seconds')}", f"commit: {commit}"]

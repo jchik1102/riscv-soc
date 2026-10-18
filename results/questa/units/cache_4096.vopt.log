@@ -1,0 +1,22 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:16:51 on Oct 17,2026
+vopt cache_tb -o cache_4096_opt -GBYTES=4096 -GTRANSACTIONS=20000 
+
+Top level modules:
+	cache_tb
+
+Analyzing design...
+-- Loading module cache_tb
+-- Importing package soc_pkg
+-- Importing package platform_pkg
+-- Loading module cache
+Optimizing 4 design-units (inlining 1/2 module instances):
+-- Optimizing package soc_pkg(fast)
+-- Optimizing package platform_pkg(fast)
+-- Inlining module cache(fast)
+** Warning: C:\projects\riscv-soc\rtl\memory\cache.sv(12): (vopt-13314) Defaulting port 'req' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: C:\projects\riscv-soc\rtl\memory\cache.sv(21): (vopt-13314) Defaulting port 'mrsp' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module cache_tb(fast)
+Optimized design name is cache_4096_opt
+End time: 15:16:52 on Oct 17,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2

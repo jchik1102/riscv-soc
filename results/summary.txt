@@ -1,10 +1,12 @@
-collected: 2026-10-15T09:12:23
-commit: f4f0a46f999d06f90b4e9a626c8c9e7cc1290a43
+collected: 2026-10-17T15:09:21
+commit: 4639ced4453899d38da3e8c53c09d1c31410cbd2
 rtl_mutants_detected: 97 of 97 (muldiv 12/12, pipeline 23/23, sdram 23/23, cache 17/17, accel 22/22)
-soc_s4: 1 runs, 8800 retirements checked
-soc_s5: 7 runs, 371566 retirements checked
-soc_s6: 23 runs, 711762 retirements checked
-soc_s7: 12 runs, 372264 retirements checked
-soc_s8: 10 runs, 992320 retirements checked
-spike_programs: 93 agree, 2 skipped by design
-uvm_runs: 105 passed, 0 runs reporting UVM errors or fatals
+soc_s4: 1 runs, 8806 retirements checked
+soc_s5: 7 runs, 371576 retirements checked
+soc_s6: 23 runs, 710059 retirements checked
+soc_s7: 12 runs, 371597 retirements checked
+soc_s8: 10 runs, 992018 retirements checked
+spike_programs: 94 agree, 2 skipped by design
+uvm_runs: 106 passed, 0 runs reporting UVM errors or fatals
+code_coverage_pipeline: statements=569/583 (97.60%) branches=332/343 (96.79%) conditions=315/326 (96.63%)
+code_coverage_multicycle: statements=337/358 (94.13%) branches=202/216 (93.52%) conditions=172/196 (87.76%)

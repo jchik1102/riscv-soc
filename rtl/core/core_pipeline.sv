@@ -2,7 +2,10 @@ module core_pipeline #(
   parameter logic [63:0] RESET_PC = platform_pkg::RESET_PC,
   // Branch prediction in fetch (branch_predictor below). 0 predicts every
   // instruction falls through, the behaviour before prediction was added;
-  // +define+NO_BPRED forces 0 for comparison runs.
+  // +define+NO_BPRED forces 0 for comparison runs. +define+NO_JALR_PRED keeps
+  // the BTB and counters for branches and JAL but turns off JALR prediction
+  // (the return-address stack and BTB entries for JALR), so every JALR
+  // redirects, as before JALR prediction was added.
   parameter bit BPRED = 1
 ) (
   input logic clk, rst,
@@ -28,6 +31,14 @@ module core_pipeline #(
   output logic event_branch, event_mispredict,
   input logic msip, mtip, meip,
   output logic icache_inv
+`ifdef RISCV_FORMAL
+  ,
+  // Source registers of the retiring instruction and the values it used
+  // (after forwarding), for the RVFI port in formal/rvfi/wrapper.sv. Zero
+  // when the instruction reads no register.
+  output logic [4:0] rvfi_rs1_addr, rvfi_rs2_addr,
+  output logic [63:0] rvfi_rs1_rdata, rvfi_rs2_rdata
+`endif
 );
   import soc_pkg::*;
   import core_pkg::*;
@@ -63,9 +74,15 @@ module core_pipeline #(
 `else
   localparam bit USE_BPRED = BPRED;
 `endif
-  logic bp_taken, bp_update, bp_update_branch;
+`ifdef NO_JALR_PRED
+  localparam bit USE_JALR_PRED = 0;
+`else
+  localparam bit USE_JALR_PRED = USE_BPRED;
+`endif
+  logic bp_taken, bp_update, bp_update_branch, bp_update_return;
   logic id_pred_taken, id_target_hit, ex_pred_taken, ex_target_hit, mispredict;
-  logic [63:0] bp_target, if_pred_next, id_pred_next;
+  logic [63:0] bp_target, if_pred_next, id_pred_next, id_jalr_expect, ex_jalr_expect;
+  logic ex_rd_link, ex_rs1_link, ras_commit, ras_push, ras_pop;
 
   assign pc_beat = pc_f[63:3];
   assign next_beat = pc_beat + 61'd1;
@@ -292,29 +309,53 @@ module core_pipeline #(
   assign id_take = !id_valid || ex_take;
   // Redirect when the next PC fetch predicted is wrong. The prediction is
   // compared with pc+4 and with pc+imm in ID, so EX only selects on the branch
-  // outcome and the compare stays off the forwarding path. JALR (target from
-  // a register), MRET and FENCE.I always redirect; JALR is not predicted.
+  // outcome and the compare stays off the forwarding path. A JALR's target
+  // comes from a register, so ID instead computes the rs1 value that would
+  // make the prediction right (predicted PC - imm) and EX compares the
+  // forwarded rs1 with it: an equality check, with no adder after forwarding.
+  // A taken prediction always has bits 1:0 clear, so equality means the real
+  // target ((rs1 + imm) & ~1) is the predicted PC. MRET and FENCE.I always
+  // redirect, and so does JALR with +define+NO_JALR_PRED.
   assign id_pred_taken = id_pred_next != id_pc + 64'd4;
   assign id_target_hit = id_pred_next == id_pc + id_dec.imm;
+  assign id_jalr_expect = id_pred_next - id_dec.imm;
   always_comb
     case (ex_dec.kind)
       K_BRANCH: mispredict = take_branch ? !(ex_pred_taken && ex_target_hit) : ex_pred_taken;
       K_JAL: mispredict = !(ex_pred_taken && ex_target_hit);
-      K_JALR, K_MRET: mispredict = 1'b1;
+      K_JALR: mispredict = !(USE_JALR_PRED && ex_pred_taken && fa == ex_jalr_expect);
+      K_MRET: mispredict = 1'b1;
       K_FENCE: mispredict = ex_insn[12] || ex_pred_taken;
       default: mispredict = ex_pred_taken;
     endcase
   assign redirect = ex_go && !executed.trap && mispredict;
   assign redirect_pc = executed.next_pc;
 
+  // Return-address stack hints from the RISC-V unprivileged spec (table 2.1),
+  // with x1 and x5 as link registers: JAL/JALR writing a link register is a
+  // call (push pc+4); JALR reading one is a return (pop), unless it also
+  // writes the same register (push only). The stack changes when the
+  // instruction leaves EX, which is in program order and never on a wrong path.
+  assign ex_rd_link = ex_insn[11:7] == 5'd1 || ex_insn[11:7] == 5'd5;
+  assign ex_rs1_link = ex_rs1 == 5'd1 || ex_rs1 == 5'd5;
+  assign ras_commit = USE_JALR_PRED && ex_go && !executed.trap;
+  assign ras_push = ras_commit && (ex_dec.kind == K_JAL || ex_dec.kind == K_JALR) && ex_rd_link;
+  assign ras_pop = ras_commit && ex_dec.kind == K_JALR && ex_rs1_link && !(ex_rd_link && ex_rs1 == ex_insn[11:7]);
+
   branch_predictor predictor(.clk(clk), .rst(rst), .fetch_pc(pc_f),
     .predict_taken(bp_taken), .predict_target(bp_target),
-    .update(bp_update), .update_branch(bp_update_branch), .update_taken(control_taken),
-    .update_pc(ex_pc), .update_target(executed.next_pc));
+    .update(bp_update), .update_branch(bp_update_branch), .update_return(bp_update_return),
+    .update_taken(control_taken), .update_pc(ex_pc), .update_target(executed.next_pc),
+    .ras_push(ras_push), .ras_pop(ras_pop), .ras_link(ex_pc + 64'd4));
   assign if_pred_next = USE_BPRED && bp_taken ? bp_target : pc_f + 64'd4;
+  // Branches, JAL and JALR train the BTB. A return's entry predicts the top
+  // of the return-address stack; any other JALR's predicts its last target,
+  // which for calls (auipc + jalr with -mcmodel=medany) and tail calls never
+  // changes.
   assign bp_update = USE_BPRED && ex_go && !executed.trap &&
-    (ex_dec.kind == K_BRANCH || ex_dec.kind == K_JAL);
+    (ex_dec.kind == K_BRANCH || ex_dec.kind == K_JAL || (USE_JALR_PRED && ex_dec.kind == K_JALR));
   assign bp_update_branch = ex_dec.kind == K_BRANCH;
+  assign bp_update_return = ras_pop;
   assign ex_trap_fire = ex_go && executed.trap;
   assign flush_front = redirect || ex_trap_fire || mem_trap_now || wb_trap_take;
   assign if_fire = if_valid && id_take && !flush_front;
@@ -341,6 +382,28 @@ module core_pipeline #(
     (ex_dec.kind == K_BRANCH || ex_dec.kind == K_JAL || ex_dec.kind == K_JALR);
   assign event_mispredict = !rst && redirect && ex_dec.kind != K_MRET && ex_dec.kind != K_FENCE;
 
+`ifdef RISCV_FORMAL
+  logic [4:0] mem_rs1_addr, mem_rs2_addr, wb_rs1_addr, wb_rs2_addr;
+  logic [63:0] mem_rs1_rdata, mem_rs2_rdata, wb_rs1_rdata, wb_rs2_rdata;
+  always_ff @(posedge clk) begin
+    if (rst) begin
+      mem_rs1_addr <= 0; mem_rs2_addr <= 0; mem_rs1_rdata <= 0; mem_rs2_rdata <= 0;
+      wb_rs1_addr <= 0; wb_rs2_addr <= 0; wb_rs1_rdata <= 0; wb_rs2_rdata <= 0;
+    end else begin
+      if (mem_accept) begin
+        mem_rs1_addr <= use_rs1 && !ex_trap ? ex_rs1 : 5'd0;
+        mem_rs2_addr <= use_rs2 && !ex_trap ? ex_rs2 : 5'd0;
+        mem_rs1_rdata <= use_rs1 && !ex_trap ? fa : 64'd0;
+        mem_rs2_rdata <= use_rs2 && !ex_trap ? fb : 64'd0;
+      end
+      wb_rs1_addr <= irq_inject ? 5'd0 : mem_rs1_addr; wb_rs1_rdata <= irq_inject ? 64'd0 : mem_rs1_rdata;
+      wb_rs2_addr <= irq_inject ? 5'd0 : mem_rs2_addr; wb_rs2_rdata <= irq_inject ? 64'd0 : mem_rs2_rdata;
+    end
+  end
+  assign rvfi_rs1_addr = wb_rs1_addr; assign rvfi_rs1_rdata = wb_rs1_rdata;
+  assign rvfi_rs2_addr = wb_rs2_addr; assign rvfi_rs2_rdata = wb_rs2_rdata;
+`endif
+
   always_ff @(posedge clk) begin
     if (rst) begin
       stopped <= 0;
@@ -351,6 +414,7 @@ module core_pipeline #(
       out_valid <= 0; out_tag <= 0; hold_valid <= 0; hold_tag <= 0;
       id_valid <= 0; id_pc <= 0; id_insn <= 0; id_trap <= 0; id_cause <= 0; id_pred_next <= 0;
       ex_valid <= 0; ex_pc <= 0; ex_insn <= 0; ex_trap <= 0; ex_cause <= 0; ex_dec <= '0; ex_pred_taken <= 0; ex_target_hit <= 0;
+      ex_jalr_expect <= 0;
       ex_a <= 0; ex_b <= 0; ex_md_started <= 0; ex_md_have_q <= 0; ex_md_result <= 0;
       mem_valid <= 0; mem_access <= 0; mem_is_load <= 0; mem_issued <= 0; mem_f3 <= 0;
       mem_rec <= '0; mem_req <= '0; mem_tval <= 0; mem_noinc <= 0;
@@ -387,7 +451,7 @@ module core_pipeline #(
       end else if (ex_take) begin
         ex_valid <= id_valid && !redirect && !ex_trap_fire;
         ex_pc <= id_pc; ex_insn <= id_insn; ex_trap <= id_trap; ex_cause <= id_cause;
-        ex_pred_taken <= id_pred_taken; ex_target_hit <= id_target_hit;
+        ex_pred_taken <= id_pred_taken; ex_target_hit <= id_target_hit; ex_jalr_expect <= id_jalr_expect;
         ex_dec <= id_dec; ex_a <= id_a; ex_b <= id_b;
         ex_md_started <= 0; ex_md_have_q <= 0;
       end else begin
@@ -428,30 +492,37 @@ module core_pipeline #(
   end
 endmodule
 
-// Branch predictor: a 32-entry direct-mapped BTB with partial tags and a
-// 256-entry table of 2-bit counters, looked up with the fetch PC in the same
-// cycle. A BTB hit predicts the stored target for JAL, and for branches when
-// the counter says taken (JALR is not predicted). Predictions are only hints:
-// EX checks every instruction's next PC against the prediction and redirects
-// on a mismatch, so aliasing from the partial tag costs cycles, not
-// correctness. Targets keep bits 31..2; the upper half comes from the fetch PC,
-// and a transfer that crosses a 4 GiB boundary is never installed. All state
-// clears on reset, so a run's cycle count does not depend on earlier runs.
+// Branch predictor: a 32-entry direct-mapped BTB with partial tags, a
+// 256-entry table of 2-bit counters and an 8-entry return-address stack,
+// looked up with the fetch PC in the same cycle. A BTB hit predicts the stored
+// target for JAL and other JALRs (the last target), for branches when the
+// counter says taken, and the top of the return-address stack for a return.
+// Predictions are only hints: EX checks every instruction's next PC against
+// the prediction and redirects on a mismatch, so aliasing from the partial
+// tag, a stack that overflowed (it wraps, losing the oldest entry) or a call
+// still in ID or EX costs cycles, not correctness. Targets and return
+// addresses keep bits 31..2; the upper half comes from the fetch PC, and a
+// transfer that crosses a 4 GiB boundary is never installed. All state clears
+// on reset, so a run's cycle count does not depend on earlier runs.
 module branch_predictor #(
-  parameter int BTB_BITS = 5, BHT_BITS = 8, TAG_BITS = 8
+  parameter int BTB_BITS = 5, BHT_BITS = 8, TAG_BITS = 8, RAS_BITS = 3
 ) (
   input logic clk, rst,
   input logic [63:0] fetch_pc,
   output logic predict_taken,
   output logic [63:0] predict_target,
-  input logic update, update_branch, update_taken,
-  input logic [63:0] update_pc, update_target
+  input logic update, update_branch, update_return, update_taken,
+  input logic [63:0] update_pc, update_target,
+  input logic ras_push, ras_pop,
+  input logic [63:0] ras_link
 );
-  localparam int ENTRIES = 1 << BTB_BITS, COUNTERS = 1 << BHT_BITS;
-  logic [ENTRIES-1:0] valid, jump;
+  localparam int ENTRIES = 1 << BTB_BITS, COUNTERS = 1 << BHT_BITS, DEPTH = 1 << RAS_BITS;
+  logic [ENTRIES-1:0] valid, jump, ret;
   logic [TAG_BITS-1:0] tag [0:ENTRIES-1];
   logic [29:0] target [0:ENTRIES-1];
   logic [1:0] counter [0:COUNTERS-1];
+  logic [29:0] ras [0:DEPTH-1];
+  logic [RAS_BITS-1:0] ras_top;
 
   wire [BTB_BITS-1:0] f_index = fetch_pc[BTB_BITS+1:2];
   wire [TAG_BITS-1:0] f_tag = fetch_pc[BTB_BITS+2 +: TAG_BITS];
@@ -460,24 +531,34 @@ module branch_predictor #(
   wire [BHT_BITS-1:0] u_counter = update_pc[BHT_BITS+1:2];
 
   assign predict_taken = valid[f_index] && tag[f_index] == f_tag && (jump[f_index] || counter[f_counter][1]);
-  assign predict_target = {fetch_pc[63:32], target[f_index], 2'b00};
+  assign predict_target = {fetch_pc[63:32], ret[f_index] ? ras[ras_top] : target[f_index], 2'b00};
 
   always_ff @(posedge clk) begin
     if (rst) begin
-      valid <= '0; jump <= '0;
+      valid <= '0; jump <= '0; ret <= '0;
       for (int i = 0; i < ENTRIES; i++) begin tag[i] <= '0; target[i] <= '0; end
       for (int i = 0; i < COUNTERS; i++) counter[i] <= 2'b01;
-    end else if (update) begin
-      if (update_branch) begin
-        if (update_taken && counter[u_counter] != 2'b11) counter[u_counter] <= counter[u_counter] + 2'd1;
-        if (!update_taken && counter[u_counter] != 2'b00) counter[u_counter] <= counter[u_counter] - 2'd1;
+      for (int i = 0; i < DEPTH; i++) ras[i] <= '0;
+      ras_top <= '0;
+    end else begin
+      if (update) begin
+        if (update_branch) begin
+          if (update_taken && counter[u_counter] != 2'b11) counter[u_counter] <= counter[u_counter] + 2'd1;
+          if (!update_taken && counter[u_counter] != 2'b00) counter[u_counter] <= counter[u_counter] - 2'd1;
+        end
+        if (update_taken && update_target[63:32] == update_pc[63:32]) begin
+          valid[u_index] <= 1'b1;
+          jump[u_index] <= !update_branch;
+          ret[u_index] <= update_return;
+          tag[u_index] <= update_pc[BTB_BITS+2 +: TAG_BITS];
+          target[u_index] <= update_target[31:2];
+        end
       end
-      if (update_taken && update_target[63:32] == update_pc[63:32]) begin
-        valid[u_index] <= 1'b1;
-        jump[u_index] <= !update_branch;
-        tag[u_index] <= update_pc[BTB_BITS+2 +: TAG_BITS];
-        target[u_index] <= update_target[31:2];
-      end
+      // A JALR that pops and pushes (a coroutine swap) replaces the top entry.
+      if (ras_push) begin
+        ras[ras_pop ? ras_top : ras_top + 1'b1] <= ras_link[31:2];
+        if (!ras_pop) ras_top <= ras_top + 1'b1;
+      end else if (ras_pop) ras_top <= ras_top - 1'b1;
     end
   end
 endmodule

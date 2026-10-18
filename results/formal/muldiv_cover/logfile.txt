@@ -1,131 +1,131 @@
-SBY  3:10:30 [muldiv_mul] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mul'.
-SBY  3:10:30 [muldiv_mulh] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulh'.
-SBY  3:10:31 [muldiv_mulhsu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhsu'.
-SBY  3:10:31 [muldiv_mulhu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhu'.
-SBY  3:10:31 [muldiv_div] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_div'.
-SBY  3:10:32 [muldiv_divu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divu'.
-SBY  3:10:32 [muldiv_rem] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_rem'.
-SBY  3:10:32 [muldiv_remu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remu'.
-SBY  3:10:33 [muldiv_mulw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulw'.
-SBY  3:10:33 [muldiv_divw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divw'.
-SBY  3:10:33 [muldiv_divuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divuw'.
-SBY  3:10:34 [muldiv_remw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remw'.
-SBY  3:10:34 [muldiv_remuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remuw'.
-SBY  3:10:34 [muldiv_cover] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_cover'.
-SBY  3:10:34 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/platform_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/platform_pkg.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/soc_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/soc_pkg.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/core_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/core_pkg.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/mul_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/mul_iter.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/div_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/div_iter.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/muldiv_unit.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/muldiv_unit.sv'.
-SBY  3:10:35 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/muldiv_formal.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/muldiv_formal.sv'.
-SBY  3:10:35 [muldiv_cover] engine_0: smtbmc bitwuzla
-SBY  3:10:36 [muldiv_cover] base: starting process "cd muldiv_cover/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY  3:10:36 [muldiv_cover] base: finished (returncode=0)
-SBY  3:10:36 [muldiv_cover] prep: starting process "cd muldiv_cover/model; yosys -ql design_prep.log design_prep.ys"
-SBY  3:10:36 [muldiv_cover] prep: finished (returncode=0)
-SBY  3:10:37 [muldiv_cover] smt2: starting process "cd muldiv_cover/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY  3:10:37 [muldiv_cover] smt2: finished (returncode=0)
-SBY  3:10:43 [muldiv_cover] engine_0: starting process "cd muldiv_cover; yosys-smtbmc -s bitwuzla --presat --unroll -c --noprogress -t 72  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Solver: bitwuzla
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 9..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 10..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 11..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 12..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 14..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 15..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 16..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 17..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 18..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 19..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 20..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 21..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 22..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 23..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 24..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 25..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 26..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 27..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 28..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 29..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 30..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 31..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 32..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 33..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 34..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 35..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 36..
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Reached cover statement in step 36 at muldiv_formal: cp_done_word
-SBY  3:10:44 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace0_tb.v
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace0.smtc
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace0.yw
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 36..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Reached cover statement in step 36 at muldiv_formal: cp_div_zero
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace1.vcd
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace1_tb.v
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace1.smtc
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace1.yw
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 36..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 37..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 38..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 39..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 40..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 41..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 42..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 43..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 44..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 45..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 46..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 47..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 48..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 49..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 50..
-SBY  3:10:45 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 51..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 52..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 53..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 54..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 55..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 56..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 57..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 58..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 59..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 60..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 61..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 62..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 63..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 64..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 65..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 66..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 67..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Checking cover reachability in step 68..
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Reached cover statement in step 68 at muldiv_formal: cp_div_overflow
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Reached cover statement in step 68 at muldiv_formal: cp_done_full
-SBY  3:10:46 [muldiv_cover] engine_0: ##   0:00:02  Writing trace to VCD file: engine_0/trace2.vcd
-SBY  3:10:47 [muldiv_cover] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace2_tb.v
-SBY  3:10:47 [muldiv_cover] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace2.smtc
-SBY  3:10:47 [muldiv_cover] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace2.yw
-SBY  3:10:47 [muldiv_cover] engine_0: ##   0:00:03  Status: passed
-SBY  3:10:47 [muldiv_cover] engine_0: finished (returncode=0)
-SBY  3:10:47 [muldiv_cover] engine_0: Status returned by engine: pass
-SBY  3:10:47 [muldiv_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:12 (12)
-SBY  3:10:47 [muldiv_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:24 (24)
-SBY  3:10:47 [muldiv_cover] summary: engine_0 (smtbmc bitwuzla) returned pass
-SBY  3:10:47 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace0.vcd
-SBY  3:10:47 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_done_word at muldiv_formal.sv:94.5-94.43 step 36
-SBY  3:10:47 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace1.vcd
-SBY  3:10:47 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_div_zero at muldiv_formal.sv:96.5-96.58 step 36
-SBY  3:10:47 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace2.vcd
-SBY  3:10:47 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_div_overflow at muldiv_formal.sv:95.5-95.107 step 68
-SBY  3:10:47 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_done_full at muldiv_formal.sv:93.5-93.44 step 68
-SBY  3:10:47 [muldiv_cover] DONE (PASS, rc=0)
+SBY 15:06:34 [muldiv_mul] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mul'.
+SBY 15:06:35 [muldiv_mulh] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulh'.
+SBY 15:06:35 [muldiv_mulhsu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhsu'.
+SBY 15:06:35 [muldiv_mulhu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulhu'.
+SBY 15:06:35 [muldiv_div] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_div'.
+SBY 15:06:35 [muldiv_divu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divu'.
+SBY 15:06:36 [muldiv_rem] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_rem'.
+SBY 15:06:36 [muldiv_remu] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remu'.
+SBY 15:06:36 [muldiv_mulw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_mulw'.
+SBY 15:06:36 [muldiv_divw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divw'.
+SBY 15:06:36 [muldiv_divuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_divuw'.
+SBY 15:06:36 [muldiv_remw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remw'.
+SBY 15:06:37 [muldiv_remuw] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_remuw'.
+SBY 15:06:37 [muldiv_cover] Removing directory '/mnt/c/projects/riscv-soc/formal/muldiv_cover'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/platform_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/platform_pkg.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/soc/soc_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/soc_pkg.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/core_pkg.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/core_pkg.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/mul_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/mul_iter.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/div_iter.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/div_iter.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/../rtl/core/muldiv_unit.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/muldiv_unit.sv'.
+SBY 15:06:37 [muldiv_cover] Copy '/mnt/c/projects/riscv-soc/formal/muldiv_formal.sv' to '/mnt/c/projects/riscv-soc/formal/muldiv_cover/src/muldiv_formal.sv'.
+SBY 15:06:37 [muldiv_cover] engine_0: smtbmc bitwuzla
+SBY 15:06:38 [muldiv_cover] base: starting process "cd muldiv_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 15:06:38 [muldiv_cover] base: finished (returncode=0)
+SBY 15:06:39 [muldiv_cover] prep: starting process "cd muldiv_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 15:06:39 [muldiv_cover] prep: finished (returncode=0)
+SBY 15:06:39 [muldiv_cover] smt2: starting process "cd muldiv_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:06:39 [muldiv_cover] smt2: finished (returncode=0)
+SBY 15:06:46 [muldiv_cover] engine_0: starting process "cd muldiv_cover; yosys-smtbmc -s bitwuzla --presat --unroll -c --noprogress -t 72  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 15:06:46 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 10..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 11..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 12..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 14..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 15..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 16..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 17..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 18..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 19..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 20..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 21..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 22..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 23..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 24..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 25..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 26..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 27..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 28..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 29..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 30..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 31..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 32..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 33..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 34..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 35..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 36..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Reached cover statement in step 36 at muldiv_formal: cp_done_word
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Checking cover reachability in step 36..
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Reached cover statement in step 36 at muldiv_formal: cp_div_zero
+SBY 15:06:47 [muldiv_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 36..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 37..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 38..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 39..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 40..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 41..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 42..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 43..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 44..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 45..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 46..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 47..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 48..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 49..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 50..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 51..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 52..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 53..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 54..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 55..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 56..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 57..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 58..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 59..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 60..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 61..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 62..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 63..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 64..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 65..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 66..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 67..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Checking cover reachability in step 68..
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Reached cover statement in step 68 at muldiv_formal: cp_div_overflow
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Reached cover statement in step 68 at muldiv_formal: cp_done_full
+SBY 15:06:48 [muldiv_cover] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 15:06:49 [muldiv_cover] engine_0: ##   0:00:02  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 15:06:49 [muldiv_cover] engine_0: ##   0:00:02  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 15:06:49 [muldiv_cover] engine_0: ##   0:00:02  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 15:06:49 [muldiv_cover] engine_0: ##   0:00:02  Status: passed
+SBY 15:06:49 [muldiv_cover] engine_0: finished (returncode=0)
+SBY 15:06:49 [muldiv_cover] engine_0: Status returned by engine: pass
+SBY 15:06:49 [muldiv_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:11 (11)
+SBY 15:06:49 [muldiv_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:16 (16)
+SBY 15:06:49 [muldiv_cover] summary: engine_0 (smtbmc bitwuzla) returned pass
+SBY 15:06:49 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace0.vcd
+SBY 15:06:49 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_done_word at muldiv_formal.sv:94.5-94.43 step 36
+SBY 15:06:49 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace1.vcd
+SBY 15:06:49 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_div_zero at muldiv_formal.sv:96.5-96.58 step 36
+SBY 15:06:49 [muldiv_cover] summary: cover trace: muldiv_cover/engine_0/trace2.vcd
+SBY 15:06:49 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_div_overflow at muldiv_formal.sv:95.5-95.107 step 68
+SBY 15:06:49 [muldiv_cover] summary:   reached cover statement muldiv_formal.cp_done_full at muldiv_formal.sv:93.5-93.44 step 68
+SBY 15:06:49 [muldiv_cover] DONE (PASS, rc=0)

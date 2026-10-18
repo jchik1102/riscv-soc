@@ -3,7 +3,7 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.377
+Slack : 0.487
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'sdram_clk_pin'
@@ -11,7 +11,7 @@ Slack : 12.425
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.320
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'sdram_clk_pin'
@@ -35,7 +35,7 @@ Slack : 12.000
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.077
+Slack : 2.107
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'sdram_clk_pin'
@@ -43,7 +43,7 @@ Slack : 12.489
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.275
+Slack : 0.265
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'sdram_clk_pin'
@@ -51,7 +51,7 @@ Slack : 2.889
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 9.686
+Slack : 9.689
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50'
@@ -67,7 +67,7 @@ Slack : 12.000
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 11.575
+Slack : 11.644
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'sdram_clk_pin'
@@ -75,7 +75,7 @@ Slack : 12.427
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.158
+Slack : 0.146
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'sdram_clk_pin'

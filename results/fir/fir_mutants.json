@@ -1,0 +1,110 @@
+[
+  {
+    "mutant": "no_rounding",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1930000: case 0 output 2: got -25409, MATLAB -25408"
+  },
+  {
+    "mutant": "ties_round_down",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 220330000: case 9 output 0: got 0, MATLAB 1"
+  },
+  {
+    "mutant": "no_positive_saturation",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 2630000: case 0 output 7: got -17111, MATLAB 32767"
+  },
+  {
+    "mutant": "no_negative_saturation",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 2490000: case 0 output 6: got 18174, MATLAB -32768"
+  },
+  {
+    "mutant": "accumulator_32_bits",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 2910000: case 0 output 9: got -32768, MATLAB 32767"
+  },
+  {
+    "mutant": "unsigned_product",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1790000: case 0 output 1: got 32767, MATLAB -26367"
+  },
+  {
+    "mutant": "lanes_misaligned",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1650000: case 0 output 0: got 5940, MATLAB 25046"
+  },
+  {
+    "mutant": "delay_line_not_shifted",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1790000: case 0 output 1: got -1320, MATLAB -26367"
+  },
+  {
+    "mutant": "oldest_tap_dropped",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 3750000: case 0 output 15: got -31811, MATLAB -19880"
+  },
+  {
+    "mutant": "one_step_short",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 3070000: case 0 output 12: got 2653, MATLAB 9494"
+  },
+  {
+    "mutant": "accumulator_not_cleared",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1790000: case 0 output 1: got -1321, MATLAB -26367"
+  },
+  {
+    "mutant": "no_hold_while_busy",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 1590000: case 0 output 0: got 0, MATLAB 25046"
+  },
+  {
+    "mutant": "coeff_write_not_held",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 281370000: COEFF write while busy: error=0 waits=0"
+  },
+  {
+    "mutant": "status_held",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 281290000: STATUS read was held: error=0 waits=3"
+  },
+  {
+    "mutant": "clear_keeps_delay_line",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 20970000: case 1 output 0: got 32767, MATLAB -2277"
+  },
+  {
+    "mutant": "byte_lanes_ignored",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 282010000: write 0000000010020020: error=0, expected 1"
+  },
+  {
+    "mutant": "error_write_applied",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 282490000: SAMPLES after error responses = 0000000000000006, expected 0000000000000005"
+  },
+  {
+    "mutant": "cycles_not_counted",
+    "lanes": 4,
+    "result": "DETECTED",
+    "first_error": "Error: FIR_TB 19510000: case 0 CYCLES = 0000000000000000, expected 0000000000000200"
+  }
+]

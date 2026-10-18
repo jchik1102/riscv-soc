@@ -53,7 +53,7 @@ Built simulation snapshot coremark_tb
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Oct 15 07:58:05 2026
+  **** Start of session at: Fri Oct 16 02:44:27 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -61,9 +61,9 @@ source xsim.dir/coremark_tb/xsim_script.tcl
 # xsim {coremark_tb} -testplusarg IMAGE=C:/projects/riscv-soc/build/programs/asm_fir.hex -testplusarg MAX_CYCLES=200000000 -autoloadwcfg -runall -onerror quit
 Time resolution is 1 ps
 run -all
-COREMARK_TB_DONE cycles=109864 retired=18009 redirects=193 branches=4452 mispredicts=193 halt_cause=3
+COREMARK_TB_DONE cycles=109864 retired=18009 redirects=193 branches=4452 mispredicts=193 jalrs=4 jalr_mispredicts=4 returns=2 return_mispredicts=2 halt_cause=3
 REPORT magic=4649523151313500 checksum=000000000fc6e755 status=1
-$finish called at time : 2197330 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 85
+$finish called at time : 2197330 ns : File "C:/projects/riscv-soc/tb/core/coremark_tb.sv" Line 97
 exit
-INFO: [Common 17-206] Exiting xsim at Thu Oct 15 07:58:07 2026...
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 02:44:30 2026...
 COREMARK_RUN_PASS program=fir variant=bpred log=C:\projects\riscv-soc\build\coremark\xsim_fir_bpred/coremark.log

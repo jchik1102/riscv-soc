@@ -1,0 +1,6 @@
+QUARTUS lanes=1 logic_elements=1,309 / 49,760 ( 3 % ) registers=764 mult9=2 / 288 setup_slack_slow85c=2.416 hold_slack_slow85c=0.343
+VIVADO lanes=1 PASS top=fir_filter part=xc7a100tcsg324-1 wns_ns=6.354 whs_ns=0.136 fmax_mhz=73.28 (worst clock period 20.000 ns) slice_luts=602 slice_registers=727 bram_tiles=0 dsps=1 unrouted_nets=0
+QUARTUS lanes=4 logic_elements=1,353 / 49,760 ( 3 % ) registers=762 mult9=8 / 288 setup_slack_slow85c=0.877 hold_slack_slow85c=0.343
+VIVADO lanes=4 PASS top=fir_filter part=xc7a100tcsg324-1 wns_ns=0.631 whs_ns=0.147 fmax_mhz=51.63 (worst clock period 20.000 ns) slice_luts=592 slice_registers=725 bram_tiles=0 dsps=5 unrouted_nets=0
+QUARTUS lanes=16 logic_elements=1,500 / 49,760 ( 3 % ) registers=680 mult9=32 / 288 setup_slack_slow85c=-0.835 hold_slack_slow85c=0.325
+VIVADO lanes=16 FAIL top=fir_filter part=xc7a100tcsg324-1 wns_ns=-16.968 whs_ns=0.132 fmax_mhz=27.05 (worst clock period 20.000 ns) slice_luts=487 slice_registers=744 bram_tiles=0 dsps=17 unrouted_nets=0

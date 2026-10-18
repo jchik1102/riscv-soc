@@ -14,10 +14,10 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-   Date             :, 10/15/26 09:11:54 British Columbia Daylight Time
+   Date             :, 10/17/26 15:08:40 British Columbia Daylight Time
    User             :, jonat
    Version          :, Vivado Simulator Coverage Report 2025.2
-   Command Line     :, C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir . -cov_db_name alu64_s1_d5_r-1 -cov_db_name array_loop_s1_d5_r-1 -cov_db_name asm_array_s1_d5_r-1 -cov_db_name asm_fir_s1_d5_r-1 -cov_db_name asm_muldiv_s1_d5_r-1 -cov_db_name branch_untaken_align_s1_d5_r-1 -cov_db_name control_s1_d5_r-1 -cov_db_name edges_s1_d5_r-1 -cov_db_name fault_branch_align_s1_d5_r-1 -cov_db_name fault_branch_reserved_s1_d5_r-1 -cov_db_name fault_csr_s1_d5_r-1 -cov_db_name fault_ebreak_s1_d5_r-1 -cov_db_name fault_ecall_s1_d5_r-1 -cov_db_name fault_fetch_bounds_s1_d5_r-1 -cov_db_name fault_fetch_high_s1_d5_r-1 -cov_db_name fault_jal_align_s1_d5_r-1 -cov_db_name fault_jalr_align_s1_d5_r-1 -cov_db_name fault_jalr_reserved_s1_d5_r-1 -cov_db_name fault_load_align_1_s1_d5_r-1 -cov_db_name fault_load_align_2_s1_d5_r-1 -cov_db_name fault_load_align_3_s1_d5_r-1 -cov_db_name fault_load_bounds_s1_d5_r-1 -cov_db_name fault_load_high_s1_d5_r-1 -cov_db_name fault_load_reserved_s1_d5_r-1 -cov_db_name fault_load_zero_s1_d5_r-1 -cov_db_name fault_m_word_reserved_1_s1_d5_r-1 -cov_db_name fault_m_word_reserved_2_s1_d5_r-1 -cov_db_name fault_m_word_reserved_3_s1_d5_r-1 -cov_db_name fault_mret_s1_d5_r-1 -cov_db_name fault_op_funct7_2_reserved_s1_d5_r-1 -cov_db_name fault_shift64_reserved_s1_d5_r-1 -cov_db_name fault_shiftw_reserved_s1_d5_r-1 -cov_db_name fault_store_align_1_s1_d5_r-1 -cov_db_name fault_store_align_2_s1_d5_r-1 -cov_db_name fault_store_align_3_s1_d5_r-1 -cov_db_name fault_store_bounds_s1_d5_r-1 -cov_db_name fault_store_high_s1_d5_r-1 -cov_db_name fault_store_reserved_s1_d5_r-1 -cov_db_name fault_store_zero_s1_d5_r-1 -cov_db_name fence_variants_s1_d5_r-1 -cov_db_name first_s1_d5_r-1 -cov_db_name m_div_edges_s1_d5_r-1 -cov_db_name m_divw_edges_s1_d5_r-1 -cov_db_name m_mixed_s1_d5_r-1 -cov_db_name m_mixed_s7_d3_r300 -cov_db_name m_mul_edges_s1_d5_r-1 -cov_db_name m_random_101_s1_d5_r-1 -cov_db_name m_random_13_s1_d5_r-1 -cov_db_name m_random_31_s1_d5_r-1 -cov_db_name m_reset_s1_d5_r-1 -cov_db_name m_reset_w_s1_d5_r-1 -cov_db_name memory_sizes_s1_d5_r-1 -cov_db_name memory_sizes_s7_d3_r300 -cov_db_name overflow_s1_d5_r-1 -cov_db_name pipe_forward_s1_d5_r-1 -cov_db_name pipe_forward_s8_d2_r25 -cov_db_name pipe_kill_load_s1_d5_r-1 -cov_db_name pipe_kill_store_s1_d5_r-1 -cov_db_name pipe_misaligned_shadow_s1_d5_r-1 -cov_db_name pipe_random_17_s1_d5_r-1 -cov_db_name pipe_random_3_s1_d5_r-1 -cov_db_name pipe_random_3_s7_d3_r300 -cov_db_name pipe_random_59_s1_d5_r-1 -cov_db_name pipe_redirect_s1_d5_r-1 -cov_db_name pipe_trap_shadow_s1_d5_r-1 -cov_db_name promoted_addiw_s1_d5_r-1 -cov_db_name promoted_divuw_s1_d5_r-1 -cov_db_name promoted_ebreak_s1_d5_r-1 -cov_db_name promoted_ecall_s1_d5_r-1 -cov_db_name promoted_fence_i_s1_d5_r-1 -cov_db_name promoted_fence_s1_d5_r-1 -cov_db_name promoted_mul_s1_d5_r-1 -cov_db_name promoted_shift_s1_d5_r-1 -cov_db_name promoted_sub_s1_d5_r-1 -cov_db_name random_1_s1_d5_r-1 -cov_db_name random_42_s1_d5_r-1 -cov_db_name random_7_s1_d5_r-1 -cov_db_name random_s1_d5_p12 -cov_db_name random_s2_d5_p12 -cov_db_name random_s3_d5_p12 -cov_db_name random_s4_d5_p12 -cov_db_name random_s5_d0_p12_ready -cov_db_name random_s6_d9_p12 -cov_db_name reject_compressed_s1_d5_r-1 -cov_db_name reject_m_word_reserved_s1_d5_r-1 -cov_db_name reset_state_s1_d5_r-1 -cov_db_name reset_store_s1_d5_r-1 -cov_db_name reset_store_s8_d2_r25 -cov_db_name rv64_random_11_s1_d5_r-1 -cov_db_name rv64_random_29_s1_d5_r-1 -cov_db_name rv64_random_97_s1_d5_r-1 -cov_db_name s4_csr_s1_d5_r-1 -cov_db_name s4_interrupt_s1_d5_r-1 -cov_db_name s4_traps_s1_d5_r-1 -cov_db_name s4_wfi_s1_d5_r-1 -cov_db_name word_ops_s1_d5_r-1 -merge_dir . -merge_db_name merged -report_dir coverage_report -report_format text 
+   Command Line     :, C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir . -cov_db_name alu64_s1_d5_r-1 -cov_db_name array_loop_s1_d5_r-1 -cov_db_name asm_array_s1_d5_r-1 -cov_db_name asm_fir_s1_d5_r-1 -cov_db_name asm_muldiv_s1_d5_r-1 -cov_db_name branch_untaken_align_s1_d5_r-1 -cov_db_name control_s1_d5_r-1 -cov_db_name edges_s1_d5_r-1 -cov_db_name fault_branch_align_s1_d5_r-1 -cov_db_name fault_branch_reserved_s1_d5_r-1 -cov_db_name fault_csr_s1_d5_r-1 -cov_db_name fault_ebreak_s1_d5_r-1 -cov_db_name fault_ecall_s1_d5_r-1 -cov_db_name fault_fetch_bounds_s1_d5_r-1 -cov_db_name fault_fetch_high_s1_d5_r-1 -cov_db_name fault_jal_align_s1_d5_r-1 -cov_db_name fault_jalr_align_s1_d5_r-1 -cov_db_name fault_jalr_reserved_s1_d5_r-1 -cov_db_name fault_load_align_1_s1_d5_r-1 -cov_db_name fault_load_align_2_s1_d5_r-1 -cov_db_name fault_load_align_3_s1_d5_r-1 -cov_db_name fault_load_bounds_s1_d5_r-1 -cov_db_name fault_load_high_s1_d5_r-1 -cov_db_name fault_load_reserved_s1_d5_r-1 -cov_db_name fault_load_zero_s1_d5_r-1 -cov_db_name fault_m_word_reserved_1_s1_d5_r-1 -cov_db_name fault_m_word_reserved_2_s1_d5_r-1 -cov_db_name fault_m_word_reserved_3_s1_d5_r-1 -cov_db_name fault_mret_s1_d5_r-1 -cov_db_name fault_op_funct7_2_reserved_s1_d5_r-1 -cov_db_name fault_shift64_reserved_s1_d5_r-1 -cov_db_name fault_shiftw_reserved_s1_d5_r-1 -cov_db_name fault_store_align_1_s1_d5_r-1 -cov_db_name fault_store_align_2_s1_d5_r-1 -cov_db_name fault_store_align_3_s1_d5_r-1 -cov_db_name fault_store_bounds_s1_d5_r-1 -cov_db_name fault_store_high_s1_d5_r-1 -cov_db_name fault_store_reserved_s1_d5_r-1 -cov_db_name fault_store_zero_s1_d5_r-1 -cov_db_name fence_variants_s1_d5_r-1 -cov_db_name first_s1_d5_r-1 -cov_db_name m_div_edges_s1_d5_r-1 -cov_db_name m_divw_edges_s1_d5_r-1 -cov_db_name m_mixed_s1_d5_r-1 -cov_db_name m_mixed_s7_d3_r300 -cov_db_name m_mul_edges_s1_d5_r-1 -cov_db_name m_random_101_s1_d5_r-1 -cov_db_name m_random_13_s1_d5_r-1 -cov_db_name m_random_31_s1_d5_r-1 -cov_db_name m_reset_s1_d5_r-1 -cov_db_name m_reset_w_s1_d5_r-1 -cov_db_name memory_sizes_s1_d5_r-1 -cov_db_name memory_sizes_s7_d3_r300 -cov_db_name overflow_s1_d5_r-1 -cov_db_name pipe_forward_s1_d5_r-1 -cov_db_name pipe_forward_s8_d2_r25 -cov_db_name pipe_kill_load_s1_d5_r-1 -cov_db_name pipe_kill_store_s1_d5_r-1 -cov_db_name pipe_misaligned_shadow_s1_d5_r-1 -cov_db_name pipe_random_17_s1_d5_r-1 -cov_db_name pipe_random_3_s1_d5_r-1 -cov_db_name pipe_random_3_s7_d3_r300 -cov_db_name pipe_random_59_s1_d5_r-1 -cov_db_name pipe_ras_s1_d5_r-1 -cov_db_name pipe_redirect_s1_d5_r-1 -cov_db_name pipe_trap_shadow_s1_d5_r-1 -cov_db_name promoted_addiw_s1_d5_r-1 -cov_db_name promoted_divuw_s1_d5_r-1 -cov_db_name promoted_ebreak_s1_d5_r-1 -cov_db_name promoted_ecall_s1_d5_r-1 -cov_db_name promoted_fence_i_s1_d5_r-1 -cov_db_name promoted_fence_s1_d5_r-1 -cov_db_name promoted_mul_s1_d5_r-1 -cov_db_name promoted_shift_s1_d5_r-1 -cov_db_name promoted_sub_s1_d5_r-1 -cov_db_name random_1_s1_d5_r-1 -cov_db_name random_42_s1_d5_r-1 -cov_db_name random_7_s1_d5_r-1 -cov_db_name random_s1_d5_p12 -cov_db_name random_s2_d5_p12 -cov_db_name random_s3_d5_p12 -cov_db_name random_s4_d5_p12 -cov_db_name random_s5_d0_p12_ready -cov_db_name random_s6_d9_p12 -cov_db_name reject_compressed_s1_d5_r-1 -cov_db_name reject_m_word_reserved_s1_d5_r-1 -cov_db_name reset_state_s1_d5_r-1 -cov_db_name reset_store_s1_d5_r-1 -cov_db_name reset_store_s8_d2_r25 -cov_db_name rv64_random_11_s1_d5_r-1 -cov_db_name rv64_random_29_s1_d5_r-1 -cov_db_name rv64_random_97_s1_d5_r-1 -cov_db_name s4_csr_s1_d5_r-1 -cov_db_name s4_interrupt_s1_d5_r-1 -cov_db_name s4_traps_s1_d5_r-1 -cov_db_name s4_wfi_s1_d5_r-1 -cov_db_name word_ops_s1_d5_r-1 -merge_dir . -merge_db_name merged -report_dir coverage_report -report_format text 
    Number of Tests  :, 1
 
    Coverage Score            :, 100
@@ -154,21 +154,21 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
 
       Name,       Hit Count,  AtLeast,    
       auto_C_ALU_R,5917        ,1           ,
-      auto_C_ALU_I,28418       ,1           ,
+      auto_C_ALU_I,28668       ,1           ,
       auto_C_ALU_W,1455        ,1           ,
       auto_C_ALU_IW,1405        ,1           ,
       auto_C_LUI  ,1078        ,1           ,
-      auto_C_AUIPC,2276        ,1           ,
-      auto_C_JAL  ,1418        ,1           ,
-      auto_C_JALR ,1029        ,1           ,
-      auto_C_BR_TAKEN,3177        ,1           ,
-      auto_C_BR_NOT,2865        ,1           ,
-      auto_C_LOAD ,7089        ,1           ,
-      auto_C_STORE,2542        ,1           ,
+      auto_C_AUIPC,2283        ,1           ,
+      auto_C_JAL  ,1480        ,1           ,
+      auto_C_JALR ,1115        ,1           ,
+      auto_C_BR_TAKEN,3216        ,1           ,
+      auto_C_BR_NOT,2896        ,1           ,
+      auto_C_LOAD ,7113        ,1           ,
+      auto_C_STORE,2568        ,1           ,
       auto_C_M    ,2972        ,1           ,
       auto_C_M_W  ,3469        ,1           ,
       auto_C_FENCE,1075        ,1           ,
-      auto_C_TRAP ,175         ,1           ,
+      auto_C_TRAP ,176         ,1           ,
       auto_C_SYS  ,1162        ,1           ,
 
 
@@ -187,14 +187,14 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      auto[0]     ,37989       ,1           ,
-      auto[1]     ,15651       ,1           ,
+      auto[0]     ,38396       ,1           ,
+      auto[1]     ,15695       ,1           ,
       auto[2]     ,1964        ,1           ,
-      auto[3]     ,3077        ,1           ,
-      auto[4]     ,2150        ,1           ,
+      auto[3]     ,3127        ,1           ,
+      auto[4]     ,2151        ,1           ,
       auto[5]     ,3004        ,1           ,
       auto[6]     ,1934        ,1           ,
-      auto[7]     ,1753        ,1           ,
+      auto[7]     ,1777        ,1           ,
 
 
 
@@ -212,10 +212,10 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      none        ,42244       ,1           ,
-      d1          ,17869       ,1           ,
-      d2          ,4043        ,1           ,
-      d3          ,3366        ,1           ,
+      none        ,42552       ,1           ,
+      d1          ,18010       ,1           ,
+      d2          ,4119        ,1           ,
+      d3          ,3367        ,1           ,
 
 
 
@@ -233,10 +233,10 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      none        ,12952       ,1           ,
+      none        ,13023       ,1           ,
       d1          ,5679        ,1           ,
       d2          ,1086        ,1           ,
-      d3          ,2698        ,1           ,
+      d3          ,2723        ,1           ,
 
 
 
@@ -254,8 +254,8 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      auto[0]     ,59261       ,1           ,
-      auto[1]     ,8261        ,1           ,
+      auto[0]     ,59693       ,1           ,
+      auto[1]     ,8355        ,1           ,
 
 
 
@@ -275,7 +275,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
       Name,       Hit Count,  AtLeast,    
       causes_0    ,5           ,1           ,
       causes_1    ,4           ,1           ,
-      causes_2    ,62          ,1           ,
+      causes_2    ,63          ,1           ,
       causes_3    ,80          ,1           ,
       causes_4    ,6           ,1           ,
       causes_5    ,5           ,1           ,
@@ -392,8 +392,8 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      auto[0]     ,9641        ,1           ,
-      auto[1]     ,41096       ,1           ,
+      auto[0]     ,9691        ,1           ,
+      auto[1]     ,41530       ,1           ,
 
 
 
@@ -411,8 +411,8 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      auto[0]     ,8255        ,1           ,
-      auto[1]     ,1386        ,1           ,
+      auto[0]     ,8297        ,1           ,
+      auto[1]     ,1394        ,1           ,
 
 
 
@@ -430,7 +430,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      auto[0]     ,50719       ,1           ,
+      auto[0]     ,51203       ,1           ,
       auto[1]     ,18          ,1           ,
 
 
@@ -449,9 +449,9 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      next        ,11407       ,1           ,
-      short       ,15359       ,1           ,
-      long        ,23971       ,1           ,
+      next        ,11485       ,1           ,
+      short       ,15521       ,1           ,
+      long        ,24215       ,1           ,
 
 
 
@@ -469,8 +469,8 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      none        ,28063       ,1           ,
-      some        ,22674       ,1           ,
+      none        ,28325       ,1           ,
+      some        ,22896       ,1           ,
 
 
 
@@ -489,12 +489,12 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                  Auto Covered bins 
 
       cp_port         ,cp_latency      ,Hit Count,  AtLeast,    
-      auto[0]         ,next            ,2193        ,1           ,
-      auto[0]         ,short           ,2991        ,1           ,
-      auto[0]         ,long            ,4457        ,1           ,
-      auto[1]         ,next            ,9214        ,1           ,
-      auto[1]         ,short           ,12368       ,1           ,
-      auto[1]         ,long            ,19514       ,1           ,
+      auto[0]         ,next            ,2203        ,1           ,
+      auto[0]         ,short           ,3010        ,1           ,
+      auto[0]         ,long            ,4478        ,1           ,
+      auto[1]         ,next            ,9282        ,1           ,
+      auto[1]         ,short           ,12511       ,1           ,
+      auto[1]         ,long            ,19737       ,1           ,
 
 
 
@@ -512,7 +512,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      hit         ,5640        ,1           ,
+      hit         ,5766        ,1           ,
 
 
 
@@ -530,7 +530,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      hit         ,3270        ,1           ,
+      hit         ,3316        ,1           ,
 
 
 
@@ -548,7 +548,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
                      Covered bins 
 
       Name,       Hit Count,  AtLeast,    
-      hit         ,108652      ,1           ,
+      hit         ,110324      ,1           ,
 
 
 
@@ -567,7 +567,7 @@ cpu_uvm_pkg::cpu_coverage::cg_events              ,100         ,1           ,100
 
       Name,       Hit Count,  AtLeast,    
       arith_only  ,313415      ,1           ,
-      mem_only    ,40742       ,1           ,
+      mem_only    ,40950       ,1           ,
       both        ,950         ,1           ,
 
 

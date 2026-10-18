@@ -1,0 +1,21 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:17:48 on Oct 17,2026
+vopt fir_tb -o fir_lanes4_opt -GLANES=4 
+
+Top level modules:
+	fir_tb
+
+Analyzing design...
+-- Loading module fir_tb
+-- Importing package soc_pkg
+-- Loading module fir_filter
+-- Importing package platform_pkg
+Optimizing 4 design-units (inlining 1/2 module instances):
+-- Optimizing package soc_pkg(fast)
+-- Optimizing package platform_pkg(fast)
+-- Inlining module fir_filter(fast)
+** Warning: C:\projects\riscv-soc\rtl\peripherals\fir_filter.sv(31): (vopt-13314) Defaulting port 'req' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module fir_tb(fast)
+Optimized design name is fir_lanes4_opt
+End time: 15:17:49 on Oct 17,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 1

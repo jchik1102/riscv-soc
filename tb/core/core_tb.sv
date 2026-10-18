@@ -49,7 +49,7 @@ module core_tb;
     if (fd == 0) $fatal(1, "Cannot open trace");
     $fdisplay(fd, "order,pc,insn,next_pc,rd,rd_data,mem_addr,mem_rmask,mem_wmask,mem_rdata,mem_wdata,trap,cause");
     repeat (3) @(negedge clk);
-    rst = 0;
+    rst <= 0;  // nonblocking: every negedge process sees the same rst, in any simulator
   end
 
   always @(negedge clk) begin
@@ -178,7 +178,7 @@ module core_tb;
         (reset_mode == 1 && busy && saved_req.write) ||
         (reset_mode == 2 && busy && dut.pending.mem_rmask != 0) ||
         (reset_mode == 3 && req_valid && req.write && !req_ready))) begin
-      rst = 1;
+      rst <= 1;
       reset_done = 1;
       arith_reset = event_arith_wait;
       if (reset_mode == 6 && !(dut.arith_done == 0 && arith_dones == m_ops + 1)) $fatal(1, "Mode 6 reset not in M commit cycle");
@@ -187,6 +187,6 @@ module core_tb;
       reset_at = cycle_count;
       last_rd = 0;
       $fdisplay(fd, "RESET");
-    end else if (reset_done && cycle_count == reset_at + 3) rst = 0;
+    end else if (reset_done && cycle_count == reset_at + 3) rst <= 0;
   end
 endmodule

@@ -29,9 +29,16 @@ foreach ($core in 'pipeline', 'multicycle') {
         & (Join-Path $Vivado 'bin/xcrg.bat') -cov_db_dir . @dbArgs -merge_dir . -merge_db_name merged -report_dir coverage_report -report_format text
         if ($LASTEXITCODE -ne 0) { throw "xcrg failed for $core" }
         if (!(Test-Path -LiteralPath 'coverage_report/functionalCoverageReport/xcrg_func_cov_report.txt')) { throw "No merged coverage report for $core" }
+        & (Join-Path $Vivado 'bin/xcrg.bat') -cov_db_dir . -cov_db_name code -report_dir code_coverage_report -report_format html -log code_coverage_xcrg.log
+        if ($LASTEXITCODE -ne 0) { throw "xcrg code coverage failed for $core" }
     } finally { Pop-Location }
 }
 $linuxRoot = ((& wsl -d $Distro --exec wslpath -a $root) | Out-String).Trim()
+foreach ($core in 'pipeline', 'multicycle') {
+    & wsl -d $Distro --cd $linuxRoot --exec $LinuxPython scripts/code_coverage_summary.py "build/uvm_$core/code_coverage_report" `
+        --dut cpu_uvm_tb.dut --label $core --root $root.Replace('\', '/') --out "build/uvm_$core/code_coverage.txt"
+    if ($LASTEXITCODE -ne 0) { throw "code coverage summary failed for $core" }
+}
 & wsl -d $Distro --cd $linuxRoot --exec $LinuxPython scripts/check_uvm_runs.py --spike
 if ($LASTEXITCODE -ne 0) { throw 'Python/Spike re-check of UVM transcripts failed' }
 Write-Host 'UVM_REGRESSION_PASS: random and directed UVM runs, merged coverage, Python and Spike re-checks'

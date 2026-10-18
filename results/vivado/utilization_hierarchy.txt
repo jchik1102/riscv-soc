@@ -1,0 +1,48 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 05:03:14 2026
+| Host         : Jonathan running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file C:/projects/riscv-soc/build/vivado/synthesis_top/utilization_hierarchy.txt
+| Design       : synthesis_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+|            Instance            |      Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+| synthesis_top                  |            (top) |      12664 |      12652 |      12 |    0 | 9555 |     16 |      0 |          0 |
+|   soc                          |          cpu_soc |      12664 |      12652 |      12 |    0 | 9555 |     16 |      0 |          0 |
+|     pipeline.serial            |             uart |        130 |        118 |      12 |    0 |  136 |      0 |      0 |          0 |
+|     pipeline.accelerator.accel |     matrix_accel |       1564 |       1564 |       0 |    0 | 1369 |      0 |      0 |          0 |
+|     pipeline.arbiter           |      bus_arbiter |        107 |        107 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     pipeline.core              |    core_pipeline |      10446 |      10446 |       0 |    0 | 6796 |      0 |      0 |          0 |
+|       (pipeline.core)          |    core_pipeline |       4104 |       4104 |       0 |    0 | 1692 |      0 |      0 |          0 |
+|       arithmetic               |              alu |        636 |        636 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       arithmetic_unit          |      muldiv_unit |       1368 |       1368 |       0 |    0 |  604 |      0 |      0 |          0 |
+|         multiplier             |         mul_iter |        669 |        669 |       0 |    0 |  333 |      0 |      0 |          0 |
+|         divider                |         div_iter |        668 |        668 |       0 |    0 |  270 |      0 |      0 |          0 |
+|       csrs                     |         csr_file |        960 |        960 |       0 |    0 |  449 |      0 |      0 |          0 |
+|       decode                   |          decoder |         73 |         73 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       mem_format               |       load_store |        111 |        111 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       predictor                | branch_predictor |       2029 |       2029 |       0 |    0 | 2067 |      0 |      0 |          0 |
+|       rf                       |          regfile |       1184 |       1184 |       0 |    0 | 1984 |      0 |      0 |          0 |
+|     pipeline.counters          |    perf_counters |        256 |        256 |       0 |    0 | 1025 |      0 |      0 |          0 |
+|     pipeline.decoder           |      bus_decoder |         71 |         71 |       0 |    0 |    5 |      0 |      0 |          0 |
+|     pipeline.machine_timer     |            timer |         34 |         34 |       0 |    0 |  129 |      0 |      0 |          0 |
+|     pipeline.peripherals       |         mmio_bus |          0 |          0 |       0 |    0 |   66 |      0 |      0 |          0 |
++--------------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

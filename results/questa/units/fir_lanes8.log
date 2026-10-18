@@ -1,0 +1,26 @@
+vsim -c fir_lanes8_opt -l fir_lanes8.log.questa "+CASES=C:/projects/riscv-soc/tests/fir/fir_cases.txt" -do "run -all; quit -f" 
+Start time: 15:17:53 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.fir_tb(fast)
+run -all
+FIR_TB_PASS taps=16 lanes=8 steps=2 cases=13 matlab_outputs=1872 checks=12525 max_wait=1
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/fir_tb.sv(202)
+   Time: 208150 ns  Iteration: 1  Instance: /fir_tb
+End time: 15:17:53 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

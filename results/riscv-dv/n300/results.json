@@ -2,156 +2,128 @@
  {
   "program": "riscv_arithmetic_basic_test_0",
   "bytes": 20552,
-  "records": 263,
+  "records": 334,
   "traps": [
-   "180:cause11",
-   "263:cause11"
+   "251:cause11",
+   "334:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 263 records, 137 fetches, 64 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 334 records, 175 fetches, 64 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 261,
+  "register_commits": 332,
   "result": "PASS"
  },
  {
   "program": "riscv_arithmetic_basic_test_1",
   "bytes": 20552,
-  "records": 377,
+  "records": 301,
   "traps": [
-   "294:cause11",
-   "377:cause11"
+   "218:cause11",
+   "301:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 377 records, 194 fetches, 64 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 301 records, 156 fetches, 64 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 375,
-  "result": "PASS"
- },
- {
-  "program": "riscv_hint_instr_test_0",
-  "bytes": 36936,
-  "records": 228,
-  "traps": [
-   "95:cause4",
-   "145:cause11",
-   "228:cause11"
-  ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_hint_instr_test_0_s1_d5.csv: 228 records, 123 fetches, 96 data accesses",
-  "spike_vs_model": "PASS",
-  "register_commits": 225,
+  "register_commits": 299,
   "result": "PASS"
  },
  {
   "program": "riscv_illegal_instr_test_0",
   "bytes": 36936,
-  "records": 250,
+  "records": 219,
   "traps": [
-   "117:cause6",
-   "167:cause11",
-   "250:cause11"
+   "86:cause4",
+   "136:cause11",
+   "219:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 250 records, 132 fetches, 97 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 219 records, 122 fetches, 95 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 247,
+  "register_commits": 216,
   "result": "PASS"
  },
  {
   "program": "riscv_illegal_instr_test_1",
   "bytes": 36936,
-  "records": 240,
+  "records": 237,
   "traps": [
-   "107:cause4",
-   "157:cause11",
-   "240:cause11"
+   "104:cause4",
+   "154:cause11",
+   "237:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 240 records, 127 fetches, 96 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 237 records, 126 fetches, 95 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 237,
+  "register_commits": 234,
   "result": "PASS"
  },
  {
   "program": "riscv_jump_stress_test_0",
   "bytes": 36936,
-  "records": 249,
+  "records": 313,
   "traps": [
-   "166:cause11",
-   "249:cause11"
+   "230:cause11",
+   "313:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_jump_stress_test_0_s1_d5.csv: 249 records, 165 fetches, 64 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_jump_stress_test_0_s1_d5.csv: 313 records, 233 fetches, 64 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 247,
+  "register_commits": 311,
   "result": "PASS"
  },
  {
   "program": "riscv_jump_stress_test_1",
   "bytes": 36936,
-  "records": 211,
+  "records": 417,
   "traps": [
-   "128:cause11",
-   "211:cause11"
+   "334:cause11",
+   "417:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_jump_stress_test_1_s1_d5.csv: 211 records, 115 fetches, 64 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_jump_stress_test_1_s1_d5.csv: 417 records, 361 fetches, 64 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 209,
+  "register_commits": 415,
   "result": "PASS"
  },
  {
   "program": "riscv_load_store_stress_test_0",
+  "bytes": 36936,
+  "records": 230,
+  "traps": [
+   "97:cause4",
+   "147:cause11",
+   "230:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_load_store_stress_test_0_s1_d5.csv: 230 records, 122 fetches, 95 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 227,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_load_store_stress_test_1",
+  "bytes": 36936,
+  "records": 240,
+  "traps": [
+   "107:cause5",
+   "157:cause11",
+   "240:cause11"
+  ],
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_load_store_stress_test_1_s1_d5.csv: 240 records, 127 fetches, 96 data accesses",
+  "spike_vs_model": "PASS",
+  "register_commits": 237,
+  "result": "PASS"
+ },
+ {
+  "program": "riscv_no_fence_test_0",
   "bytes": null,
   "result": "NOT_RUN",
   "reason": "GENERATOR_INVALID_ASM"
  },
  {
-  "program": "riscv_load_store_stress_test_1",
-  "bytes": 36936,
-  "records": 236,
-  "traps": [
-   "103:cause6",
-   "153:cause11",
-   "236:cause11"
-  ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_load_store_stress_test_1_s1_d5.csv: 236 records, 126 fetches, 95 data accesses",
-  "spike_vs_model": "PASS",
-  "register_commits": 233,
-  "result": "PASS"
- },
- {
-  "program": "riscv_loop_test_0",
-  "bytes": 36936,
-  "records": 207,
-  "traps": [
-   "124:cause11",
-   "207:cause11"
-  ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_loop_test_0_s1_d5.csv: 207 records, 112 fetches, 64 data accesses",
-  "spike_vs_model": "PASS",
-  "register_commits": 205,
-  "result": "PASS"
- },
- {
-  "program": "riscv_no_fence_test_0",
-  "bytes": 36936,
-  "records": 268,
-  "traps": [
-   "135:cause4",
-   "185:cause11",
-   "268:cause11"
-  ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_no_fence_test_0_s1_d5.csv: 268 records, 186 fetches, 95 data accesses",
-  "spike_vs_model": "PASS",
-  "register_commits": 265,
-  "result": "PASS"
- },
- {
   "program": "riscv_no_fence_test_1",
   "bytes": 36936,
-  "records": 241,
+  "records": 272,
   "traps": [
-   "108:cause5",
-   "158:cause11",
-   "241:cause11"
+   "189:cause11",
+   "272:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_no_fence_test_1_s1_d5.csv: 241 records, 147 fetches, 96 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_no_fence_test_1_s1_d5.csv: 272 records, 159 fetches, 64 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 238,
+  "register_commits": 270,
   "result": "PASS"
  },
  {
@@ -161,45 +133,31 @@
   "reason": "GENERATOR_INVALID_ASM"
  },
  {
-  "program": "riscv_rand_instr_test_1",
-  "bytes": 36936,
-  "records": 226,
-  "traps": [
-   "93:cause6",
-   "143:cause11",
-   "226:cause11"
-  ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_rand_instr_test_1_s1_d5.csv: 226 records, 123 fetches, 97 data accesses",
-  "spike_vs_model": "PASS",
-  "register_commits": 223,
-  "result": "PASS"
- },
- {
   "program": "riscv_rand_jump_test_0",
   "bytes": 36936,
-  "records": 240,
+  "records": 374,
   "traps": [
-   "107:cause5",
-   "157:cause11",
-   "240:cause11"
+   "241:cause4",
+   "291:cause11",
+   "374:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_rand_jump_test_0_s1_d5.csv: 240 records, 127 fetches, 96 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_rand_jump_test_0_s1_d5.csv: 374 records, 210 fetches, 99 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 237,
+  "register_commits": 371,
   "result": "PASS"
  },
  {
   "program": "riscv_rand_jump_test_1",
   "bytes": 36936,
-  "records": 300,
+  "records": 246,
   "traps": [
-   "167:cause4",
-   "217:cause11",
-   "300:cause11"
+   "113:cause4",
+   "163:cause11",
+   "246:cause11"
   ],
-  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_rand_jump_test_1_s1_d5.csv: 300 records, 166 fetches, 97 data accesses",
+  "rtl_vs_model": "PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n300/xsim/riscv_rand_jump_test_1_s1_d5.csv: 246 records, 135 fetches, 96 data accesses",
   "spike_vs_model": "PASS",
-  "register_commits": 297,
+  "register_commits": 243,
   "result": "PASS"
  }
 ]

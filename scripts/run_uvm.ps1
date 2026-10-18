@@ -29,7 +29,11 @@ try {
             'tb/uvm/cpu_if.sv', 'tb/uvm/cpu_uvm_pkg.sv', 'tb/uvm/cpu_uvm_tb.sv') | ForEach-Object { Join-Path $root $_ }
         $define = if ($Core -eq 'multicycle') { @('-d', 'MULTICYCLE') } else { @() }
         Invoke-Xilinx 'xvlog' (@('--sv', '-L', 'uvm') + $define + $sources)
-        Invoke-Xilinx 'xelab' @('cpu_uvm_tb', '-L', 'uvm', '-s', 'cpu_uvm', '--timescale', '1ns/1ps')
+        # Statement, branch and condition code coverage, accumulated over every
+        # run of this snapshot in xsim.codeCov/code (toggle is left out: xcrg
+        # 2025.2 crashes on most attempts to report it for this design).
+        Invoke-Xilinx 'xelab' @('cpu_uvm_tb', '-L', 'uvm', '-s', 'cpu_uvm', '--timescale', '1ns/1ps',
+            '--cc_type', 'sbc', '--cov_db_dir', '.', '--cov_db_name', 'code')
     }
     $runs = if ($Test -eq 'cpu_image_test') { $Cases } else { @("random") }
     foreach ($case in $runs) {

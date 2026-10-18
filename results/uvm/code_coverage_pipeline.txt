@@ -1,0 +1,23 @@
+XSim code coverage (pipeline): statement, branch and condition, merged over every run
+design under test: instances under cpu_uvm_tb.dut; testbench modules excluded
+
+module                                       inst          statements            branches          conditions
+alu                                             1     22/23     95.65%     18/19     94.74%      0/0         n/a
+branch_predictor_default                        1     30/30    100.00%     18/18    100.00%     16/16    100.00%
+core_pipeline_default                           1    247/256    96.48%    137/141    97.16%    169/170    99.41%
+csr_file                                        1     63/64     98.44%     36/39     92.31%      6/6     100.00%
+decoder                                         1     86/89     96.63%     42/45     93.33%     60/66     90.91%
+div_iter                                        1     50/50    100.00%     32/32    100.00%     32/32    100.00%
+load_store                                      1     24/24    100.00%     13/13    100.00%      3/6      50.00%
+mul_iter                                        1     38/38    100.00%     24/24    100.00%     20/20    100.00%
+muldiv_unit                                     1      4/4     100.00%      5/5     100.00%      3/4      75.00%
+regfile                                         1      5/5     100.00%      7/7     100.00%      6/6     100.00%
+TOTAL                                                569/583    97.60%    332/343    96.79%    315/326    96.63%
+
+Lines with a statement that never executed:
+alu (rtl/core/alu.sv): 19
+core_pipeline_default (rtl/core/core_pipeline.sv): 483, 484, 485, 486, 487
+csr_file (rtl/core/csr_file.sv): 74
+decoder (rtl/core/decoder.sv): 30, 56, 85
+
+CODE_COVERAGE pipeline statements=569/583 (97.60%) branches=332/343 (96.79%) conditions=315/326 (96.63%)

@@ -2,85 +2,67 @@
  {
   "program": "riscv_arithmetic_basic_test_0",
   "result": "PASS",
-  "register_commits": 261,
+  "register_commits": 332,
   "handled_traps": 1
  },
  {
   "program": "riscv_arithmetic_basic_test_1",
   "result": "PASS",
-  "register_commits": 375,
+  "register_commits": 299,
   "handled_traps": 1
- },
- {
-  "program": "riscv_hint_instr_test_0",
-  "result": "PASS",
-  "register_commits": 225,
-  "handled_traps": 2
  },
  {
   "program": "riscv_illegal_instr_test_0",
   "result": "PASS",
-  "register_commits": 247,
+  "register_commits": 216,
   "handled_traps": 2
  },
  {
   "program": "riscv_illegal_instr_test_1",
   "result": "PASS",
-  "register_commits": 237,
+  "register_commits": 234,
   "handled_traps": 2
  },
  {
   "program": "riscv_jump_stress_test_0",
   "result": "PASS",
-  "register_commits": 247,
+  "register_commits": 311,
   "handled_traps": 1
  },
  {
   "program": "riscv_jump_stress_test_1",
   "result": "PASS",
-  "register_commits": 209,
+  "register_commits": 415,
   "handled_traps": 1
+ },
+ {
+  "program": "riscv_load_store_stress_test_0",
+  "result": "PASS",
+  "register_commits": 227,
+  "handled_traps": 2
  },
  {
   "program": "riscv_load_store_stress_test_1",
-  "result": "PASS",
-  "register_commits": 233,
-  "handled_traps": 2
- },
- {
-  "program": "riscv_loop_test_0",
-  "result": "PASS",
-  "register_commits": 205,
-  "handled_traps": 1
- },
- {
-  "program": "riscv_no_fence_test_0",
-  "result": "PASS",
-  "register_commits": 265,
-  "handled_traps": 2
- },
- {
-  "program": "riscv_no_fence_test_1",
-  "result": "PASS",
-  "register_commits": 238,
-  "handled_traps": 2
- },
- {
-  "program": "riscv_rand_instr_test_1",
-  "result": "PASS",
-  "register_commits": 223,
-  "handled_traps": 2
- },
- {
-  "program": "riscv_rand_jump_test_0",
   "result": "PASS",
   "register_commits": 237,
   "handled_traps": 2
  },
  {
+  "program": "riscv_no_fence_test_1",
+  "result": "PASS",
+  "register_commits": 270,
+  "handled_traps": 1
+ },
+ {
+  "program": "riscv_rand_jump_test_0",
+  "result": "PASS",
+  "register_commits": 371,
+  "handled_traps": 2
+ },
+ {
   "program": "riscv_rand_jump_test_1",
   "result": "PASS",
-  "register_commits": 297,
+  "register_commits": 243,
   "handled_traps": 2
  }
 ]

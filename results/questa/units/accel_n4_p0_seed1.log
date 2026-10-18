@@ -1,0 +1,58 @@
+vsim -c accel_n4_p0_opt -l accel_n4_p0_seed1.log.questa "+SEED=1" "+TRACE=accel_n4_p0_seed1.csv" -do "run -all; quit -f" 
+Start time: 15:17:36 on Oct 17,2026
+//  Questa Intel Starter FPGA Edition-64
+//  Version 2024.3 win64 Sep 10 2024
+//
+// Unpublished work. Copyright 2024 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.platform_pkg(fast)
+Loading work.soc_pkg(fast)
+Loading work.accel_tb(fast)
+run -all
+ACCEL_TB n=4 parallel=0 latency=64 transactions=20000 checks=133808
+ACCEL_TB cover byte_error 247
+ACCEL_TB cover ctrl_upper_write 495
+ACCEL_TB cover done_masked 133
+ACCEL_TB cover done_with_irq 480
+ACCEL_TB cover dword 3811
+ACCEL_TB cover half_error 227
+ACCEL_TB cover ignored_register_write 367
+ACCEL_TB cover operand_min_squared 489
+ACCEL_TB cover read_ctrl 182
+ACCEL_TB cover read_cycles_busy 214
+ACCEL_TB cover read_d_busy 3383
+ACCEL_TB cover read_d_done 17
+ACCEL_TB cover read_info 235
+ACCEL_TB cover reset_while_busy 225
+ACCEL_TB cover restart_after_done 555
+ACCEL_TB cover row_beyond_n_error 215
+ACCEL_TB cover rsp_backpressure 6642
+ACCEL_TB cover start_ab 400
+ACCEL_TB cover start_abc 438
+ACCEL_TB cover start_while_busy 1235
+ACCEL_TB cover unmapped_error 465
+ACCEL_TB cover w1c_at_completion_edge 115
+ACCEL_TB cover w1c_done 55
+ACCEL_TB cover w1c_start_ignored 329
+ACCEL_TB cover word_high 4669
+ACCEL_TB cover word_low 5992
+ACCEL_TB cover wrap_overflow 396
+ACCEL_TB cover write_a_busy 1408
+ACCEL_TB cover write_b_busy 1318
+ACCEL_TB cover write_c_busy 1426
+ACCEL_TB cover write_d_error 222
+ACCEL_TEST_PASS
+** Note: $finish    : C:/projects/riscv-soc/tb/unit/accel_tb.sv(350)
+   Time: 1234290 ns  Iteration: 1  Instance: /accel_tb
+End time: 15:17:38 on Oct 17,2026, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0

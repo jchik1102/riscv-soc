@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 17 03:38:05 2026
+# Process ID         : 45784
+# Current directory  : C:/projects/riscv-soc/build/xsim_ddr3
+# Command line       : xsim.exe -log bridge_mem0.log -mode tcl -source {xsim.dir/bridge_mem0/xsim_script.tcl}
+# Log file           : C:/projects/riscv-soc/build/xsim_ddr3/bridge_mem0.log
+# Journal file       : C:/projects/riscv-soc/build/xsim_ddr3\xsim.jou
+# Running On         : Jonathan
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : Intel(R) Core(TM) i9-14900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 34053 MB
+# Swap memory        : 8264 MB
+# Total Virtual      : 42317 MB
+# Available Virtual  : 8026 MB
+#-----------------------------------------------------------
+source xsim.dir/bridge_mem0/xsim_script.tcl
+# xsim {bridge_mem0} -autoloadwcfg -runall -onerror quit
+Time resolution is 1 ps
+run -all
+BRIDGE_TB init done at 200573700 ps (cycle 10029)
+SDR_BRIDGE_TB_PASS ops=3000 writes=931 reads=738 burst2=384 lines=586 error_requests=361 checks=26166 read_latency_cycles min=10 mean=10.0 max=11 line_reads=128 cycles=2952 bytes_per_cycle=1.39 mbytes_per_s_at_50mhz=69.4
+$finish called at time : 1065753700 ps : File "C:/projects/riscv-soc/tb/ddr3/ddr3_bridge_tb.sv" Line 248
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 17 03:38:07 2026...

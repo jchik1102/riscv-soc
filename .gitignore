@@ -35,3 +35,5 @@ webtalk*
 
 # SymbiYosys work directories (logs are copied to results/formal/)
 formal/*/
+# riscv-formal configuration and environment (sources, not SBY output)
+!formal/rvfi/

@@ -1,0 +1,47 @@
+SBY 13:20:55 [reg_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/defines.sv'.
+SBY 13:20:55 [reg_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/reg_ch0.sv'.
+SBY 13:20:55 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/../../checks/rvfi_macros.vh' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/rvfi_macros.vh'.
+SBY 13:20:55 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/../../checks/rvfi_channel.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/rvfi_channel.sv'.
+SBY 13:20:55 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/../../checks/rvfi_testbench.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/rvfi_testbench.sv'.
+SBY 13:20:55 [reg_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/../../checks/rvfi_reg_check.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks/cores/riscv_soc/checks/reg_ch0/src/rvfi_reg_check.sv'.
+SBY 13:20:55 [reg_ch0] engine_0: smtbmc bitwuzla
+SBY 13:20:55 [reg_ch0] base: starting process "cd reg_ch0/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:20:57 [reg_ch0] base: finished (returncode=0)
+SBY 13:20:57 [reg_ch0] prep: starting process "cd reg_ch0/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:20:57 [reg_ch0] prep: finished (returncode=0)
+SBY 13:20:57 [reg_ch0] smt2: starting process "cd reg_ch0/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:20:57 [reg_ch0] smt2: finished (returncode=0)
+SBY 13:20:57 [reg_ch0] engine_0: starting process "cd reg_ch0; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 20:21  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 0..
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 1..
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 2..
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 3..
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 4..
+SBY 13:20:58 [reg_ch0] engine_0: ##   0:00:00  Skipping step 5..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 6..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 7..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 8..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 9..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 10..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 11..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 12..
+SBY 13:20:59 [reg_ch0] engine_0: ##   0:00:01  Skipping step 13..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:01  Skipping step 14..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Skipping step 15..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Skipping step 16..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Skipping step 17..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Skipping step 18..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Skipping step 19..
+SBY 13:21:00 [reg_ch0] engine_0: ##   0:00:02  Checking assumptions in step 20..
+SBY 13:21:04 [reg_ch0] engine_0: ##   0:00:06  Checking assertions in step 20..
+SBY 13:22:04 [reg_ch0] engine_0: ##   0:01:06  waiting for solver (1 minute)
+SBY 13:26:04 [reg_ch0] engine_0: ##   0:05:06  waiting for solver (5 minutes)
+SBY 13:26:20 [reg_ch0] engine_0: ##   0:05:22  Status: passed
+SBY 13:26:20 [reg_ch0] engine_0: finished (returncode=0)
+SBY 13:26:20 [reg_ch0] engine_0: Status returned by engine: pass
+SBY 13:26:20 [reg_ch0] summary: Elapsed clock time [H:MM:SS (secs)]: 0:05:24 (324)
+SBY 13:26:20 [reg_ch0] summary: Elapsed process time [H:MM:SS (secs)]: 0:05:25 (325)
+SBY 13:26:20 [reg_ch0] summary: engine_0 (smtbmc bitwuzla) returned pass
+SBY 13:26:20 [reg_ch0] summary: engine_0 did not produce any traces
+SBY 13:26:20 [reg_ch0] DONE (PASS, rc=0)

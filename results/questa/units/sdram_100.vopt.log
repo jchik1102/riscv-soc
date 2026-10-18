@@ -1,0 +1,23 @@
+Questa Intel Starter FPGA Edition-64 vopt 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:17:09 on Oct 17,2026
+vopt sdram_tb -o sdram_100_opt -GCLK_PS=10000 -GTRANSACTIONS=6000 
+
+Top level modules:
+	sdram_tb
+
+Analyzing design...
+-- Loading module sdram_tb
+-- Importing package soc_pkg
+-- Importing package platform_pkg
+-- Loading module sdram_ctrl
+-- Loading module sdram_model
+Optimizing 5 design-units (inlining 2/3 module instances):
+-- Optimizing package soc_pkg(fast)
+-- Optimizing package platform_pkg(fast)
+-- Inlining module sdram_ctrl(fast)
+** Warning: C:\projects\riscv-soc\rtl\memory\sdram_ctrl.sv(21): (vopt-13314) Defaulting port 'req' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Inlining module sdram_model(fast)
+-- Optimizing module sdram_tb(fast)
+Optimized design name is sdram_100_opt
+End time: 15:17:10 on Oct 17,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 1

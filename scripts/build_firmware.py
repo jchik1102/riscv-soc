@@ -4,13 +4,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MARCH = "rv64im"
 PROGRAMS = {"first": ["sw/first.S"], "array": ["sw/array.S"], "muldiv": ["sw/muldiv.S", "sw/m_kernel.c"],
-            "fir": ["sw/fir_start.S", "sw/fir.c"],
+            "fir": ["sw/fir_start.S", "sw/fir.c"], "fir_hw": ["sw/fir_start.S", "sw/fir_hw.c"],
             "s4_demo": ["sw/s4_start.S", "sw/s4_demo.c"], "s4_board": ["sw/s4_start.S", "sw/s4_demo.c"],
             "s5_sdram": ["sw/s4_start.S", "sw/s5_sdram.c"], "s5_board": ["sw/s4_start.S", "sw/s5_sdram.c"],
             "s6_bench": ["sw/s4_start.S", "sw/s6_bench.c"], "s6_board": ["sw/s4_start.S", "sw/s6_bench.c"],
             "s7_bench": ["sw/s4_start.S", "sw/s7_bench.c"], "s7_board": ["sw/s4_start.S", "sw/s7_bench.c"],
             "s8_bench": ["sw/s4_start.S", "sw/s8_demo.c"], "s8_board": ["sw/s4_start.S", "sw/s8_demo.c"]}
-ZICSR = {"s4_demo": [], "s4_board": ["-DTICK_PERIOD=5000000UL", "-DTICKS=50UL", "-DUART_DIV=434UL"],
+ZICSR = {"fir_hw": [], "s4_demo": [], "s4_board": ["-DTICK_PERIOD=5000000UL", "-DTICKS=50UL", "-DUART_DIV=434UL"],
          "s5_sdram": [], "s5_board": ["-DTEST_BYTES=0x4000000UL", "-DTICK_PERIOD=5000000UL", "-DRUN_COUNTER"],
          "s6_bench": [], "s6_board": ["-DTICK_PERIOD=50000UL", "-DSMALL_WORDS=256UL", "-DBIG_WORDS=4096UL", "-DROUNDS=8UL"],
          "s7_bench": [], "s7_board": ["-DTICK_PERIOD=50000UL", "-DRANDOM_CASES=58UL"],

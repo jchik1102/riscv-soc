@@ -1,0 +1,438 @@
+units/ram.log                                PASS
+VECTORS: 10725 M operations, seed 2024, /mnt/c/projects/riscv-soc/build/muldiv/vectors.txt
+units/muldiv_s1.log                          PASS
+units/muldiv_s2.log                          PASS
+units/cache_2048_seed1.log                   PASS
+units/cache_2048_seed2.log                   PASS
+units/cache_2048_seed3.log                   PASS
+units/cache_4096_seed1.log                   PASS
+units/sdram_50_seed1.log                     PASS
+units/sdram_50_seed2.log                     PASS
+units/sdram_50_seed3.log                     PASS
+units/sdram_100_seed1.log                    PASS
+units/sdram_tester.log                       PASS
+units/accel_n4_p1_seed1.log                  PASS
+units/accel_n4_p1_seed2.log                  PASS
+units/accel_n4_p1_seed3.log                  PASS
+units/accel_n2_p1_seed1.log                  PASS
+units/accel_n4_p0_seed1.log                  PASS
+units/accel_n2_p0_seed1.log                  PASS
+PASS accelerator transcript build/questa/units/accel_n4_p1_seed1.csv: {'requests': 20000, 'checked_reads': 5060, 'undefined_reads': 2193, 'errors': 2138, 'irq_changes': 6853, 'resets': 143, 'n': 4, 'parallel': True, 'starts': 3824, 'completions': 3761}
+PASS accelerator transcript build/questa/units/accel_n4_p1_seed2.csv: {'requests': 20000, 'checked_reads': 4849, 'undefined_reads': 2448, 'errors': 2142, 'irq_changes': 6819, 'resets': 187, 'n': 4, 'parallel': True, 'starts': 3795, 'completions': 3722}
+PASS accelerator transcript build/questa/units/accel_n4_p1_seed3.csv: {'requests': 20000, 'checked_reads': 4886, 'undefined_reads': 2496, 'errors': 2099, 'irq_changes': 6429, 'resets': 202, 'n': 4, 'parallel': True, 'starts': 3607, 'completions': 3526}
+PASS accelerator transcript build/questa/units/accel_n2_p1_seed1.csv: {'requests': 20000, 'checked_reads': 6136, 'undefined_reads': 713, 'errors': 1470, 'irq_changes': 7812, 'resets': 114, 'n': 2, 'parallel': True, 'starts': 4262, 'completions': 4220}
+PASS accelerator transcript build/questa/units/accel_n4_p0_seed1.csv: {'requests': 20000, 'checked_reads': 4566, 'undefined_reads': 3969, 'errors': 5493, 'irq_changes': 967, 'resets': 470, 'n': 4, 'parallel': False, 'starts': 838, 'completions': 612}
+PASS accelerator transcript build/questa/units/accel_n2_p0_seed1.csv: {'requests': 20000, 'checked_reads': 5366, 'undefined_reads': 2205, 'errors': 3195, 'irq_changes': 5215, 'resets': 263, 'n': 2, 'parallel': False, 'starts': 3038, 'completions': 2926}
+units/fir_lanes1.log                         PASS
+units/fir_lanes2.log                         PASS
+units/fir_lanes4.log                         PASS
+units/fir_lanes8.log                         PASS
+units/fir_lanes16.log                        PASS
+units/fir_adc_test0.log                      PASS
+units/fir_adc_test1.log                      PASS
+core/first_s1_d5_r-1.log                     PASS
+PASS first_s1_d5_r-1.csv: 4 records
+PASS edges_s1_d5_r-1.csv: 10 records
+PASS overflow_s1_d5_r-1.csv: 70 records
+PASS reset_state_s1_d5_r-1.csv: 7 records
+PASS reject_m_word_reserved_s1_d5_r-1.csv: 4 records
+PASS reject_compressed_s1_d5_r-1.csv: 4 records
+PASS promoted_sub_s1_d5_r-1.csv: 5 records
+PASS promoted_addiw_s1_d5_r-1.csv: 5 records
+PASS promoted_shift_s1_d5_r-1.csv: 5 records
+PASS promoted_ecall_s1_d5_r-1.csv: 4 records
+PASS promoted_ebreak_s1_d5_r-1.csv: 4 records
+PASS promoted_fence_s1_d5_r-1.csv: 5 records
+PASS promoted_mul_s1_d5_r-1.csv: 5 records
+PASS random_1_s1_d5_r-1.csv: 232 records
+PASS random_7_s1_d5_r-1.csv: 232 records
+PASS random_42_s1_d5_r-1.csv: 232 records
+PASS alu64_s1_d5_r-1.csv: 155 records
+PASS word_ops_s1_d5_r-1.csv: 596 records
+PASS control_s1_d5_r-1.csv: 80 records
+PASS memory_sizes_s1_d5_r-1.csv: 167 records
+PASS array_loop_s1_d5_r-1.csv: 119 records
+PASS reset_store_s1_d5_r-1.csv: 7 records
+PASS fault_ecall_s1_d5_r-1.csv: 3 records
+PASS fault_ebreak_s1_d5_r-1.csv: 3 records
+PASS fault_jal_align_s1_d5_r-1.csv: 3 records
+PASS fault_branch_align_s1_d5_r-1.csv: 3 records
+PASS fault_jalr_align_s1_d5_r-1.csv: 4 records
+PASS fault_fetch_bounds_s1_d5_r-1.csv: 21 records
+PASS fault_fetch_high_s1_d5_r-1.csv: 21 records
+PASS fault_load_bounds_s1_d5_r-1.csv: 20 records
+PASS fault_store_bounds_s1_d5_r-1.csv: 20 records
+PASS fault_load_high_s1_d5_r-1.csv: 20 records
+PASS fault_store_high_s1_d5_r-1.csv: 20 records
+PASS fault_load_zero_s1_d5_r-1.csv: 3 records
+PASS fault_store_zero_s1_d5_r-1.csv: 3 records
+PASS fault_shift64_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_shiftw_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_1_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_2_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_3_s1_d5_r-1.csv: 3 records
+PASS fault_op_funct7_2_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_branch_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_load_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_store_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_jalr_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_csr_s1_d5_r-1.csv: 3 records
+PASS fault_mret_s1_d5_r-1.csv: 3 records
+PASS fault_load_align_1_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_1_s1_d5_r-1.csv: 4 records
+PASS fault_load_align_2_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_2_s1_d5_r-1.csv: 4 records
+PASS fault_load_align_3_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_3_s1_d5_r-1.csv: 4 records
+PASS promoted_divuw_s1_d5_r-1.csv: 4 records
+PASS promoted_fence_i_s1_d5_r-1.csv: 6 records
+PASS branch_untaken_align_s1_d5_r-1.csv: 4 records
+PASS fence_variants_s1_d5_r-1.csv: 8 records
+PASS rv64_random_11_s1_d5_r-1.csv: 642 records
+PASS rv64_random_29_s1_d5_r-1.csv: 629 records
+PASS rv64_random_97_s1_d5_r-1.csv: 629 records
+PASS m_mul_edges_s1_d5_r-1.csv: 925 records
+PASS m_div_edges_s1_d5_r-1.csv: 781 records
+PASS m_divw_edges_s1_d5_r-1.csv: 781 records
+PASS m_mixed_s1_d5_r-1.csv: 170 records
+PASS m_reset_s1_d5_r-1.csv: 39 records
+PASS m_reset_w_s1_d5_r-1.csv: 39 records
+PASS m_random_13_s1_d5_r-1.csv: 565 records
+PASS m_random_31_s1_d5_r-1.csv: 555 records
+PASS m_random_101_s1_d5_r-1.csv: 552 records
+PASS pipe_forward_s1_d5_r-1.csv: 51 records
+PASS pipe_redirect_s1_d5_r-1.csv: 43 records
+PASS pipe_kill_load_s1_d5_r-1.csv: 21 records
+PASS pipe_kill_store_s1_d5_r-1.csv: 21 records
+PASS pipe_trap_shadow_s1_d5_r-1.csv: 4 records
+PASS pipe_misaligned_shadow_s1_d5_r-1.csv: 3 records
+PASS pipe_random_3_s1_d5_r-1.csv: 761 records
+PASS pipe_random_17_s1_d5_r-1.csv: 770 records
+PASS pipe_random_59_s1_d5_r-1.csv: 768 records
+PASS pipe_ras_s1_d5_r-1.csv: 526 records
+PASS s4_csr_s1_d5_r-1.csv: 2 records
+PASS s4_wfi_s1_d5_r-1.csv: 2 records
+PASS s4_traps_s1_d5_r-1.csv: 6 records
+PASS s4_interrupt_s1_d5_r-1.csv: 5 records
+PASS asm_array_s1_d5_r-1.csv: 177 records
+PASS asm_muldiv_s1_d5_r-1.csv: 159 records
+PASS asm_fir_s1_d5_r-1.csv: 18010 records
+PASS first_s7_d0_r-1.csv: 4 records
+PASS edges_s7_d0_r-1.csv: 10 records
+PASS overflow_s7_d0_r-1.csv: 70 records
+PASS reset_state_s7_d0_r-1.csv: 7 records
+PASS random_1_s42_d9_r-1.csv: 232 records
+PASS random_7_s42_d9_r-1.csv: 232 records
+PASS random_42_s42_d9_r-1.csv: 232 records
+PASS rv64_random_11_s42_d9_r-1.csv: 642 records
+PASS rv64_random_29_s42_d9_r-1.csv: 629 records
+PASS rv64_random_97_s42_d9_r-1.csv: 629 records
+PASS control_s42_d9_r-1.csv: 80 records
+PASS memory_sizes_s42_d9_r-1.csv: 167 records
+PASS array_loop_s42_d9_r-1.csv: 119 records
+PASS reset_state_s1_d5_r4.csv: 7 records
+PASS reset_state_s1_d5_r6.csv: 7 records
+PASS reset_state_s1_d5_r10.csv: 7 records
+PASS reset_state_s1_d5_r20.csv: 8 records
+PASS reset_state_s1_d5_r30.csv: 10 records
+PASS reset_store_s1_d9_r-1_m1.csv: 10 records
+PASS reset_store_s1_d9_r-1_m2.csv: 8 records
+PASS reset_store_s1_d9_r-1_m3.csv: 10 records
+PASS m_random_13_s42_d9_r-1.csv: 565 records
+PASS m_random_31_s42_d9_r-1.csv: 555 records
+PASS m_random_101_s42_d9_r-1.csv: 552 records
+PASS m_mixed_s42_d9_r-1.csv: 170 records
+PASS asm_muldiv_s42_d9_r-1.csv: 159 records
+PASS m_divw_edges_s42_d9_r-1.csv: 781 records
+PASS m_random_13_s7_d0_r-1.csv: 565 records
+PASS m_mixed_s7_d0_r-1.csv: 170 records
+PASS m_mul_edges_s7_d0_r-1.csv: 925 records
+PASS m_reset_s1_d5_r0_m4.csv: 73 records
+PASS m_reset_s1_d5_r1_m4.csv: 73 records
+PASS m_reset_s1_d5_r31_m4.csv: 73 records
+PASS m_reset_s1_d5_r63_m4.csv: 73 records
+PASS m_reset_s1_d5_r64_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r0_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r15_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r31_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r32_m4.csv: 73 records
+PASS m_reset_s1_d5_r-1_m5.csv: 73 records
+PASS m_reset_w_s1_d5_r-1_m5.csv: 73 records
+PASS m_reset_s1_d5_r-1_m6.csv: 73 records
+PASS m_reset_w_s1_d5_r-1_m6.csv: 73 records
+PASS m_mixed_s29_d3_r150.csv: 176 records
+PASS m_mixed_s29_d3_r900.csv: 203 records
+PASS m_mixed_s29_d3_r2500.csv: 268 records
+PASS: 132 traces, 38972 records
+pipe/first_s1_d5_r-1.log                     PASS
+PASS first_s1_d5_r-1.csv: 4 records
+PASS edges_s1_d5_r-1.csv: 10 records
+PASS overflow_s1_d5_r-1.csv: 70 records
+PASS reset_state_s1_d5_r-1.csv: 7 records
+PASS reject_m_word_reserved_s1_d5_r-1.csv: 4 records
+PASS reject_compressed_s1_d5_r-1.csv: 4 records
+PASS promoted_sub_s1_d5_r-1.csv: 5 records
+PASS promoted_addiw_s1_d5_r-1.csv: 5 records
+PASS promoted_shift_s1_d5_r-1.csv: 5 records
+PASS promoted_ecall_s1_d5_r-1.csv: 4 records
+PASS promoted_ebreak_s1_d5_r-1.csv: 4 records
+PASS promoted_fence_s1_d5_r-1.csv: 5 records
+PASS promoted_mul_s1_d5_r-1.csv: 5 records
+PASS random_1_s1_d5_r-1.csv: 232 records
+PASS random_7_s1_d5_r-1.csv: 232 records
+PASS random_42_s1_d5_r-1.csv: 232 records
+PASS alu64_s1_d5_r-1.csv: 155 records
+PASS word_ops_s1_d5_r-1.csv: 596 records
+PASS control_s1_d5_r-1.csv: 80 records
+PASS memory_sizes_s1_d5_r-1.csv: 167 records
+PASS array_loop_s1_d5_r-1.csv: 119 records
+PASS reset_store_s1_d5_r-1.csv: 7 records
+PASS fault_ecall_s1_d5_r-1.csv: 3 records
+PASS fault_ebreak_s1_d5_r-1.csv: 3 records
+PASS fault_jal_align_s1_d5_r-1.csv: 3 records
+PASS fault_branch_align_s1_d5_r-1.csv: 3 records
+PASS fault_jalr_align_s1_d5_r-1.csv: 4 records
+PASS fault_fetch_bounds_s1_d5_r-1.csv: 21 records
+PASS fault_fetch_high_s1_d5_r-1.csv: 21 records
+PASS fault_load_bounds_s1_d5_r-1.csv: 20 records
+PASS fault_store_bounds_s1_d5_r-1.csv: 20 records
+PASS fault_load_high_s1_d5_r-1.csv: 20 records
+PASS fault_store_high_s1_d5_r-1.csv: 20 records
+PASS fault_load_zero_s1_d5_r-1.csv: 3 records
+PASS fault_store_zero_s1_d5_r-1.csv: 3 records
+PASS fault_shift64_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_shiftw_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_1_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_2_s1_d5_r-1.csv: 3 records
+PASS fault_m_word_reserved_3_s1_d5_r-1.csv: 3 records
+PASS fault_op_funct7_2_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_branch_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_load_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_store_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_jalr_reserved_s1_d5_r-1.csv: 3 records
+PASS fault_csr_s1_d5_r-1.csv: 4 records
+PASS fault_mret_s1_d5_r-1.csv: 4 records
+PASS fault_load_align_1_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_1_s1_d5_r-1.csv: 4 records
+PASS fault_load_align_2_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_2_s1_d5_r-1.csv: 4 records
+PASS fault_load_align_3_s1_d5_r-1.csv: 4 records
+PASS fault_store_align_3_s1_d5_r-1.csv: 4 records
+PASS promoted_divuw_s1_d5_r-1.csv: 4 records
+PASS promoted_fence_i_s1_d5_r-1.csv: 6 records
+PASS branch_untaken_align_s1_d5_r-1.csv: 4 records
+PASS fence_variants_s1_d5_r-1.csv: 8 records
+PASS rv64_random_11_s1_d5_r-1.csv: 642 records
+PASS rv64_random_29_s1_d5_r-1.csv: 629 records
+PASS rv64_random_97_s1_d5_r-1.csv: 629 records
+PASS m_mul_edges_s1_d5_r-1.csv: 925 records
+PASS m_div_edges_s1_d5_r-1.csv: 781 records
+PASS m_divw_edges_s1_d5_r-1.csv: 781 records
+PASS m_mixed_s1_d5_r-1.csv: 170 records
+PASS m_reset_s1_d5_r-1.csv: 39 records
+PASS m_reset_w_s1_d5_r-1.csv: 39 records
+PASS m_random_13_s1_d5_r-1.csv: 565 records
+PASS m_random_31_s1_d5_r-1.csv: 555 records
+PASS m_random_101_s1_d5_r-1.csv: 552 records
+PASS pipe_forward_s1_d5_r-1.csv: 51 records
+PASS pipe_redirect_s1_d5_r-1.csv: 43 records
+PASS pipe_kill_load_s1_d5_r-1.csv: 21 records
+PASS pipe_kill_store_s1_d5_r-1.csv: 21 records
+PASS pipe_trap_shadow_s1_d5_r-1.csv: 4 records
+PASS pipe_misaligned_shadow_s1_d5_r-1.csv: 3 records
+PASS pipe_random_3_s1_d5_r-1.csv: 761 records
+PASS pipe_random_17_s1_d5_r-1.csv: 770 records
+PASS pipe_random_59_s1_d5_r-1.csv: 768 records
+PASS pipe_ras_s1_d5_r-1.csv: 526 records
+PASS s4_csr_s1_d5_r-1.csv: 127 records
+PASS s4_wfi_s1_d5_r-1.csv: 5 records
+PASS s4_traps_s1_d5_r-1.csv: 245 records
+PASS s4_interrupt_s1_d5_r-1.csv: 390 records
+PASS asm_array_s1_d5_r-1.csv: 177 records
+PASS asm_muldiv_s1_d5_r-1.csv: 159 records
+PASS asm_fir_s1_d5_r-1.csv: 18010 records
+PASS first_s7_d0_r-1.csv: 4 records
+PASS edges_s7_d0_r-1.csv: 10 records
+PASS overflow_s7_d0_r-1.csv: 70 records
+PASS reset_state_s7_d0_r-1.csv: 7 records
+PASS reject_m_word_reserved_s7_d0_r-1.csv: 4 records
+PASS reject_compressed_s7_d0_r-1.csv: 4 records
+PASS promoted_sub_s7_d0_r-1.csv: 5 records
+PASS promoted_addiw_s7_d0_r-1.csv: 5 records
+PASS promoted_shift_s7_d0_r-1.csv: 5 records
+PASS promoted_ecall_s7_d0_r-1.csv: 4 records
+PASS promoted_ebreak_s7_d0_r-1.csv: 4 records
+PASS promoted_fence_s7_d0_r-1.csv: 5 records
+PASS promoted_mul_s7_d0_r-1.csv: 5 records
+PASS random_1_s7_d0_r-1.csv: 232 records
+PASS random_7_s7_d0_r-1.csv: 232 records
+PASS random_42_s7_d0_r-1.csv: 232 records
+PASS alu64_s7_d0_r-1.csv: 155 records
+PASS word_ops_s7_d0_r-1.csv: 596 records
+PASS control_s7_d0_r-1.csv: 80 records
+PASS memory_sizes_s7_d0_r-1.csv: 167 records
+PASS array_loop_s7_d0_r-1.csv: 119 records
+PASS reset_store_s7_d0_r-1.csv: 7 records
+PASS fault_ecall_s7_d0_r-1.csv: 3 records
+PASS fault_ebreak_s7_d0_r-1.csv: 3 records
+PASS fault_jal_align_s7_d0_r-1.csv: 3 records
+PASS fault_branch_align_s7_d0_r-1.csv: 3 records
+PASS fault_jalr_align_s7_d0_r-1.csv: 4 records
+PASS fault_fetch_bounds_s7_d0_r-1.csv: 21 records
+PASS fault_fetch_high_s7_d0_r-1.csv: 21 records
+PASS fault_load_bounds_s7_d0_r-1.csv: 20 records
+PASS fault_store_bounds_s7_d0_r-1.csv: 20 records
+PASS fault_load_high_s7_d0_r-1.csv: 20 records
+PASS fault_store_high_s7_d0_r-1.csv: 20 records
+PASS fault_load_zero_s7_d0_r-1.csv: 3 records
+PASS fault_store_zero_s7_d0_r-1.csv: 3 records
+PASS fault_shift64_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_shiftw_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_m_word_reserved_1_s7_d0_r-1.csv: 3 records
+PASS fault_m_word_reserved_2_s7_d0_r-1.csv: 3 records
+PASS fault_m_word_reserved_3_s7_d0_r-1.csv: 3 records
+PASS fault_op_funct7_2_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_branch_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_load_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_store_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_jalr_reserved_s7_d0_r-1.csv: 3 records
+PASS fault_csr_s7_d0_r-1.csv: 4 records
+PASS fault_mret_s7_d0_r-1.csv: 4 records
+PASS fault_load_align_1_s7_d0_r-1.csv: 4 records
+PASS fault_store_align_1_s7_d0_r-1.csv: 4 records
+PASS fault_load_align_2_s7_d0_r-1.csv: 4 records
+PASS fault_store_align_2_s7_d0_r-1.csv: 4 records
+PASS fault_load_align_3_s7_d0_r-1.csv: 4 records
+PASS fault_store_align_3_s7_d0_r-1.csv: 4 records
+PASS promoted_divuw_s7_d0_r-1.csv: 4 records
+PASS promoted_fence_i_s7_d0_r-1.csv: 6 records
+PASS branch_untaken_align_s7_d0_r-1.csv: 4 records
+PASS fence_variants_s7_d0_r-1.csv: 8 records
+PASS rv64_random_11_s7_d0_r-1.csv: 642 records
+PASS rv64_random_29_s7_d0_r-1.csv: 629 records
+PASS rv64_random_97_s7_d0_r-1.csv: 629 records
+PASS m_mul_edges_s7_d0_r-1.csv: 925 records
+PASS m_div_edges_s7_d0_r-1.csv: 781 records
+PASS m_divw_edges_s7_d0_r-1.csv: 781 records
+PASS m_mixed_s7_d0_r-1.csv: 170 records
+PASS m_reset_s7_d0_r-1.csv: 39 records
+PASS m_reset_w_s7_d0_r-1.csv: 39 records
+PASS m_random_13_s7_d0_r-1.csv: 565 records
+PASS m_random_31_s7_d0_r-1.csv: 555 records
+PASS m_random_101_s7_d0_r-1.csv: 552 records
+PASS pipe_forward_s7_d0_r-1.csv: 51 records
+PASS pipe_redirect_s7_d0_r-1.csv: 43 records
+PASS pipe_kill_load_s7_d0_r-1.csv: 21 records
+PASS pipe_kill_store_s7_d0_r-1.csv: 21 records
+PASS pipe_trap_shadow_s7_d0_r-1.csv: 4 records
+PASS pipe_misaligned_shadow_s7_d0_r-1.csv: 3 records
+PASS pipe_random_3_s7_d0_r-1.csv: 761 records
+PASS pipe_random_17_s7_d0_r-1.csv: 770 records
+PASS pipe_random_59_s7_d0_r-1.csv: 768 records
+PASS pipe_ras_s7_d0_r-1.csv: 526 records
+PASS s4_csr_s7_d0_r-1.csv: 127 records
+PASS s4_wfi_s7_d0_r-1.csv: 5 records
+PASS s4_traps_s7_d0_r-1.csv: 245 records
+PASS s4_interrupt_s7_d0_r-1.csv: 390 records
+PASS asm_array_s7_d0_r-1.csv: 177 records
+PASS asm_muldiv_s7_d0_r-1.csv: 159 records
+PASS asm_fir_s7_d0_r-1.csv: 18010 records
+PASS random_1_s42_d9_r-1.csv: 232 records
+PASS random_7_s42_d9_r-1.csv: 232 records
+PASS random_42_s42_d9_r-1.csv: 232 records
+PASS rv64_random_11_s42_d9_r-1.csv: 642 records
+PASS rv64_random_29_s42_d9_r-1.csv: 629 records
+PASS rv64_random_97_s42_d9_r-1.csv: 629 records
+PASS control_s42_d9_r-1.csv: 80 records
+PASS memory_sizes_s42_d9_r-1.csv: 167 records
+PASS array_loop_s42_d9_r-1.csv: 119 records
+PASS pipe_forward_s42_d9_r-1.csv: 51 records
+PASS pipe_redirect_s42_d9_r-1.csv: 43 records
+PASS pipe_ras_s42_d9_r-1.csv: 526 records
+PASS pipe_random_3_s42_d9_r-1.csv: 761 records
+PASS pipe_random_17_s42_d9_r-1.csv: 770 records
+PASS pipe_random_59_s42_d9_r-1.csv: 768 records
+PASS asm_array_s42_d9_r-1.csv: 177 records
+PASS asm_muldiv_s42_d9_r-1.csv: 159 records
+PASS pipe_forward_s3_d2_r-1.csv: 51 records
+PASS pipe_redirect_s3_d2_r-1.csv: 43 records
+PASS pipe_ras_s3_d2_r-1.csv: 526 records
+PASS pipe_kill_load_s3_d2_r-1.csv: 21 records
+PASS pipe_kill_store_s3_d2_r-1.csv: 21 records
+PASS pipe_random_3_s3_d2_r-1.csv: 761 records
+PASS pipe_random_17_s3_d2_r-1.csv: 770 records
+PASS pipe_random_59_s3_d2_r-1.csv: 768 records
+PASS m_mixed_s3_d2_r-1.csv: 170 records
+PASS reset_state_s1_d5_r4.csv: 7 records
+PASS reset_state_s1_d5_r6.csv: 7 records
+PASS reset_state_s1_d5_r10.csv: 7 records
+PASS reset_state_s1_d5_r20.csv: 11 records
+PASS reset_state_s1_d5_r30.csv: 7 records
+PASS reset_store_s1_d9_r-1_m1.csv: 10 records
+PASS reset_store_s1_d9_r-1_m2.csv: 8 records
+PASS reset_store_s1_d9_r-1_m3.csv: 10 records
+PASS m_random_13_s42_d9_r-1.csv: 565 records
+PASS m_random_31_s42_d9_r-1.csv: 555 records
+PASS m_random_101_s42_d9_r-1.csv: 552 records
+PASS m_mixed_s42_d9_r-1.csv: 170 records
+PASS asm_muldiv_s42_d9_r-1.csv: 159 records
+PASS m_divw_edges_s42_d9_r-1.csv: 781 records
+PASS m_reset_s1_d5_r0_m4.csv: 73 records
+PASS m_reset_s1_d5_r1_m4.csv: 73 records
+PASS m_reset_s1_d5_r31_m4.csv: 73 records
+PASS m_reset_s1_d5_r63_m4.csv: 73 records
+PASS m_reset_s1_d5_r64_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r0_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r15_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r31_m4.csv: 73 records
+PASS m_reset_w_s1_d5_r32_m4.csv: 73 records
+PASS m_reset_s1_d5_r-1_m5.csv: 73 records
+PASS m_reset_w_s1_d5_r-1_m5.csv: 73 records
+PASS m_reset_s1_d5_r-1_m6.csv: 73 records
+PASS m_reset_w_s1_d5_r-1_m6.csv: 73 records
+PASS m_mixed_s29_d3_r150.csv: 176 records
+PASS m_mixed_s29_d3_r900.csv: 209 records
+PASS m_mixed_s29_d3_r2500.csv: 281 records
+PASS pipe_random_3_s5_d4_r40.csv: 773 records
+PASS pipe_forward_s5_d4_r40.csv: 61 records
+PASS pipe_random_3_s5_d4_r95.csv: 793 records
+PASS pipe_forward_s5_d4_r95.csv: 79 records
+PASS pipe_random_3_s5_d4_r300.csv: 864 records
+PASS pipe_forward_s5_d4_r300.csv: 93 records
+PASS pipe_random_3_s5_d4_r1200.csv: 909 records
+PASS pipe_forward_s5_d4_r1200.csv: 51 records
+PASS s4_interrupt_s3_d4_r-1_i120.csv: 1554 records
+PASS s4_csr_s3_d4_r-1_i120.csv: 127 records
+PASS s4_traps_s3_d4_r-1_i120.csv: 245 records
+PASS pipe_random_3_s3_d4_r-1_i120.csv: 761 records
+PASS m_mixed_s3_d4_r-1_i120.csv: 170 records
+PASS memory_sizes_s3_d4_r-1_i120.csv: 167 records
+PASS s4_interrupt_s9_d0_r-1_i300.csv: 678 records
+PASS s4_interrupt_s21_d7_r-1_i60.csv: 5142 records
+PASS pipe_forward_s21_d7_r-1_i60.csv: 51 records
+PASS asm_muldiv_s21_d7_r-1_i60.csv: 159 records
+PASS s4_interrupt_s5_d3_r2000_i90.csv: 2468 records
+PASS s4_interrupt_s5_d3_r4500_i90.csv: 2606 records
+PASS: 248 traces, 92699 records
+integration/soc_tb_p0.log                    PASS
+integration/fault_tb_p0.log                  PASS
+integration/soc_array_tb_p0.log              PASS
+integration/soc_muldiv_tb_p0.log             PASS
+integration/soc_fir_tb_p0.log                PASS
+integration/pipe_fault_tb_p1.log             PASS
+integration/soc_tb_p1.log                    PASS
+integration/soc_array_tb_p1.log              PASS
+integration/soc_muldiv_tb_p1.log             PASS
+integration/soc_fir_tb_p1.log                PASS
+integration/soc_fir_hw_tb_p1.log             PASS
+integration/board_tb_p1.log                  PASS
+integration/board_tb_p0.log                  PASS
+integration/board_s4_tb_p1.log               PASS
+integration/board_s5_tb_p1.log               PASS
+integration/board_s6_tb_p1.log               PASS
+integration/board_s7_tb_p1.log               PASS
+integration/board_s8_tb_p1.log               PASS
+QUESTA_DONE: units, cores, integration
+multicycle: 264 of 264 files identical (132 traces, 130250 trace lines); 0 differ, 0 missing in XSim
+pipeline: 494 of 494 files identical (247 traces, 250543 trace lines); 0 differ, 0 missing in XSim
+TRACES_IDENTICAL

@@ -1,0 +1,42 @@
+SBY 13:37:47 [insn_mulw_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/defines.sv'.
+SBY 13:37:47 [insn_mulw_ch0] Writing '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/insn_mulw_ch0.sv'.
+SBY 13:37:47 [insn_mulw_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/../../checks/rvfi_macros.vh' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/rvfi_macros.vh'.
+SBY 13:37:48 [insn_mulw_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/../../checks/rvfi_channel.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/rvfi_channel.sv'.
+SBY 13:37:48 [insn_mulw_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/../../checks/rvfi_testbench.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/rvfi_testbench.sv'.
+SBY 13:37:48 [insn_mulw_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/../../checks/rvfi_insn_check.sv' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/rvfi_insn_check.sv'.
+SBY 13:37:48 [insn_mulw_ch0] Copy '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/../../insns/insn_mulw.v' to '/mnt/c/projects/riscv-soc-formal/build/rvfi-checks_m/cores/riscv_soc/checks/insn_mulw_ch0/src/insn_mulw.v'.
+SBY 13:37:48 [insn_mulw_ch0] engine_0: smtbmc bitwuzla
+SBY 13:37:48 [insn_mulw_ch0] base: starting process "cd insn_mulw_ch0/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:37:49 [insn_mulw_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [2:0]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3279': $auto$proc_dlatch.cc:555:proc_dlatch$4078
+SBY 13:37:49 [insn_mulw_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [3]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3279': $auto$proc_dlatch.cc:557:proc_dlatch$4121
+SBY 13:37:49 [insn_mulw_ch0] base: Warning: Latch inferred for signal `\rvfi_insn_check.\i [31:4]' from process `\rvfi_insn_check.$proc$rvfi_insn_check.sv:133$3279': $auto$proc_dlatch.cc:555:proc_dlatch$4124
+SBY 13:37:50 [insn_mulw_ch0] base: finished (returncode=0)
+SBY 13:37:50 [insn_mulw_ch0] prep: starting process "cd insn_mulw_ch0/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:37:50 [insn_mulw_ch0] prep: finished (returncode=0)
+SBY 13:37:50 [insn_mulw_ch0] smt2: starting process "cd insn_mulw_ch0/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:37:51 [insn_mulw_ch0] smt2: finished (returncode=0)
+SBY 13:37:51 [insn_mulw_ch0] engine_0: starting process "cd insn_mulw_ch0; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 12:13  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 0..
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 1..
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 2..
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 3..
+SBY 13:37:51 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 4..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:00  Skipping step 5..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 6..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 7..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 8..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 9..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 10..
+SBY 13:37:52 [insn_mulw_ch0] engine_0: ##   0:00:01  Skipping step 11..
+SBY 13:37:53 [insn_mulw_ch0] engine_0: ##   0:00:01  Checking assumptions in step 12..
+SBY 13:37:54 [insn_mulw_ch0] engine_0: ##   0:00:03  Checking assertions in step 12..
+SBY 13:38:54 [insn_mulw_ch0] engine_0: ##   0:01:03  waiting for solver (1 minute)
+SBY 13:40:45 [insn_mulw_ch0] engine_0: ##   0:02:54  Status: passed
+SBY 13:40:45 [insn_mulw_ch0] engine_0: finished (returncode=0)
+SBY 13:40:45 [insn_mulw_ch0] engine_0: Status returned by engine: pass
+SBY 13:40:45 [insn_mulw_ch0] summary: Elapsed clock time [H:MM:SS (secs)]: 0:02:57 (177)
+SBY 13:40:45 [insn_mulw_ch0] summary: Elapsed process time [H:MM:SS (secs)]: 0:02:56 (176)
+SBY 13:40:45 [insn_mulw_ch0] summary: engine_0 (smtbmc bitwuzla) returned pass
+SBY 13:40:45 [insn_mulw_ch0] summary: engine_0 did not produce any traces
+SBY 13:40:45 [insn_mulw_ch0] DONE (PASS, rc=0)
