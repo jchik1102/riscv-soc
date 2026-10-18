@@ -21,6 +21,7 @@ The diagram is an SVG with the draw.io model embedded; open `docs/block_diagram.
 | WSL Ubuntu | 24.04 | firmware, Python, Spike, `make` |
 | riscv64-unknown-elf-gcc | 13.2.0 | firmware |
 | Python | 3.12 venv at `/home/jonat/.venvs/riscv-soc` with `requirements-lock.txt` | models, checkers, tests |
+| Perl | 5.38 (Ubuntu's, core modules only) | `make questa`'s trace comparison with XSim |
 | Spike | commit in `spike-commit.txt` | reference simulator |
 | riscv-formal | YosysHQ commit `c992aa6`, cloned to `~/hwtools/riscv-formal` (or set `RVF`) | `make riscv-formal` |
 | PowerShell | 7 (`pwsh.exe`) for the Makefile; the scripts also run in Windows PowerShell | driving XSim and Quartus |
@@ -269,7 +270,7 @@ Two things differ from the SDR runs. Micron's model returns X for memory never w
 | --- | --- | --- |
 | Unit benches: RAM, M unit (2 seeds), cache (2 sizes, 4 runs), SDRAM controller (50 and 100 MHz, 4 runs) and tester, accelerator (4 configurations, 6 runs), FIR filter at 1, 2, 4, 8 and 16 lanes, ADC-model bench (2 tests) | 25 of 25 pass; the accelerator transcripts also pass the Python replay | [summary.txt](results/questa/summary.txt), [units/](results/questa/units/) |
 | Both cores' full trace matrices (the same groups as `make test-sim`) | 132 multicycle traces (38,972 retirements) and 248 pipeline traces (92,699) pass the reference-model checker | [check_all_multicycle.txt](results/questa/check_all_multicycle.txt), [check_all_pipeline.txt](results/questa/check_all_pipeline.txt) |
-| The same traces against XSim's, file for file | identical: 758 of 758 files (379 traces, with 380,793 trace lines, and their final memory dumps) | [trace_compare.json](results/questa/trace_compare.json) |
+| The same traces against XSim's, file for file ([`scripts/compare_sim_traces.pl`](scripts/compare_sim_traces.pl), Perl) | identical: 758 of 758 files (379 traces, with 380,793 trace lines, and their final memory dumps) | [trace_compare.json](results/questa/trace_compare.json) |
 | Integration benches: the 18 runs of `run_integration.ps1` (SoC firmware on both cores, fault benches, board top with all six demos) | 18 of 18 pass | [integration/](results/questa/integration/) |
 
 Comparing the traces found a race in the core benches, now fixed: they released reset with a blocking assignment on a falling edge that the bus model's process also reads it on, so the two simulators ordered the two processes differently and XSim ran one cycle ahead of Questa. Every trace still passed the checker in both, but two traces with a reset at a fixed cycle retired one more instruction before it in XSim. The benches now drive reset with nonblocking assignments; XSim's counts went from 38,973 and 92,700 to the 38,972 and 92,699 above, and the two simulators then agree on every trace.

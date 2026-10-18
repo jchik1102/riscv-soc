@@ -185,7 +185,7 @@ arty: | results-dir
 # Logs in results/questa/.
 questa: | results-dir
 	$(PS) scripts/run_questa.ps1 $(LOG)
-	$(VENV)/bin/python scripts/compare_sim_traces.py 2>&1 | tee -a $(RESULTS)/$@.log
+	perl scripts/compare_sim_traces.pl 2>&1 | tee -a $(RESULTS)/$@.log
 	mkdir -p $(RESULTS)/questa/units $(RESULTS)/questa/integration
 	cp build/questa/summary.txt build/questa/trace_compare.json $(RESULTS)/questa/
 	cp build/questa/core/check_all.txt $(RESULTS)/questa/check_all_multicycle.txt
