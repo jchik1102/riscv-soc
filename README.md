@@ -8,8 +8,6 @@ An original SystemVerilog RISC-V system for the Terasic DE10-Lite (MAX 10 `10M50
 
 The diagram is an SVG with the draw.io model embedded; open `docs/block_diagram.svg` in draw.io to edit it.
 
-**Demo video:** _placeholder — link to be added._
-
 ## Tools
 
 | Tool | Version | Used for |
@@ -24,6 +22,9 @@ The diagram is an SVG with the draw.io model embedded; open `docs/block_diagram.
 | Perl | 5.38 (Ubuntu's, core modules only) | `make questa`'s trace comparison with XSim |
 | Spike | commit in `spike-commit.txt` | reference simulator |
 | riscv-formal | YosysHQ commit `c992aa6`, cloned to `~/hwtools/riscv-formal` (or set `RVF`) | `make riscv-formal` |
+| riscv-gnu-toolchain | 2026.08.27 (GCC 16.1) | building the ACT4 ELFs only (`make act`); ACT4 needs GCC 15 or later |
+| OSS CAD Suite | 2026-10-14 build in `~/oss-cad-suite` (Yosys with yosys-slang, SymbiYosys, Bitwuzla, Verilator) | `make formal`, `make riscv-formal`, lint |
+| MATLAB | R2026a with Fixed-Point Designer (Windows) | `make fir` only: the FIR reference model and the ADC analysis |
 | PowerShell | 7 (`pwsh.exe`) for the Makefile; the scripts also run in Windows PowerShell | driving XSim and Quartus |
 
 The scripts default to `C:\intelFPGA_lite\24.1std\quartus`, `C:\AMDDesignTools\2025.2\Vivado`, WSL distro `Ubuntu` and the venv above. Pass `-Quartus`, `-Vivado`, `-Distro` or `-LinuxPython` to override them. The Makefile uses `pwsh.exe` from `PATH`, or set `PWSH=/path/to/pwsh.exe`.
@@ -42,8 +43,8 @@ The scripts default to `C:\intelFPGA_lite\24.1std\quartus`, `C:\AMDDesignTools\2
 | `make act` | riscv-arch-test (ACT4) RV64I and RV64M on the pipeline core, plus the same ELFs on Spike; see [Compliance and random testing](#compliance-and-random-testing) |
 | `make riscvdv INSTR_CNT=300` | riscv-dv random programs on the pipeline core and Spike, each checked against the Python model |
 | `make coremark` | CoreMark (10 iterations) and the S3 FIR benchmark on the pipeline core, with full prediction, without JALR prediction and without prediction; see [Branch prediction, CoreMark and FIR](#branch-prediction-coremark-and-fir) |
-| `make formal` | SymbiYosys checks of the M unit (`formal/`); needs OSS CAD Suite with the yosys-slang plugin in WSL (the 2026-10-14 build was used, versions in [versions.txt](results/formal/versions.txt)). See [Formal checks of the M unit](#formal-checks-of-the-m-unit) |
-| `make riscv-formal` | riscv-formal checks of the pipeline core through its RVFI port (`formal/rvfi/`), with the same OSS CAD Suite; `make riscv-formal-mutants` runs them on RTL mutants. See [riscv-formal on the pipeline core](#riscv-formal-on-the-pipeline-core) |
+| `make formal` | SymbiYosys checks of the M unit and the proof of the DDR3 bridge's async FIFO (`formal/`), then the FIFO proof on 4 mutants; needs OSS CAD Suite with the yosys-slang plugin in WSL (the 2026-10-14 build was used, versions in [versions.txt](results/formal/versions.txt)). See [Formal checks of the M unit](#formal-checks-of-the-m-unit) |
+| `make riscv-formal` | riscv-formal checks of the pipeline core through its RVFI port (`formal/rvfi/`), with the same OSS CAD Suite; `make riscv-formal-csr` runs the CSR configuration, `make riscv-formal-mutants` runs the checks on RTL mutants. See [riscv-formal on the pipeline core](#riscv-formal-on-the-pipeline-core) |
 | `make fir` | The hardware FIR filter: MATLAB (R2026a, Fixed-Point Designer's `fi`) regenerates the expected outputs, which must equal `tests/fir/`; the unit bench at 1, 2, 4, 8 and 16 lanes; the ADC-model bench and MATLAB's analysis of it; the mutants. `make test` runs the same benches without MATLAB, on the committed vectors. See [Hardware FIR filter](#hardware-fir-filter-matlab-model-and-adc-model) |
 | `make fir-synth` | The FIR filter alone in Quartus (MAX 10) and Vivado (Artix-7) at 50 MHz, with 1, 4 and 16 lanes |
 | `make ddr3` | DDR3 in simulation: the bridge bench through Xilinx's MIG and Micron's DDR3 model, the same bench on the SDR path, then S6 cache programs on DDR3. See [DDR3](#ddr3-through-xilinxs-mig-simulated-and-implemented) |
@@ -54,7 +55,7 @@ The scripts default to `C:\intelFPGA_lite\24.1std\quartus`, `C:\AMDDesignTools\2
 
 ### Continuous integration
 
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push and pull request, on GitHub's Ubuntu runners: the Python model and checker tests, a Verilator lint of the pipeline core, and `scripts/run-formal.sh` (the M-unit SymbiYosys checks, with the same OSS CAD Suite build as above). Everything that needs XSim or Quartus (`make test`, `act`, `riscvdv`, `coremark`, `fpga`) cannot run there and is run locally; its logs are committed under `results/`.
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push and pull request, on GitHub's Ubuntu runners: the Python model and checker tests, a Verilator `-Wall` lint of the whole SoC with both cores, the SDRAM controller and tester and the DDR3 bridge (`make lint`; no warnings outside the reviewed waivers in [`scripts/lint_waivers.vlt`](scripts/lint_waivers.vlt), [logs](results/lint/)), a check that every number in this README's tables is in the log its row links ([`scripts/check_readme_numbers.py`](scripts/check_readme_numbers.py)), and `scripts/run-formal.sh` (the M-unit SymbiYosys checks and the async FIFO proof, with the same OSS CAD Suite build as above) followed by the FIFO mutant check. Everything that needs XSim or Quartus (`make test`, `act`, `riscvdv`, `coremark`, `fpga`) cannot run there and is run locally; its logs are committed under `results/`.
 
 ### On the board
 
@@ -66,6 +67,10 @@ The scripts default to `C:\intelFPGA_lite\24.1std\quartus`, `C:\AMDDesignTools\2
 
 2. Build the FPGA image with `make fpga`. It writes `build/quartus_board_s8_p1/output_files/de10_lite_s8_p1.sof`.
 3. Connect the DE10-Lite over USB, put all switches down, and run `make program`. Programming is over JTAG and is lost at power-off. The script prints "Configuration succeeded".
+
+4. To record what the board reports, run `make board-log STAGE=s8` (or `s3` to `s7`) with the board connected and all switches down. It programs that stage's image, waits for the demo to finish and writes `results/board/<stage>.log`. Build every stage's image first with `scripts/build_board_all.ps1`.
+
+**JTAG readout.** The board top holds one Intel in-system source and probe block (`jtag_readout` in [`de10_lite_top.sv`](fpga/de10_lite/de10_lite_top.sv)). The probe carries the value on the HEX displays, the pass, fail and halted flags, the demo number, and the full 64-bit checksum, cycle and retired-instruction counters. The source is a set of virtual switches that only choose which value is displayed, so [`scripts/board_log.tcl`](scripts/board_log.tcl) can step through every view without anyone touching the board; the switches that change behaviour (SDRAM tester mode at KEY0, the SDRAM timing options) stay on the physical switches. In simulation the block is a stub that leaves the virtual switches off, and `board_tb` checks, for every stage, that each virtual-switch setting shows the same value as the physical switches and that the probe matches the counters (`BOARD_TB_JTAG_VIEW` lines in [integration_sim.log](results/board/integration_sim.log), the pass lines of `scripts/run_integration.ps1`). The script reads each value twice and only records it when both reads agree, because the probe is sampled by the JTAG clock.
 
 The demo starts by itself; KEY0 reruns it. Switches are written SW9 ... SW0, and up = 1. LEDR0 on with LEDR1 off means the demo passed its own checks; LEDR4 = SDRAM ready, LEDR6 = caches built, LEDR7 = accelerator built, and LEDR9 blinks. SW1 SW0 select the HEX view: `0 0` shows the checksum of all results, `1 1` the accelerator case and mismatch counts, `0 1` the phase and the number of 1 ms timer interrupts taken, and `1 0` cycle counts. With `1 0`, SW5 to SW8 pick which measurement is shown (CPU or accelerator, polled or interrupt-driven, caches on or off, the 16x16 product or the 64 small cases), and SW4 SW3 SW2 show the other counters: cycles, retired instructions, memory waits, M-unit cycles, D-cache accesses and misses, uncached loads and SDRAM stores.
 
@@ -89,7 +94,7 @@ The map is defined in `config/address_map.json`; `scripts/gen_map.py` generates 
 
 ## Results
 
-Every number below comes from a log in [`results/`](results/), produced by `make test`, `make fpga`, `make formal` (`results/formal/`) and `make riscv-formal` (`results/riscv-formal/`). [`results/summary.txt`](results/summary.txt) records the commit and date, and holds the totals that `scripts/collect_results.py` derives from the logs.
+Every number below comes from a log in [`results/`](results/), produced by the `make` target named in its section: `make test` and `make fpga` for the first tables, then `make vivado`, `make act`, `make riscvdv`, `make formal`, `make riscv-formal`, `make coremark`, `make fir`, `make fir-synth`, `make ddr3`, `make arty` and `make questa`. [`results/summary.txt`](results/summary.txt) records the commit and date, and holds the totals that `scripts/collect_results.py` derives from the logs.
 
 **Verification**
 
@@ -97,7 +102,7 @@ Every number below comes from a log in [`results/`](results/), produced by `make
 | --- | --- | --- |
 | Python model and checker tests | 240 passed | [test-sim.log](results/test-sim.log) |
 | Multicycle CPU traces | 132 traces, 38,972 retired instructions checked | [test-sim.log](results/test-sim.log), [trace_results.json](results/checkers/trace_results.json) |
-| Pipeline CPU traces (random interrupts and resets) | 248 traces, 92,699 retired instructions checked | [test-sim.log](results/test-sim.log), [trace_results_pipeline.json](results/checkers/trace_results_pipeline.json) |
+| Pipeline CPU traces (random interrupts and resets) | 248 runs, 92,699 retired instructions checked. One run (`asm_muldiv`, seed 42, 159 retirements) is in two groups of the run list, so 247 of the traces are distinct | [test-sim.log](results/test-sim.log), [trace_results_pipeline.json](results/checkers/trace_results_pipeline.json) |
 | Multicycle vs pipeline | 80 programs, 29,793 identical retirements | [core_comparison.json](results/checkers/core_comparison.json) |
 | Spike comparison | 94 programs agree; 2 skipped by design (WFI is a no-op here; SDRAM instruction fetch faults here) | [summary.txt](results/summary.txt), [test-sim.log](results/test-sim.log) |
 | RTL mutants | 97 of 97 detected (M unit 12, pipeline 23, SDRAM 23, cache 17, accelerator 22) | [summary.txt](results/summary.txt), [checkers/](results/checkers/) |
@@ -113,15 +118,17 @@ Every number below comes from a log in [`results/`](results/), produced by `make
 
 | Measurement | Result | Report |
 | --- | --- | --- |
-| Logic elements | 25,898 / 49,760 (52%) | [fit.summary](results/quartus/de10_lite_s8_p1.fit.summary) |
+| Logic elements | 26,555 / 49,760 (53%) | [fit.summary](results/quartus/de10_lite_s8_p1.fit.summary) |
 | Memory bits | 629,696 / 1,677,312 (38%) | [fit.summary](results/quartus/de10_lite_s8_p1.fit.summary) |
 | 9-bit multipliers, PLLs | 16 / 288, 1 / 4 | [fit.summary](results/quartus/de10_lite_s8_p1.fit.summary) |
-| Worst setup slack, 50 MHz core clock | +0.487 ns (slow 85 °C) | [sta.summary](results/quartus/de10_lite_s8_p1.sta.summary) |
-| Worst hold slack, core clock | +0.146 ns (fast 0 °C) | [sta.summary](results/quartus/de10_lite_s8_p1.sta.summary) |
-| Fmax, core clock | 51.25 MHz (slow 85 °C) | [sta.rpt](results/quartus/de10_lite_s8_p1.sta.rpt) |
-| Power | 463.77 mW total thermal; vectorless estimate with low confidence, not a measurement | [pow.summary](results/quartus/de10_lite_s8_p1.pow.summary) |
+| Worst setup slack, 50 MHz core clock | +0.780 ns (slow 85 °C) | [sta.summary](results/quartus/de10_lite_s8_p1.sta.summary) |
+| Worst hold slack, core clock | +0.128 ns (fast 0 °C) | [sta.summary](results/quartus/de10_lite_s8_p1.sta.summary) |
+| Fmax, core clock | 52.03 MHz (slow 85 °C) | [sta.rpt](results/quartus/de10_lite_s8_p1.sta.rpt) |
+| Power | 463.44 mW total thermal; vectorless estimate with low confidence, not a measurement | [pow.summary](results/quartus/de10_lite_s8_p1.pow.summary) |
 
 All reported setup, hold and pulse-width checks in all three corners have positive slack.
+
+The image includes the JTAG readout described under [On the board](#on-the-board) and is built with Quartus fitter seed 4. The margin depends on the seed: with the readout, seed 1 misses 50 MHz by 0.096 ns on a path inside the core (writeback register number, through forwarding, to the branch predictor's target table), and seeds 2, 3 and 4 meet it by +0.334, +0.239 and +0.780 ns ([fitter_seeds.txt](results/board/fitter_seeds.txt)). Before the readout was added the same image had 25,898 logic elements and +0.487 ns at seed 1 ([reports](results/baseline/quartus-before-jtag-readout/)). Every stage's image meets timing at seed 4 ([build_timing.txt](results/board/build_timing.txt)).
 
 ### Vivado implementation for a Xilinx part
 
@@ -152,9 +159,9 @@ All reported setup, hold and pulse-width checks in all three corners have positi
 | Run | Programs | Result | Log |
 | --- | --- | --- | --- |
 | 300 instructions per test | 16 requested; 13 generated (`loop` and one `rand_instr` timed out in the generator), 2 rejected as invalid assembly (see below) | 11 of 11 pass on the RTL and on Spike; 3,155 Spike-matched register commits | [rtl.log](results/riscv-dv/n300/rtl.log), [results.json](results/riscv-dv/n300/results.json), [gen.log](results/riscv-dv/n300/gen.log) |
-| 2,000 instructions per test | 16 requested; 13 generated (`loop` and one `rand_instr` timed out in the generator), 3 rejected as invalid assembly | 10 of 10 pass on the RTL and on Spike; 6,604 Spike-matched register commits | [check.log](results/riscv-dv/n2000/check.log), [results.json](results/riscv-dv/n2000/results.json), [gen.log](results/riscv-dv/n2000/gen.log) |
+| 2,000 instructions per test | 16 requested; 13 generated (`loop` and one `rand_instr` timed out in the generator), 2 rejected as invalid assembly | 11 of 11 pass on the RTL and on Spike; 6,214 Spike-matched register commits | [rtl.log](results/riscv-dv/n2000/rtl.log), [results.json](results/riscv-dv/n2000/results.json), [gen.log](results/riscv-dv/n2000/gen.log) |
 
-**Most programs end early.** All but one of the programs that use pyflow's load/store streams take an unexpected load or store exception (address misaligned or access fault, causes 4 to 7) between their 86th and 241st retired instruction, although the target declares misaligned accesses unsupported; riscv-dv's handler then dumps the registers and ends the test. The exception is `riscv_no_fence_test_1` at 300 instructions, which ran to its normal end. The RTL, Spike and the model agree on all of it, but those programs only exercise about 100 to 240 random instructions plus the trap path. Only the arithmetic, jump-stress and loop programs, which have no load/store streams, run to their normal end: up to 2,155 retired instructions at 2,000. No program reached one of its illegal instructions before ending. The retired count and trap positions of every program are in its `results.json`.
+**Most programs end early.** All but one of the programs that use pyflow's load/store streams take an unexpected load or store exception (address misaligned or access fault, causes 4 to 7) between their 86th and 241st retired instruction, although the target declares misaligned accesses unsupported; riscv-dv's handler then dumps the registers and ends the test. The exception is `riscv_no_fence_test_1` at 300 instructions, which ran to its normal end. The RTL, Spike and the model agree on all of it, but those programs only exercise about 100 to 240 random instructions plus the trap path. Only the arithmetic and jump-stress programs, which have no load/store streams, run to their normal end: up to 2,147 retired instructions at 2,000. No program reached one of its illegal instructions before ending. The retired count and trap positions of every program are in its `results.json`.
 
 What differs from a standard riscv-dv run, and why (all recorded in [`testlist.yaml`](compliance/riscv-dv/rv64im/testlist.yaml)):
 
@@ -175,27 +182,50 @@ These are **bounded checks over a restricted operand space, not proofs for every
 
 | Check | Result | Log |
 | --- | --- | --- |
-| All 13 operations against the spec reference | 13 of 13 pass; slowest REMU at 277 s | [summary.txt](results/formal/summary.txt), e.g. [muldiv_div](results/formal/muldiv_div/logfile.txt) |
+| All 13 operations against the spec reference | 13 of 13 pass; slowest REMU at 301 s | [summary.txt](results/formal/summary.txt), e.g. [muldiv_div](results/formal/muldiv_div/logfile.txt) |
 | Covers (a full-width and a W result, DIV overflow, division by zero) | 4 of 4 reached | [muldiv_cover](results/formal/muldiv_cover/logfile.txt) |
 | The 12 M-unit RTL mutants from the simulation campaign, all 13 tasks at K=4 (`scripts/formal_mutants.sh`) | 10 of 12 detected; not detected: `kill_ignored_by_multiplier` and `unit_accepts_start_while_busy`, which need a `kill` or a second `start` that the harness never drives | [mutants.txt](results/formal/mutants.txt) |
 
+**Async FIFO.** `make formal` also proves [`rtl/memory/async_fifo.sv`](rtl/memory/async_fifo.sv), the clock-crossing FIFO in the DDR3 bridge, with the harness from the network engine repository ([`formal/async_fifo_formal.sv`](formal/async_fifo_formal.sv)): both clocks are free inputs, so the solver tries every interleaving of their edges. This is an unbounded proof (ABC PDR), at 4 entries, the depth the bridge uses, and 4-bit words (the FIFO does not look at its data).
+
+| Check | Result | Log |
+| --- | --- | --- |
+| Never overflows or underflows; Gray pointers encode their binary pointers; each synchronized pointer only lags the real one; a word chosen by the solver is read back unchanged from the same position | proof passes | [async_fifo_prove](results/formal/async_fifo_prove/logfile.txt), [summary.txt](results/formal/summary.txt) |
+| Covers: FIFO full, the tracked word read, drained afterwards | 3 of 3 reached | [async_fifo_cover](results/formal/async_fifo_cover/logfile.txt) |
+| The proof on 4 FIFO mutants (missed full, write while full, read without ready, missed empty; [`scripts/formal-cdc-mutants.sh`](scripts/formal-cdc-mutants.sh)) | fails on all 4 | [cdc_fifo_mutants.txt](results/formal/cdc_fifo_mutants.txt) |
+
+The proof samples signals ideally, so it checks the pointer protocol and not metastability; the Gray coding and two-flop synchronizers are what make the crossing safe in hardware.
+
 ### riscv-formal on the pipeline core
 
-`make riscv-formal` runs [riscv-formal](https://github.com/YosysHQ/riscv-formal) (YosysHQ, commit `c992aa6`) on the pipeline core through an RVFI port. The core's retirement trace already carried most RVFI fields; when built with `RISCV_FORMAL` defined, it also reports each retiring instruction's source registers and the forwarded values it actually used ([`rtl/core/core_pipeline.sv`](rtl/core/core_pipeline.sv)). Normal builds do not define it. [`formal/rvfi/env.sv`](formal/rvfi/env.sv) is the environment: each bus accepts a request whenever the solver chooses and returns any data any number of cycles later, bus errors never happen, and the interrupt inputs are 0. SYSTEM and MISC-MEM encodings (CSR, ECALL, EBREAK, MRET, WFI, FENCE, FENCE.I) are assumed away, because riscv-formal has no specification for them; with no CSR writes `mtvec` stays 0, so any trap halts the core. The core and environment are read with yosys-slang, and [`formal/rvfi/wrapper.v`](formal/rvfi/wrapper.v) supplies the free inputs because yosys-slang has no `$anyseq`. Solver: Bitwuzla.
+`make riscv-formal` runs [riscv-formal](https://github.com/YosysHQ/riscv-formal) (YosysHQ, commit `c992aa6`) on the pipeline core through an RVFI port. The core's retirement trace already carried most RVFI fields; when built with `RISCV_FORMAL` defined, it also reports each retiring instruction's source registers and the forwarded values it actually used ([`rtl/core/core_pipeline.sv`](rtl/core/core_pipeline.sv)). Normal builds do not define it. [`formal/rvfi/env.sv`](formal/rvfi/env.sv) is the environment: each bus accepts a request whenever the solver chooses and returns any data any number of cycles later, bus errors never happen, and the interrupt inputs are 0. SYSTEM and MISC-MEM encodings (CSR, ECALL, EBREAK, MRET, WFI, FENCE, FENCE.I) are assumed away in the main and M configurations: riscv-formal has no instruction models for them. With no CSR writes `mtvec` stays 0, so any trap halts the core. A third configuration allows CSR instructions and runs riscv-formal's separate CSR checks (see [CSR checks](#csr-checks) below). The core and environment are read with yosys-slang, and [`formal/rvfi/wrapper.v`](formal/rvfi/wrapper.v) supplies the free inputs because yosys-slang has no `$anyseq`. Solver: Bitwuzla.
 
 These are **bounded model checks**: each property holds for every instruction sequence and bus timing up to its depth, in cycles from reset. They are not unbounded proofs.
 
 | Check | Depth | Result | Log |
 | --- | --- | --- | --- |
-| Each of the 49 RV64I instructions riscv-formal models (result, destination, next PC, memory address, byte mask and data, and whether it traps); register-file consistency (`reg`); PC continuity both ways; `causal`; `unique`; every encoding that is neither RV64I nor assumed away traps as illegal (`ill`). M encodings are also assumed away here ([checks.cfg](formal/rvfi/checks.cfg)) | 20 (`reg`, `pc_*` and `causal` from 10) | 55 of 55 pass; slowest `pc_fwd` at 990 s, 2,752 s summed over all checks | [checks.txt](results/riscv-formal/checks.txt) |
-| The 13 M instructions, with M encodings allowed in the instruction stream, against riscv-formal's alternative operations ([checks_m.cfg](formal/rvfi/checks_m.cfg)) | 12 | 13 of 13 pass, 177 to 233 s each | [checks_m.txt](results/riscv-formal/checks_m.txt) |
+| Each of the 49 RV64I instructions riscv-formal models (result, destination, next PC, memory address, byte mask and data, and whether it traps); register-file consistency (`reg`); PC continuity both ways; `causal`; `unique`; every encoding that is neither RV64I nor assumed away traps as illegal (`ill`). M encodings are also assumed away here ([checks.cfg](formal/rvfi/checks.cfg)) | 20 (`reg`, `pc_*` and `causal` from 10) | 55 of 55 pass; slowest `pc_fwd` at 812 s, 2,378 s summed over all checks | [checks.txt](results/riscv-formal/checks.txt) |
+| The 13 M instructions, with M encodings allowed in the instruction stream, against riscv-formal's alternative operations ([checks_m.cfg](formal/rvfi/checks_m.cfg)) | 12 | 13 of 13 pass, 101 to 175 s each | [checks_m.txt](results/riscv-formal/checks_m.txt) |
 | RTL mutants: the 23 pipeline mutants of the simulation campaign, plus two controls (ADD computes SUB; a wrong alternative-operation constant for MUL) | as above | 16 of 25 detected: both controls and 14 of the 23 pipeline mutants (forwarding, load-use stall, wrong-path flush, branch target, sign extension, ALU and M-operand bugs) | [mutants.txt](results/riscv-formal/mutants.txt), [mutants_m.txt](results/riscv-formal/mutants_m.txt), [failing logs](results/riscv-formal/mutants/) |
+| CSR instructions allowed in the stream ([checks_csr.cfg](formal/rvfi/checks_csr.cfg)): `csrw` on 13 CSRs, `csrc_any` on `mscratch`, `mtvec` and `mie`, `csrc_zero` on the four ID CSRs, `csr_ill` on four addresses, and `reg`, `pc_fwd`, `pc_bwd`, `unique`, `causal` again | 20 | 29 of 29 pass; slowest `pc_fwd` at 975 s | [checks_csr.txt](results/riscv-formal/checks_csr.txt) |
+| Six CSR mutants under the CSR configuration (set computes clear, write to a read-only CSR allowed, unknown address accepted, `mscratch` reads `mtval`, `mtvec` write dropped, immediate ignored) | 20 | 6 of 6 detected | [mutants_csr.txt](results/riscv-formal/mutants_csr.txt) |
 
 **Alternative operations.** With `RISCV_FORMAL_ALTOPS`, riscv-formal replaces each M operation by `(rs1 + rs2)` or `(rs1 - rs2)` XOR a per-operation constant, so a short bound can follow M instructions through the pipeline. [`rtl/core/muldiv_unit.sv`](rtl/core/muldiv_unit.sv) implements those, answering one cycle after `start`, only when that macro is defined. The M checks therefore cover how M instructions move through the core (operands, forwarding, the start/done handshake, writeback), not the arithmetic, which the M-unit checks above cover.
 
-**Why two depths.** With M encodings in the instruction stream, the ADD check at depth 20 was stopped unfinished after 30 minutes, and the MUL check at depth 15 after 40 minutes ([logs](results/riscv-formal/depth-limits/)); without them, every RV64I check at depth 20 finishes, ADD in 24 s. So the main configuration excludes M encodings at depth 20, and the M configuration runs at depth 12.
+**Why two depths.** With M encodings in the instruction stream, the ADD check at depth 20 was stopped unfinished after 30 minutes, and the MUL check at depth 15 after 40 minutes ([logs](results/riscv-formal/depth-limits/)); without them, every RV64I check at depth 20 finishes, ADD in 22 s. So the main configuration excludes M encodings at depth 20, and the M configuration runs at depth 12.
 
 **What the mutants show.** Most detections come from `reg`, where a forwarding or stall bug makes an instruction read a value that disagrees with the register file, and from `pc_fwd`, for flush and branch-target bugs. The nine missed mutants change behaviour this environment leaves out: seven change traps, interrupts, CSRs or `minstret`, which need CSR instructions, interrupts or a trap handler; `flush_does_not_kill_m` needs a trap while an M instruction is in flight, and here any trap halts the core; and `duplicate_store_issue` writes the same store twice, which changes no register and no retired memory access. The simulation campaign detects all 23.
+
+#### CSR checks
+
+`make riscv-formal-csr` runs the third configuration. When built with `RISCV_FORMAL`, the core also reports, for each retiring CSR instruction, the value read and the value written before the register keeps only its implemented bits ([`rtl/core/csr_file.sv`](rtl/core/csr_file.sv)), and the environment turns that into riscv-formal's per-CSR ports when `RVFI_CSR` is defined. CSR instructions are then allowed in the instruction stream; ECALL, EBREAK, MRET, WFI, MISC-MEM and M encodings stay excluded, and the interrupt inputs stay 0. Since `mtvec` can now be written, a trap no longer has to halt the core.
+
+- `csrw` checks one CSR instruction: `rd` gets the value read, the value written is the set, clear or swap of `rs1` or the immediate, the next PC is PC+4, and a write to a read-only CSR traps. It runs on `mstatus`, `misa`, `mie`, `mtvec`, `mscratch`, `mepc`, `mcause`, `mtval`, `mip` and the four ID CSRs.
+- `csrc_any` checks that a later read returns what the last write stored. riscv-formal keeps a 32-bit copy of the written `rs1` value, so on RV64 this check can only compare the low 32 bits; the masks also leave out bits a register does not implement. It runs on `mscratch`, `mtvec` and `mie` only, because traps also change `mepc`, `mcause`, `mtval` and `mstatus`.
+- `csr_ill` checks that an access to an unimplemented address (`0xfff`, `0x7c0`, `0xc00`) or a write to a read-only one (`0xf11`) traps as illegal.
+- `mcycle` and `minstret` are not checked.
+
+The same configuration was also run on the ten pipeline mutants the main configuration misses. It detects none of them ([mutants_csr.txt](results/riscv-formal/mutants_csr.txt), 6 of 16 including the six CSR mutants): they need a trap handler that returns, MRET, an interrupt or a `minstret` comparison, and none of those is in this environment. Those ten are detected only in simulation (nine of them; `m_operand_b_takes_rs1` is also caught by the M configuration).
 
 ### Branch prediction, CoreMark and FIR
 
@@ -248,7 +278,7 @@ Sixteen lanes, one output per cycle, does not close 50 MHz in either tool: the s
 
 ### DDR3 through Xilinx's MIG, simulated and implemented
 
-[`rtl/memory/ddr3_bridge.sv`](rtl/memory/ddr3_bridge.sv) puts DDR3 behind the SoC's SDRAM region in place of the DE10-Lite's SDR SDRAM: it takes the same requests the SDR controller takes (single beats with byte masks, 2- and 4-beat read bursts for cache line fills) and drives the native port of a Xilinx MIG 7-series DDR3 controller. The MIG is generated by [`fpga/arty_a7/gen_mig.tcl`](fpga/arty_a7/gen_mig.tcl) from Digilent's settings for the Arty A7-100T (MIT licence, [Digilent/vivado-boards](https://github.com/Digilent/vivado-boards), changed to the native port and an internal system clock; [`mig_ddr3.prj`](fpga/arty_a7/mig_ddr3.prj)): an MT41K128M16 at 325 MHz, 4:1 PHY, so the MIG's user clock is 81.25 MHz. The SoC stays at 50 MHz and the bridge crosses between the clocks with two async FIFOs ([`async_fifo.sv`](rtl/memory/async_fifo.sv), the network engine's formally checked design). The reasons are in [DESIGN.md](DESIGN.md#7-ddr3-through-xilinxs-mig-as-a-second-memory-back-end). **Nothing here has run on hardware**: everything below is simulation (XSim, the MIG's simulation build with its fast calibration, Micron's DDR3 model from the MIG example design) or implementation.
+[`rtl/memory/ddr3_bridge.sv`](rtl/memory/ddr3_bridge.sv) puts DDR3 behind the SoC's SDRAM region in place of the DE10-Lite's SDR SDRAM: it takes the same requests the SDR controller takes (single beats with byte masks, 2- and 4-beat read bursts for cache line fills) and drives the native port of a Xilinx MIG 7-series DDR3 controller. The MIG is generated by [`fpga/arty_a7/gen_mig.tcl`](fpga/arty_a7/gen_mig.tcl) from Digilent's settings for the Arty A7-100T (MIT licence, [Digilent/vivado-boards](https://github.com/Digilent/vivado-boards), changed to the native port and an internal system clock; [`mig_ddr3.prj`](fpga/arty_a7/mig_ddr3.prj)): an MT41K128M16 at 325 MHz, 4:1 PHY, so the MIG's user clock is 81.25 MHz. The SoC stays at 50 MHz and the bridge crosses between the clocks with two async FIFOs ([`async_fifo.sv`](rtl/memory/async_fifo.sv), a copy of the network engine's `stream_cdc_fifo`, with its own formal proof here: see [Formal checks](#formal-checks-of-the-m-unit)). The reasons are in [DESIGN.md](DESIGN.md#7-ddr3-through-xilinxs-mig-as-a-second-memory-back-end). **Nothing here has run on hardware**: everything below is simulation (XSim, the MIG's simulation build with its fast calibration, Micron's DDR3 model from the MIG example design) or implementation.
 
 | Check | Result | Log |
 | --- | --- | --- |
@@ -260,7 +290,7 @@ Sixteen lanes, one output per cycle, does not close 50 MHz in either tool: the s
 
 Two things differ from the SDR runs. Micron's model returns X for memory never written, where the SDR model returns zeros; three of the programs read 13 such responses in total, speculatively past the end of code they copied to SDRAM, and the checker counts them and reads them as zero (the identical retirements show they were discarded). And the MIG's write calibration leaves training patterns at address 0, so the bench empties the model's store when the CPU starts, before the program writes anything. The SoC runs' cycle counts are not comparable with the S6 bench's: that bench starts the CPU during the SDR power-up wait, this one after calibration. Running these programs is how a bug was found: single-beat reads returned all eight bytes instead of zeros in the unrequested lanes, which the uncached run's checker caught; the bridge bench now checks it.
 
-**Implementation for the Arty A7-100T** ([`fpga/arty_a7/arty_ddr3_top.sv`](fpga/arty_a7/arty_ddr3_top.sv), [`build_arty.tcl`](fpga/arty_a7/build_arty.tcl), pins from Digilent's master XDC in [`arty_ddr3.xdc`](fpga/arty_a7/arty_ddr3.xdc)): the pipeline SoC with caches, the bridge, the MIG and one MMCM for 50, 100 and 200 MHz, with the S5 SDRAM test firmware in the boot ROM. Vivado 2025.2 places, routes and writes a bitstream ([result.txt](results/vivado/arty_ddr3/result.txt)): 16,915 slice LUTs, 12,737 registers, 24 block RAM tiles; worst setup slack +0.553 ns and hold +0.029 ns over all clocks ([timing](results/vivado/arty_ddr3/timing_summary.txt)); 0 DRC errors ([drc.txt](results/vivado/arty_ddr3/drc.txt)). The clock crossings are bounded to the user clock's 12.308 ns, Gray-pointer skew included ([bus_skew.txt](results/vivado/arty_ddr3/bus_skew.txt)). `report_cdc` lists 213 CDC-1 and 168 CDC-13 critical items, all reads of the two FIFOs' LUT memories from the other clock (the FIFO protocol guarantees the word is stable before its pointer is seen; the network engine's identical FIFO has a formal proof), and one CDC-2 warning on the existing UART's receive synchronizer, which lacks the `ASYNC_REG` attribute ([cdc.txt](results/vivado/arty_ddr3/cdc.txt)). The bitstream has not been loaded on a board.
+**Implementation for the Arty A7-100T** ([`fpga/arty_a7/arty_ddr3_top.sv`](fpga/arty_a7/arty_ddr3_top.sv), [`build_arty.tcl`](fpga/arty_a7/build_arty.tcl), pins from Digilent's master XDC in [`arty_ddr3.xdc`](fpga/arty_a7/arty_ddr3.xdc)): the pipeline SoC with caches, the bridge, the MIG and one MMCM for 50, 100 and 200 MHz, with the S5 SDRAM test firmware in the boot ROM. Vivado 2025.2 places, routes and writes a bitstream ([result.txt](results/vivado/arty_ddr3/result.txt)): 16,902 slice LUTs, 12,737 registers, 24 block RAM tiles; worst setup slack +0.474 ns and hold +0.012 ns over all clocks ([timing](results/vivado/arty_ddr3/timing_summary.txt)); 0 DRC errors ([drc.txt](results/vivado/arty_ddr3/drc.txt)). The build log has one critical warning, from the MIG's own constraint file: a placement for an MMCM that the MIG only instantiates when its `UI_EXTRA_CLOCKS` option is on. It is off here, so the cell does not exist and nothing is left unplaced ([vivado.log](results/vivado/arty_ddr3/vivado.log)). The clock crossings are bounded to the user clock's 12.308 ns, Gray-pointer skew included ([bus_skew.txt](results/vivado/arty_ddr3/bus_skew.txt)). `report_cdc` lists 213 CDC-1 and 168 CDC-13 critical items, all reads of the two FIFOs' LUT memories from the other clock (the FIFO protocol guarantees the word is stable before its pointer is seen; the FIFO's proof below covers exactly this). The UART's receive synchronizer carries the `ASYNC_REG` attribute and is reported as synchronized (CDC-3); there is no CDC-2 item ([cdc.txt](results/vivado/arty_ddr3/cdc.txt)). The bitstream has not been loaded on a board.
 
 ### Second simulator: Questa
 
@@ -270,14 +300,25 @@ Two things differ from the SDR runs. Micron's model returns X for memory never w
 | --- | --- | --- |
 | Unit benches: RAM, M unit (2 seeds), cache (2 sizes, 4 runs), SDRAM controller (50 and 100 MHz, 4 runs) and tester, accelerator (4 configurations, 6 runs), FIR filter at 1, 2, 4, 8 and 16 lanes, ADC-model bench (2 tests) | 25 of 25 pass; the accelerator transcripts also pass the Python replay | [summary.txt](results/questa/summary.txt), [units/](results/questa/units/) |
 | Both cores' full trace matrices (the same groups as `make test-sim`) | 132 multicycle traces (38,972 retirements) and 248 pipeline traces (92,699) pass the reference-model checker | [check_all_multicycle.txt](results/questa/check_all_multicycle.txt), [check_all_pipeline.txt](results/questa/check_all_pipeline.txt) |
-| The same traces against XSim's, file for file ([`scripts/compare_sim_traces.pl`](scripts/compare_sim_traces.pl), Perl) | identical: 758 of 758 files (379 traces, with 380,793 trace lines, and their final memory dumps) | [trace_compare.json](results/questa/trace_compare.json) |
+| The same traces against XSim's, file for file ([`scripts/compare_sim_traces.pl`](scripts/compare_sim_traces.pl), Perl) | identical: 758 of 758 files (379 traces, with 380,793 trace lines, and their final memory dumps). It is 379 files, not 380 runs, because the pipeline run list has `asm_muldiv` at seed 42 in two groups, and both runs write the same trace file | [trace_compare.json](results/questa/trace_compare.json) |
 | Integration benches: the 18 runs of `run_integration.ps1` (SoC firmware on both cores, fault benches, board top with all six demos) | 18 of 18 pass | [integration/](results/questa/integration/) |
 
 Comparing the traces found a race in the core benches, now fixed: they released reset with a blocking assignment on a falling edge that the bus model's process also reads it on, so the two simulators ordered the two processes differently and XSim ran one cycle ahead of Questa. Every trace still passed the checker in both, but two traces with a reset at a fixed cycle retired one more instruction before it in XSim. The benches now drive reset with nonblocking assignments; XSim's counts went from 38,973 and 92,700 to the 38,972 and 92,699 above, and the two simulators then agree on every trace.
 
-### Not yet backed by a log
+### Board runs, logged over JTAG
 
-The board runs (S3 to S8) were read from the HEX displays and LEDs by hand, so there is no log for them. They are left out here until they are recorded, for example as photos or a System Console readout saved under `results/board/`. This covers the S6 cache cycle counts, the S7 accelerator per-case cycles, the S8 checksum, the 16x16 product and 64-case cycle counts, and the board-to-simulation agreement.
+`make board-log` was run for every stage on one DE10-Lite on 2026-11-15, all switches down; the logs are in [results/board/](results/board/). Each log records the commit, the image's SHA-256 (the same as in [build_timing.txt](results/board/build_timing.txt)) and everything the probe and the display views report. All six images pass their own checks: the program halts at its final EBREAK, and its checksum equals the expected value built into the image (the full value for S3 and S4, the low 31 bits for S5 to S8). These are measurements on the board. Each stage was run twice, and every value was the same both times except in S5, as noted in its row; the logs kept are the second run's.
+
+| Stage | Result on the board | Log |
+| --- | --- | --- |
+| S3, FIR benchmark | pass; checksum `0fc6e755`, 103,387 cycles, 18,009 instructions retired. The same program runs in `board_tb`, and all three values are identical to simulation ([integration_sim.log](results/board/integration_sim.log)) | [s3.log](results/board/s3.log) |
+| S4, timer interrupts | pass; 250,170,235 cycles, 125,075,772 retired | [s4.log](results/board/s4.log) |
+| S5, test of all 64 MiB of SDRAM from the CPU | pass, error count 0; 1,168,517,881 cycles, 629,173,807 retired. The program keeps a run count in SDRAM, which survives reprogramming while the board stays powered: the first run reported run 1 with 1,168,517,865 cycles and 629,173,806 retired ([s5_run1.log](results/board/s5_run1.log)), the second run 2 | [s5.log](results/board/s5.log) |
+| S6, caches | pass; 9,682,658 cycles, 2,540,046 retired; the 16 per-mode kernel cycle counts are in the log | [s6.log](results/board/s6.log) |
+| S7, accelerator (N = 4) | pass; 64 cases, 0 mismatches against software; 1,079,490 cycles, 308,481 retired | [s7.log](results/board/s7.log) |
+| S8, full SoC | pass; 64 cases, 0 mismatches; 2,020,646 cycles, 498,830 retired. With caches on, the 16x16 matrix product takes 220,545 cycles in software, 20,429 with the accelerator polled (10.8x) and 30,673 interrupt-driven (7.19x); the 64 small cases take 241,084, 23,207 (10.4x) and 33,238 (7.25x). The caches-off counts and the other counters are in the log | [s8.log](results/board/s8.log) |
+
+Only S3 is compared with simulation cycle for cycle. The S4 to S8 board images run larger programs than the ones `board_tb` simulates, so their counts are board results only. The first attempt at S4 showed a mistake in the logging script, not in the design: it treated a counter that was still moving as an error, and the S4 program runs for about five seconds. The script now waits; the final values are still read twice and must agree.
 
 ## Problems found while building it
 
@@ -295,9 +336,9 @@ Design decisions and the reasoning behind them are in [DESIGN.md](DESIGN.md).
 - No UART link on the board (no USB-serial adapter); the UART is verified in simulation.
 - Machine mode only: no compressed or floating-point instructions, S/U modes, MMU, PMP, A extension or debug.
 - 50 MHz only; 100 MHz was not attempted.
-- SDRAM board trace delays are assumed in timing analysis; the board runs are the physical evidence.
+- SDRAM board trace delays are assumed in timing analysis. The S5 to S8 images pass on the one board tested (see [Board runs, logged over JTAG](#board-runs-logged-over-jtag)); that is not a margin measurement.
 - Every misprediction flushes the two younger instructions. The return-address stack has 8 entries and wraps on deeper recursion, losing the oldest return addresses; MRET and FENCE.I always redirect.
-- Verification is extensive but finite. The formal checks are bounded: the M unit over a restricted operand space, and the pipeline (riscv-formal) to 20 cycles from reset, 12 for M instructions, with no CSR instructions, interrupts or trap handlers. Passing riscv-arch-test is not a certification.
+- Verification is extensive but finite. The formal checks are bounded: the M unit over a restricted operand space, and the pipeline (riscv-formal) to 20 cycles from reset, 12 for M instructions, with no ECALL, MRET, interrupts or returning trap handlers (CSR instructions only in the separate CSR configuration, which does not check `mcycle` or `minstret`). Passing riscv-arch-test is not a certification.
 
 ## Layout
 

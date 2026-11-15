@@ -1,0 +1,4 @@
+full_misses_lap        FAIL        failed assertion async_fifo_formal.ap_data
+write_ignores_full     FAIL        failed assertion async_fifo_formal.ap_data
+read_ignores_ready     FAIL        failed assertion async_fifo_formal.ap_track_inside
+empty_misses_data      FAIL        failed assertion async_fifo_formal.ap_no_underflow

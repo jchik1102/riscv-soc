@@ -8,10 +8,9 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -o pipefail -c
 
-PWSH_FALLBACK := /mnt/c/Users/jonat/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe
-PWSH ?= $(or $(shell command -v pwsh.exe 2>/dev/null),$(PWSH_FALLBACK))
+PWSH ?= $(or $(shell command -v pwsh.exe 2>/dev/null),pwsh.exe)
 PS := "$(PWSH)" -NoProfile -ExecutionPolicy Bypass -File
-VENV ?= /home/jonat/.venvs/riscv-soc
+VENV ?= $(HOME)/.venvs/riscv-soc
 RESULTS := results
 # pwsh.exe launched from WSL reports exit code 0 even when a script fails, so
 # every PowerShell step is judged by the pass marker it prints, like the
@@ -19,7 +18,7 @@ RESULTS := results
 require = grep -qE '$(1)' $(2) || { echo "FAIL: '$(1)' not found in $(2)"; exit 1; }
 LOG = 2>&1 | tee $(RESULTS)/$@.log
 
-.PHONY: help models test test-sim test-uvm fpga fpga-synth vivado program results act riscvdv formal riscv-formal riscv-formal-mutants coremark fir fir-synth ddr3 arty questa results-dir
+.PHONY: help models test test-sim test-uvm fpga fpga-synth vivado program board-log results act riscvdv formal riscv-formal riscv-formal-csr riscv-formal-mutants lint coremark fir fir-synth ddr3 arty questa results-dir
 
 help:
 	@echo "make models     Python model/checker tests (WSL only, seconds)"
@@ -30,12 +29,14 @@ help:
 	@echo "make fpga-synth scripts/synthesize.ps1 -Stage s8 -Pipeline 1 -AccelN 4"
 	@echo "make vivado     Vivado implementation of the fpga-synth configuration for an Artix-7 at 50 MHz"
 	@echo "make program    scripts/program_board.ps1 -Stage s8 (board connected)"
+	@echo "make board-log  STAGE=s3..s8: program a stage and log its results over JTAG to results/board/ (board connected)"
 	@echo "make results    copy logs and reports that back the README into results/"
 	@echo "make act        riscv-arch-test (ACT4) RV64I+RV64M on the pipeline core and Spike"
 	@echo "make riscvdv    riscv-dv random programs (INSTR_CNT=300), RTL and Spike vs the model"
 	@echo "make coremark   CoreMark (ITERATIONS=10) and FIR on the pipeline core: no prediction, no JALR prediction, full"
 	@echo "make formal     SymbiYosys checks in formal/ (results/formal/summary.txt)"
 	@echo "make riscv-formal         riscv-formal checks of the pipeline core (results/riscv-formal/)"
+	@echo "make riscv-formal-csr     the CSR configuration (formal/rvfi/checks_csr.cfg)"
 	@echo "make riscv-formal-mutants the same checks on RTL mutants; each must fail one"
 	@echo "make fir        hardware FIR filter: MATLAB vectors, unit bench at 5 lane counts, ADC-model bench, mutants"
 	@echo "make fir-synth  the FIR filter alone in Quartus (MAX 10) and Vivado (Artix-7) at 50 MHz, LANES 1, 4, 16"
@@ -85,6 +86,14 @@ program:
 	$(PS) scripts/program_board.ps1 -Stage s8 $(LOG)
 	@$(call require,^PROGRAMMED,$(RESULTS)/$@.log)
 
+# Board readout over JTAG (DE10-Lite connected, all switches down): programs the
+# stage's image (built with scripts/build_board.ps1), waits for the demo to
+# finish and saves what it reports to results/board/<stage>.log.
+STAGE ?= s8
+board-log:
+	$(PS) scripts/board_log.ps1 -Stage $(STAGE)
+	@$(call require,^BOARD_LOG_PASS,$(RESULTS)/board/$(STAGE).log)
+
 results:
 	$(VENV)/bin/python scripts/collect_results.py
 
@@ -110,16 +119,25 @@ riscvdv: | results-dir
 	cp build/riscv-dv/$(DV_TAG)/results.json build/riscv-dv/$(DV_TAG)/spike.json build/riscv-dv/$(DV_TAG)/testlist.yaml $(RESULTS)/riscv-dv/$(DV_TAG)/
 	@$(call require,^RISCVDV_TOTAL pass=([0-9]+) of \1 programs,$(RESULTS)/riscv-dv/$(DV_TAG)/rtl.log)
 
+# Verilator lint of the RTL; every accepted warning is listed with its reason in
+# scripts/lint_waivers.vlt.
+lint:
+	bash scripts/lint.sh
+
 # SymbiYosys proofs, bounded checks and covers listed in formal/tasks.txt.
 # Needs OSS CAD Suite on PATH (yosys with the slang plugin, sby, solvers).
 formal: | results-dir
 	bash scripts/run-formal.sh
+	bash scripts/formal-cdc-mutants.sh
 
 # riscv-formal (YosysHQ) on the pipeline core through its RVFI port
 # (formal/rvfi/). Needs riscv-formal in RVF (default ~/hwtools/riscv-formal)
 # and OSS CAD Suite with yosys-slang on PATH.
 riscv-formal: | results-dir
 	bash scripts/run_riscv_formal.sh 2>&1 | tee $(RESULTS)/riscv-formal.log
+
+riscv-formal-csr: | results-dir
+	CFG=checks_csr bash scripts/run_riscv_formal.sh 2>&1 | tee $(RESULTS)/riscv-formal-csr.log
 
 riscv-formal-mutants: | results-dir
 	bash scripts/riscv_formal_mutants.sh 2>&1 | tee $(RESULTS)/riscv-formal-mutants.log
@@ -174,8 +192,8 @@ ddr3: | results-dir
 arty: | results-dir
 	$(VENV)/bin/python -m scripts.programs > /dev/null
 	mkdir -p build/vivado/arty_ddr3 $(RESULTS)/vivado/arty_ddr3
-	cd build/vivado/arty_ddr3 && "/mnt/c/AMDDesignTools/2025.2/Vivado/bin/vivado.bat" -mode batch -nojournal -log vivado.log 	  -source C:/projects/riscv-soc/fpga/arty_a7/build_arty.tcl -tclargs C:/projects/riscv-soc/build/firmware/s5_board_words.hex 2>&1 | tee ../../../$(RESULTS)/$@.log
-	cd build/vivado/arty_ddr3 && cp result.txt utilization.txt utilization_hierarchy.txt timing_summary.txt worst_setup_path.txt clock_interaction.txt cdc.txt bus_skew.txt drc.txt ../../../$(RESULTS)/vivado/arty_ddr3/
+	cd build/vivado/arty_ddr3 && cmd.exe /c "C:\AMDDesignTools\2025.2\Vivado\bin\vivado.bat" -mode batch -nojournal -log vivado.log 	  -source C:/projects/riscv-soc/fpga/arty_a7/build_arty.tcl -tclargs C:/projects/riscv-soc/build/firmware/s5_board_words.hex 2>&1 | tee ../../../$(RESULTS)/$@.log
+	cd build/vivado/arty_ddr3 && cp result.txt utilization.txt utilization_hierarchy.txt timing_summary.txt worst_setup_path.txt clock_interaction.txt cdc.txt bus_skew.txt drc.txt vivado.log ../../../$(RESULTS)/vivado/arty_ddr3/
 	@$(call require,^ARTY_PASS,$(RESULTS)/vivado/arty_ddr3/result.txt)
 
 # Questa Intel Starter FPGA Edition (Windows): the unit benches, both cores'

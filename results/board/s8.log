@@ -1,0 +1,116 @@
+board_log: stage s8, pipeline 1, DE10-Lite (10M50DAF484C7G), read over JTAG
+date: 2026-11-15T11:34:33-07:00
+commit: 859c7952f6aade83107b6efb944080c9457429b8
+image: build/quartus_board_s8_p1/output_files/de10_lite_s8_p1.sof
+image_sha256: 215a6fb3ad4bffe434d28f86213a36b1085ceeb264de4fa34c889057cf94e98f
+programmed: yes
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+cable: USB-Blaster [USB-0]
+device: @1: 10M50DA(.|ES)/10M50DC (0x031050DD)
+layout_version: 1
+demo: 5  pipeline: 1
+pass: 1  fail: 0  halted: 1  loading: 0  tester_mode: 0  sdram_ready: 1
+final_trap: 1  final_cause: 3
+checksum: 0x00000000e40a4eff
+cycles: 2020646
+retired: 498830
+view checksum (SW1 SW0 = 00): 0a4eff
+view phase/timer ticks (01): 30001a
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=0: 220545
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=1: 60995
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=2: 11242
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=3: 139264
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=4: 8704
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=5: 48
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=7: 256
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=0: 20429
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=1: 10719
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=2: 4645
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=3: 66
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=4: 768
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=5: 48
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=7: 128
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=0: 30673
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=1: 14793
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=2: 7144
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=3: 66
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=4: 768
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=5: 48
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=0 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=7: 128
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=0: 296005
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=1: 61111
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=2: 86468
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=3: 139264
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=6: 8448
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=7: 256
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=0: 25101
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=1: 10719
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=2: 9315
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=3: 66
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=6: 640
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=7: 128
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=0: 35319
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=1: 14793
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=2: 11794
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=3: 66
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=6: 640
+s8 workload(SW8)=0 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=7: 128
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=0: 241084
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=1: 72581
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=2: 20815
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=3: 139264
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=4: 10752
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=5: 192
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=0 metric(SW4..SW2)=7: 1024
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=0: 23207
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=1: 9250
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=2: 9442
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=3: 0
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=4: 1152
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=5: 192
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=1 metric(SW4..SW2)=7: 512
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=0: 33238
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=1: 13340
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=2: 11885
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=3: 0
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=4: 1152
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=5: 192
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=6: 0
+s8 workload(SW8)=1 mode(SW7)=0 method(SW6 SW5)=2 metric(SW4..SW2)=7: 512
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=0: 324229
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=1: 72697
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=2: 104296
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=3: 139264
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=6: 9728
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=0 metric(SW4..SW2)=7: 1024
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=0: 24526
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=1: 9250
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=2: 10799
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=3: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=6: 640
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=1 metric(SW4..SW2)=7: 512
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=0: 34517
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=1: 13340
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=2: 13200
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=3: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=4: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=5: 0
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=6: 640
+s8 workload(SW8)=1 mode(SW7)=1 method(SW6 SW5)=2 metric(SW4..SW2)=7: 512
+s8 N=4 cases=64 mismatches=0
+BOARD_LOG_PASS: demo 5 passed its own checks on the board (pass LED on, fail LED off)

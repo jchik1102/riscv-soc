@@ -1,0 +1,23 @@
+// Lint waivers for rtl/ (read by scripts/lint.sh). Each entry was checked against the code; the
+// reason is given. scripts/lint.sh fails on any warning that is not listed here.
+`verilator_config
+
+// Zero-extension of a narrower operand in an add or compare. Widening cannot
+// lose bits.
+lint_off -rule WIDTHEXPAND -file "*rtl/peripherals/uart.sv"
+lint_off -rule WIDTHEXPAND -file "*rtl/peripherals/matrix_accel.sv"
+lint_off -rule WIDTHEXPAND -file "*rtl/peripherals/fir_filter.sv"
+lint_off -rule WIDTHEXPAND -file "*rtl/memory/onchip_ram.sv"
+
+// h[coeff_index]: a 5-bit index into 16 coefficients. Both uses are in the
+// R_COEFF case, which the decode only selects when coeff_index < TAPS.
+lint_off -rule WIDTHTRUNC -file "*rtl/peripherals/fir_filter.sv" -lines 101
+lint_off -rule WIDTHTRUNC -file "*rtl/peripherals/fir_filter.sv" -lines 140
+// `h ? upper : lower` with h a loop variable that is 0 or 1.
+lint_off -rule WIDTHTRUNC -file "*rtl/peripherals/matrix_accel.sv" -lines 74
+// irq_sources[INTERRUPTS_*]: the index is a package constant (0 or 1) that the
+// generated package declares 64 bits wide.
+lint_off -rule WIDTHTRUNC -file "*rtl/soc/cpu_soc.sv" -lines 180-181
+
+// A region whose base is 0 makes `addr >= base` always true for that instance.
+lint_off -rule UNSIGNED -file "*rtl/soc/bus_decoder.sv" -lines 56

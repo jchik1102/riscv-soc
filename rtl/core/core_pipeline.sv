@@ -37,7 +37,11 @@ module core_pipeline #(
   // (after forwarding), for the RVFI port in formal/rvfi/wrapper.sv. Zero
   // when the instruction reads no register.
   output logic [4:0] rvfi_rs1_addr, rvfi_rs2_addr,
-  output logic [63:0] rvfi_rs1_rdata, rvfi_rs2_rdata
+  output logic [63:0] rvfi_rs1_rdata, rvfi_rs2_rdata,
+  // For a retiring CSR instruction that did not trap: the value it read, the
+  // value it wrote (before the register masks it), and whether it wrote.
+  output logic rvfi_csr_valid, rvfi_csr_write,
+  output logic [63:0] rvfi_csr_rdata, rvfi_csr_wdata
 `endif
 );
   import soc_pkg::*;
@@ -203,6 +207,9 @@ module core_pipeline #(
   assign ex_sys = ex_valid && !ex_trap && (ex_dec.kind == K_CSR || ex_dec.kind == K_MRET);
   assign sys_wait = ex_sys && (mem_valid || wb_valid);
   assign csr_commit = ex_go && !ex_trap && ex_dec.kind == K_CSR;
+`ifdef RISCV_FORMAL
+  logic [63:0] csr_formal_wdata;
+`endif
   csr_file csrs(.clk(clk), .rst(rst), .addr(ex_insn[31:20]), .funct3(ex_insn[14:12]),
     .operand(csr_operand), .write_intent(csr_write_intent), .rdata(csr_rdata), .illegal(csr_illegal),
     .commit(csr_commit), .writes_minstret(csr_writes_minstret),
@@ -210,7 +217,11 @@ module core_pipeline #(
     .trap_tval(wb_tval), .mret(ex_go && !ex_trap && ex_dec.kind == K_MRET),
     .retire_inc(wb_valid && !wb_rec.trap && !wb_noinc),
     .msip(msip), .mtip(mtip), .meip(meip), .irq_pending(irq_pending), .irq_cause(irq_cause),
-    .mtvec_q(mtvec_q), .mepc_q(mepc_q), .mie_global(mie_global));
+    .mtvec_q(mtvec_q), .mepc_q(mepc_q), .mie_global(mie_global)
+`ifdef RISCV_FORMAL
+    , .formal_wdata(csr_formal_wdata)
+`endif
+    );
 
   always_comb begin
     take_branch = 0;
@@ -385,23 +396,34 @@ module core_pipeline #(
 `ifdef RISCV_FORMAL
   logic [4:0] mem_rs1_addr, mem_rs2_addr, wb_rs1_addr, wb_rs2_addr;
   logic [63:0] mem_rs1_rdata, mem_rs2_rdata, wb_rs1_rdata, wb_rs2_rdata;
+  logic mem_csr_valid, mem_csr_write, wb_csr_valid, wb_csr_write;
+  logic [63:0] mem_csr_rdata, mem_csr_wdata, wb_csr_rdata, wb_csr_wdata;
   always_ff @(posedge clk) begin
     if (rst) begin
       mem_rs1_addr <= 0; mem_rs2_addr <= 0; mem_rs1_rdata <= 0; mem_rs2_rdata <= 0;
       wb_rs1_addr <= 0; wb_rs2_addr <= 0; wb_rs1_rdata <= 0; wb_rs2_rdata <= 0;
+      mem_csr_valid <= 0; mem_csr_write <= 0; mem_csr_rdata <= 0; mem_csr_wdata <= 0;
+      wb_csr_valid <= 0; wb_csr_write <= 0; wb_csr_rdata <= 0; wb_csr_wdata <= 0;
     end else begin
       if (mem_accept) begin
         mem_rs1_addr <= use_rs1 && !ex_trap ? ex_rs1 : 5'd0;
         mem_rs2_addr <= use_rs2 && !ex_trap ? ex_rs2 : 5'd0;
         mem_rs1_rdata <= use_rs1 && !ex_trap ? fa : 64'd0;
         mem_rs2_rdata <= use_rs2 && !ex_trap ? fb : 64'd0;
+        mem_csr_valid <= ex_dec.kind == K_CSR && !ex_trap && !csr_illegal;
+        mem_csr_write <= csr_write_intent;
+        mem_csr_rdata <= csr_rdata; mem_csr_wdata <= csr_formal_wdata;
       end
       wb_rs1_addr <= irq_inject ? 5'd0 : mem_rs1_addr; wb_rs1_rdata <= irq_inject ? 64'd0 : mem_rs1_rdata;
       wb_rs2_addr <= irq_inject ? 5'd0 : mem_rs2_addr; wb_rs2_rdata <= irq_inject ? 64'd0 : mem_rs2_rdata;
+      wb_csr_valid <= !irq_inject && mem_csr_valid; wb_csr_write <= mem_csr_write;
+      wb_csr_rdata <= mem_csr_rdata; wb_csr_wdata <= mem_csr_wdata;
     end
   end
   assign rvfi_rs1_addr = wb_rs1_addr; assign rvfi_rs1_rdata = wb_rs1_rdata;
   assign rvfi_rs2_addr = wb_rs2_addr; assign rvfi_rs2_rdata = wb_rs2_rdata;
+  assign rvfi_csr_valid = wb_csr_valid; assign rvfi_csr_write = wb_csr_write;
+  assign rvfi_csr_rdata = wb_csr_rdata; assign rvfi_csr_wdata = wb_csr_wdata;
 `endif
 
   always_ff @(posedge clk) begin

@@ -119,6 +119,35 @@ module board_tb #(parameter bit PIPELINE = 1, parameter IMAGE_FILE = "fir_words.
       if (cycles != dut.cycles) $fatal(1, "Displayed cycles %0d differ from counter %0d", cycles, dut.cycles);
     end
   endtask
+  // The JTAG readout's virtual switches must select exactly what the board's
+  // switches select, and its probe must carry the displayed value and counters.
+  // DEMO 2 and 3 use SW[7:5] for SDRAM timing options, so there only SW[4:0] is
+  // swept on the physical side.
+  logic [10:0] jtag_drive = 0;   // stands in for the JTAG source in simulation
+  task automatic check_jtag_view();
+    int views = (DEMO == 2 || DEMO == 3) ? 32 : 512;
+    logic [23:0] by_switch;
+    force dut.jtag_source = jtag_drive;
+    for (int v = 0; v < views; v++) begin
+      SW[8:0] = 9'(v); repeat (6) @(posedge clk);
+      by_switch = shown();
+      SW[8:0] = 0;
+      jtag_drive = {1'b1, 1'b0, 9'(v)};
+      repeat (6) @(posedge clk);
+      if (shown() !== by_switch) $fatal(1, "JTAG view %0d shows %h, switches show %h", v, shown(), by_switch);
+      if (dut.jtag_probe[23:0] !== by_switch) $fatal(1, "JTAG probe view %0d is %h, switches show %h", v, dut.jtag_probe[23:0], by_switch);
+      jtag_drive = 0;
+      repeat (2) @(posedge clk);
+    end
+    release dut.jtag_source;
+    if (dut.jtag_probe[24] !== LEDR[0] || dut.jtag_probe[25] !== LEDR[1]) $fatal(1, "JTAG probe pass/fail differ from the LEDs");
+    if (dut.jtag_probe[26] !== 1'b1 || dut.jtag_probe[39:37] !== 3'(DEMO) || dut.jtag_probe[40] !== 1'(PIPELINE))
+      $fatal(1, "JTAG probe status fields wrong: %h", dut.jtag_probe[47:24]);
+    if (dut.jtag_probe[111:48] !== dut.checksum || dut.jtag_probe[175:112] !== dut.cycles || dut.jtag_probe[239:176] !== dut.retired)
+      $fatal(1, "JTAG probe counters differ from the registers");
+    if (dut.jtag_probe[71:48] !== expected[23:0]) $fatal(1, "JTAG probe checksum %h, expected %h", dut.jtag_probe[71:48], expected[23:0]);
+    $display("BOARD_TB_JTAG_VIEW: demo=%0d %0d switch settings give the same value through the virtual switches and the probe", DEMO, views);
+  endtask
   bit watch_init = 0;
   always @(posedge clk) if (watch_init && DEMO >= 2 && LEDR[4] !== 1) $fatal(1, "KEY0 re-initialized the SDRAM controller");
   initial begin
@@ -148,6 +177,7 @@ module board_tb #(parameter bit PIPELINE = 1, parameter IMAGE_FILE = "fir_words.
     if (LEDR[0] !== 0 || LEDR[3] !== 1) $fatal(1, "KEY0 did not restart boot loading");
     wait_result(cycles_second);
     if (DEMO < 2 && cycles_first != cycles_second) $fatal(1, "Run cycle counts differ: %0d vs %0d", cycles_first, cycles_second);
+    check_jtag_view();
     if (DEMO == 2) begin
       automatic int guard = 0;
       SW[9] = 1;

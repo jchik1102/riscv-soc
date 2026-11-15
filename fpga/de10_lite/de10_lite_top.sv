@@ -5,7 +5,8 @@ module de10_lite_top #(
   parameter logic [63:0] EXPECTED_CHECKSUM = 64'h0,
   parameter int DEMO = 0,
   parameter logic [63:0] TESTER_BYTES = platform_pkg::SDRAM_BYTES,
-  parameter SDRAM_PHASE_PS = "-3000"
+  parameter SDRAM_PHASE_PS = "-3000",
+  parameter bit JTAG_READOUT = 1
 ) (
   input logic MAX10_CLK1_50,
   input logic [1:0] KEY,
@@ -141,6 +142,15 @@ module de10_lite_top #(
   end endgenerate
   assign DRAM_DQ = sdram_dq_oe ? sdram_dq_o : 16'bz;
 
+  // JTAG readout (results/board/ logs): the PC can select the displayed value with
+  // virtual switches and read it, with the counters, through an in-system probe.
+  // Only the display selection uses the virtual switches; the functional switch
+  // inputs (tester mode at KEY0, the SDRAM timing options) stay on the board's SW.
+  logic [10:0] jtag_source;          // [10] use virtual switches, [9:0] virtual SW
+  logic [239:0] jtag_probe;
+  logic [9:0] view_sw;
+  assign view_sw = jtag_source[10] ? jtag_source[9:0] : sw_sync;
+
   logic [63:0] magic, checksum, status, cycles, retired, errors_phase, runs;
   logic [11:0] s7_mismatches;
   logic [3:0] s7_n;
@@ -183,7 +193,7 @@ module de10_lite_top #(
     assign offset = trace.mem_addr - (REPORT + 64'd128);
     assign we = !cpu_rst && trace_valid && trace.mem_wmask == 8'hff && !trace.trap && offset < 64'd2048;
     assign waddr = offset[10:3];
-    assign raddr = {sw_sync[8], sw_sync[7], sw_sync[6:5], 1'b0, sw_sync[4:2]};
+    assign raddr = {view_sw[8], view_sw[7], view_sw[6:5], 1'b0, view_sw[4:2]};
     always_ff @(posedge clk) begin
       if (we) metrics[waddr] <= trace.mem_wdata[23:0];
       s8_metric <= metrics[raddr];
@@ -208,43 +218,43 @@ module de10_lite_top #(
   logic [63:0] tester_offset;
   assign tester_offset = tester_address - platform_pkg::SDRAM_BASE;
   always_comb begin
-    if (tester_mode && sw_sync[8]) case (sw_sync[1:0])
+    if (tester_mode && view_sw[8]) case (view_sw[1:0])
       2'd0: shown = first_rdata[23:0];
       2'd1: shown = first_rdata[47:24];
       2'd2: shown = {8'b0, first_rdata[63:48]};
       default: shown = first_expected[23:0];
     endcase
-    else if (tester_mode) case (sw_sync[1:0])
+    else if (tester_mode) case (view_sw[1:0])
       2'd0: shown = {8'b0, loops};
       2'd1: shown = tester_errors[23:0];
       2'd2: shown = first_error[23:0];
       default: shown = {tester_pass, tester_verify, 3'b0, tester_offset[25:8]};
     endcase
-    else if (S8) case (sw_sync[1:0])
+    else if (S8) case (view_sw[1:0])
       2'd0: shown = checksum[23:0];
       2'd1: shown = errors_phase[23:0];
       2'd2: shown = s8_metric;
       default: shown = {s7_n, s7_cases, s7_mismatches};
     endcase
-    else if (S7) case (sw_sync[1:0])
+    else if (S7) case (view_sw[1:0])
       2'd0: shown = checksum[23:0];
       2'd1: shown = errors_phase[23:0];
-      2'd2: shown = s6_cycles[{sw_sync[5], sw_sync[4:2]}];
+      2'd2: shown = s6_cycles[{view_sw[5], view_sw[4:2]}];
       default: shown = {s7_n, s7_cases, s7_mismatches};
     endcase
-    else if (S6) case (sw_sync[1:0])
+    else if (S6) case (view_sw[1:0])
       2'd0: shown = checksum[23:0];
       2'd1: shown = errors_phase[23:0];
-      2'd2: shown = s6_cycles[{sw_sync[3:2], sw_sync[4], 1'b1}];
-      default: shown = s6_cycles[{sw_sync[3:2], sw_sync[4], 1'b0}];
+      2'd2: shown = s6_cycles[{view_sw[3:2], view_sw[4], 1'b1}];
+      default: shown = s6_cycles[{view_sw[3:2], view_sw[4], 1'b0}];
     endcase
-    else if (S5) case (sw_sync[1:0])
+    else if (S5) case (view_sw[1:0])
       2'd0: shown = checksum[23:0];
       2'd1: shown = errors_phase[23:0];
       2'd2: shown = runs[23:0];
       default: shown = cycles[47:24];
     endcase
-    else case (sw_sync[1:0])
+    else case (view_sw[1:0])
       2'd0: shown = checksum[23:0];
       2'd1: shown = cycles[23:0];
       2'd2: shown = cycles[47:24];
@@ -259,10 +269,37 @@ module de10_lite_top #(
       4'hc: seg = 8'hc6; 4'hd: seg = 8'ha1; 4'he: seg = 8'h86; default: seg = 8'h8e;
     endcase
   endfunction
+  assign jtag_probe = {retired, cycles, checksum, 3'b0, 4'd1, 1'(PIPELINE), 3'(DEMO), final_cause, final_trap,
+                       init_done, tester_mode, loading, halted, fail, pass, shown};
+  jtag_readout #(.ENABLE(JTAG_READOUT), .PROBE_W(240), .SOURCE_W(11)) readout(.clk(clk), .probe(jtag_probe), .source(jtag_source));
+
   always_ff @(posedge clk) begin
     HEX0 <= seg(shown[3:0]); HEX1 <= seg(shown[7:4]); HEX2 <= seg(shown[11:8]);
     HEX3 <= seg(shown[15:12]); HEX4 <= seg(shown[19:16]); HEX5 <= seg(shown[23:20]);
     LEDR <= {heartbeat[25], PIPELINE, S7, S6, tester_mode, init_done, loading && !tester_mode,
              tester_mode ? !system_rst : !halted && !loading, fail, pass};
   end
+endmodule
+
+// In-system source and probe for the JTAG readout. Quartus builds Intel's
+// altsource_probe; every other tool (XSim, Questa, Verilator) sees a block that
+// drives the source to zero, so simulation behaves as it did without it. The
+// source is synchronized to clk inside altsource_probe; the probe is sampled by
+// the JTAG clock, so the host reads it only while the values are stable.
+module jtag_readout #(parameter bit ENABLE = 1, parameter int PROBE_W = 240, parameter int SOURCE_W = 11) (
+  input logic clk,
+  input logic [PROBE_W-1:0] probe,
+  output logic [SOURCE_W-1:0] source
+);
+`ifdef ALTERA_RESERVED_QIS
+  generate if (ENABLE) begin : issp
+    altsource_probe #(.sld_auto_instance_index("YES"), .sld_instance_index(0), .instance_id("RVSO"),
+                      .probe_width(PROBE_W), .source_width(SOURCE_W), .source_initial_value("0"),
+                      .enable_metastability("YES")) core(.probe(probe), .source(source), .source_clk(clk), .source_ena(1'b1));
+  end else begin : off
+    assign source = '0;
+  end endgenerate
+`else
+  assign source = '0;
+`endif
 endmodule

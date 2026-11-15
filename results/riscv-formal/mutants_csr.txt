@@ -1,0 +1,19 @@
+riscv-formal on RTL mutants (formal/rvfi/checks_csr.cfg): six CSR mutants, then the ten pipeline
+mutants that checks.cfg does not detect
+DETECTED csr_set_computes_clear by csrw_mcause_ch0 in 169s
+DETECTED csr_read_only_write_allowed by csr_ill_f11_ch0 in 131s
+DETECTED csr_unknown_address_accepted by csr_ill_7c0_ch0 in 125s
+DETECTED csr_mscratch_reads_mtval by csrc_any_mscratch_ch0 in 133s
+DETECTED csr_mtvec_write_dropped by csrc_any_mtvec_ch0 in 115s
+DETECTED csr_immediate_ignored by csrc_any_mscratch_ch0 in 143s
+MISSED duplicate_store_issue (all checks pass, 946s)
+MISSED flush_does_not_kill_m (all checks pass, 1001s)
+MISSED trap_mepc_is_next_pc (all checks pass, 1081s)
+MISSED trap_keeps_mie (all checks pass, 1077s)
+MISSED mret_does_not_restore_mie (all checks pass, 1006s)
+MISSED interrupt_ignores_mstatus_mie (all checks pass, 1021s)
+MISSED minstret_counts_traps (all checks pass, 840s)
+MISSED csr_not_serialized (all checks pass, 855s)
+MISSED trap_entry_keeps_front_end (all checks pass, 876s)
+MISSED m_operand_b_takes_rs1 (all checks pass, 887s)
+RISCV_FORMAL_MUTANTS detected 6 of 16

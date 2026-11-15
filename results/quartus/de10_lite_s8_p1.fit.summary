@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Oct 16 01:27:50 2026
+Fitter Status : Successful - Sun Nov 15 01:44:51 2026
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : de10_lite_s8_p1
 Top-level Entity Name : de10_lite_top
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 25,898 / 49,760 ( 52 % )
-    Total combinational functions : 23,800 / 49,760 ( 48 % )
-    Dedicated logic registers : 12,064 / 49,760 ( 24 % )
-Total registers : 12133
+Total logic elements : 26,555 / 49,760 ( 53 % )
+    Total combinational functions : 24,375 / 49,760 ( 49 % )
+    Dedicated logic registers : 12,569 / 49,760 ( 25 % )
+Total registers : 12638
 Total pins : 110 / 360 ( 31 % )
 Total virtual pins : 0
 Total memory bits : 629,696 / 1,677,312 ( 38 % )

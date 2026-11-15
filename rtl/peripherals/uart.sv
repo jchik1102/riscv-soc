@@ -25,7 +25,9 @@ module uart #(
   logic [9:0] tx_shift;
   logic [3:0] tx_bits;
   logic [15:0] tx_timer, tx_div;
-  logic rx_meta, rx_sync;
+  // Two-flop synchronizer for the asynchronous rx pin. The attributes mark it for
+  // Quartus's metastability analysis and keep Vivado from separating the flops.
+  (* altera_attribute = "-name SYNCHRONIZER_IDENTIFICATION FORCED_IF_ASYNCHRONOUS", ASYNC_REG = "TRUE" *) logic rx_meta, rx_sync;
   logic rx_busy;
   logic [3:0] rx_bits;
   logic [15:0] rx_timer, rx_div;

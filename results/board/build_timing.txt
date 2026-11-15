@@ -1,0 +1,7 @@
+Board images with the JTAG readout: Quartus Prime Lite 24.1std, 10M50DAF484C7G. Worst slack (ns) over all corners and clocks.
+stage=s3 seed=4 worst_setup=0.682 worst_hold=0.14 timing=met logic_elements="19,032 / 49,760 ( 38 % )" sof_sha256=88e227abb2665ec660272b45bcb368ba6de82a9061b856abe3225850fa2b9fde
+stage=s4 seed=4 worst_setup=0.109 worst_hold=0.14 timing=met logic_elements="19,103 / 49,760 ( 38 % )" sof_sha256=e16994a4cc5ce71fa5e78a0d8f6e24593b6e0c9a78fddc6ab83ecfaa12e2fa22
+stage=s5 seed=4 worst_setup=0.946 worst_hold=0.147 timing=met logic_elements="20,888 / 49,760 ( 42 % )" sof_sha256=63ea8220aa37a52e6cf1d9d5b9d8cda591d49017f0539009def35a332db21572
+stage=s6 seed=4 worst_setup=1.058 worst_hold=0.121 timing=met logic_elements="24,827 / 49,760 ( 50 % )" sof_sha256=98a8ed598a19e632b2759b400576415f4fc903a0fa12afd8775eefc06c34ed5a
+stage=s7 seed=4 worst_setup=0.641 worst_hold=0.152 timing=met logic_elements="26,965 / 49,760 ( 54 % )" sof_sha256=7b037b7d76bffdff101a3119bfeee2344c3d91121a04c72ae161c65e502371fa
+stage=s8 seed=4 worst_setup=0.78 worst_hold=0.128 timing=met logic_elements="26,555 / 49,760 ( 53 % )" sof_sha256=215a6fb3ad4bffe434d28f86213a36b1085ceeb264de4fa34c889057cf94e98f

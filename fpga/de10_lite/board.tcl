@@ -29,6 +29,8 @@ set_parameter -name IMAGE_WORDS $words
 set_parameter -name EXPECTED_CHECKSUM $expected
 set_parameter -name DEMO $demo
 if {$tester_bytes ne ""} { set_parameter -name TESTER_BYTES $tester_bytes }
+# Fitter seed (scripts/build_board.ps1 -Seed N); Quartus's default is 1.
+if {[info exists ::env(BOARD_SEED)] && $::env(BOARD_SEED) ne ""} { set_global_assignment -name SEED $::env(BOARD_SEED) }
 source [file join $root fpga/de10_lite/de10_lite_pins.tcl]
 export_assignments
 execute_flow -compile

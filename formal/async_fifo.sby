@@ -1,0 +1,25 @@
+# async_fifo: asynchronous FIFO with two free-running clocks.
+# prove: unbounded proof (ABC PDR) at WIDTH=4, ADDR=2 (4 entries)
+# cover: full, tracked word read and the FIFO drained, tracked word read
+[tasks]
+prove
+cover
+
+[options]
+multiclock on
+prove: mode prove
+cover: mode cover
+cover: depth 40
+
+[engines]
+prove: abc pdr
+cover: smtbmc yices
+
+[script]
+plugin -i slang
+read_slang -D FORMAL async_fifo.sv async_fifo_formal.sv --top async_fifo_formal
+prep -top async_fifo_formal
+
+[files]
+../rtl/memory/async_fifo.sv
+async_fifo_formal.sv

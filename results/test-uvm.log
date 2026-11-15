@@ -62,7 +62,7 @@ Built simulation snapshot cpu_uvm
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:00:28 2026
+  **** Start of session at: Sat Nov 14 19:19:42 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -129,17 +129,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 292540 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 198.602 ; gain = 0.070
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:29 . Memory (MB): peak = 198.473 ; gain = 0.047
 exit
-INFO: xsimkernel Simulation Memory Usage: 109560 KB (Peak: 109560 KB), Simulation CPU Usage: 12140 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:00:42 2026...
+INFO: xsimkernel Simulation Memory Usage: 109176 KB (Peak: 109176 KB), Simulation CPU Usage: 26968 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:20:13 2026...
 UVM_RUN_PASS: random_s1_d5_p12
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:00:43 2026
+  **** Start of session at: Sat Nov 14 19:20:15 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -206,17 +206,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 286550 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 197.184 ; gain = 0.074
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:28 . Memory (MB): peak = 198.312 ; gain = 0.062
 exit
-INFO: xsimkernel Simulation Memory Usage: 106364 KB (Peak: 106364 KB), Simulation CPU Usage: 11874 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:00:57 2026...
+INFO: xsimkernel Simulation Memory Usage: 106924 KB (Peak: 106924 KB), Simulation CPU Usage: 25749 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:20:45 2026...
 UVM_RUN_PASS: random_s2_d5_p12
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:00:58 2026
+  **** Start of session at: Sat Nov 14 19:20:46 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -283,17 +283,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 306830 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 197.871 ; gain = 0.062
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:30 . Memory (MB): peak = 198.598 ; gain = 0.043
 exit
-INFO: xsimkernel Simulation Memory Usage: 113328 KB (Peak: 113328 KB), Simulation CPU Usage: 12874 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:01:13 2026...
+INFO: xsimkernel Simulation Memory Usage: 113804 KB (Peak: 113804 KB), Simulation CPU Usage: 28515 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:21:19 2026...
 UVM_RUN_PASS: random_s3_d5_p12
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:01:13 2026
+  **** Start of session at: Sat Nov 14 19:21:20 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -360,17 +360,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 302310 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 197.418 ; gain = 0.074
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 199.051 ; gain = 0.043
 exit
-INFO: xsimkernel Simulation Memory Usage: 112528 KB (Peak: 112528 KB), Simulation CPU Usage: 12577 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:01:28 2026...
+INFO: xsimkernel Simulation Memory Usage: 113000 KB (Peak: 113000 KB), Simulation CPU Usage: 27671 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:21:51 2026...
 UVM_RUN_PASS: random_s4_d5_p12
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:01:29 2026
+  **** Start of session at: Sat Nov 14 19:21:52 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -437,16 +437,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 199 us : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 197.172 ; gain = 0.066
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:22 . Memory (MB): peak = 198.586 ; gain = 0.062
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:01:40 2026...
+INFO: xsimkernel Simulation Memory Usage: 94028 KB (Peak: 94028 KB), Simulation CPU Usage: 20796 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:22:17 2026...
 UVM_RUN_PASS: random_s5_d0_p12_ready
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:01:41 2026
+  **** Start of session at: Sat Nov 14 19:22:18 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -513,17 +514,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 347380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 198.184 ; gain = 0.062
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:31 . Memory (MB): peak = 198.355 ; gain = 0.047
 exit
-INFO: xsimkernel Simulation Memory Usage: 116232 KB (Peak: 116232 KB), Simulation CPU Usage: 12859 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:01:55 2026...
+INFO: xsimkernel Simulation Memory Usage: 116632 KB (Peak: 116632 KB), Simulation CPU Usage: 28639 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:22:50 2026...
 UVM_RUN_PASS: random_s6_d9_p12
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:01:56 2026
+  **** Start of session at: Sat Nov 14 19:22:52 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -579,14 +580,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:01:58 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:22:54 2026...
 UVM_RUN_PASS: first_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:01:59 2026
+  **** Start of session at: Sat Nov 14 19:22:55 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -642,14 +643,14 @@ UVM_FATAL :    0
 
 $finish called at time : 500 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:01 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:22:57 2026...
 UVM_RUN_PASS: edges_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:02 2026
+  **** Start of session at: Sat Nov 14 19:22:57 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -705,14 +706,14 @@ UVM_FATAL :    0
 
 $finish called at time : 1880 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:04 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:22:59 2026...
 UVM_RUN_PASS: overflow_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:04 2026
+  **** Start of session at: Sat Nov 14 19:23:00 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -768,14 +769,14 @@ UVM_FATAL :    0
 
 $finish called at time : 440 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:06 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:02 2026...
 UVM_RUN_PASS: reset_state_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:07 2026
+  **** Start of session at: Sat Nov 14 19:23:04 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -831,14 +832,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:09 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:05 2026...
 UVM_RUN_PASS: reject_m_word_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:10 2026
+  **** Start of session at: Sat Nov 14 19:23:06 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -894,14 +895,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:11 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:08 2026...
 UVM_RUN_PASS: reject_compressed_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:12 2026
+  **** Start of session at: Sat Nov 14 19:23:09 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -957,14 +958,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:14 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:11 2026...
 UVM_RUN_PASS: promoted_sub_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:15 2026
+  **** Start of session at: Sat Nov 14 19:23:12 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1020,14 +1021,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:17 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:14 2026...
 UVM_RUN_PASS: promoted_addiw_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:18 2026
+  **** Start of session at: Sat Nov 14 19:23:15 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1083,14 +1084,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:20 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:17 2026...
 UVM_RUN_PASS: promoted_shift_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:21 2026
+  **** Start of session at: Sat Nov 14 19:23:18 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1146,14 +1147,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:22 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:20 2026...
 UVM_RUN_PASS: promoted_ecall_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:23 2026
+  **** Start of session at: Sat Nov 14 19:23:22 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1209,14 +1210,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:25 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:23 2026...
 UVM_RUN_PASS: promoted_ebreak_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:26 2026
+  **** Start of session at: Sat Nov 14 19:23:24 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1272,14 +1273,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:28 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:26 2026...
 UVM_RUN_PASS: promoted_fence_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:29 2026
+  **** Start of session at: Sat Nov 14 19:23:27 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1335,14 +1336,14 @@ UVM_FATAL :    0
 
 $finish called at time : 1060 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:30 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:29 2026...
 UVM_RUN_PASS: promoted_mul_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:31 2026
+  **** Start of session at: Sat Nov 14 19:23:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1398,14 +1399,14 @@ UVM_FATAL :    0
 
 $finish called at time : 6160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:33 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:33 2026...
 UVM_RUN_PASS: random_1_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:34 2026
+  **** Start of session at: Sat Nov 14 19:23:35 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1461,14 +1462,14 @@ UVM_FATAL :    0
 
 $finish called at time : 6160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:36 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:37 2026...
 UVM_RUN_PASS: random_7_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:37 2026
+  **** Start of session at: Sat Nov 14 19:23:38 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1524,14 +1525,14 @@ UVM_FATAL :    0
 
 $finish called at time : 6160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:39 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:40 2026...
 UVM_RUN_PASS: random_42_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:40 2026
+  **** Start of session at: Sat Nov 14 19:23:41 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1587,14 +1588,14 @@ UVM_FATAL :    0
 
 $finish called at time : 4100 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:42 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:43 2026...
 UVM_RUN_PASS: alu64_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:43 2026
+  **** Start of session at: Sat Nov 14 19:23:45 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1650,14 +1651,14 @@ UVM_FATAL :    0
 
 $finish called at time : 15490 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:45 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:47 2026...
 UVM_RUN_PASS: word_ops_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:46 2026
+  **** Start of session at: Sat Nov 14 19:23:48 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1713,14 +1714,14 @@ UVM_FATAL :    0
 
 $finish called at time : 2430 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:48 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:50 2026...
 UVM_RUN_PASS: control_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:49 2026
+  **** Start of session at: Sat Nov 14 19:23:51 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1776,14 +1777,14 @@ UVM_FATAL :    0
 
 $finish called at time : 7950 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:51 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:53 2026...
 UVM_RUN_PASS: memory_sizes_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:52 2026
+  **** Start of session at: Sat Nov 14 19:23:54 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1839,14 +1840,14 @@ UVM_FATAL :    0
 
 $finish called at time : 4290 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:54 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:56 2026...
 UVM_RUN_PASS: array_loop_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:55 2026
+  **** Start of session at: Sat Nov 14 19:23:57 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1902,14 +1903,14 @@ UVM_FATAL :    0
 
 $finish called at time : 540 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:57 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:23:59 2026...
 UVM_RUN_PASS: reset_store_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:02:57 2026
+  **** Start of session at: Sat Nov 14 19:24:00 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -1965,14 +1966,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:02:59 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:02 2026...
 UVM_RUN_PASS: fault_ecall_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:00 2026
+  **** Start of session at: Sat Nov 14 19:24:03 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2028,14 +2029,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:02 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:05 2026...
 UVM_RUN_PASS: fault_ebreak_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:03 2026
+  **** Start of session at: Sat Nov 14 19:24:06 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2091,14 +2092,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:05 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:08 2026...
 UVM_RUN_PASS: fault_jal_align_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:06 2026
+  **** Start of session at: Sat Nov 14 19:24:09 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2154,14 +2155,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:08 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:11 2026...
 UVM_RUN_PASS: fault_branch_align_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:08 2026
+  **** Start of session at: Sat Nov 14 19:24:12 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2217,14 +2218,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:10 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:13 2026...
 UVM_RUN_PASS: fault_jalr_align_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:11 2026
+  **** Start of session at: Sat Nov 14 19:24:14 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2280,14 +2281,14 @@ UVM_FATAL :    0
 
 $finish called at time : 840 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:13 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:16 2026...
 UVM_RUN_PASS: fault_fetch_bounds_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:14 2026
+  **** Start of session at: Sat Nov 14 19:24:17 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2343,14 +2344,14 @@ UVM_FATAL :    0
 
 $finish called at time : 840 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:16 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:19 2026...
 UVM_RUN_PASS: fault_fetch_high_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:16 2026
+  **** Start of session at: Sat Nov 14 19:24:20 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2406,14 +2407,14 @@ UVM_FATAL :    0
 
 $finish called at time : 790 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:18 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:22 2026...
 UVM_RUN_PASS: fault_load_bounds_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:19 2026
+  **** Start of session at: Sat Nov 14 19:24:23 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2469,14 +2470,14 @@ UVM_FATAL :    0
 
 $finish called at time : 790 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:21 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:25 2026...
 UVM_RUN_PASS: fault_store_bounds_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:22 2026
+  **** Start of session at: Sat Nov 14 19:24:26 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2532,14 +2533,14 @@ UVM_FATAL :    0
 
 $finish called at time : 790 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:24 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:28 2026...
 UVM_RUN_PASS: fault_load_high_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:24 2026
+  **** Start of session at: Sat Nov 14 19:24:29 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2595,14 +2596,14 @@ UVM_FATAL :    0
 
 $finish called at time : 790 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:26 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:31 2026...
 UVM_RUN_PASS: fault_store_high_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:27 2026
+  **** Start of session at: Sat Nov 14 19:24:32 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2658,14 +2659,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:29 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:34 2026...
 UVM_RUN_PASS: fault_load_zero_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:30 2026
+  **** Start of session at: Sat Nov 14 19:24:34 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2721,14 +2722,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:32 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:36 2026...
 UVM_RUN_PASS: fault_store_zero_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:32 2026
+  **** Start of session at: Sat Nov 14 19:24:37 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2784,14 +2785,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:34 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:39 2026...
 UVM_RUN_PASS: fault_shift64_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:35 2026
+  **** Start of session at: Sat Nov 14 19:24:40 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2847,14 +2848,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:37 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:42 2026...
 UVM_RUN_PASS: fault_shiftw_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:38 2026
+  **** Start of session at: Sat Nov 14 19:24:44 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2910,14 +2911,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:39 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:46 2026...
 UVM_RUN_PASS: fault_m_word_reserved_1_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:40 2026
+  **** Start of session at: Sat Nov 14 19:24:47 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -2973,14 +2974,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:42 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:49 2026...
 UVM_RUN_PASS: fault_m_word_reserved_2_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:43 2026
+  **** Start of session at: Sat Nov 14 19:24:50 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3036,14 +3037,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:45 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:52 2026...
 UVM_RUN_PASS: fault_m_word_reserved_3_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:46 2026
+  **** Start of session at: Sat Nov 14 19:24:53 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3099,14 +3100,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:47 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:55 2026...
 UVM_RUN_PASS: fault_op_funct7_2_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:48 2026
+  **** Start of session at: Sat Nov 14 19:24:56 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3162,14 +3163,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:50 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:24:58 2026...
 UVM_RUN_PASS: fault_branch_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:51 2026
+  **** Start of session at: Sat Nov 14 19:24:58 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3225,14 +3226,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:53 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:00 2026...
 UVM_RUN_PASS: fault_load_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:53 2026
+  **** Start of session at: Sat Nov 14 19:25:01 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3288,14 +3289,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:55 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:03 2026...
 UVM_RUN_PASS: fault_store_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:56 2026
+  **** Start of session at: Sat Nov 14 19:25:04 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3351,14 +3352,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:03:58 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:06 2026...
 UVM_RUN_PASS: fault_jalr_reserved_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:03:59 2026
+  **** Start of session at: Sat Nov 14 19:25:07 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3414,14 +3415,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:01 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:09 2026...
 UVM_RUN_PASS: fault_csr_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:01 2026
+  **** Start of session at: Sat Nov 14 19:25:10 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3477,14 +3478,14 @@ UVM_FATAL :    0
 
 $finish called at time : 440 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:03 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:12 2026...
 UVM_RUN_PASS: fault_mret_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:04 2026
+  **** Start of session at: Sat Nov 14 19:25:13 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3540,14 +3541,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:06 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:15 2026...
 UVM_RUN_PASS: fault_load_align_1_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:07 2026
+  **** Start of session at: Sat Nov 14 19:25:16 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3603,14 +3604,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:09 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:18 2026...
 UVM_RUN_PASS: fault_store_align_1_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:09 2026
+  **** Start of session at: Sat Nov 14 19:25:19 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3666,14 +3667,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:11 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:21 2026...
 UVM_RUN_PASS: fault_load_align_2_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:12 2026
+  **** Start of session at: Sat Nov 14 19:25:22 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3729,14 +3730,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:14 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:24 2026...
 UVM_RUN_PASS: fault_store_align_2_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:15 2026
+  **** Start of session at: Sat Nov 14 19:25:25 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3792,14 +3793,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:17 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:27 2026...
 UVM_RUN_PASS: fault_load_align_3_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:17 2026
+  **** Start of session at: Sat Nov 14 19:25:31 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3855,14 +3856,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:19 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:33 2026...
 UVM_RUN_PASS: fault_store_align_3_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:20 2026
+  **** Start of session at: Sat Nov 14 19:25:34 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3918,14 +3919,14 @@ UVM_FATAL :    0
 
 $finish called at time : 730 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:22 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:36 2026...
 UVM_RUN_PASS: promoted_divuw_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:23 2026
+  **** Start of session at: Sat Nov 14 19:25:37 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -3981,14 +3982,14 @@ UVM_FATAL :    0
 
 $finish called at time : 580 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:25 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:39 2026...
 UVM_RUN_PASS: promoted_fence_i_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:25 2026
+  **** Start of session at: Sat Nov 14 19:25:40 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4044,14 +4045,14 @@ UVM_FATAL :    0
 
 $finish called at time : 390 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:27 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:42 2026...
 UVM_RUN_PASS: branch_untaken_align_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:28 2026
+  **** Start of session at: Sat Nov 14 19:25:43 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4107,14 +4108,14 @@ UVM_FATAL :    0
 
 $finish called at time : 450 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:30 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:45 2026...
 UVM_RUN_PASS: fence_variants_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:31 2026
+  **** Start of session at: Sat Nov 14 19:25:46 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4170,14 +4171,14 @@ UVM_FATAL :    0
 
 $finish called at time : 19160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:33 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:48 2026...
 UVM_RUN_PASS: rv64_random_11_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:34 2026
+  **** Start of session at: Sat Nov 14 19:25:49 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4233,14 +4234,14 @@ UVM_FATAL :    0
 
 $finish called at time : 18160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:36 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:52 2026...
 UVM_RUN_PASS: rv64_random_29_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:37 2026
+  **** Start of session at: Sat Nov 14 19:25:53 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4296,14 +4297,14 @@ UVM_FATAL :    0
 
 $finish called at time : 18580 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:40 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:25:55 2026...
 UVM_RUN_PASS: rv64_random_97_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:40 2026
+  **** Start of session at: Sat Nov 14 19:25:57 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4358,17 +4359,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 441780 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 197.227 ; gain = 0.070
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:39 . Memory (MB): peak = 198.691 ; gain = 0.047
 exit
-INFO: xsimkernel Simulation Memory Usage: 123316 KB (Peak: 123316 KB), Simulation CPU Usage: 15764 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:04:58 2026...
+INFO: xsimkernel Simulation Memory Usage: 123800 KB (Peak: 123800 KB), Simulation CPU Usage: 35264 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:26:38 2026...
 UVM_RUN_PASS: m_mul_edges_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:04:59 2026
+  **** Start of session at: Sat Nov 14 19:26:39 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4423,17 +4424,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 391380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 197.820 ; gain = 0.070
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:49 . Memory (MB): peak = 197.875 ; gain = 0.043
 exit
-INFO: xsimkernel Simulation Memory Usage: 112640 KB (Peak: 112640 KB), Simulation CPU Usage: 14140 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:15 2026...
+INFO: xsimkernel Simulation Memory Usage: 113124 KB (Peak: 113124 KB), Simulation CPU Usage: 35609 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:27:29 2026...
 UVM_RUN_PASS: m_div_edges_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:15 2026
+  **** Start of session at: Sat Nov 14 19:27:31 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4488,16 +4489,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 207060 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 197.160 ; gain = 0.062
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:29 . Memory (MB): peak = 198.320 ; gain = 0.059
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:25 2026...
+INFO: xsimkernel Simulation Memory Usage: 73020 KB (Peak: 73020 KB), Simulation CPU Usage: 18796 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:01 2026...
 UVM_RUN_PASS: m_divw_edges_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:25 2026
+  **** Start of session at: Sat Nov 14 19:28:03 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4553,14 +4555,14 @@ UVM_FATAL :    0
 
 $finish called at time : 35310 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:29 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:06 2026...
 UVM_RUN_PASS: m_mixed_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:29 2026
+  **** Start of session at: Sat Nov 14 19:28:07 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4616,14 +4618,14 @@ UVM_FATAL :    0
 
 $finish called at time : 3160 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:31 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:09 2026...
 UVM_RUN_PASS: m_reset_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:32 2026
+  **** Start of session at: Sat Nov 14 19:28:10 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4679,14 +4681,14 @@ UVM_FATAL :    0
 
 $finish called at time : 2200 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:34 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:12 2026...
 UVM_RUN_PASS: m_reset_w_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:35 2026
+  **** Start of session at: Sat Nov 14 19:28:13 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4741,15 +4743,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 95170 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 198.180 ; gain = 0.062
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:40 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:21 2026...
 UVM_RUN_PASS: m_random_13_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:41 2026
+  **** Start of session at: Sat Nov 14 19:28:22 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4804,15 +4807,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 87640 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 198.410 ; gain = 0.062
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:46 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:29 2026...
 UVM_RUN_PASS: m_random_31_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:46 2026
+  **** Start of session at: Sat Nov 14 19:28:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4867,15 +4871,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 89760 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 198.363 ; gain = 0.059
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:51 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:38 2026...
 UVM_RUN_PASS: m_random_101_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:52 2026
+  **** Start of session at: Sat Nov 14 19:28:39 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4931,14 +4936,14 @@ UVM_FATAL :    0
 
 $finish called at time : 6380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:54 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:41 2026...
 UVM_RUN_PASS: pipe_forward_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:55 2026
+  **** Start of session at: Sat Nov 14 19:28:42 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -4994,14 +4999,14 @@ UVM_FATAL :    0
 
 $finish called at time : 1090 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:05:57 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:44 2026...
 UVM_RUN_PASS: pipe_redirect_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:05:58 2026
+  **** Start of session at: Sat Nov 14 19:28:45 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5057,14 +5062,14 @@ UVM_FATAL :    0
 
 $finish called at time : 900 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:00 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:47 2026...
 UVM_RUN_PASS: pipe_kill_load_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:00 2026
+  **** Start of session at: Sat Nov 14 19:28:49 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5120,14 +5125,14 @@ UVM_FATAL :    0
 
 $finish called at time : 900 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:02 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:51 2026...
 UVM_RUN_PASS: pipe_kill_store_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:03 2026
+  **** Start of session at: Sat Nov 14 19:28:51 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5183,14 +5188,14 @@ UVM_FATAL :    0
 
 $finish called at time : 420 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:05 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:53 2026...
 UVM_RUN_PASS: pipe_trap_shadow_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:06 2026
+  **** Start of session at: Sat Nov 14 19:28:54 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5246,14 +5251,14 @@ UVM_FATAL :    0
 
 $finish called at time : 380 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:08 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:28:56 2026...
 UVM_RUN_PASS: pipe_misaligned_shadow_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:08 2026
+  **** Start of session at: Sat Nov 14 19:28:57 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5308,15 +5313,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 98460 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 198.242 ; gain = 0.062
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:14 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:05 2026...
 UVM_RUN_PASS: pipe_random_3_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:14 2026
+  **** Start of session at: Sat Nov 14 19:29:06 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5371,15 +5377,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 88640 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 198.195 ; gain = 0.078
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:19 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:13 2026...
 UVM_RUN_PASS: pipe_random_17_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:20 2026
+  **** Start of session at: Sat Nov 14 19:29:14 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5434,15 +5441,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 88030 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 198.746 ; gain = 0.059
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:25 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:21 2026...
 UVM_RUN_PASS: pipe_random_59_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:26 2026
+  **** Start of session at: Sat Nov 14 19:29:23 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5498,14 +5506,14 @@ UVM_FATAL :    0
 
 $finish called at time : 23080 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:28 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:25 2026...
 UVM_RUN_PASS: pipe_ras_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:29 2026
+  **** Start of session at: Sat Nov 14 19:29:27 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5561,14 +5569,14 @@ UVM_FATAL :    0
 
 $finish called at time : 3530 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:31 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:29 2026...
 UVM_RUN_PASS: s4_csr_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:32 2026
+  **** Start of session at: Sat Nov 14 19:29:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5624,14 +5632,14 @@ UVM_FATAL :    0
 
 $finish called at time : 410 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:34 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:32 2026...
 UVM_RUN_PASS: s4_wfi_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:34 2026
+  **** Start of session at: Sat Nov 14 19:29:34 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5687,14 +5695,14 @@ UVM_FATAL :    0
 
 $finish called at time : 9370 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:37 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:36 2026...
 UVM_RUN_PASS: s4_traps_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:37 2026
+  **** Start of session at: Sat Nov 14 19:29:37 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5750,14 +5758,14 @@ UVM_FATAL :    0
 
 $finish called at time : 76510 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:42 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:43 2026...
 UVM_RUN_PASS: s4_interrupt_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:43 2026
+  **** Start of session at: Sat Nov 14 19:29:47 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5813,14 +5821,14 @@ UVM_FATAL :    0
 
 $finish called at time : 7050 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:45 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:49 2026...
 UVM_RUN_PASS: asm_array_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:46 2026
+  **** Start of session at: Sat Nov 14 19:29:52 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5876,14 +5884,14 @@ UVM_FATAL :    0
 
 $finish called at time : 30830 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:06:48 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:29:55 2026...
 UVM_RUN_PASS: asm_muldiv_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:06:49 2026
+  **** Start of session at: Sat Nov 14 19:29:57 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -5938,17 +5946,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 1342820 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:44 . Memory (MB): peak = 197.809 ; gain = 0.039
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:54 . Memory (MB): peak = 200.230 ; gain = 0.043
 exit
-INFO: xsimkernel Simulation Memory Usage: 342576 KB (Peak: 342576 KB), Simulation CPU Usage: 44155 ms
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:35 2026...
+INFO: xsimkernel Simulation Memory Usage: 343060 KB (Peak: 343060 KB), Simulation CPU Usage: 108014 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:31:53 2026...
 UVM_RUN_PASS: asm_fir_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:07:36 2026
+  **** Start of session at: Sat Nov 14 19:31:55 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6003,15 +6011,16 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 98240 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 198.688 ; gain = 0.074
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:41 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:32:03 2026...
 UVM_RUN_PASS: pipe_random_3_s7_d3_r300
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:07:42 2026
+  **** Start of session at: Sat Nov 14 19:32:05 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6067,14 +6076,14 @@ UVM_FATAL :    0
 
 $finish called at time : 37570 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:45 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:32:09 2026...
 UVM_RUN_PASS: m_mixed_s7_d3_r300
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:07:46 2026
+  **** Start of session at: Sat Nov 14 19:32:10 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6130,14 +6139,14 @@ UVM_FATAL :    0
 
 $finish called at time : 9750 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:48 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:32:12 2026...
 UVM_RUN_PASS: memory_sizes_s7_d3_r300
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:07:49 2026
+  **** Start of session at: Sat Nov 14 19:32:14 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6193,14 +6202,14 @@ UVM_FATAL :    0
 
 $finish called at time : 740 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:51 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:32:16 2026...
 UVM_RUN_PASS: reset_store_s8_d2_r25
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:07:52 2026
+  **** Start of session at: Sat Nov 14 19:32:17 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6256,7 +6265,7 @@ UVM_FATAL :    0
 
 $finish called at time : 6630 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:07:54 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:32:20 2026...
 UVM_RUN_PASS: pipe_forward_s8_d2_r25
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/platform_pkg.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/soc_pkg.sv" into library work
@@ -6319,7 +6328,7 @@ Built simulation snapshot cpu_uvm
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:08 2026
+  **** Start of session at: Sat Nov 14 19:32:46 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6380,16 +6389,17 @@ UVM_FATAL :    0
 [UVM/RELNOTES]     1
 
 $finish called at time : 303590 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 198.621 ; gain = 0.074
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 198.176 ; gain = 0.074
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:16 2026...
+INFO: xsimkernel Simulation Memory Usage: 85620 KB (Peak: 85620 KB), Simulation CPU Usage: 12233 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:01 2026...
 UVM_RUN_PASS: random_s1_d5_p6
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:17 2026
+  **** Start of session at: Sat Nov 14 19:33:03 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6445,14 +6455,14 @@ UVM_FATAL :    0
 
 $finish called at time : 490 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:19 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:05 2026...
 UVM_RUN_PASS: first_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:20 2026
+  **** Start of session at: Sat Nov 14 19:33:07 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6508,14 +6518,14 @@ UVM_FATAL :    0
 
 $finish called at time : 6350 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:21 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:09 2026...
 UVM_RUN_PASS: control_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:22 2026
+  **** Start of session at: Sat Nov 14 19:33:11 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6571,14 +6581,14 @@ UVM_FATAL :    0
 
 $finish called at time : 19100 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:24 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:14 2026...
 UVM_RUN_PASS: memory_sizes_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:25 2026
+  **** Start of session at: Sat Nov 14 19:33:16 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6634,14 +6644,14 @@ UVM_FATAL :    0
 
 $finish called at time : 43740 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:28 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:19 2026...
 UVM_RUN_PASS: m_mixed_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:29 2026
+  **** Start of session at: Sat Nov 14 19:33:21 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6697,14 +6707,14 @@ UVM_FATAL :    0
 
 $finish called at time : 40180 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:31 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:24 2026...
 UVM_RUN_PASS: asm_muldiv_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:32 2026
+  **** Start of session at: Sat Nov 14 19:33:26 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6760,14 +6770,14 @@ UVM_FATAL :    0
 
 $finish called at time : 1670 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:34 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:28 2026...
 UVM_RUN_PASS: fault_load_bounds_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:35 2026
+  **** Start of session at: Sat Nov 14 19:33:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6823,14 +6833,14 @@ UVM_FATAL :    0
 
 $finish called at time : 1710 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:36 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:32 2026...
 UVM_RUN_PASS: fault_fetch_high_s1_d5_r-1
 
 ****** xsim v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 17 15:08:37 2026
+  **** Start of session at: Sat Nov 14 19:33:34 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -6886,7 +6896,7 @@ UVM_FATAL :    0
 
 $finish called at time : 9100 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Oct 17 15:08:39 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 19:33:37 2026...
 UVM_RUN_PASS: pipe_forward_s1_d5_r-1
 
  Options Set are : 

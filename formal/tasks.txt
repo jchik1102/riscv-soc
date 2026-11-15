@@ -13,3 +13,5 @@ muldiv.sby divuw
 muldiv.sby remw
 muldiv.sby remuw
 muldiv.sby cover
+async_fifo.sby prove
+async_fifo.sby cover

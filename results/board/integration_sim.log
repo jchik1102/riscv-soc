@@ -1,0 +1,26 @@
+SOC_TEST_PASS: synchronous RAM and synthesis harness execute 5+7=12
+FAULT_TEST_PASS: misaligned PC and fetch bus error halt without retirement
+SOC_ARRAY_TEST_PASS: assembly -8..7 sum=-8, LWU/LD, 17 stores 18 loads 176 retired
+SOC_MULDIV_TEST_PASS: GCC RV64IM firmware, 15 checked results, 45 M retired, 158 retired
+SOC_FIR_TEST_PASS: pipeline=0 checksum=000000000fc6e755 cycles=154346 retired=18009 m=2056 loads=3988 stores=165
+PIPE_FAULT_TEST_PASS: misaligned reset PC and fetch bus error halt without retirement
+SOC_TEST_PASS: synchronous RAM and synthesis harness execute 5+7=12
+SOC_ARRAY_TEST_PASS: assembly -8..7 sum=-8, LWU/LD, 17 stores 18 loads 176 retired
+SOC_MULDIV_TEST_PASS: GCC RV64IM firmware, 15 checked results, 45 M retired, 158 retired
+SOC_FIR_TEST_PASS: pipeline=1 checksum=000000000fc6e755 cycles=103387 retired=18009 m=2056 loads=3988 stores=165
+SOC_FIR_HW_TEST_PASS: lanes=4 checksum=000000000fc6e755 sw_cycles=93495 hw_cycles=2229 speedup=41.9 filter_busy_cycles=512 matlab_matched=128 total_cycles=117162 retired=20954
+BOARD_TB_JTAG_VIEW: demo=0 512 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=0 pipeline=1 value=c6e755 cycles=103387 retired=18009 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=0 512 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=0 pipeline=0 value=c6e755 cycles=154346 retired=18009 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=1 512 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=1 pipeline=1 value=000006 cycles=65646 retired=8115 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=2 32 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_S5_TESTER: loops=1 errors=0 over 8192 bytes; model refreshes=2551
+BOARD_TB_PASS: demo=2 pipeline=1 value=c9e2a8 cycles=405410 retired=0 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=3 32 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=3 pipeline=1 value=08e84a cycles=544973 retired=152195 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=4 512 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=4 pipeline=1 value=465e18 cycles=164808 retired=49657 (twice, KEY0 rerun)
+BOARD_TB_JTAG_VIEW: demo=5 512 switch settings give the same value through the virtual switches and the probe
+BOARD_TB_PASS: demo=5 pipeline=1 value=f682fe cycles=933139 retired=259277 (twice, KEY0 rerun)

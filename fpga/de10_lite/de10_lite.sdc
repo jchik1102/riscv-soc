@@ -17,3 +17,13 @@ if {[get_collection_size $sdram_pll_out] > 0} {
     set_input_delay -clock sdram_clk_pin -min [expr {2.5 + $board_min}] [get_ports {DRAM_DQ[*]}]
     set_multicycle_path -setup -from [get_clocks sdram_clk_pin] -to $sys_clk 2
 }
+
+# JTAG readout (in-system source/probe in de10_lite_top): the JTAG clock is
+# asynchronous to the system clocks.
+set jtag_tck [get_ports -nowarn altera_reserved_tck]
+if {[get_collection_size $jtag_tck] > 0} {
+    create_clock -name altera_reserved_tck -period 100.000 $jtag_tck
+    set_clock_groups -asynchronous -group {altera_reserved_tck}
+    set_input_delay -clock altera_reserved_tck -clock_fall 20.000 [get_ports {altera_reserved_tdi altera_reserved_tms}]
+    set_output_delay -clock altera_reserved_tck 20.000 [get_ports altera_reserved_tdo]
+}

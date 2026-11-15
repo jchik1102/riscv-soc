@@ -9,6 +9,8 @@
 # MUTANTS="a b" runs only those. CFG=checks_m runs the 13 M instruction
 # checks of checks_m.cfg instead (results/riscv-formal/mutants_m.txt), for
 # mutants that checks.cfg, which excludes M instructions, cannot see.
+# CFG=checks_csr runs the CSR configuration (results/riscv-formal/mutants_csr.txt)
+# on six CSR mutants that only this flow uses and on the pipeline mutants.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 RVF=${RVF:-$HOME/hwtools/riscv-formal}
@@ -19,11 +21,14 @@ CFG=${CFG:-checks}
 MLIST=$(printf 'insn_%s_ch0 ' mul mulh mulhsu mulhu mulw div divu divuw divw rem remu remuw remw)
 python3 scripts/pipeline_mutants.py > /dev/null
 pipeline=$(python3 -c 'import json; print(" ".join(json.load(open("build/pipeline_mutants/mutants.json"))))')
+csr_mutants="csr_set_computes_clear csr_read_only_write_allowed csr_unknown_address_accepted csr_mscratch_reads_mtval csr_mtvec_write_dropped csr_immediate_ignored"
 names=${MUTANTS:-"add_computes_sub altops_mul_wrong $pipeline"}
+[[ $CFG == checks_csr && -z ${MUTANTS:-} ]] && names="$csr_mutants $pipeline"
 out=results/riscv-formal
 mkdir -p "$out/mutants"
 summary=$out/mutants.txt
 [[ $CFG == checks_m ]] && summary=$out/mutants_m.txt
+[[ $CFG == checks_csr ]] && summary=$out/mutants_csr.txt
 echo "riscv-formal on RTL mutants (formal/rvfi/$CFG.cfg); each must fail a check" > "$summary"
 
 kill_tree() { local c; for c in $(pgrep -P "$1" || true); do kill_tree "$c"; done; kill -TERM "$1" 2>/dev/null || true; }
@@ -35,6 +40,12 @@ for m in $names; do
   case $m in
     add_computes_sub) python3 - "$root/rtl/core/alu.sv" "OP_ADD: result = a + b;" "OP_ADD: result = a - b;" ;;
     altops_mul_wrong) python3 - "$root/rtl/core/muldiv_unit.sv" "MD_MUL: r = (a + b) ^ 64'h2cdf52a55876063e;" "MD_MUL: r = (a + b) ^ 64'h2cdf52a55876063f;" ;;
+    csr_set_computes_clear) python3 - "$root/rtl/core/csr_file.sv" "2'd2: wdata = rdata | operand;" "2'd2: wdata = rdata & ~operand;" ;;
+    csr_read_only_write_allowed) python3 - "$root/rtl/core/csr_file.sv" "illegal = !known || (read_only && write_intent);" "illegal = !known;" ;;
+    csr_unknown_address_accepted) python3 - "$root/rtl/core/csr_file.sv" "default: known = 0;" "default: known = 1;" ;;
+    csr_mscratch_reads_mtval) python3 - "$root/rtl/core/csr_file.sv" "12'h340: rdata = mscratch_q;" "12'h340: rdata = mtval_q;" ;;
+    csr_mtvec_write_dropped) python3 - "$root/rtl/core/csr_file.sv" "12'h305: mtvec_q <= {wdata[63:2], 2'b00};" "12'h305: begin end" ;;
+    csr_immediate_ignored) python3 - "$root/rtl/core/core_pipeline.sv" "assign csr_operand = ex_insn[14] ? {59'b0, ex_insn[19:15]} : fa;" "assign csr_operand = fa;" ;;
     *) cp build/pipeline_mutants/"$m"/*.sv "$root/rtl/core/"; true ;;
   esac <<'EOF'
 import sys
@@ -65,7 +76,7 @@ EOF
   secs=$(( $(date +%s) - start ))
   if [[ -n $failed ]]; then
     check=$(basename "$(dirname "$failed")")
-    cp "$core/checks/$check/logfile.txt" "$out/mutants/$m$([[ $CFG == checks_m ]] && echo _m).txt"
+    cp "$core/checks/$check/logfile.txt" "$out/mutants/$m$([[ $CFG == checks_m ]] && echo _m)$([[ $CFG == checks_csr ]] && echo _csr).txt"
     echo "DETECTED $m by $check in ${secs}s"
   else
     echo "MISSED $m (all checks pass, ${secs}s)"

@@ -17,6 +17,12 @@ module csr_file (
   output logic [63:0] irq_cause,
   output logic [63:0] mtvec_q, mepc_q,
   output logic mie_global
+`ifdef RISCV_FORMAL
+  ,
+  // The value this CSR instruction writes, before each register keeps only
+  // the bits it implements (for the RVFI CSR ports).
+  output logic [63:0] formal_wdata
+`endif
 );
   logic mie_bit, mpie_bit;
   logic [63:0] mie_q, mscratch_q, mcause_q, mtval_q, mcycle_q, minstret_q, mip_now, wdata;
@@ -24,6 +30,9 @@ module csr_file (
 
   assign mip_now = {52'b0, meip, 3'b0, mtip, 3'b0, msip, 3'b0};
   assign mie_global = mie_bit;
+`ifdef RISCV_FORMAL
+  assign formal_wdata = wdata;
+`endif
   always_comb begin
     known = 1; rdata = 0;
     case (addr)

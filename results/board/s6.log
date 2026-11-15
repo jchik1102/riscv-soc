@@ -1,0 +1,35 @@
+board_log: stage s6, pipeline 1, DE10-Lite (10M50DAF484C7G), read over JTAG
+date: 2026-11-15T11:34:19-07:00
+commit: 859c7952f6aade83107b6efb944080c9457429b8
+image: build/quartus_board_s6_p1/output_files/de10_lite_s6_p1.sof
+image_sha256: 98a8ed598a19e632b2759b400576415f4fc903a0fa12afd8775eefc06c34ed5a
+programmed: yes
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+cable: USB-Blaster [USB-0]
+device: @1: 10M50DA(.|ES)/10M50DC (0x031050DD)
+layout_version: 1
+demo: 3  pipeline: 1
+pass: 1  fail: 0  halted: 1  loading: 0  tester_mode: 0  sdram_ready: 1
+final_trap: 1  final_cause: 3
+checksum: 0x00000000fde52428
+cycles: 9682658
+retired: 2540046
+view checksum (SW1 SW0 = 00): e52428
+view phase/timer ticks (01): 5000bb
+s6 cycles view=2 mode(SW3 SW2)=0 kernel(SW4)=0: 690304
+s6 cycles view=2 mode(SW3 SW2)=0 kernel(SW4)=1: 2605442
+s6 cycles view=2 mode(SW3 SW2)=1 kernel(SW4)=0: 690366
+s6 cycles view=2 mode(SW3 SW2)=1 kernel(SW4)=1: 821880
+s6 cycles view=2 mode(SW3 SW2)=2 kernel(SW4)=0: 582220
+s6 cycles view=2 mode(SW3 SW2)=2 kernel(SW4)=1: 2167309
+s6 cycles view=2 mode(SW3 SW2)=3 kernel(SW4)=0: 582165
+s6 cycles view=2 mode(SW3 SW2)=3 kernel(SW4)=1: 716636
+s6 cycles view=3 mode(SW3 SW2)=0 kernel(SW4)=0: 43090
+s6 cycles view=3 mode(SW3 SW2)=0 kernel(SW4)=1: 163016
+s6 cycles view=3 mode(SW3 SW2)=1 kernel(SW4)=0: 43104
+s6 cycles view=3 mode(SW3 SW2)=1 kernel(SW4)=1: 51484
+s6 cycles view=3 mode(SW3 SW2)=2 kernel(SW4)=0: 26127
+s6 cycles view=3 mode(SW3 SW2)=2 kernel(SW4)=1: 119969
+s6 cycles view=3 mode(SW3 SW2)=3 kernel(SW4)=0: 26142
+s6 cycles view=3 mode(SW3 SW2)=3 kernel(SW4)=1: 34377
+BOARD_LOG_PASS: demo 3 passed its own checks on the board (pass LED on, fail LED off)

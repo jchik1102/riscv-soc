@@ -1,5 +1,6 @@
 # What runs on GitHub-hosted runners: the Python model and checker tests, a
-# Verilator lint of the pipeline core, and the SymbiYosys checks of the M unit.
+# Verilator lint of the RTL, the README number check, and the SymbiYosys checks
+# of the M unit and the async FIFO.
 # The XSim/UVM regression, ACT4, riscv-dv, CoreMark and the Quartus build need
 # the Windows vendor tools and run locally (make test, act, riscvdv, coremark,
 # fpga).
@@ -27,15 +28,11 @@ jobs:
       - uses: YosysHQ/setup-oss-cad-suite@v3
         with:
           version: '2026-10-14'
-      - name: Verilator lint of the pipeline core
-        run: >
-          verilator --lint-only -Wno-fatal -Wno-WIDTH -Wno-UNUSED -Wno-DECLFILENAME
-          --top-module core_pipeline
-          rtl/soc/platform_pkg.sv rtl/soc/soc_pkg.sv rtl/core/core_pkg.sv rtl/core/decoder.sv
-          rtl/core/alu.sv rtl/core/load_store.sv rtl/core/regfile.sv rtl/core/mul_iter.sv
-          rtl/core/div_iter.sv rtl/core/muldiv_unit.sv rtl/core/csr_file.sv rtl/core/core_pipeline.sv
-          2>&1 | tee lint.log;
-          ! grep -q '%Error' lint.log
+      # Verilator -Wall over the whole SoC (both cores), the SDRAM controller and
+      # tester and the DDR3 bridge; fails on any warning without a waiver and reason.
+      - run: bash scripts/lint.sh
+      # Every number in a README table must be in the log the row links.
+      - run: python3 scripts/check_readme_numbers.py
 
   formal:
     runs-on: ubuntu-24.04
@@ -46,6 +43,8 @@ jobs:
         with:
           version: '2026-10-14'
       - run: FORMAL_JOBS=4 bash scripts/run-formal.sh
+      # The async FIFO proof must fail on each of its 4 mutants.
+      - run: bash scripts/formal-cdc-mutants.sh
       - if: always()
         uses: actions/upload-artifact@v4
         with:

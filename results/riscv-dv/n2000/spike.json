@@ -2,61 +2,67 @@
  {
   "program": "riscv_arithmetic_basic_test_0",
   "result": "PASS",
-  "register_commits": 2153,
+  "register_commits": 2145,
   "handled_traps": 1
  },
  {
   "program": "riscv_arithmetic_basic_test_1",
   "result": "PASS",
-  "register_commits": 612,
+  "register_commits": 313,
   "handled_traps": 1
  },
  {
   "program": "riscv_illegal_instr_test_0",
   "result": "PASS",
-  "register_commits": 225,
+  "register_commits": 277,
   "handled_traps": 2
  },
  {
   "program": "riscv_illegal_instr_test_1",
   "result": "PASS",
-  "register_commits": 268,
+  "register_commits": 225,
   "handled_traps": 2
  },
  {
   "program": "riscv_jump_stress_test_0",
   "result": "PASS",
-  "register_commits": 2040,
+  "register_commits": 532,
   "handled_traps": 1
  },
  {
   "program": "riscv_jump_stress_test_1",
   "result": "PASS",
-  "register_commits": 326,
+  "register_commits": 1504,
   "handled_traps": 1
  },
  {
   "program": "riscv_no_fence_test_0",
   "result": "PASS",
-  "register_commits": 241,
+  "register_commits": 271,
   "handled_traps": 2
  },
  {
-  "program": "riscv_rand_instr_test_0",
+  "program": "riscv_no_fence_test_1",
   "result": "PASS",
-  "register_commits": 224,
+  "register_commits": 252,
+  "handled_traps": 2
+ },
+ {
+  "program": "riscv_rand_instr_test_1",
+  "result": "PASS",
+  "register_commits": 238,
   "handled_traps": 2
  },
  {
   "program": "riscv_rand_jump_test_0",
   "result": "PASS",
-  "register_commits": 234,
+  "register_commits": 232,
   "handled_traps": 2
  },
  {
   "program": "riscv_rand_jump_test_1",
   "result": "PASS",
-  "register_commits": 281,
+  "register_commits": 225,
   "handled_traps": 2
  }
 ]

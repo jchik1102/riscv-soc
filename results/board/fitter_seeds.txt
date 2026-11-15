@@ -1,0 +1,6 @@
+S8 board image with the JTAG readout, Quartus Prime Lite 24.1std, 10M50DAF484C7G, 50 MHz core clock.
+Worst setup and hold slack (ns) over all corners and clocks, per fitter seed:
+seed=1 worst_setup=-0.096 worst_hold=0.147
+seed=2 worst_setup=0.334 worst_hold=0.15
+seed=3 worst_setup=0.239 worst_hold=0.138
+seed=4 worst_setup=0.78 worst_hold=0.128

@@ -1,0 +1,32 @@
+riscv-formal c992aa6, Yosys 0.70+16 (git sha1 3bb533450, Release, Clang /usr/bin/clang++ 21.1.8)
+config: formal/rvfi/checks_csr.cfg
+causal_ch0               PASS         34s
+csr_ill_7c0_ch0          PASS         13s
+csr_ill_c00_ch0          PASS         12s
+csr_ill_f11_ch0          PASS         12s
+csr_ill_fff_ch0          PASS         13s
+csrc_any_mie_ch0         PASS         19s
+csrc_any_mscratch_ch0    PASS         20s
+csrc_any_mtvec_ch0       PASS         19s
+csrc_zero_marchid_ch0    PASS         10s
+csrc_zero_mhartid_ch0    PASS         10s
+csrc_zero_mimpid_ch0     PASS          9s
+csrc_zero_mvendorid_ch0  PASS          9s
+csrw_marchid_ch0         PASS         12s
+csrw_mcause_ch0          PASS         19s
+csrw_mepc_ch0            PASS         12s
+csrw_mhartid_ch0         PASS         12s
+csrw_mie_ch0             PASS         14s
+csrw_mimpid_ch0          PASS         14s
+csrw_mip_ch0             PASS         13s
+csrw_misa_ch0            PASS         13s
+csrw_mscratch_ch0        PASS         18s
+csrw_mstatus_ch0         PASS         13s
+csrw_mtval_ch0           PASS         13s
+csrw_mtvec_ch0           PASS         13s
+csrw_mvendorid_ch0       PASS         12s
+pc_bwd_ch0               PASS          9s
+pc_fwd_ch0               PASS        975s
+reg_ch0                  PASS        282s
+unique_ch0               PASS          8s
+RISCV_FORMAL checks_csr 29 of 29 checks PASS

@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.780
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'sdram_clk_pin'
+Slack : 12.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 18.595
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sdram_clk_pin'
+Slack : 2.997
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 94.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.907
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.674
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk50'
+Slack : 9.820
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.853
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sdram_clk_pin'
+Slack : 12.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.562
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'sdram_clk_pin'
+Slack : 12.489
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 19.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sdram_clk_pin'
+Slack : 2.889
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 94.809
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.687
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50'
+Slack : 9.830
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.876
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram_clk_pin'
+Slack : 12.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.580
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 11.818
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'sdram_clk_pin'
+Slack : 12.427
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 24.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sdram_clk_pin'
+Slack : 2.575
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 97.272
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk50'
+Slack : 9.530
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_clock.pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.974
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram_clk_pin'
+Slack : 12.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.285
+TNS   : 0.000
+
+------------------------------------------------------------

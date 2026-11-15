@@ -296,3 +296,43 @@ both clocks from fabric ("No Buffer"), and one MMCM in the board top makes
 side follows the MIG's user-clock reset, synchronized into the SoC clock, and
 the CPU is held until the boot image is loaded; the bridge holds requests off
 until the MIG reports calibration done.
+
+## 8. A JTAG readout, so board results come from a log
+
+**What was built.** The board top has one Intel in-system source and probe
+block (`jtag_readout` in `fpga/de10_lite/de10_lite_top.sv`). `make board-log`
+programs a stage's image, waits for its demo to finish, and writes what the
+board reports to `results/board/<stage>.log`.
+
+**Why.** The first board results were read off the HEX displays by hand and
+then lost, so the README could not quote them. A person flipping switches and
+writing down hex digits is slow and leaves no evidence. The readout gives the
+same values to a script. All six stages were logged this way on 2026-11-15
+(`results/board/s3.log` to `s8.log`).
+
+**Why virtual switches instead of a second read path?** The displays already
+show every result through one multiplexer selected by the switches. The
+readout overrides only that selection, so what the script reads is exactly
+what the displays would show, through the same logic. The switches that
+change behaviour (SDRAM tester mode at KEY0, the SDRAM timing options) are
+not overridden, so a script cannot put the board in a state the demo was not
+tested in. The probe also carries the full 64-bit checksum, cycle and retired
+counters, which the six displays can only show 24 bits at a time.
+
+**Why it does not change simulation.** The block is built only by Quartus
+(`ALTERA_RESERVED_QIS`); every simulator sees a stub that leaves the virtual
+switches off. The integration benches give the same cycle counts as before,
+and `board_tb` forces the virtual switches to check that each setting shows
+what the physical switches show and that the probe matches the counters.
+
+**What it cost.** 651 logic elements on the S8 image, and timing: with the
+default fitter seed the image missed 50 MHz by 0.096 ns on a path that has
+nothing to do with the readout (writeback register number, through
+forwarding, to the branch predictor's target table). Seeds 2, 3 and 4 meet
+timing, by up to +0.780 ns, so the board images are built with seed 4. That
+the margin moves by most of a nanosecond with the seed says the core's
+tightest path, not the readout, is what limits this design at 50 MHz.
+
+**Reading a value that is still changing.** The probe is sampled by the JTAG
+clock, not the system clock. The script waits for the demo to halt, and
+records a value only when two consecutive reads agree.

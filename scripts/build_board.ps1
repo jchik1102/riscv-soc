@@ -1,6 +1,9 @@
 param([string]$Quartus = 'C:\intelFPGA_lite\24.1std\quartus', [string]$Stage = 's3', [int]$Pipeline = 1,
       [ValidateSet('fir', 's4', 's5', 's6', 's7', 's8')][string]$Demo = 'fir', [switch]$Power,
-      [string]$Distro = 'Ubuntu', [string]$LinuxPython = '/home/jonat/.venvs/riscv-soc/bin/python')
+      [int]$Seed = 4, [string]$Distro = 'Ubuntu', [string]$LinuxPython = '/home/jonat/.venvs/riscv-soc/bin/python')
+# -Seed is the Quartus fitter seed. With the JTAG readout the S8 image misses 50 MHz by
+# 0.096 ns at seed 1 and meets it at seeds 2, 3 and 4 (results/board/fitter_seeds.txt);
+# seed 4 has the most margin, so it is the default.
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 $image = Join-Path $root @{fir = 'build/firmware/fir_words.hex'; s4 = 'build/firmware/s4_board_words.hex'; s5 = 'build/firmware/s5_board_words.hex'; s6 = 'build/firmware/s6_board_words.hex'; s7 = 'build/firmware/s7_board_words.hex'; s8 = 'build/firmware/s8_board_words.hex'}[$Demo]
@@ -26,6 +29,7 @@ if ($Demo -eq 'fir') {
     $demoId = 2
 }
 if ($expected -ge 2147483648) { throw 'Expected value exceeds the 31-bit range verified for Quartus decimal parameters' }
+$env:BOARD_SEED = [string]$Seed
 & (Join-Path $Quartus 'bin64/quartus_sh.exe') -t (Join-Path $root 'fpga/de10_lite/board.tcl') $Stage $Pipeline $image.Replace('\', '/') $words ([string]$expected) $demoId
 if ($LASTEXITCODE -ne 0) { throw "Quartus board compile failed: $LASTEXITCODE" }
 if ($Power) {

@@ -1,0 +1,36 @@
+board_log: stage s7, pipeline 1, DE10-Lite (10M50DAF484C7G), read over JTAG
+date: 2026-11-15T11:34:25-07:00
+commit: 859c7952f6aade83107b6efb944080c9457429b8
+image: build/quartus_board_s7_p1/output_files/de10_lite_s7_p1.sof
+image_sha256: 7b037b7d76bffdff101a3119bfeee2344c3d91121a04c72ae161c65e502371fa
+programmed: yes
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+cable: USB-Blaster [USB-0]
+device: @1: 10M50DA(.|ES)/10M50DC (0x031050DD)
+layout_version: 1
+demo: 4  pipeline: 1
+pass: 1  fail: 0  halted: 1  loading: 0  tester_mode: 0  sdram_ready: 1
+final_trap: 1  final_cause: 3
+checksum: 0x0000000045dcb4f6
+cycles: 1079490
+retired: 308481
+view checksum (SW1 SW0 = 00): dcb4f6
+view phase/timer ticks (01): 300010
+s7 total mode(SW5)=0 metric(SW4..SW2)=0: 235979
+s7 total mode(SW5)=0 metric(SW4..SW2)=1: 8149
+s7 total mode(SW5)=0 metric(SW4..SW2)=2: 1441
+s7 total mode(SW5)=0 metric(SW4..SW2)=3: 11211
+s7 total mode(SW5)=0 metric(SW4..SW2)=4: 20801
+s7 total mode(SW5)=0 metric(SW4..SW2)=5: 30589
+s7 total mode(SW5)=0 metric(SW4..SW2)=6: 256
+s7 total mode(SW5)=0 metric(SW4..SW2)=7: 11747
+s7 total mode(SW5)=1 metric(SW4..SW2)=0: 321616
+s7 total mode(SW5)=1 metric(SW4..SW2)=1: 13352
+s7 total mode(SW5)=1 metric(SW4..SW2)=2: 1440
+s7 total mode(SW5)=1 metric(SW4..SW2)=3: 11217
+s7 total mode(SW5)=1 metric(SW4..SW2)=4: 26009
+s7 total mode(SW5)=1 metric(SW4..SW2)=5: 35674
+s7 total mode(SW5)=1 metric(SW4..SW2)=6: 256
+s7 total mode(SW5)=1 metric(SW4..SW2)=7: 11445
+s7 N=4 cases=64 mismatches=0
+BOARD_LOG_PASS: demo 4 passed its own checks on the board (pass LED on, fail LED off)

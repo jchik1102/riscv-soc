@@ -1,3 +1,53 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/platform_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/soc/soc_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/decoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/load_store.sv" into library work
+INFO: [VRFC 10-311] analyzing module load_store
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/mul_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module mul_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/div_iter.sv" into library work
+INFO: [VRFC 10-311] analyzing module div_iter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/muldiv_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module muldiv_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/csr_file.sv" into library work
+INFO: [VRFC 10-311] analyzing module csr_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/rtl/core/core_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module core_pipeline
+INFO: [VRFC 10-311] analyzing module branch_predictor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/projects/riscv-soc/tb/core/pipe_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module pipe_tb
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe pipe_tb -s pipe_tb --timescale 1ns/1ps --debug typical 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.soc_pkg
+Compiling package work.platform_pkg
+Compiling package work.core_pkg
+Compiling module work.decoder
+Compiling module work.regfile
+Compiling module work.alu
+Compiling module work.mul_iter
+Compiling module work.div_iter
+Compiling module work.muldiv_unit
+Compiling module work.csr_file
+Compiling module work.load_store
+Compiling module work.branch_predictor_default
+Compiling module work.core_pipeline_default
+Compiling module work.pipe_tb
+Built simulation snapshot pipe_tb
 SIMULATED: riscv_arithmetic_basic_test_0_s1_d5
 SIMULATED: riscv_arithmetic_basic_test_1_s1_d5
 SIMULATED: riscv_illegal_instr_test_0_s1_d5
@@ -5,20 +55,21 @@ SIMULATED: riscv_illegal_instr_test_1_s1_d5
 SIMULATED: riscv_jump_stress_test_0_s1_d5
 SIMULATED: riscv_jump_stress_test_1_s1_d5
 SIMULATED: riscv_no_fence_test_0_s1_d5
-SIMULATED: riscv_rand_instr_test_0_s1_d5
+SIMULATED: riscv_no_fence_test_1_s1_d5
+SIMULATED: riscv_rand_instr_test_1_s1_d5
 SIMULATED: riscv_rand_jump_test_0_s1_d5
 SIMULATED: riscv_rand_jump_test_1_s1_d5
-RISCVDV_PASS riscv_arithmetic_basic_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 2155 records, 1083 fetches, 64 data accesses
-RISCVDV_PASS riscv_arithmetic_basic_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 614 records, 315 fetches, 64 data accesses
-RISCVDV_PASS riscv_illegal_instr_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 228 records, 126 fetches, 95 data accesses
-RISCVDV_PASS riscv_illegal_instr_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 271 records, 201 fetches, 95 data accesses
-RISCVDV_PASS riscv_jump_stress_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_0_s1_d5.csv: 2042 records, 1973 fetches, 64 data accesses
-RISCVDV_PASS riscv_jump_stress_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_1_s1_d5.csv: 328 records, 225 fetches, 64 data accesses
+RISCVDV_PASS riscv_arithmetic_basic_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_0_s1_d5.csv: 2147 records, 1080 fetches, 64 data accesses records=2147 traps=2064:cause11,2147:cause11
+RISCVDV_PASS riscv_arithmetic_basic_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_arithmetic_basic_test_1_s1_d5.csv: 315 records, 163 fetches, 64 data accesses records=315 traps=232:cause11,315:cause11
+RISCVDV_PASS riscv_illegal_instr_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_0_s1_d5.csv: 280 records, 193 fetches, 95 data accesses records=280 traps=147:cause4,197:cause11,280:cause11
+RISCVDV_PASS riscv_illegal_instr_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_illegal_instr_test_1_s1_d5.csv: 228 records, 128 fetches, 95 data accesses records=228 traps=95:cause4,145:cause11,228:cause11
+RISCVDV_PASS riscv_jump_stress_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_0_s1_d5.csv: 534 records, 421 fetches, 64 data accesses records=534 traps=451:cause11,534:cause11
+RISCVDV_PASS riscv_jump_stress_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_jump_stress_test_1_s1_d5.csv: 1506 records, 1447 fetches, 64 data accesses records=1506 traps=1423:cause11,1506:cause11
 RISCVDV_NOT_RUN riscv_load_store_stress_test_0 GENERATOR_INVALID_ASM
 RISCVDV_NOT_RUN riscv_load_store_stress_test_1 GENERATOR_INVALID_ASM
-RISCVDV_PASS riscv_no_fence_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_no_fence_test_0_s1_d5.csv: 244 records, 152 fetches, 95 data accesses
-RISCVDV_NOT_RUN riscv_no_fence_test_1 GENERATOR_INVALID_ASM
-RISCVDV_PASS riscv_rand_instr_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_instr_test_0_s1_d5.csv: 227 records, 125 fetches, 95 data accesses
-RISCVDV_PASS riscv_rand_jump_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_0_s1_d5.csv: 237 records, 126 fetches, 96 data accesses
-RISCVDV_PASS riscv_rand_jump_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_1_s1_d5.csv: 284 records, 153 fetches, 95 data accesses
-RISCVDV_TOTAL pass=10 of 10 programs; not run=3; 6604 Spike-matched register commits in passing programs
+RISCVDV_PASS riscv_no_fence_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_no_fence_test_0_s1_d5.csv: 274 records, 190 fetches, 96 data accesses records=274 traps=141:cause4,191:cause11,274:cause11
+RISCVDV_PASS riscv_no_fence_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_no_fence_test_1_s1_d5.csv: 255 records, 171 fetches, 95 data accesses records=255 traps=122:cause4,172:cause11,255:cause11
+RISCVDV_PASS riscv_rand_instr_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_instr_test_1_s1_d5.csv: 241 records, 127 fetches, 96 data accesses records=241 traps=108:cause4,158:cause11,241:cause11
+RISCVDV_PASS riscv_rand_jump_test_0 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_0_s1_d5.csv: 235 records, 130 fetches, 96 data accesses records=235 traps=102:cause5,152:cause11,235:cause11
+RISCVDV_PASS riscv_rand_jump_test_1 PASS /mnt/c/projects/riscv-soc/build/riscv-dv/n2000/xsim/riscv_rand_jump_test_1_s1_d5.csv: 228 records, 123 fetches, 95 data accesses records=228 traps=95:cause4,145:cause11,228:cause11
+RISCVDV_TOTAL pass=11 of 11 programs; not run=2; 6214 Spike-matched register commits in passing programs

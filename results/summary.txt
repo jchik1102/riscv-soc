@@ -1,5 +1,5 @@
-collected: 2026-10-17T15:09:21
-commit: 4639ced4453899d38da3e8c53c09d1c31410cbd2
+collected: 2026-11-15T01:45:24
+commit: 4eb3761eca7522ff30c8aafe7d3b3a7031ad073c
 rtl_mutants_detected: 97 of 97 (muldiv 12/12, pipeline 23/23, sdram 23/23, cache 17/17, accel 22/22)
 soc_s4: 1 runs, 8806 retirements checked
 soc_s5: 7 runs, 371576 retirements checked

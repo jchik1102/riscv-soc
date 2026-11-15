@@ -1,0 +1,4 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-403-g0dc5f722a (mod)
+- Verilator: Built from 1.615 MB sources in 30 modules, into 0.949 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.918 s (elab=0.040, cvt=0.149, bld=0.000); cpu 0.238 s on 1 threads; allocated 29.602 MB
+LINT soc_pipeline: 0 warnings or errors outside the waivers

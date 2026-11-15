@@ -16,8 +16,8 @@ TOTAL                                                569/583    97.60%    332/34
 
 Lines with a statement that never executed:
 alu (rtl/core/alu.sv): 19
-core_pipeline_default (rtl/core/core_pipeline.sv): 483, 484, 485, 486, 487
-csr_file (rtl/core/csr_file.sv): 74
+core_pipeline_default (rtl/core/core_pipeline.sv): 505, 506, 507, 508, 509
+csr_file (rtl/core/csr_file.sv): 83
 decoder (rtl/core/decoder.sv): 30, 56, 85
 
 CODE_COVERAGE pipeline statements=569/583 (97.60%) branches=332/343 (96.79%) conditions=315/326 (96.63%)

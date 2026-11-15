@@ -1,0 +1,21 @@
+board_log: stage s4, pipeline 1, DE10-Lite (10M50DAF484C7G), read over JTAG
+date: 2026-11-15T11:33:40-07:00
+commit: 859c7952f6aade83107b6efb944080c9457429b8
+image: build/quartus_board_s4_p1/output_files/de10_lite_s4_p1.sof
+image_sha256: e16994a4cc5ce71fa5e78a0d8f6e24593b6e0c9a78fddc6ab83ecfaa12e2fa22
+programmed: yes
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+cable: USB-Blaster [USB-0]
+device: @1: 10M50DA(.|ES)/10M50DC (0x031050DD)
+layout_version: 1
+demo: 1  pipeline: 1
+pass: 1  fail: 0  halted: 1  loading: 0  tester_mode: 0  sdram_ready: 0
+final_trap: 1  final_cause: 3
+checksum: 0x0000000000000032
+cycles: 250170235
+retired: 125075772
+view checksum (SW1 SW0 = 00): 000032
+view cycles[23:0] (01): e94b7b
+view cycles[47:24] (10): 00000e
+view retired[23:0] (11): 74813c
+BOARD_LOG_PASS: demo 1 passed its own checks on the board (pass LED on, fail LED off)

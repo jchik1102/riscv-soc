@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Sat Oct 17 03:35:08 2026
+| Date         : Sun Nov 15 01:53:19 2026
 | Host         : Jonathan running 64-bit major release  (build 9200)
 | Command      : report_cdc -details -file C:/projects/riscv-soc/build/vivado/arty_ddr3/cdc.txt
 | Design       : arty_ddr3_top
@@ -15,8 +15,7 @@ CDC Report
 ID      Severity  Count  Description
 ------  --------  -----  ---------------------------------------------------------------
 CDC-1   Critical    213  1-bit unknown CDC circuitry
-CDC-2   Warning       1  1-bit synchronized with missing ASYNC_REG property
-CDC-3   Info          6  1-bit synchronized with ASYNC_REG property
+CDC-3   Info          7  1-bit synchronized with ASYNC_REG property
 CDC-6   Warning       4  Multi-bit synchronized with ASYNC_REG property
 CDC-8   Warning       2  Asynchronous reset synchronized with missing ASYNC_REG property
 CDC-13  Critical    168  1-bit CDC path on a non-FD primitive
@@ -148,7 +147,7 @@ Row  ID      Severity  Description                                     Depth  Ex
 102  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[23]/D
 103  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[24]/D
 104  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[25]/D
-105  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[26]/D
+105  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_90_95/RAMA/CLK                                                               soc/pipeline.caches.dcache/rsp_data_reg[26]/D
 106  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[27]/D
 107  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[28]/D
 108  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/rd_fifo/mem_reg_0_3_126_130/RAMB/CLK                                                             soc/pipeline.caches.dcache/rsp_data_reg[29]/D
@@ -740,10 +739,10 @@ Source Clock: input port clock
 Destination Clock: clk50_raw
 CDC Type: No Common Primary Clock
 
-Row  ID     Severity  Description                                         Depth  Exception   Source (From)  Destination (To)
----  -----  --------  --------------------------------------------------  -----  ----------  -------------  ---------------------------------
-  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property              2  False Path  ck_rst         btn_sync_reg[0]/D
-  2  CDC-2  Warning   1-bit synchronized with missing ASYNC_REG property      2  False Path  uart_txd_in    soc/pipeline.serial/rx_meta_reg/D
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------  ---------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  False Path  ck_rst         btn_sync_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  False Path  uart_txd_in    soc/pipeline.serial/rx_meta_reg/D
 
 Source Clock: clk50_raw
 Destination Clock: clk_pll_i
@@ -757,7 +756,7 @@ Row  ID      Severity  Description                                     Depth  Ex
   4  CDC-1   Critical  1-bit unknown CDC circuitry                         0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_0_5/RAMA/CLK        bridge/beats_left_reg[1]/D
   5  CDC-6   Warning   Multi-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  bridge/cmd_fifo/w_gray_reg[2:0]/C               bridge/cmd_fifo/w_sync1_reg[2:0]/D
   6  CDC-1   Critical  1-bit unknown CDC circuitry                         0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_0_5/RAMA/CLK        bridge/cmds_left_reg[0]/D
-  7  CDC-1   Critical  1-bit unknown CDC circuitry                         0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_96_100/RAMC/CLK     bridge/cmds_left_reg[1]/D
+  7  CDC-1   Critical  1-bit unknown CDC circuitry                         0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_0_5/RAMA/CLK        bridge/cmds_left_reg[1]/D
   8  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_78_83/RAMA/CLK      bridge/next_addr_reg[3]/D
   9  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_78_83/RAMA_D1/CLK   bridge/next_addr_reg[4]/D
  10  CDC-15  Warning   Clock enable controlled CDC structure detected      0  Max Delay Datapath Only  bridge/cmd_fifo/mem_reg_0_3_78_83/RAMB/CLK      bridge/next_addr_reg[5]/D

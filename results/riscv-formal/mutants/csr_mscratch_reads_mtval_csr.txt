@@ -1,0 +1,52 @@
+SBY 12:26:29 [csrc_any_mscratch_ch0] Writing '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/defines.sv'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] Writing '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/csrc_any_mscratch_ch0.sv'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] Copy '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/../../checks/rvfi_macros.vh' to '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/rvfi_macros.vh'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] Copy '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/../../checks/rvfi_channel.sv' to '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/rvfi_channel.sv'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] Copy '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/../../checks/rvfi_testbench.sv' to '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/rvfi_testbench.sv'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] Copy '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/../../checks/rvfi_csrc_any_check.sv' to '/mnt/c/projects/riscv-soc/build/rvfi_mutants/csr_mscratch_reads_mtval/rvfi/cores/riscv_soc/checks/csrc_any_mscratch_ch0/src/rvfi_csrc_any_check.sv'.
+SBY 12:26:30 [csrc_any_mscratch_ch0] engine_0: smtbmc bitwuzla
+SBY 12:26:30 [csrc_any_mscratch_ch0] base: starting process "cd csrc_any_mscratch_ch0/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 12:26:32 [csrc_any_mscratch_ch0] base: finished (returncode=0)
+SBY 12:26:32 [csrc_any_mscratch_ch0] prep: starting process "cd csrc_any_mscratch_ch0/model; yosys -ql design_prep.log design_prep.ys"
+SBY 12:26:33 [csrc_any_mscratch_ch0] prep: finished (returncode=0)
+SBY 12:26:33 [csrc_any_mscratch_ch0] smt2: starting process "cd csrc_any_mscratch_ch0/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 12:26:34 [csrc_any_mscratch_ch0] smt2: finished (returncode=0)
+SBY 12:26:34 [csrc_any_mscratch_ch0] engine_0: starting process "cd csrc_any_mscratch_ch0; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 20:21  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 12:26:34 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Solver: bitwuzla
+SBY 12:26:34 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 0..
+SBY 12:26:34 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 1..
+SBY 12:26:34 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 2..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 3..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 4..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 5..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:00  Skipping step 6..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 7..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 8..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 9..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 10..
+SBY 12:26:35 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 11..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 12..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 13..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:01  Skipping step 14..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Skipping step 15..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Skipping step 16..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Skipping step 17..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Skipping step 18..
+SBY 12:26:36 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Skipping step 19..
+SBY 12:26:37 [csrc_any_mscratch_ch0] engine_0: ##   0:00:02  Checking assumptions in step 20..
+SBY 12:26:40 [csrc_any_mscratch_ch0] engine_0: ##   0:00:05  Checking assertions in step 20..
+SBY 12:27:11 [csrc_any_mscratch_ch0] engine_0: ##   0:00:36  BMC failed!
+SBY 12:27:11 [csrc_any_mscratch_ch0] engine_0: ##   0:00:36  Assert failed in rvfi_testbench: rvfi_csrc_any_check.sv:89.32-89.70 (_witness_.check_flatten_checker_inst__assert_rvfi_csrc_any_check_sv_89_4024)
+SBY 12:27:11 [csrc_any_mscratch_ch0] engine_0: ##   0:00:36  Writing trace to VCD file: engine_0/trace.vcd
+SBY 12:28:29 [csrc_any_mscratch_ch0] engine_0: ##   0:01:54  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 12:28:31 [csrc_any_mscratch_ch0] engine_0: ##   0:01:57  Writing trace to constraints file: engine_0/trace.smtc
+SBY 12:28:34 [csrc_any_mscratch_ch0] engine_0: ##   0:01:59  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 12:28:40 [csrc_any_mscratch_ch0] engine_0: ##   0:02:05  Status: failed
+SBY 12:28:40 [csrc_any_mscratch_ch0] engine_0: finished (returncode=1)
+SBY 12:28:40 [csrc_any_mscratch_ch0] engine_0: Status returned by engine: FAIL
+SBY 12:28:40 [csrc_any_mscratch_ch0] summary: Elapsed clock time [H:MM:SS (secs)]: 0:02:15 (135)
+SBY 12:28:40 [csrc_any_mscratch_ch0] summary: Elapsed process time [H:MM:SS (secs)]: 0:02:09 (129)
+SBY 12:28:40 [csrc_any_mscratch_ch0] summary: engine_0 (smtbmc bitwuzla) returned FAIL
+SBY 12:28:40 [csrc_any_mscratch_ch0] summary: counterexample trace: csrc_any_mscratch_ch0/engine_0/trace.vcd
+SBY 12:28:40 [csrc_any_mscratch_ch0] summary:   failed assertion rvfi_testbench._witness_.check_flatten_checker_inst__assert_rvfi_csrc_any_check_sv_89_4024 at rvfi_csrc_any_check.sv:89.32-89.70 step 20
+SBY 12:28:40 [csrc_any_mscratch_ch0] DONE (FAIL, rc=0)

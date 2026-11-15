@@ -1,15 +1,17 @@
-muldiv_mul                               PASS        9s
-muldiv_mulh                              PASS       62s
-muldiv_mulhsu                            PASS       95s
-muldiv_mulhu                             PASS        9s
-muldiv_div                               PASS      105s
-muldiv_divu                              PASS      188s
-muldiv_rem                               PASS      199s
-muldiv_remu                              PASS      277s
-muldiv_mulw                              PASS       10s
+muldiv_mul                               PASS       13s
+muldiv_mulh                              PASS       77s
+muldiv_mulhsu                            PASS      116s
+muldiv_mulhu                             PASS       12s
+muldiv_div                               PASS      125s
+muldiv_divu                              PASS      215s
+muldiv_rem                               PASS      226s
+muldiv_remu                              PASS      301s
+muldiv_mulw                              PASS       11s
 muldiv_divw                              PASS       17s
-muldiv_divuw                             PASS       26s
-muldiv_remw                              PASS       17s
+muldiv_divuw                             PASS       21s
+muldiv_remw                              PASS       31s
 muldiv_remuw                             PASS       30s
-muldiv_cover                             PASS       11s
-FORMAL 14 of 14 tasks PASS
+muldiv_cover                             PASS       10s
+async_fifo_prove                         PASS        6s
+async_fifo_cover                         PASS        0s
+FORMAL 16 of 16 tasks PASS
